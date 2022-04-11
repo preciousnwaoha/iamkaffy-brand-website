@@ -1,0 +1,11 @@
+.theme-button {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    border: 7px solid var(--black);
+    margin-right: 1rem;
+    cursor: pointer;
+}

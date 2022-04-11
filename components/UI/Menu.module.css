@@ -1,0 +1,16 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    margin-left: 1rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu div {
+    background: var(--black);
+    height: 3px;
+    width: 100%;
+}

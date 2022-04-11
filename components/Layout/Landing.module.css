@@ -1,0 +1,189 @@
+.landing {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--white);
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1366px;
+    margin: auto;
+    padding: 60px 0 0 0;
+    padding-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    bottom: -70%;
+    right: calc(-70% + 80px);
+    background: var(--primary);
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+}
+
+.image-case {
+    display: inline-block;
+    position: absolute;
+    top: 60px;
+    right: -15%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    z-index: 1;
+}
+
+
+
+.landing-text-side {
+    width: 100%;
+    height: 100%;
+    margin-top: 1.5rem;
+    overflow-y: auto;
+    padding: 1rem;
+    z-index: 2;
+}
+
+.landing-text-side::-webkit-scrollbar {
+    width: 4px;
+    background-color: var(--black);
+    border-radius: 2px;
+}
+
+.hero-text {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3rem;
+    width: 55%;
+}
+
+.tagline {
+    font-size: 2rem;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    padding-left: 1.5rem;
+    color: var(--primary);
+}
+.dare-dance-live {
+    position: absolute;
+    top: 10px;
+    left: -1.5rem;
+    writing-mode: vertical-rl;
+text-orientation: sideways;
+    color: var(--secondary);
+    display: inline-block;
+    text-align: justify;
+}
+
+.sub-tagline {
+    font-size: 1rem;
+    color: var(--primary);
+    padding-left: 1.5rem;
+    line-height: 1rem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        rem;
+}
+
+.p-tags {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.p-tags p {
+    font-size: 0.8rem;
+}
+
+.p-yellow {
+    color: var(--secondary)
+}
+
+.record-image-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    
+    text-align: center;
+}
+
+
+
+.record {
+    
+    height: auto;
+    text-align: right;
+    width: 100%;
+    color: var(--white);
+    z-index: 1;
+}
+.record h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+}
+.record p {
+    font-size: 0.65rem;
+    font-style: italic;
+}
+
+@media screen and (min-width: 760px) {
+    .landing {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100vh;
+        padding: 60px 2rem 0 2rem;
+    }
+
+    .image-case {
+        width: calc(50%);
+        right: 0;
+    }
+    .landing-text-side {
+        max-width: 70%;
+        padding: 0 1.5rem;
+    }
+    .hero-text {
+        width: 100%;
+    }
+
+    .tagline {
+        font-size: 3rem;
+    }
+
+    .dare-dance-live {
+        top: 15px;
+    }
+    
+    .sub-tagline {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+    }
+    
+    .record-image-side {
+        position: relative;
+        width: 30%;
+        padding: 0;
+    }
+
+    .record {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .p-tags {
+        width: 60%;
+    }
+    .record h4 {
+        font-size: 0.9rem;
+    }
+    .record p {
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,79 @@
+.award {
+  position: relative;
+  background: var(--primary);
+  overflow: hidden;
+  padding: 0;
+  /* border: 1px solid var(--secondary-trans); */
+  border-radius: 1rem;
+  transition: .3s;
+  z-index: 1;
+}
+
+.award-img {
+  object-fit: cover;
+}
+
+.award-text {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem 2rem;
+  transition: background 0.3s;
+}
+
+.award:hover,
+.award:focus {
+  -moz-box-shadow: 0 0 10px var(--shadow-1);
+  -webkit-box-shadow: 0 0 10px var(--shadow-1);
+  box-shadow: 0 0 10px var(--shadow-1);
+  /* transform: scale(1.05); */
+  z-index: 10;
+}
+
+.award:hover .award-text,
+.award:focus .award-text {
+    background: rgba(230, 160, 113, 0.759);
+    
+}
+
+.award-from {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.award-name {
+  color: var(--black);
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.award-date {
+  align-self: flex-end;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  margin: 0;
+}
+@media screen and (min-width: 760px) {
+    .award-from {
+        font-size: 1.85rem;
+      }
+      
+      .award-name {
+        font-size: 1.75rem;
+        font-weight: 600;
+      }
+      
+      .award-date {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+}

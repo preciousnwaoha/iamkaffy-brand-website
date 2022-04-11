@@ -1,0 +1,38 @@
+.dare-dance-live {
+    display: flex;
+    height: 30vh;
+    width: 100%;
+}
+
+.dare-dance-live div {
+    width: 33.33%;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.dare-dance-live div:nth-child(1) {
+    background: var(--black);
+    color: var(--white);
+}
+
+.dare-dance-live div:nth-child(2) {
+    background: var(--white);
+    color: var(--black);
+}
+.dare-dance-live div:nth-child(3) {
+    background: var(--black);
+    color: var(--white);
+}
+
+@media screen and (min-width: 760px) {
+    .dare-dance-live {
+        height: 40vh;
+    }
+
+    .dare-dance-live div {
+        font-size: 3rem;
+    }
+}

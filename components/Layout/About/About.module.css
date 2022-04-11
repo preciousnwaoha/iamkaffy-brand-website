@@ -1,0 +1,19 @@
+.about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background: var(--white);
+    padding: 0 ;
+    width: 100%;
+    max-width: 1366px;
+    min-height: 100vh;
+    overflow: hidden;
+    margin: auto;
+}
+
+@media screen and (min-width: 760px) {
+    .about {
+        padding: 0;
+    }
+}
