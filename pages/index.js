@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Accolades from '../components/Layout/About/Accolades'
-import MoreThanADancer from '../components/Layout/About/MoreThanADancer'
-import Story from '../components/Layout/About/Story'
+import Accolades from '../components/About/Accolades'
+import MoreThanADancer from '../components/About/MoreThanADancer'
+import Story from '../components/About/Story'
 import Footer from '../components/Layout/Footer'
 import Header from '../components/Layout/Header'
-import Landing from '../components/Layout/Landing'
+import Landing from '../components/Landing'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {

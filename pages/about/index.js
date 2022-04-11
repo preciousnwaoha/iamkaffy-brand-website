@@ -1,9 +1,9 @@
 import React from 'react'
 import Head from "next/head"
 import Header from '../../components/Layout/Header'
-import Story from '../../components/Layout/About/Story'
-import MoreThanADancer from '../../components/Layout/About/MoreThanADancer'
-import Accolades from '../../components/Layout/About/Accolades'
+import Story from '../../components/About/Story'
+import MoreThanADancer from '../../components/About/MoreThanADancer'
+import Accolades from '../../components/About/Accolades'
 import Footer from '../../components/Layout/Footer'
 import styles from "../../styles/Home.module.css"
 

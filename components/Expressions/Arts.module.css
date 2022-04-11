@@ -1,0 +1,7 @@
+.arts {
+    border: 1px solid red;
+    width: 100%;
+    max-width: 1366px;
+    margin: auto;
+    min-height: 100vh;
+}

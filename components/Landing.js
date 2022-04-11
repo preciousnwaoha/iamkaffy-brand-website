@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Scroll from "../UI/Scroll";
+import Scroll from "./UI/Scroll";
 import classes from "./Landing.module.css";
 
 const LANDDING_IMAGES = [

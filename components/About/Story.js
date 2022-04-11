@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import Button from "../../UI/Button";
-import Scroll from "../../UI/Scroll";
+import Button from "../UI/Button";
+import Scroll from "../UI/Scroll";
 import classes from "./Story.module.css";
 
 const Story = () => {
