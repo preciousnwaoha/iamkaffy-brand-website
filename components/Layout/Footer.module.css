@@ -1,6 +1,8 @@
 .footer {
     background: var(--white);
     width: 100%;
+    max-width: 1366px;
+    margin: auto;
 }
 
 .footer-content {

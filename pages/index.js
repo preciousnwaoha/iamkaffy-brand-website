@@ -22,12 +22,9 @@ export default function Home() {
        <Story />
        <MoreThanADancer />
        <Accolades />
-       <Footer />
+       
       </main>
-
-      <footer className={styles.footer}>
-        
-      </footer>
+      <Footer />
     </div>
   )
 }
