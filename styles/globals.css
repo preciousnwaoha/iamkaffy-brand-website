@@ -7,9 +7,9 @@
   --white: #fffaf7;
   --text-black-1: #000000;
   --text-white-1: #fffaf7;
-  
-  --shadow-1: rgba(53, 37, 27, 0.897);
-  --shadow-2: #996847de;
+  --shadow-1: rgba(255, 102, 0, 0.15);
+  --shadow-2: rgba(255, 255, 255, 0.15);
+  --shadow-3: rgba(0, 0, 0, 0.15);
 }
 
 html {
@@ -23,6 +23,7 @@ html {
 }
 
 body {
+  background: var(--white);
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,

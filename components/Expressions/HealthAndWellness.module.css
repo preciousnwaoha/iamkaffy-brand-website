@@ -1,7 +1,118 @@
 .HAW {
-    border: 1px solid red;
+  border: 1px solid red;
+  width: 100%;
+  max-width: 1366px;
+  margin: auto;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.title {
+    /* background: var(--black); */
+  width: 100%;
+  box-shadow: 0px 0px 8px 0px var(--shadow-3);
+  padding: 1rem;
+}
+
+.title h2 {
+  font-size: 1.75rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  display: inline-block;
+  color: var(--secondary);
+}
+
+.title h3 {
+  margin: 0;
+  display: inline-block;
+  font-size: 1.4rem;
+  color: var(--secondary);
+}
+
+.sub-title {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.message-wrapper {
+  width: 100%;
+}
+
+.message-item_image-wrapper {
+  position: relative;
+}
+
+.message-item_image-ref {
+  position: absolute;
+  display: inline-block;
+  min-width: 25%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background: var(--white);
+  color: var(--black);
+  padding: 0.5rem 1.5rem;
+}
+
+.message-text {
+    margin: 0;
+    padding: 2rem 0;
+}
+
+@media screen and (min-width: 760px) {
+  .HAW {
+    padding: 2rem;
+  }
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
     width: 100%;
-    max-width: 1366px;
-    margin: auto;
-    min-height: 100vh;
+  }
+
+  .title h2 {
+    font-size: 1.85rem;
+    margin: 0;
+    width: 40%;
+    display: inline-block;
+  }
+
+  .title h3 {
+    font-size: 1.5rem;
+    text-align: right;
+    width: 60%;
+  }
+
+  .sub-title {
+    font-size: 1.2rem;
+  }
+
+  .message-wrapper {
+    width: 100%;
+  }
+
+  .message-item {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100%;
+    max-height: 60vh;
+    margin-bottom: 0.5rem;
+  }
+
+  .message-item_image-wrapper {
+    /* width: calc(66.67% - 0.25rem); */
+    grid-column: span 2;
+    overflow: hidden;
+  }
+
+  .message-text {
+    box-shadow: 0px 0px 8px 0px var(--shadow-3);
+    /* width: calc(33.33% - 0.25rem); */
+    grid-column: span 1;
+    text-align: justify;
+    line-height: 1.5rem;
+    padding: 2rem 1rem;
+  }
 }
