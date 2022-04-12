@@ -1,9 +1,17 @@
 import React from 'react'
 import classes from "./Scroll.module.css"
 
-function Scroll() {
+function Scroll({classValue}) { 
+  const scrollClasses = `${classes.scroll} ${classValue || ""}`
+
+  if (classValue === "scroll-down" ) {
+    return (
+      <div className={scrollClasses}>|</div>
+    )
+  }
+
   return (
-    <div className={classes.scroll}>|</div>
+    <div className={scrollClasses}>-</div>
   )
 }
 

@@ -3,9 +3,10 @@ import Head from "next/head"
 import Header from '../../components/Layout/Header'
 import Footer from '../../components/Layout/Footer'
 import styles from "../../styles/Home.module.css"
-import HealthAndWellness from '../../components/Layout/Expressions/HealthAndWellness'
-import Inspiration from '../../components/Layout/Expressions/Inspiration'
-import Arts from '../../components/Layout/Expressions/Arts'
+import HealthAndWellness from '../../components/Expressions/HealthAndWellness'
+import Inspiration from '../../components/Expressions/Inspiration'
+import Arts from '../../components/Expressions/Arts'
+import ExpressionsLanding from '../../components/Expressions/ExpressionsLanding'
 
 const Expressions = () => {
   return (
@@ -18,6 +19,7 @@ const Expressions = () => {
 
       <main className={styles.main}>
        <Header />
+       <ExpressionsLanding />
        <HealthAndWellness />
        <Inspiration />
        <Arts />

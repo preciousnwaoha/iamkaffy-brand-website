@@ -152,24 +152,24 @@ const DEFAULT_AWARDS = [
 ];
 
 const Accolades = () => {
-
-  const shuffle = (array) => {
-    let currentIndex = array.length,  randomIndex;
+  // const shuffle = (array) => {
+  //   let currentIndex = array.length,  randomIndex;
   
-    // While there remain elements to shuffle.
-    while (currentIndex != 0) {
+  //   // While there remain elements to shuffle.
+  //   while (currentIndex != 0) {
   
-      // Pick a remaining element.
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
+  //     // Pick a remaining element.
+  //     randomIndex = Math.floor(Math.random() * currentIndex);
+  //     currentIndex--;
   
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
-    }
+  //     // And swap it with the current element.
+  //     [array[currentIndex], array[randomIndex]] = [
+  //       array[randomIndex], array[currentIndex]];
+  //   }
   
-    return array;
-  }
+  //   return array;
+  // }
+  
   return (
     <div className={classes.accolades}>
       
@@ -189,7 +189,7 @@ const Accolades = () => {
           ))}
         </div>
         <div className={classes.awards}>
-          {shuffle(DEFAULT_AWARDS).map((award) => (
+          {DEFAULT_AWARDS.map((award) => (
             <Award
               key={`${award.id}par`}
               from={award.from}

@@ -1,8 +1,5 @@
 .scroll {
-    position: fixed;
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -12,5 +9,5 @@
     border-radius: 50%;
     background: var(--black);
     color: var(--white);
-    z-index: 100;
+    cursor: pointer;
 }
