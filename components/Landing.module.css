@@ -64,7 +64,7 @@
     text-align: left;
     margin: 0;
     padding-left: 1.5rem;
-    color: var(--primary);
+    color: var(--secondary);
 }
 .dare-dance-live {
     position: absolute;
@@ -72,14 +72,14 @@
     left: -1.5rem;
     writing-mode: vertical-rl;
 text-orientation: sideways;
-    color: var(--secondary);
+    color: var(--primary);
     display: inline-block;
     text-align: justify;
 }
 
 .sub-tagline {
     font-size: 1rem;
-    color: var(--primary);
+    color: var(--secondary);
     padding-left: 1.5rem;
     line-height: 1rem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        rem;
 }

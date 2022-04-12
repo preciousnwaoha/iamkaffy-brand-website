@@ -1,0 +1,25 @@
+.important {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--black);
+    color: var(--white);
+    border-radius: 0.5rem;
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.important span {
+    font-weight: 600;
+  color: var(--primary);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 760px){
+    .important {
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+    }
+}
