@@ -1,21 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Programs from "./Programs";
 import ImportantMessage from "../UI/ImportantMessage";
+import Title from "./Title";
 import classes from "./HealthAndWellness.module.css";
+import BrandsWorkedWith from "./BrandsWorkedWith";
 
 const HealthAndWellness = () => {
   return (
     <div className={classes.HAW}>
-      {" "}
       {/* HAW - Health and Wellness */}
-      <div className={classes.title}>
+      <Title className={classes["HAW-title"]}>
         <h2>Health & Wellness</h2>
         <h3>
           I strive to live in communities with stronger, healthier, and happier
           humans.
         </h3>
-      </div>
+      </Title>
       <h4 className={classes["sub-title"]}>
         Fitness is no longer a nice- to- have, but of utmost necessity for long
         and healthy living.{" "}
@@ -66,8 +68,10 @@ const HealthAndWellness = () => {
         </div>
       </div>
       <ImportantMessage classValue={classes["take-test-wrapper"]}>
-        <p><span>Take This Text </span>to determine where to start your fitness journey.</p>
+        <p><span>Take this test </span>to determine where to start your fitness journey.</p>
       </ImportantMessage>
+      <Programs />
+      <BrandsWorkedWith />
     </div>
   );
 };

@@ -1,0 +1,11 @@
+.img-ref {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    min-width: 25%;
+    border: 1px solid;
+    margin: 0;
+    background: var(--white);
+    color: var(--black);
+    padding: 0.5rem 1.5rem;
+}

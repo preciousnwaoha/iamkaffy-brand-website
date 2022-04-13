@@ -1,0 +1,36 @@
+.programs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 1rem 1rem;
+}
+
+.programs-items-wrapper {
+    width: 100%;
+}
+
+
+@media screen and (min-width:760px) {
+    .programs {
+        margin: 2rem 2rem;
+    }
+}
+@media screen and (min-width: 580px) {
+    
+    .programs-items-wrapper {
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .programs-items-wrapper {
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+}

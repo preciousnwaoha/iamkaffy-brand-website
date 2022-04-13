@@ -1,0 +1,99 @@
+.featured {
+    margin: 1rem;
+}
+
+.featured h4 {
+    background: var(--white);
+    margin: 0;
+    color: var(--secondary);
+    padding: 1rem 2rem;
+}
+
+.featured-show {
+    position: relative;
+}
+
+.featured-image-overlay {
+    position: absolute;
+    top: 3.25rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 3.25rem);
+    overflow: hidden;
+
+}
+.featured-image-overlay:hover, .featured-image-overlay:focus {
+    backdrop-filter: brightness(35%);
+}
+
+.featured-image-overlay a {
+    position: absolute;
+    top: calc(100% + 3rem);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 0.85rem 1.5rem;
+    color: var(--secondary);
+    background: var(--white);
+}
+
+.featured-image-overlay a:hover, .featured-image-overlay a:focus {
+    color: var(--primary);
+}
+.featured-image-overlay:hover a, .featured-image-overlay:focus a {
+    animation: showUp .3s ease-out forwards;
+}
+
+.featured-hide {
+    display: none;
+}
+
+@keyframes showUp {
+    0% {
+        top: calc(100% + 3rem); 
+    }
+
+    100% {
+        top: 50%;
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .featured {
+        margin: 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .featured-show {
+        width: calc(50% - 0.25rem);
+    }
+    .featured-hide {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: calc(50% - 0.25rem);
+        background: var(--black);
+        
+  box-shadow: 0px 0px 8px 0px var(--shadow-2);
+        padding: 2rem;
+    }
+    .featured-hide p {
+        /* min-height: 50%; */
+        margin: 0;
+        width: 100%;
+        color: var(--white);
+    }
+    .featured-hide a {
+        align-self: flex-end;
+        display: inline-block;
+        padding: 0.85rem 1.5rem;
+        color: var(--secondary);
+        background: var(--white);
+    }
+    
+    .featured-hide a:hover, .featured-hide a:focus {
+        color: var(--primary);
+    }
+}
+

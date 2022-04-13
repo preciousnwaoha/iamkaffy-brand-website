@@ -1,13 +1,13 @@
 import React from "react";
 import classes from "./Button.module.css";
 
-const Button = ({ children, classValue, clickAction }) => {
-  const btnClasses = `${classes.button} ${classValue || ""}`;
+const Button = ({ children, className, clickAction }) => {
+  const btnClasses = `${classes.button} ${className || ""}`;
 
   return (
-    <div className={btnClasses} onClick={clickAction}>
+    <button className={btnClasses} onClick={clickAction}>
       {children}
-    </div>
+    </button>
   );
 };
 

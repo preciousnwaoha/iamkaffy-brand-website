@@ -5,9 +5,8 @@
     background: var(--black);
     color: var(--white);
     border-radius: 0.5rem;
-    width: 100%;
     padding: 1rem;
-    margin: 1rem 0;
+    margin: 1rem;
 }
 
 .important span {
@@ -20,6 +19,6 @@
 @media screen and (min-width: 760px){
     .important {
     padding: 1rem 2rem;
-    margin: 2rem 0;
+    margin: 2rem 2rem;
     }
 }

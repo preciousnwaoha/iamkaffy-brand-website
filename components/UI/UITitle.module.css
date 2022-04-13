@@ -1,0 +1,14 @@
+.ui-title {
+    margin: 1rem auto;
+    max-width: 60%;
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 760px) {
+    .ui-title {
+        font-size: 2rem;
+    }
+}
+

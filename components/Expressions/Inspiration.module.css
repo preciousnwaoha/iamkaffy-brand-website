@@ -1,7 +1,43 @@
 .inspire {
-    border: 1px solid red;
-    width: 100%;
-    max-width: 1366px;
-    margin: auto;
-    min-height: 100vh;
+  border: 1px solid red;
+  background: var(--black);
+  width: 100%;
+  max-width: 1366px;
+  margin: auto;
+  min-height: 100vh;
+}
+
+.inspire-title {
+  background: var(--black);
+  box-shadow: 0px 0px 8px 0px var(--shadow-2);
+}
+
+.text-wrapper {
+  margin: 0 1rem;
+  padding: 1.5rem;
+  box-shadow: 0px 0px 8px 0px var(--shadow-2);
+}
+
+.text-wrapper p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--white);
+  text-align: justify;
+  text-indent: 2rem;
+}
+
+
+@media screen and (min-width: 760px) {
+  
+
+  .text-wrapper {
+    margin: 0 2rem;
+  }
+
+  .text-wrapper p {
+    line-height: 1.5rem;
+    text-align: left;
+    text-indent: 0;
+  }
 }
