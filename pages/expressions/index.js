@@ -6,6 +6,7 @@ import Inspiration from '../../components/Expressions/Inspiration'
 import Arts from '../../components/Expressions/Arts'
 import ExpressionsLanding from '../../components/Expressions/ExpressionsLanding'
 import Entertainment from '../../components/Expressions/Entertainment'
+import Business from '../../components/Expressions/Business'
 import Footer from '../../components/Layout/Footer'
 import styles from "../../styles/Home.module.css"
 
@@ -25,6 +26,7 @@ const Expressions = () => {
        <Inspiration />
        <Arts />
        <Entertainment />
+       <Business />
       </main>
       <Footer />
     </div>

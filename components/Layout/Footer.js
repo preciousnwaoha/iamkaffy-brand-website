@@ -16,7 +16,7 @@ const Footer = () => {
 
         </div>
         <div className={classes["btn-wrapper"]}>
-          <Button classValue={classes["btn"]}>
+          <Button className={classes["footer-btn"]}>
               Contact
           </Button>
         </div>

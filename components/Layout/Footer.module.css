@@ -32,8 +32,14 @@
     margin-bottom: 0;
 }
 
-.btn {
-    background: var(--secondary);
+.footer-btn {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.footer-btn:hover, .footer-btn:focus {
+    background: var(--black);
+    color: var(--primary);
 }
 
 @media screen and (min-width: 760px) {
