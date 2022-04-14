@@ -7,6 +7,7 @@
 }
 
 .title h2 {
+    width: 100%;
   font-size: 1.75rem;
   margin: 0;
   margin-bottom: 1rem;
@@ -15,6 +16,7 @@
 }
 
 .title h3 {
+    width: 100%;
   margin: 0;
   display: inline-block;
   font-size: 1.4rem;

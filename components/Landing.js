@@ -24,6 +24,7 @@ const Landing = () => {
             width={image.width}
             height={image.height}
             layout="responsive"
+            priority={true}
             className={classes.image}
           />
         ))}

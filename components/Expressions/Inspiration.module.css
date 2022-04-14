@@ -1,10 +1,10 @@
 .inspire {
-  border: 1px solid red;
   background: var(--black);
   width: 100%;
   max-width: 1366px;
   margin: auto;
-  min-height: 100vh;
+  padding: 1rem 0;
+  /* min-height: 100vh; */
 }
 
 .inspire-title {
@@ -29,6 +29,7 @@
 
 
 @media screen and (min-width: 760px) {
+
   
 
   .text-wrapper {

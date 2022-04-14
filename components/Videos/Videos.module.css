@@ -1,0 +1,24 @@
+ .videos {
+    border: 2px solid yellow;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.videos-inner {
+    border: 2px solid blue;
+   margin: 0 1rem;
+     /* white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto; */
+}
+
+
+@media screen and (min-width: 760px) {
+    .videos {
+        padding: 2rem 0;
+    }
+
+    .videos-inner {
+        margin: 0 2rem;
+    }
+}

@@ -4,9 +4,9 @@ import classes from "./Service.module.css"
 
 const Service = ({ name }) => {
   return (
-    <div className={classes.service}>
-        
-    </div>
+    <li className={classes.service}>
+        {name}
+    </li>
   )
 }
 

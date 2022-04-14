@@ -2,6 +2,7 @@ import React from "react";
 import Title from "./Title";
 import Services from "../Services/Services"
 import classes from "./Arts.module.css";
+import ImportantMessage from "../UI/ImportantMessage";
 
 const Arts = () => {
   return (
@@ -27,6 +28,10 @@ const Arts = () => {
         </p>
       </div>
       <Services />
+      
+      <ImportantMessage className={classes["arts-quote"]}>
+        <h4>Art is a piece of communication tool used to express the unspoken and open the eyes to the unseen.</h4>
+      </ImportantMessage>
     </div>
   );
 };

@@ -1,0 +1,20 @@
+.entertainment {
+    border: 1px solid red;
+    width: 100%;
+    max-width: 1366px;
+    padding-bottom: 1rem;
+}
+
+.entertainment h4 {
+    border: 1px solid red;
+    margin: 1rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--black);
+}
+
+@media screen and (min-width: 760px) {
+    .entertainment h4 {
+        margin: 1rem 2rem;
+    }
+}

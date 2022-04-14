@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 1366px;
   margin: auto;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .sub-title {
@@ -14,13 +14,17 @@
 }
 
 .arts-text {
-  border: 1px solid red;
-  margin: 0 1rem;
+  margin: 1rem;
   text-align: left;
 }
 .arts-text p {
     margin: 0;
     margin-bottom: 0.5rem;
+}
+
+.arts-quote {
+    text-align: center;
+    font-size: 1.25rem;
 }
 
 @media screen and (min-width: 760px) {
@@ -32,7 +36,7 @@
   }
 
   .arts-text {
-    margin: 0 auto;
+    margin: 1rem auto;
     width: 60%;
     text-align: center;
 

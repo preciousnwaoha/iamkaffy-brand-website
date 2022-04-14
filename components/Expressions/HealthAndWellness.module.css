@@ -3,10 +3,8 @@
   width: 100%;
   max-width: 1366px;
   margin: auto;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
-
-
 
 .sub-title {
   font-size: 1.1rem;
@@ -37,23 +35,25 @@
 }
 
 .message-text {
-    margin: 0;
-    padding: 2rem 0;
+  margin: 0;
+  padding: 2rem 0;
 }
 
 .ijoda-link {
-    color: var(--primary);
-    font-weight: 500;
-    cursor: pointer;
+  color: var(--primary);
+  font-weight: 500;
+  cursor: pointer;
 }
-.ijoda-link:hover, .ijoda-link:focus {
-    color: var(--secondary);
+.ijoda-link:hover,
+.ijoda-link:focus {
+  color: var(--secondary);
 }
 
-.take-text-wrapper span {
+.take-test-span {
   font-weight: 600;
-  color: var(--white);
+  color: var(--primary);
   font-size: 1.25rem;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 760px) {

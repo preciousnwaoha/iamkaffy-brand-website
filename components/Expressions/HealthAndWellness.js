@@ -33,7 +33,7 @@ const HealthAndWellness = () => {
               layout="responsive"
               className={classes["message-item_image"]}
             />
-            <p className={classes["message-item_image-ref"]}>UNSPLASH</p>
+            <p className={classes["message-item_image-ref"]}>IJODA</p>
           </div>
           <p className={classes["message-text"]}>
             Through{" "}
@@ -63,12 +63,12 @@ const HealthAndWellness = () => {
               layout="responsive"
               className={classes["message-item_image"]}
             />
-            <p className={classes["message-item_image-ref"]}>UNSPLASH</p>
+            <p className={classes["message-item_image-ref"]}>BODY BACK</p>
           </div>
         </div>
       </div>
-      <ImportantMessage classValue={classes["take-test-wrapper"]}>
-        <p><span>Take this test </span>to determine where to start your fitness journey.</p>
+      <ImportantMessage className={classes["take-test-wrapper"]}>
+        <p><span className={classes["take-test-span"]}>Take this test </span>to determine where to start your fitness journey.</p>
       </ImportantMessage>
       <Programs />
       <BrandsWorkedWith />

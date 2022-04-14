@@ -1,10 +1,10 @@
 import React from 'react'
 import classes from "./ImportantMessage.module.css"
 
-const ImportantMessage = ({ children, classValue }) => {
-    const importantMsgClasses = `${classes.important} ${classValue || ""}`
+const ImportantMessage = ({ children, className }) => {
+ 
   return (
-    <div className={importantMsgClasses}>
+    <div className={`${classes.important} ${className || ""}`}>
         {children}
     </div>
   )

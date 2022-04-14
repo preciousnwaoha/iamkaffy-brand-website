@@ -37,12 +37,12 @@ const Inspiration = () => {
         </p>
       </div>
       <Featured
-        imgPath="/images/fit_breaking-bad-1.jpg"
-        imgW="400"
-        imgH="400"
+        imgPath="/images/kaffy-photo-4.jpg"
+        imgW="640"
+        imgH="517"
         name="CNN"
         description="Featured on News Channel CNN"
-        featuredLink={"/"}
+        featuredLink={"https://www.instagram.com/reel/CI_HfTXBwEv/?utm_source=ig_web_copy_link"}
         className={classes["cnn-feature"]}
       />
     </div>
