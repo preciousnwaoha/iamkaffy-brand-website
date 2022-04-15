@@ -1,40 +1,41 @@
 import React from "react";
 import Image from "next/image";
 import classes from "./MoreThanADancer.module.css";
+import UIBigTitle from "../UI/UIBigTitle";
 
 const DEFAULT_MTAD_DATA = [
   {
     id: "mtad1",
-    imgpath: "/images/orange1.JPEG",
-    imgw: "2299",
-    imgh: "3218",
+    imgpath: "/images/kaffy-photo-11.jpg",
+    imgw: "400",
+    imgh: "324",
     title: "Creative",
     description:
       "Lays out the characters of horizontal scripts naturally (upright), as well as the glyphs for vertical scripts",
   },
   {
     id: "mtad2",
-    imgpath: "/images/orange2.JPEG",
+    imgpath: "/images/orange9.JPEG",
     title: "Entrepreneur",
     imgw: "2299",
-    imgh: "3218",
+    imgh: "3128",
     description:
       "Lays out the characters of horizontal scripts naturally (upright), as well as the glyphs for vertical scripts",
   },
   {
     id: "mtad3",
-    imgpath: "/images/orange3.JPEG",
+    imgpath: "/images/kaffy-photo-6.webp",
     title: "Coach",
-    imgw: "2299",
-    imgh: "3218",
+    imgw: "768",
+    imgh: "768",
     description:
       "Lays out the characters of horizontal scripts naturally (upright), as well as the glyphs for vertical scripts",
   },
   {
     id: "mtad4",
-    imgpath: "/images/orange4.JPEG",
-    imgw: "2299",
-    imgh: "3218",
+    imgpath: "/images/kaffy-photo-15.JPEG",
+    imgw: "2800",
+    imgh: "2240",
     title: "Influencer",
     description:
       "Lays out the characters of horizontal scripts naturally (upright), as well as the glyphs for vertical scripts",
@@ -51,24 +52,18 @@ const DEFAULT_MTAD_DATA = [
 ];
 
 const MoreThanADancer = () => {
-
-  
-
   return (
     <div className={classes.more}>
-      <h2 className={classes["more-title"]}>More Than A Dancer</h2>
+      <UIBigTitle
+        titleText={"More Than A Dancer"}
+        className={classes["more-title"]}
+      />
       <div className={classes["more-content"]}>
-      <div className={classes["title-2-wrapper"]}>
-          <h4 className={classes["title-2"]}>
-            More Than A Dancer
-          </h4>
-        </div>
-        <div className={classes["more-show"]}>
-          {DEFAULT_MTAD_DATA.map((item) => (
-            <div key={item.id} className={classes["more-show-inner"]}>
-              <div className={classes["more-inner-image-wrapper"]}>
-                 <Image
-                 priority
+        {DEFAULT_MTAD_DATA.map((item) => (
+          <div key={item.id} className={classes["more-content-inner"]}>
+            <div className={classes["more-content-inner-image-wrapper"]}>
+              <Image
+                priority
                 src={item.imgpath}
                 className={classes.fader}
                 alt={`${item.title} side of kaffy`}
@@ -76,18 +71,14 @@ const MoreThanADancer = () => {
                 height={item.imgh}
                 layout="responsive"
               />
-              </div>
-
-             <div className={classes["more-show-inner-text"]}>
-               <h3>{item.title}</h3>
-              <p>{item.description}</p>
-             </div>
-
-              
             </div>
-          ))}
-        </div>
-        
+
+            <div className={classes["more-content-inner-text"]}>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -1,0 +1,15 @@
+.ui-big-title {
+    margin: 2rem auto;
+    max-width: 60%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--black);
+}
+
+@media screen and (min-width: 760px) {
+    .ui-big-title {
+        font-size: 2.25rem;
+    }
+}
+

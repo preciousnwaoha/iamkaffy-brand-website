@@ -1,0 +1,53 @@
+.impact-landing {
+  width: 100%;
+  max-width: 1366px;
+  height: 50vh;
+  background: url("/images/ijoda-3.jpg");
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.backdrop {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(50%);
+}
+
+.impact-angle-div {
+  background: var(--primary-trans);
+  position: absolute;
+  top: 0;
+  left: -60vw;
+  width: 100vw;
+  height: 100vw;
+  transform: rotate(45deg);
+  border-radius: 1rem;
+  -moz-box-shadow: 0 0 5px var(--shadow-3);
+  -webkit-box-shadow: 0 0 5px var(--shadow-3);
+  box-shadow: 0 0 5px var(--shadow-3);
+  backdrop-filter: blur(8px);
+}
+
+.title {
+  /* width: auto; */
+  display: inline-block;
+  position: absolute;
+  color: var(--white);
+  top: 45%;
+  left: 6rem;
+  font-weight: 700;
+  font-size: 3rem;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 760px) {
+  .title {
+    left: 6.5rem;
+  }
+  .impact-angle-div {
+    left: -30vh;
+    width: 50vw;
+    height: 50vw;
+  }
+}

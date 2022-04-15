@@ -3,6 +3,8 @@ import Image from "next/image";
 import Button from "../UI/Button";
 import Scroll from "../UI/Scroll";
 import classes from "./Story.module.css";
+import UIBigTitle from "../UI/UIBigTitle";
+import UITitle from "../UI/UITitle";
 
 const Story = () => {
   const [showingMore, setShowingMore] = useState(false);
@@ -15,7 +17,7 @@ const Story = () => {
 
   return (
     <div className={classes.story}>
-      <h2 className={classes["story-title"]}>Kaffy&apos;s Story</h2>
+      <UIBigTitle titleText={"Kaffy's Story"} className={classes["story-title"]} />
       <div className={classes["story-content"]}>
         <div className={classes["story-image-case"]}>
           <Image
@@ -185,7 +187,7 @@ const Story = () => {
           </div>
         </div>
         <div className={classes["story-text"]}>
-          <h3>A Brief Inspirational Synopsis of Kaffy’sLife </h3>
+          <UITitle titleText={"A Brief Inspirational Synopsis of Kaffy’s Life"} className={classes["sub-title"]} />
           <div className={"story-text-shown"}>
             <p>
               The Self-taught Dance Queen rose, to a World Guinness Record
@@ -259,7 +261,7 @@ const Story = () => {
             </div>
           )}
 
-          <Button classValue={classes.button} clickAction={readMoreHandler}>
+          <Button className={classes["story-btn"]} clickAction={readMoreHandler}>
             {showingMore ? "SHOW LESS" : "READ MORE"}
           </Button>
         </div>

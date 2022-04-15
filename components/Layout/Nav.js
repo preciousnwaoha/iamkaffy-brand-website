@@ -62,7 +62,7 @@ const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/impact">
             <a>Impact</a>
           </Link>
         </li>
