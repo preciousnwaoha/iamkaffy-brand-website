@@ -1,0 +1,23 @@
+.side-scroll-dots {
+    display: inline-block;
+    margin: 1rem auto;
+    padding: 0;
+
+}
+
+.side-scroll-dots div {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: var(--primary);
+    border-radius: 50%;
+    margin: 0 0.5rem;
+}
+
+@media  screen and (min-width: 760px) {
+    .side-scroll-dots div {
+        width: 15px;
+        height: 15px;
+    }
+    
+}

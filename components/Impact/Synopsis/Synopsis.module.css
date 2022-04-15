@@ -1,3 +1,19 @@
 .synopsis {
-    border: 1px solid red;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.synopsis-content {
+    margin: 1rem;
+    border-radius: 1rem;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+
+@media screen and (min-width: 760px) {
+    .synopsis-content {
+        margin: 0 2rem;
+    }
 }

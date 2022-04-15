@@ -11,7 +11,7 @@
 .backdrop {
     width: 100%;
     height: 100%;
-    backdrop-filter: brightness(50%);
+    backdrop-filter: brightness(60%);
 }
 
 .impact-angle-div {
@@ -46,6 +46,7 @@
     left: 6.5rem;
   }
   .impact-angle-div {
+    top: -5vw;
     left: -30vh;
     width: 50vw;
     height: 50vw;

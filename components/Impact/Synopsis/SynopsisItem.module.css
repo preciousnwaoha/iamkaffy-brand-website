@@ -1,0 +1,37 @@
+.synopsis-item {
+    display: inline-block;
+    width: 40vw;
+    margin-right: 0.5rem;
+}
+
+.image-wrapper {
+    position: relative;
+    padding-top: 100%;
+}
+
+.image-wrapper-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.text-wrapper h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+.text-wrapper p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 760px) {
+    .synopsis-item {
+        width: 30vw;
+    }
+}
