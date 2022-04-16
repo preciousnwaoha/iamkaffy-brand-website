@@ -5,11 +5,11 @@
     justify-content: space-between;
     background: var(--white);
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 60px);
     max-width: 1366px;
     margin: auto;
-    padding: 60px 0 0 0;
-    padding-bottom: 1.5rem;
+    padding: 0;
+    padding-bottom: 0;
     overflow: hidden;
 }
 
@@ -26,10 +26,11 @@
 .image-case {
     display: inline-block;
     position: absolute;
-    top: 60px;
+    top: 0;
     right: -15%;
     width: 100%;
     height: calc(100vh - 60px);
+    border: 1px solid red;
     z-index: 1;
 }
 
@@ -39,15 +40,8 @@
     width: 100%;
     height: 100%;
     margin-top: 1.5rem;
-    overflow-y: auto;
     padding: 1rem;
     z-index: 2;
-}
-
-.landing-text-side::-webkit-scrollbar {
-    width: 4px;
-    background-color: var(--black);
-    border-radius: 2px;
 }
 
 .hero-text {
@@ -75,6 +69,7 @@ text-orientation: sideways;
     color: var(--primary);
     display: inline-block;
     text-align: justify;
+    white-space: nowrap;
 }
 
 .sub-tagline {
@@ -86,7 +81,7 @@ text-orientation: sideways;
 
 .p-tags {
     margin-top: 1rem;
-    width: 100%;
+    width: 60%;
 }
 
 .p-tags p {
@@ -102,10 +97,13 @@ text-orientation: sideways;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    width: 100%;
+    width: 55%;
     padding: 0 1rem;
-    
+    border: 1px solid red;
+    align-self: flex-end;
     text-align: center;
+    z-index: 1;
+    
 }
 
 
@@ -117,15 +115,16 @@ text-orientation: sideways;
     width: 100%;
     color: var(--white);
     z-index: 1;
+    backdrop-filter: blur(3px);
 }
 .record h4 {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 400;
     font-style: italic;
     margin: 0;
 }
 .record p {
-    font-size: 0.65rem;
+    font-size: 0.85rem;
     font-style: italic;
 }
 
@@ -133,7 +132,7 @@ text-orientation: sideways;
     .landing {
         flex-direction: row;
         justify-content: space-between;
-        height: 100vh;
+        /* height: calc(100vh - 60px); */
         padding: 60px 2rem 0 2rem;
     }
 
@@ -143,6 +142,8 @@ text-orientation: sideways;
     }
     .landing-text-side {
         max-width: 70%;
+        border: 1px solid red;
+        /* width: 100%; */
         padding: 0 1.5rem;
     }
     .hero-text {
@@ -161,6 +162,10 @@ text-orientation: sideways;
         font-size: 1.4rem;
         line-height: 1.4rem;
     }
+
+    .p-tags {
+        width: 90%;
+    }
     
     .record-image-side {
         position: relative;
@@ -177,9 +182,7 @@ text-orientation: sideways;
 }
 
 @media screen and (min-width: 900px) {
-    .p-tags {
-        width: 60%;
-    }
+    
     .record h4 {
         font-size: 0.9rem;
     }

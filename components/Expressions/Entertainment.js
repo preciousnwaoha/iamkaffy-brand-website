@@ -3,7 +3,7 @@ import Videos from "../Videos/Videos";
 import classes from "./Entertainment.module.css";
 import Title from "./Title";
 
-const DEFAULT_VIDEOS = [
+export const DEFAULT_VIDEOS = [
     {
         id: "vid1",
         url: "https://youtu.be/Rq5SEhs9lws",

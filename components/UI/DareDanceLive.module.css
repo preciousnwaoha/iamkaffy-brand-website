@@ -1,6 +1,6 @@
 .dare-dance-live {
     display: flex;
-    height: 30vh;
+    height: 25vh;
     width: 100%;
 }
 
@@ -29,7 +29,7 @@
 
 @media screen and (min-width: 760px) {
     .dare-dance-live {
-        height: 40vh;
+        height: 35vh;
     }
 
     .dare-dance-live div {

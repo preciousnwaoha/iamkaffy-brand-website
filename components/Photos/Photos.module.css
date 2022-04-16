@@ -1,0 +1,27 @@
+.photos {
+    /* display: flex; */
+    margin:  1rem;
+    /* border-radius: 1rem; */
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: auto;
+    padding: 1rem 0;
+    
+}
+
+.photos {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.photos::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+}
+
+@media screen and (min-width: 760px) {
+    .photos {
+        margin: 1rem 2rem;
+    }
+}

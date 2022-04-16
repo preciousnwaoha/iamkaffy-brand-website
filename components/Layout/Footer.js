@@ -1,4 +1,5 @@
 import React from "react";
+import Social from "../Contact/Socials"
 import Button from "../UI/Button";
 import DareDanceLive from "../UI/DareDanceLive";
 import Logo from "../UI/Logo";
@@ -12,9 +13,7 @@ const Footer = () => {
         <div className={classes["logo-wrapper"]}>
           <Logo classValue={classes.logo} />
         </div>
-        <div className={classes.socials}>
-
-        </div>
+        <Social className={classes["footer-socials"]} />
         <div className={classes["btn-wrapper"]}>
           <Button className={classes["footer-btn"]}>
               Contact

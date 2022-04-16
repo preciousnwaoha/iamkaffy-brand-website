@@ -16,15 +16,21 @@
     display: inline-block;
 }
 .logo {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
-.socials {
-    margin-bottom: 1rem;
-    display: inline-block;
-    border: 1px solid var(--primary);
+.footer-socials {
+    align-self: center;
+}
+
+.footer-socials a {
 
 }
+
+.footer-socials a:hover {
+    color:  var(--secondary);
+}
+
 
 .btn-wrapper {
     display: flex;
@@ -33,13 +39,13 @@
 }
 
 .footer-btn {
-    background: var(--primary);
+    background: var(--secondary);
     color: var(--white);
+    font-weight: 500;
 }
 
-.footer-btn:hover, .footer-btn:focus {
-    background: var(--black);
-    color: var(--primary);
+.footer-btn:hover {
+    color: var(--black);
 }
 
 @media screen and (min-width: 760px) {

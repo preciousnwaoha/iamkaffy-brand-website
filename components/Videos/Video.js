@@ -5,17 +5,14 @@ import classes from "./Video.module.css";
 const Video = ({ title, url }) => {
   return (
     <div className={classes["video"]}>
-      <p>{title}</p>
+      <p className={classes.title}>{title}</p>
       <div className={classes["player-wrapper"]}>
       {/* <ReactPlayer
-          className={classes['react-player']}
-          url={url}
+          className='react-player'
+          url='https://www.youtu.be/yaOGwIPIce4'
           width='100%'
           height='100%'
-          controls= {false}
-          volume={1}
-          muted={true}
-          getDuration
+          control=""
         /> */}
       </div>
     </div>

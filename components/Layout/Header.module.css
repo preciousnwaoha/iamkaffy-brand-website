@@ -1,15 +1,14 @@
 .header {
-    position: fixed;
-    top: calc(2rem - 2px);
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: sticky;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 1366px;
     height: 60px;
-    background: transparent;
+    background: var(--white);
     padding: 0 1rem;
     z-index: 100;
     margin: 0 auto;

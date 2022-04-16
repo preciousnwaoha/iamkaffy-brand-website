@@ -1,4 +1,5 @@
 import React from "react";
+import HorizontalScroll from "react-scroll-horizontal";
 import UIBigTitle from "../../UI/UIBigTitle";
 import SynopsisItem from "./SynopsisItem";
 import classes from "./Synopsis.module.css";
@@ -50,7 +51,7 @@ const Synopsis = () => {
           />
         ))}
       </div>
-      <SideScrollDots />
+      <SideScrollDots className={classes["synopsis-side-scroll-dots"]} />
     </div>
   );
 };

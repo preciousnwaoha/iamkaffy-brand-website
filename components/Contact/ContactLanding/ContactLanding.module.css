@@ -1,0 +1,60 @@
+.contact-landing {
+    position: relative;
+    background: var(--white);
+    width: 100%;
+    max-width: 1366px;
+    overflow: hidden;
+}
+
+.cut-div {
+    display: none;
+    background: var(--white);
+    position: absolute;
+    top: -10%;
+    left: -50%;
+    transform: rotate(-5deg);
+    width: 200%;
+    height: 200px;
+    /* z-index: 1; */
+}
+
+.title-wrapper {
+    text-align: center;
+    margin: 0 1rem;
+    margin-top: 60px;
+    padding-top: 2rem;
+    /* z-index: 10; */
+}
+.title-wrapper h1 {
+    text-align: center;
+    font-weight: 700px;
+    font-size: 2.5rem;
+    /* margin-top: 2rem; */
+}
+.title-wrapper h3 {
+    text-align: center;
+    font-weight: 400;
+}
+
+.contact-options-wrapper {
+    text-align: center;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 760px) {
+    .title-wrapper {
+        margin: 0 2rem;
+        margin-top: 60px;
+    }
+
+    .title-wrapper h1 {
+        font-size: 2.85rem;
+    }
+
+    .contact-options-wrapper {
+        margin: 1rem 2rem;
+    }
+}

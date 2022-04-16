@@ -21,6 +21,8 @@
   padding-top: 100%;
   margin-bottom: 0.5rem;
   overflow: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .more-content-inner-image-wrapper {
@@ -65,7 +67,8 @@
   font-size: 1.5rem;
   padding: 1rem;
   margin: 0;
-  transform: translateY(100%);
+  margin-bottom: 2rem;
+  transform: translateY(calc(100% + 2rem));
   color: white;
   font-weight: 400;
 }
@@ -76,10 +79,10 @@
 
 @keyframes showUp {
   0% {
-    transform: translateY(100%);
+    transform: translateY(calc(100% + 2rem));
   }
   90% {
-    transform: translateY(-10%);
+    transform: translateY(calc(-10%));
   }
   100% {
     transform: translateY(0);

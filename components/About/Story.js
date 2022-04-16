@@ -206,7 +206,7 @@ const Story = () => {
               individuals across the world.
             </p>
             <p>
-              <b>Nigerian-born and raised</b>, Kaffyshe had a dream just like
+              <b>Nigerian-born and raised</b>, Kaffy had a dream just like
               every child of becoming an Aeronautical Engineer, until she
               discovered her passion for dance. Against all odds and opposition
               from her loved ones, she successfully pioneered the African dance
@@ -215,7 +215,7 @@ const Story = () => {
                
             </p>
             <p>
-              In 2006, she broke a World Guinness Record for the longest dance
+              In 2006, she broke a <b>World Guinness Record</b> for the longest dance
               party with a record time of 55hrs 40 minutes. This singular feat
               was the game-changer that carved her unique journey, brought her
               to the limelight, and earned her a seat amongst iconic
@@ -226,7 +226,7 @@ const Story = () => {
             <div className={classes["story-text-hidden"]}>
               
               <p>
-                Her reach is felt worldwide with over 2 million followers across
+                Her reach is felt worldwide with over <b>2 million followers</b> across
                 social media. Her iconic choreography is synonymous with passion
                 and authenticity and widely accepted by individuals across
                 different age groups, races, and colors.
@@ -248,13 +248,13 @@ const Story = () => {
               </p>
 
               <p>
-                As Africa’s Foremost Dance Queen, Kaffy continues to be
+                As <b>Africa’s Foremost Dance Queen</b>, Kaffy continues to be
                 celebrated and has been awarded with several accolades and
                 recognitions for masterful performances and contributions to the
                 industry over the years. Her Award Walls include The
                 Inspirational Lady in the Creative Industry Award, Tribhal Women
                 of the Year Awards: Women of The Year in Entertainment (2018) to
-                mention a few. Recently, she received an honorary doctorate from
+                mention a few. Recently, she received an <b>honorary doctorate</b> from
                 Escae Benin University in recognition as a ‘pioneer in the
                 business of dance in Africa’.
               </p>

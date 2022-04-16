@@ -1,6 +1,6 @@
 .synopsis-item {
     display: inline-block;
-    width: 40vw;
+    width: 40%;
     margin-right: 0.5rem;
 }
 
@@ -32,6 +32,6 @@
 
 @media screen and (min-width: 760px) {
     .synopsis-item {
-        width: 30vw;
+        width: 35%;
     }
 }

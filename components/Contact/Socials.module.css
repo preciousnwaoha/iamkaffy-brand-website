@@ -1,0 +1,21 @@
+.social {
+  display: inline-block;
+  width: auto;
+  white-space: nowrap;
+}
+
+.social a {
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.instagram {
+  font-weight: 600;
+}
+
+.instagram:hover,
+.facebook:hover,
+.tiktok:hover,
+.youtube:hover {
+  /* color: var(--primary); */
+}

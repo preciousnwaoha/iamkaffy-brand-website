@@ -6,17 +6,17 @@ import classes from "./SuccessStories.module.css";
 
 const DEFAULT_SSs = [
   {
-    img: "/image/ijoda-1.jpg",
+    img: "/images/ijoda-1.jpg",
     title: "A Story from Kaffy's Impact 1",
     description: "desscription of story",
   },
   {
-    img: "/image/ijoda-2.jpg",
+    img: "/images/ijoda-2.jpg",
     title: "A Story from Kaffy's Impact 2",
     description: "desscription of story",
   },
   {
-    img: "/image/ijoda-2.jpg",
+    img: "/images/ijoda-2.jpg",
     title: "A Story from Kaffy's Impact 3",
     description: "desscription of story",
   },
