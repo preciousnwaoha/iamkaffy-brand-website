@@ -1,13 +1,57 @@
 .scroll {
     position: absolute;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
-    text-align: center;
+    /* text-align: center; */
     line-height: 40px;
     padding: 0 0;
+    margin: 0;
     border-radius: 50%;
     background: var(--black);
     color: var(--white);
     cursor: pointer;
+    
+}
+
+
+.bounceDown {
+    animation: bouncyDown 3s infinite;
+}
+
+.bounceUp {
+    animation: bouncyUp 3s infinite;
+}
+
+
+@keyframes bouncyUp {
+    0% {
+        transform: translateY(0);
+    }
+    80% {
+        transform: translateY(-20px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bouncyDown {
+    0% {
+        transform: translateY(0);
+    }
+    80% {
+        transform: translateY(20px);
+    }
+    90% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

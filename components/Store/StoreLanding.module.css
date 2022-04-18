@@ -1,0 +1,27 @@
+.store-landing {
+    position: relative;
+    background: var(--black);
+}
+
+.store-banner {
+    position: relative;
+    width: 100%;
+    height: calc(60vh - 60px);
+    overflow: hidden;
+    background: var(--black);
+}
+
+.store-banner-inner {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: var(--black);
+}
+
+.banner-image {
+    filter: brightness(25%);
+    object-fit: contain;
+    background: var(--black);
+}

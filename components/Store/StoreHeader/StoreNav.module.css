@@ -1,0 +1,147 @@
+.store-nav {
+    width: 90%;
+    max-width: 300px;
+    position: absolute;
+    top: 0;
+    left: -3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 60px);
+    z-index: 10;
+    background: var(--black);
+    color: var(--white);
+    padding: 0;
+    overflow-y: scroll;
+    transform: translateX(-100%);
+}
+
+.show-nav {
+    animation: showStoreNav .3s ease-in forwards;
+}
+
+.hideNav {
+    animation: hideStoreNav .3s ease-in forwards;
+}
+
+@keyframes showStoreNav {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes hideStoreNav {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.store-nav::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--primary)
+}
+
+.store-nav-logo {
+    align-self: center;
+    margin: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.store-exit-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0.5rem 0;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 30px;
+    color: var(--primary);
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+}
+
+.store-exit-icon:hover {
+    color: var(--white);
+}
+
+.store-nav-collection-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    /* width: 100%; */
+}
+
+.store-nav-collection-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.store-nav-collection-item:not(:last-of-type) {
+    border-bottom: 1px solid var(--primary);
+}
+
+.collection-name, .sub-collection-arrow {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    
+    cursor: pointer;
+
+}
+
+.collection-name {
+    color: var(--white);
+    /* border: 1px solid blue; */
+    width: 100%;
+}
+
+.collection-name:hover {
+    color: var(--primary);
+}
+
+.sub-collection-arrow {
+    color: var(--primary);
+    /* border: 1px solid green; */
+}
+
+.store-nav-acc {
+    /* border: 1px solid green; */
+    margin-top: 0.5rem;
+}
+
+.store-nav-acc-head {
+    color: var(--primary);
+    font-size: 0.85rem;
+    /* border: 1px solid red; */
+    padding: 0.5rem 1rem;
+}
+
+.store-nav-acc_item {
+    /* border: 1px solid yellow; */
+    padding: 1rem;
+}
+
+.store-nav-acc_item:hover {
+    color: var(--primary);
+}
+
+.store-nav-acc_item:not(:last-of-type) {
+    border-bottom: 1px solid var(--primary);
+}

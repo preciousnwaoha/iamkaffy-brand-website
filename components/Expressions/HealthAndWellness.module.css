@@ -18,6 +18,18 @@
 
 .message-item_image-wrapper {
   position: relative;
+  padding-top: 52.65%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.message-item_image-wrapper-inner {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .message-item_image-ref {
@@ -36,6 +48,8 @@
 .message-text {
   margin: 0;
   padding: 2rem 0;
+  
+  
 }
 
 .ijoda-link {
@@ -89,5 +103,7 @@
     text-align: justify;
     line-height: 1.5rem;
     padding: 2rem 1rem;
+    border-radius: 1rem;
+  overflow: hidden;
   }
 }

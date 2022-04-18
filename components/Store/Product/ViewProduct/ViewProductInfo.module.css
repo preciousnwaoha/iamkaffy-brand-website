@@ -1,0 +1,147 @@
+.view-product-info {
+    background: var(--shadow-2);
+    padding: 1rem 2rem;
+}
+
+.view-product-title {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 1rem 0 1rem 0;
+}
+
+.color-section {
+    margin: 1rem 0;
+}
+
+.color-title, .size-title, .quantity-title {
+    font-weight: 500;
+    color: rgb(123, 123, 123);
+    font-size: 0.75rem;
+    margin: 0.5rem 0;
+}
+
+.color-wrapper {
+}
+
+.color-wrapper .color {
+    display: inline-block;
+    margin-right: 1rem;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    cursor: pointer;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: var(--black);
+}
+
+
+
+.size-section {
+    margin: 1rem 0;
+}
+
+
+.size {
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    width: 40px;
+    height: 33px;
+    margin-right: 0.5rem;
+    color: var(--black);
+    border: 1px solid black;
+}
+
+.quantity-setter {
+    display: inline-block;
+}
+
+.quantity-setter div {
+    display: inline-block;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.increase-quantity {
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.decrease-quantity {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.price {
+    display: inline-block;
+    margin-top: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.add-to-cart-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+    background: rgb(78, 77, 76);
+    color: var(--white);
+    cursor: pointer;
+    border: none;
+}
+
+.add-to-cart-btn:hover {
+    background: var(--black);
+    color: var(--primary);
+}
+
+.buy-now-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+.buy-now-btn {
+    color: var(--primary);
+}
+
+.add-to-cart-btn, .buy-now-btn {
+    margin-bottom: 0.5rem;
+}
+
+.description, .specs {
+    font-size: 0.85rem;
+}
+
+.specs {
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+}
+
+.share {
+    display: inline-block;
+    margin: 2.5rem 0 1rem 0;
+    font-size: 0.75rem;
+    color: var(--black);
+    font-weight: 500;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid black;
+}
+
+@media screen and (min-width: 760px) {
+    .view-product-info {
+        width: calc(50%);
+        margin: 1rem 0;
+        
+    }
+}

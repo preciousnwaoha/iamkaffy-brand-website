@@ -29,11 +29,13 @@
 }
 
 .scroll-down {
-    bottom: 0;
-    left: 50%;
+    bottom: 40px;
+    left: calc(50% - 1rem);
     transform: translate(-50%, -50%);
-    background: var(--primary);
-    color: #fffaf7;
+}
+
+.scroll-down:hover {
+    color: var(--primary)
 }
 
 @media screen and (min-width: 760px) {

@@ -1,0 +1,36 @@
+.collection {
+    background: var(--white);
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.title {
+    margin: 1rem;
+    margin-top: 2rem;
+    /* color: var(--white); */
+}
+
+.subtitle {
+    margin: 1rem;
+    margin-top: 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.collection-items-wrapper {
+}
+
+
+.view-all-link {
+    background: var(--black);
+    display: inline-block;
+    color: var(--white);
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.5rem 1.5rem;
+    margin: 0 auto;
+}

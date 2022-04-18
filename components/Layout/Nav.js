@@ -67,11 +67,7 @@ const Nav = () => {
             <a>Home</a>
           </Link>
         </li>
-        <li>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
-        </li>
+        
         <li>
           <Link href="/expressions">
             <a>Expresions</a>
@@ -85,6 +81,16 @@ const Nav = () => {
         <li>
           <Link href="/vault">
             <a>The Vault (Media)</a>
+          </Link>
+        </li>
+        <li>
+            <Link href="/store">
+              <a>Store</a>
+            </Link>
+          </li>
+          <li>
+          <Link href="/about">
+            <a>About</a>
           </Link>
         </li>
         <li>
@@ -102,7 +108,7 @@ const Nav = () => {
       <div className={classes["theme-btn-wrapper"]}>
         <ThemeButton />
         <div className={classes.theme}></div>
-        <Menu classValue="menu-two" toggleSideNav={toggleSideNavHandler} />
+        <Menu className={classes["menu-icon"]} onClick={toggleSideNavHandler} />
       </div>
     </nav>
   );

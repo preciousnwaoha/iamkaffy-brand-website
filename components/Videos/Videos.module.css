@@ -1,15 +1,13 @@
  .videos {
-    border: 2px solid yellow;
     width: 100%;
     padding: 1rem 0;
 }
 
 .videos-inner {
-    border: 2px solid blue;
     margin: 0 1rem;
-    white-space: nowrap;
+    /* white-space: nowrap;
     overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-x: scroll; */
 }
 
 

@@ -36,16 +36,24 @@
 }
 .hide-side-nav {
     opacity: 1;
-    right: -252px;
+    
     animation: hide-side-nav 0.3s forwards;
     animation-delay: 0.3s;
+    display: none;
+    
+}
+
+.menu-icon {
+  margin-left: 1rem;
 }
 
 @keyframes hide-side-nav {
   0% {
+    right: -252px;
     opacity: 1;
   }
   100% {
+    right: -252px;
     opacity: 0;
   }
 }

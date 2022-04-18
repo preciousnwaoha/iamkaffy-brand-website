@@ -1,0 +1,46 @@
+.mailing-list{
+    padding: 1rem;
+    text-align: center;
+    background: var(--black);
+}
+
+.mailing-list h3 {
+    margin-top: 2rem 0;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--primary);
+}
+
+.mailing-list-form {
+    display: flex;
+}
+
+.mailing-list-form label {
+    display: none;
+}
+
+.mailing-list-form input {
+    padding: 0.65rem 1.5rem;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--primary);
+    outline: none;
+    background: transparent;
+    color: var(--primary);
+}
+
+.mailing-list-form button {
+    padding: 0.65rem 1.5rem;
+    color: var(--primary);
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+@media screen and (min-width: 760px) {
+    .mailing-list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}

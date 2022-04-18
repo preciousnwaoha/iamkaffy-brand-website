@@ -1,13 +1,31 @@
 import Head from 'next/head'
-import Accolades from '../components/About/Accolades'
-import MoreThanADancer from '../components/About/MoreThanADancer'
+import Services from "../components/Services/Services"
+import SuccessStories from "../components/Impact/SuccessStories"
+import GetInTouch from "../components/Contact/GetInTouch"
 import Story from '../components/About/Story'
 import Footer from '../components/Layout/Footer'
 import Header from '../components/Layout/Header'
 import Landing from '../components/Landing'
 import styles from '../styles/Home.module.css'
+import VaultVideos from '../components/Vault/VaultVideos'
+import BrandsWorkedWith from '../components/Expressions/BrandsWorkedWith'
+import Featured from '../components/Expressions/Featured'
 
-export default function Home() {
+
+const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems"
+
+export async function getServerSideProps() {
+  const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLEFMDQD6AJA0YKOE1v0IBCOU4lcqehIKc&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`)
+  const videosData = await res.json();
+  return {
+    props: {
+      videosData
+    }
+  }
+}
+
+
+export default function Home( { videosData }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -19,9 +37,21 @@ export default function Home() {
       <main className={styles.main}>
        <Header />
        <Landing />
+       
+       <Featured 
+        imgPath="/images/kaffy-photo-4.jpg"
+        imgW="640"
+        imgH="517"
+        name="CNN"
+        description="Featured on News Channel CNN"
+        featuredLink={"https://www.instagram.com/reel/CI_HfTXBwEv/?utm_source=ig_web_copy_link"}
+       />
+       <SuccessStories />
        <Story />
-       <MoreThanADancer />
-       <Accolades />
+       <VaultVideos videosData={videosData} />
+       <Services />
+       <BrandsWorkedWith />
+        <GetInTouch />
        
       </main>
       <Footer />

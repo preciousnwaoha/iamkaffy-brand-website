@@ -1,7 +1,13 @@
-import Head from 'next/head'
-import Header from '../../components/Layout/Header'
-import Footer from '../../components/Layout/Footer'
-import styles from "../../styles/Home.module.css"
+import Head from "next/head";
+import Header from "../../components/Layout/Header";
+import Footer from "../../components/Layout/Footer";
+import styles from "../../styles/Shop.module.css";
+import StoreLanding from "../../components/Store/StoreLanding";
+import StoreCollections from "../../components/Store/StoreCollections/StoreCollections";
+import Collection from "../../components/Store/StoreCollections/Collection";
+import MailingList from "../../components/Store/MailingList";
+import ViewProduct from "../../components/Store/Product/ViewProduct/ViewProduct";
+import ProductReviews from "../../components/Store/ProductReview/ProductReviews";
 
 const Store = () => {
   return (
@@ -12,12 +18,19 @@ const Store = () => {
       </Head>
 
       <main className={styles.main}>
-       <Header />
-       
+        <Header />
+        <StoreLanding />
+        <StoreCollections />
+        <Collection name={"T-Shirts"} isInStoreHome={true} />
+        <Collection name={"T-Shirts"} isInStoreHome={false} />
+        <Collection name={"For Dancers"} isInStoreHome={true} />
+        <ViewProduct />
+        <ProductReviews />
+        <MailingList />
       </main>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Store
+export default Store;

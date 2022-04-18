@@ -6,7 +6,19 @@ import VaultLanding from '../../components/Vault/VaultLanding'
 import VaultVideos from '../../components/Vault/VaultVideos'
 import VaultPhotos from '../../components/Vault/VaultPhotos'
 
-const Vault = () => {
+const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems"
+
+export async function getServerSideProps() {
+  const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLEFMDQD6AJA0YKOE1v0IBCOU4lcqehIKc&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`)
+  const videosData = await res.json();
+  return {
+    props: {
+      videosData
+    }
+  }
+}
+
+const Vault = ({ videosData}) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -17,7 +29,7 @@ const Vault = () => {
       <main className={styles.main}>
        <Header />
        <VaultLanding />
-       <VaultVideos />
+       <VaultVideos videosData={videosData} />
        <VaultPhotos />
       </main>
       <Footer />

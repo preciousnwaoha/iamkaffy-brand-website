@@ -6,7 +6,7 @@ const ExpressionsLanding = () => {
   return (
     <div className={classes["expressions-landing"]}>
       <h1>Kaffy&apos;s Expressions</h1>
-      <Scroll classValue={classes["scroll-down"]} />
+      <Scroll className={classes["scroll-down"]} scrollType={"scroll-down"} />
     </div>
   )
 }

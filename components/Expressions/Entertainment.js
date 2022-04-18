@@ -38,7 +38,7 @@ const Entertainment = () => {
         <h2>Entertainment</h2>
       </Title>
       <h4>She has produced numerous dance performances and choreography for different music genres - Afrobeats, Fuji, RnB etc.</h4>
-      <Videos videosData={DEFAULT_VIDEOS}/>
+      {/* <Videos videosData={DEFAULT_VIDEOS}/> */}
     </div>
   );
 };

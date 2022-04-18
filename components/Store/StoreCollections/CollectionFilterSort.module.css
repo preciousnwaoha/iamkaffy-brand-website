@@ -1,0 +1,7 @@
+.collection-filter-sort {
+    border: 2px solid red;
+    display: inline-block;
+    width: 80%;
+    height: 50px;
+    margin: 1rem;
+}

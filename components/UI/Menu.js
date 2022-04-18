@@ -1,10 +1,10 @@
 import React from 'react'
 import classes from "./Menu.module.css"
 
-const Menu = ({classValue, toggleSideNav}) => {
-    const menuClasses = `${classes.menu} ${classValue || " "}`
+const Menu = ({className, onClick}) => {
+    const menuClasses = `${classes.menu} ${className || " "}`
   return (
-    <div className={menuClasses} onClick={toggleSideNav}>
+    <div className={menuClasses} onClick={onClick}>
         <div></div>
         <div></div>
         <div></div>

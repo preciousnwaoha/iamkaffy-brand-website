@@ -1,0 +1,43 @@
+.product {
+    display: inline-block;
+    width: calc(50% - 1rem);
+    margin: 2rem 0.5rem;
+}
+
+.image-wrapper {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.image-wrapper-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.item-info-wrapper {
+
+}
+
+.item-name, .item-price {
+    font-size: 0.9rem;
+    color: var(--black);
+    margin: 0.5rem 0;
+}
+
+@media screen and (min-width: 760px) {
+    .product {
+        width: calc(33.33% - 1rem);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .product {
+        width: calc(25% - 1rem);
+    }
+}
