@@ -27,6 +27,7 @@
     outline: none;
     background: transparent;
     color: var(--primary);
+    cursor: pointer;
 }
 
 .mailing-list-form button {
@@ -35,6 +36,7 @@
     border: none;
     outline: none;
     background: transparent;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 760px) {

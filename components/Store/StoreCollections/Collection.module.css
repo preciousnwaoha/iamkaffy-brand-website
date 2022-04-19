@@ -10,7 +10,7 @@
 .title {
     margin: 1rem;
     margin-top: 2rem;
-    /* color: var(--white); */
+    color: var(--black);
 }
 
 .subtitle {
@@ -19,6 +19,7 @@
     text-align: center;
     font-weight: 600;
     font-size: 0.9rem;
+    color: var(--black);
 }
 
 .collection-items-wrapper {

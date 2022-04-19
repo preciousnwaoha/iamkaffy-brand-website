@@ -39,7 +39,7 @@ const DEFAULT_SERVICES = [
 const Services = () => {
   return (
     <div className={classes.services}>
-      <UITitle titleText={"Her Range of Tunkey Services Include"} />
+      <UITitle titleText={"Her Range of Tunkey Services Include"} className={classes.title} />
       <ul className={classes["services-items-wrapper"]}>
         {DEFAULT_SERVICES.map((service) => (
           <Service key={service.id} name={service.name} />

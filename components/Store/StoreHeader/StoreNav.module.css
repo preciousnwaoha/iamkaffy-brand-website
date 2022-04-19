@@ -9,11 +9,26 @@
     justify-content: space-between;
     height: calc(100vh - 60px);
     z-index: 10;
-    background: var(--black);
-    color: var(--white);
+    background: black;
+    color: white;
     padding: 0;
     overflow-y: scroll;
     transform: translateX(-100%);
+}
+
+.store-nav::-webkit-scrollbar {
+    width: 10px;
+    background: var(--white);
+}
+
+.store-nav::-webkit-scrollbar-thumb {
+    background: var(--primary-trans);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.store-nav::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-trans);
 }
 
 .show-nav {
@@ -75,7 +90,7 @@
 }
 
 .store-exit-icon:hover {
-    color: var(--white);
+    color: white;
 }
 
 .store-nav-collection-list {
@@ -107,7 +122,7 @@
 }
 
 .collection-name {
-    color: var(--white);
+    color: white;
     /* border: 1px solid blue; */
     width: 100%;
 }

@@ -95,6 +95,9 @@ const ProductReviews = () => {
   const writeReviewHandler = () => {
     console.log("write a review handled");
   };
+
+  const reviewExist = reviews.length > 0;
+
   return (
     <div className={classes["product-reviews"]}>
       <UIBigTitle titleText={"Product reviews"} className={classes.title} />
@@ -109,18 +112,23 @@ const ProductReviews = () => {
         write a review
       </button>
       <div className={classes["product-reviews-content"]}>
-        {reviews.map((review) => (
-          <ProductReview
-            key={`review${review.reviewerName}${reviews.indexOf(review)}`}
-            reviewerName={review.reviewerName}
-            rating={review.rating}
-            itemName={review.itemName}
-            date={review.date}
-            itemType={review.itemType}
-            reviewMessage={review.reviewMessage}
-
-          />
-        ))}
+        {reviewExist ? (
+          reviews.map((review) => (
+            <ProductReview
+              key={`review${review.reviewerName}${reviews.indexOf(review)}`}
+              reviewerName={review.reviewerName}
+              rating={review.rating}
+              itemName={review.itemName}
+              date={review.date}
+              itemType={review.itemType}
+              reviewMessage={review.reviewMessage}
+            />
+          ))
+        ) : (
+          <p className={classes["be-first-review"]}>
+            Be the first to write a review
+          </p>
+        )}
       </div>
     </div>
   );

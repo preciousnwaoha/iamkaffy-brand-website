@@ -5,7 +5,9 @@
     padding-bottom: 1rem;
 }
 
-
+.title {
+    color: var(--black);
+}
 
 .services-items-wrapper {
     list-style: none;

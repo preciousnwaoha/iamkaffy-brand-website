@@ -43,6 +43,7 @@
   width: 100%;
   padding: 1rem 1rem;
   border-radius: 0 0 1rem 1rem;
+  color: var(--black);
   /* border: 1px solid black; */
 }
 

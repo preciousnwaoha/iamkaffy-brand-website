@@ -29,11 +29,13 @@
     text-align: center;
     font-weight: 700px;
     font-size: 2.5rem;
+    color: var(--black);
     /* margin-top: 2rem; */
 }
 .title-wrapper h3 {
     text-align: center;
     font-weight: 400;
+    color: var(--black);
 }
 
 .contact-options-wrapper {

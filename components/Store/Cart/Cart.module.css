@@ -1,0 +1,129 @@
+.cart {
+    border: 1px solid red;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    height: calc(100vh - 60px);
+    background: var(--white);
+    width: 80%;
+    overflow-y: scroll;
+    z-index: 2;
+    padding: 1rem;
+    text-align: center;
+}
+
+.show-cart {
+    animation: showCart .3s ease-in forwards;
+}
+
+.hide-cart {
+    animation: hideCart .3s ease-in forwards;
+}
+
+@keyframes showCart {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes hideCart {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: -100%;
+    }
+}
+
+.cart::-webkit-scrollbar {
+    width: 10px;
+    background: var(--white);
+}
+
+.cart::-webkit-scrollbar-thumb {
+    background: var(--primary-trans);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.cart::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-trans);
+}
+
+.title {
+    margin: 0;
+    font-weight: 600;
+    color: var(--black);
+    border: 1px solid red;
+    text-align: left;
+}
+
+.exit-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--black);
+    width: 30px;
+    height: 30px;
+    margin: 0.5rem;
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+.exit-btn:hover {
+    color: var(--secondary);
+}
+
+.cart-items-wrapper {
+    border: 1px solid red;
+    margin: 1rem;
+
+    padding: 0;
+    border-bottom: 1px solid var(--black);
+}
+
+.subtotal-section {
+    border: 1px solid red;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.subtotal-title {
+    font-size: 0.75rem;
+    border: 1px solid blue;
+    margin: 0.5rem 0;
+    color: var(--black);
+}
+
+.subtotal {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    border: 1px solid blueviolet;
+    color: var(--black);
+}
+
+.tax-calc-info {
+    border: 1px solid red;
+    font-size: 0.85rem;
+    color: var(--black);
+}
+
+.actions {
+    border: 1px solid pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.check-out-btn {
+    margin-bottom: 1rem;
+}

@@ -7,12 +7,14 @@
 
 .avg-rating {
   margin: 0 2rem;
+  color: var(--black);
 }
 
 .write-review-btn {
   border: 1px solid var(--black);
   padding: 0.65rem 2rem;
   margin: 0.5rem 2rem;
+  color: var(--black);
   background: var(--white);
   outline: none;
   cursor: pointer;
@@ -25,6 +27,12 @@
 
 .product-reviews-content {
   margin: 1rem;
+}
+
+.be-first-review {
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 760px) {

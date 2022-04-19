@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 1366px;
     min-height: 100vh;
-    background: var(--black);
+    background: black;
     text-align: center;
     padding: 2rem 0;
 }
@@ -10,7 +10,7 @@
 .collections-title {
     color: var(--white);
     margin-top: 0rem;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .collections-content {

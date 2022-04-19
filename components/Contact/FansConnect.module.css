@@ -1,5 +1,5 @@
 .fans-connect {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* background: url("/images/kaffy-photo-11.jpg"); */
     /* background-size: cover; */
     padding: 1rem 0;
@@ -22,7 +22,7 @@
 }
 
 .content-side {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .title {
@@ -37,14 +37,14 @@
 
 .image-side {
     width: 100%;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     position: relative;
     padding-top: 52.65%;
     overflow: hidden;
 }
 
 .image-wrapper {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     position: absolute;
     top: 0;
     left: 0;

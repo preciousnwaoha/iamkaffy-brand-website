@@ -14,6 +14,10 @@
     margin: 0 auto;
 }
 
+.logo {
+    color: var(--black);
+}
+
 @media screen and (min-width: 760px) {
     .header {
         padding: 0 2rem;

@@ -18,7 +18,6 @@ const StoreLanding = () => {
           />
         </div>
       </div>
-      <StoreHeader />
     </div>
   );
 };

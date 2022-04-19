@@ -8,6 +8,7 @@ import Collection from "../../components/Store/StoreCollections/Collection";
 import MailingList from "../../components/Store/MailingList";
 import ViewProduct from "../../components/Store/Product/ViewProduct/ViewProduct";
 import ProductReviews from "../../components/Store/ProductReview/ProductReviews";
+import StoreHeader from "../../components/Store/StoreHeader/StoreHeader";
 
 const Store = () => {
   return (
@@ -20,6 +21,7 @@ const Store = () => {
       <main className={styles.main}>
         <Header />
         <StoreLanding />
+        <StoreHeader />
         <StoreCollections />
         <Collection name={"T-Shirts"} isInStoreHome={true} />
         <Collection name={"T-Shirts"} isInStoreHome={false} />
