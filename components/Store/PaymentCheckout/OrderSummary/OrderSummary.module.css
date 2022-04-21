@@ -1,0 +1,28 @@
+.order-summary {
+    background: var(--shadow-3);
+}
+
+.ordered-items {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.total-section {
+    display: flex;
+    margin: 1rem 0;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-title {
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.total-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary);
+}

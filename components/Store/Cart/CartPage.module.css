@@ -1,0 +1,62 @@
+.cart-page {
+    background: var(--white);
+    padding: 1rem;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+
+
+.title {
+    margin: 0;
+    font-weight: 600;
+    color: var(--black);
+    text-align: left;
+}
+
+
+.cart-items-wrapper {
+    margin: 1rem;
+
+    padding: 0;
+    border-bottom: 1px solid var(--black);
+}
+
+.subtotal-section {
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.subtotal-title {
+    font-size: 0.75rem;
+    margin: 0.5rem 0;
+    color: var(--black);
+}
+
+.subtotal {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: var(--black);
+}
+
+.tax-calc-info {
+    font-size: 0.85rem;
+    color: var(--black);
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.check-out-btn {
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 760px) {
+    .cart-page {
+        padding: 2rem;
+    }
+}

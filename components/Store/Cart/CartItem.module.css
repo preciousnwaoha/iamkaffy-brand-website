@@ -1,5 +1,4 @@
 .cart-item {
-    border: 2px solid blue;
     margin: auto;
     padding: 1rem;
     max-width: 300px;
@@ -8,7 +7,6 @@
 }
 
 .image-wrapper {
-    border: 2px solid yellow;
     
     position: relative;
     padding-top: 100%;
@@ -17,7 +15,6 @@
 }
 
 .image-wrapper-inner {
-    border: 1px solid red;
     position: absolute;
     top: 0;
     left: 0;
@@ -50,26 +47,26 @@
 }
 
 .name-size {
-    border: 1px solid red;
-    
+    color: var(--black);
     margin: 0.5rem 0;
 }
 
 
 .price {
-    border: 1px solid red;
     font-size: 0.85rem;
+    color: var(--black);
     margin: 0.5rem 0;
 }
 
 .quantity-setter {
     display: inline-block;
     border-bottom: 1px solid var(--black);
+    color: var(--black);
     
-    border: 1px solid red;
 }
 
 .quantity {
+
     display: inline-block;
     margin: 0 0.5rem;
     width: 30px;
@@ -86,6 +83,7 @@
     border: none;
     cursor: pointer;
     line-height: 30px;
+    color: var(--black);
 }
 
 .quantity-btn:hover {
@@ -94,5 +92,4 @@
 }
 
 .subtotal {
-    border: 1px solid red;
 }

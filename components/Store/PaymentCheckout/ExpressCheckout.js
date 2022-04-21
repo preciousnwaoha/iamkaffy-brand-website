@@ -5,6 +5,7 @@ import classes from "./ExpressCheckout.module.css"
 const ExpressCheckout = () => {
   return (
     <div className={classes["express-checkout"]}>
+        <p className={classes["express-checkout-title"]}>Express checkout</p>
         <GooglePayButton />
     </div>
   )

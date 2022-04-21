@@ -3,6 +3,8 @@ import Image from "next/image";
 import StoreHeader from "./StoreHeader/StoreHeader";
 import classes from "./StoreLanding.module.css"
 
+
+
 const StoreLanding = () => {
   return (
     <div className={classes["store-landing"]}>

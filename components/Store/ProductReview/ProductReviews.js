@@ -91,6 +91,8 @@ const {
   numSold: 10,
 };
 
+
+
 const ProductReviews = () => {
   const writeReviewHandler = () => {
     console.log("write a review handled");

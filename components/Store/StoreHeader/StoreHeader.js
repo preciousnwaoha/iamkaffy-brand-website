@@ -8,7 +8,7 @@ import StoreNav from './StoreNav'
 
 const StoreHeader = () => {
   const [showSideNav, setShowSideNav] = useState(false)
-  const [showCart, setShowCart] = useState(true)
+  const [showCart, setShowCart] = useState(false)
 
     const toggleShowingNav = () => {
         setShowSideNav(prevState => !prevState)
