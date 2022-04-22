@@ -3,12 +3,14 @@ import Photo from './Photo'
 import classes from "./Photos.module.css"
 
 const Photos = ({photosData}) => {
+
+  console.log(photosData)
   return (
     <div className={classes.photos}>
         {photosData.map(photo => (
             <Photo 
                 key={photo.id}
-                imgPath={photo.imgPath}
+                url={photo.url}
                 desc={photo.desc}
             />
         ))}

@@ -6,7 +6,36 @@ import styles from "../../styles/Home.module.css";
 import GetInTouch from "../../components/Contact/GetInTouch";
 import FansConnect from "../../components/Contact/FansConnect";
 
-const Contact = () => {
+import { db } from "../../firebase";
+import { collection, getDocs } from "firebase/firestore";
+
+
+
+const contactDetailsCollectionRef = collection(db, "contactDetails")
+
+
+export const getStaticProps = async () => {
+  
+  
+  
+  const contactDetailsData = await getDocs(contactDetailsCollectionRef);
+
+  const contactDetails = contactDetailsData.docs.map((doc) => {
+    return { ...doc.data(), id: doc.id };
+  });
+
+  
+
+
+  return {
+    props: {
+      propsData: contactDetails,
+    }
+  }
+}
+
+const Contact = ({ propsData }) => {
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -17,7 +46,7 @@ const Contact = () => {
       <main className={styles.main}>
         <Header />
         <ContactLanding />
-        <GetInTouch />
+        <GetInTouch data={propsData} />
         <FansConnect />
       </main>
       <Footer />

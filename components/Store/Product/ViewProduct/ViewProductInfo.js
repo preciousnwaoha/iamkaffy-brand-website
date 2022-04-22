@@ -6,7 +6,7 @@ import CartContext from "../../../../context/cart-context";
 import classes from "./ViewProductInfo.module.css";
 import AddedProductToCartPopUp from "./AddedProductToCartPopUp";
 import BuyNowLink from "../../StoreUI/BuyNowLink";
-import GooglePayButton from "../../PaymentCheckout/GooglePayButton";
+import GooglePayBtn from "../../PaymentCheckout/GooglePayBtn";
 
 const ViewProductInfo = ({ product }) => {
   const cartCtx = useContext(CartContext);
@@ -135,7 +135,7 @@ const ViewProductInfo = ({ product }) => {
       >
         Add to Cart
       </StoreButton>
-      <GooglePayButton className={"buy-now-btn"}/>
+      <GooglePayBtn item={product} className={classes["buy-now-btn"]} />
       {/* <BuyNowLink productId={product.id} className={"buy-now-btn"} /> */}
 
       <div className={classes["description-section"]}>

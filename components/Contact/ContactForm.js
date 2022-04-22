@@ -1,23 +1,42 @@
-import React from 'react'
+import React, {useState, useRef} from 'react'
 import Button from '../UI/Button'
 import classes from "./ContactForm.module.css"
+import { db } from '../../firebase'
+import { collection, addDoc } from 'firebase/firestore'
+
 
 const ContactForm = () => {
-    const submitHandler = (event) => {
+  const usersCollectionRef = collection(db, "contactMessages");
+  const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+
+  const nameRef = useRef()
+  const emailRef = useRef()
+  const messageRef = useRef()
+
+
+    const submitHandler = async (event) => {
         event.preventDefault()
-        console.log("form submited")
+        setSending(true)
+        const name = nameRef.current.value
+        const email = emailRef.current.value
+        const message = messageRef.current.value
+
+        const res = await addDoc(usersCollectionRef, {name: name, email: email, message: message})
+        setSending(false)
+        setSubmitted(true)
     }
   return (
-    <form className={classes.form} id="contact-1" onSubmit={submitHandler}>
+    <form className={classes.form} onSubmit={submitHandler}>
         <label htmlFor='name'>Name</label>
-        <input type="text" id="name" placeholder='Your Name' required />
+        <input ref={nameRef} type="text" id="name" placeholder='Your Name' required />
         <label htmlFor='email'>Email</label>
-        <input type="email" id="email" placeholder='Email' required />
-        <textarea placeholder='Got a message for Kaffy'> 
+        <input ref={emailRef} type="email" id="email" placeholder='Email' required />
+        <textarea ref={messageRef} placeholder='Got a message for Kaffy'> 
         </textarea>
-        <Button className={classes["form-submit-btn"]}>
-            Send
-        </Button>
+        {submitted ? <p>Kaffy&apos;s got your message</p> : <Button className={classes["form-submit-btn"]}>
+           { !sending ? "Send Message" : "Sending..."}
+        </Button>}
     </form>
   )
 }

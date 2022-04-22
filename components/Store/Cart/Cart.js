@@ -3,7 +3,7 @@ import CartItem from "./CartItem";
 import classes from "./Cart.module.css";
 import CheckOutBtn from "../PaymentCheckout/CheckOutBtn";
 import CartContext from "../../../context/cart-context";
-import GooglePayButton from "../PaymentCheckout/GooglePayButton";
+import GooglePayBtn from "../PaymentCheckout/GooglePayBtn";
 
  
 
@@ -39,7 +39,7 @@ const Cart = ({ className, onHideCart }) => {
       {cartCtx.items.length > 0 && (
         <div className={classes["actions"]}>
           <CheckOutBtn className={classes["check-out-btn"]} />
-          <GooglePayButton className={classes["g-pay-btn"]} />
+          <GooglePayBtn item={cartCtx} fromCart={true} className={classes["g-pay-btn"]} />
         </div>
       )}
     </div>

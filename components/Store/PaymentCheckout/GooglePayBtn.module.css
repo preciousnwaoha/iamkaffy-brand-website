@@ -1,8 +1,8 @@
 .google-pay-btn {
     /* display: inline-block; */
     min-width: 150px;
-    padding: 0.7rem 1.5rem;
-    background: var(--black);
+    /* padding: 0.7rem 1.5rem; */
+    /* background: var(--black); */
     color: var(--white);
     cursor: pointer;
     text-align: center;

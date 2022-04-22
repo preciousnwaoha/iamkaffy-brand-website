@@ -7,26 +7,27 @@ const DEFAULT_OPTIONS = [
     id: "copt1",
     optionText: "Business",
     linkText: "Connect",
+    linkURL: "/contact/#contact-2",
   },
   {
     id: "copt2",
     optionText: "Management",
-    linkText: "Connect",
+    linkURL: "/contact/#contact-2",
   },
   {
     id: "copt3",
     optionText: "Partneship",
-    linkText: "Connect",
+    linkURL: "/contact/#contact-2",
   },
   {
     id: "copt4",
     optionText: "Speaking Engagements",
-    linkText: "Connect",
+    linkURL: "/contact/#contact-2",
   },
   {
     id: "copt5",
     optionText: "For Fans",
-    linkText: "Connect",
+    linkURL: "/contact/#contact-1",
   },
 ];
 
@@ -36,14 +37,14 @@ const ContactLanding = () => {
       <div className={classes["cut-div"]}></div>
       <div className={classes["title-wrapper"]}>
         <h1>Would Love to Hear From You</h1>
-        <h3>Connect to kaffy thwought these mediums</h3>
+        <h3>Connect to kaffy for any of these...</h3>
       </div>
       <div className={classes["contact-options-wrapper"]}>
         {DEFAULT_OPTIONS.map((option) => (
           <ContactOption
             key={option.id}
             optionText={option.optionText}
-            linkText={option.linkText}
+            linkURL={option.linkURL}
           />
         ))}
       </div>

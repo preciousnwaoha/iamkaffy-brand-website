@@ -1,5 +1,5 @@
-import { useState, useLayoutEffect } from "react";
-
+import { useState, useContext, useLayoutEffect } from "react";
+import ThemeContext from "../../context/theme-context";
 import classes from "./ThemeButton.module.css"
 
 
@@ -55,18 +55,24 @@ const useTheme = (theme) => {
 
 
 const ThemeButton = () => {
-  const [themeState, setThemeState] = useState(themeLight)
+  const themeCtx = useContext(ThemeContext)
 
     const themeChangeHandler = () => {
-      if (themeState === themeLight) {
-        setThemeState(themeDark)
-      }
-      else {
-        setThemeState(themeLight)
-      }
+      themeCtx.onToggleTheme()
     }
 
-    useTheme(themeState)  
+    let themeValue;
+    if (themeCtx.theme === "light") {
+      themeValue = themeLight  
+    }
+
+    if (themeCtx.theme === "dark") {
+        themeValue = themeDark
+    }
+
+    useTheme(themeValue)
+
+    
 
   return (
     <div className={classes["theme-button"]} onClick={themeChangeHandler}>

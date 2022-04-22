@@ -15,10 +15,22 @@
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
 }
-.photos::-webkit-scrollbar { 
-    width: 0;
-    height: 0;
+
+.photos::-webkit-scrollbar {
+    width: 10px;
+    background: var(--white);
 }
+
+.photos::-webkit-scrollbar-thumb {
+    background: var(--primary-trans);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.photos::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-trans);
+}
+
 
 @media screen and (min-width: 760px) {
     .photos {

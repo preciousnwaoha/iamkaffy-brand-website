@@ -11,7 +11,7 @@
 
 .fans-connect-inner {
     background: var(--primary-trans);
-    background: var(--black);
+    background: #020202;
     width: 100%;
     margin: 1rem;
     border-radius: 1rem;

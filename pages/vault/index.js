@@ -6,19 +6,44 @@ import VaultLanding from '../../components/Vault/VaultLanding'
 import VaultVideos from '../../components/Vault/VaultVideos'
 import VaultPhotos from '../../components/Vault/VaultPhotos'
 
+import {db} from "../../firebase"
+import { collection, getDocs } from 'firebase/firestore'
+
+const videosCollectionRef = collection(db, "videos")
+const photosCollectionRef = collection(db, "photos")
+
 const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems"
 
 export async function getServerSideProps() {
-  const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLEFMDQD6AJA0YKOE1v0IBCOU4lcqehIKc&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`)
+  const videosDataFrb = await getDocs(videosCollectionRef);
+  const photosDataFrb = await getDocs(photosCollectionRef);
+
+
+  const videosPlaylist = videosDataFrb.docs.map(doc =>  {
+    return (
+      {...doc.data(), id: doc.id}
+    )
+  })[0]
+
+
+  const photosData = photosDataFrb.docs.map(doc =>  {
+    return (
+      {...doc.data(), id: doc.id}
+    )
+  })
+
+  const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=${videosPlaylist.playListCode}&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`)
   const videosData = await res.json();
   return {
     props: {
-      videosData
+      videosData,
+      photosData: photosData,
     }
   }
 }
 
-const Vault = ({ videosData}) => {
+const Vault = ({ videosData, photosData }) => {
+ 
   return (
     <div className={styles.container}>
       <Head>
@@ -29,8 +54,8 @@ const Vault = ({ videosData}) => {
       <main className={styles.main}>
        <Header />
        <VaultLanding />
-       <VaultVideos videosData={videosData} />
-       <VaultPhotos />
+       {/* <VaultVideos videosData={videosData} /> */}
+       <VaultPhotos photosData={photosData} />
       </main>
       <Footer />
     </div>

@@ -1,12 +1,15 @@
-import React from 'react'
-import GooglePayButton from './GooglePayButton'
+import React, {useContext} from 'react'
+import GooglePayButton from './GooglePayBtn'
+import CartContext from '../../../context/cart-context'
 import classes from "./ExpressCheckout.module.css"
 
 const ExpressCheckout = () => {
+const cartCtx = useContext(CartContext)
+
   return (
     <div className={classes["express-checkout"]}>
         <p className={classes["express-checkout-title"]}>Express checkout</p>
-        <GooglePayButton />
+        <GooglePayButton item={cartCtx} fromCart={true} />
     </div>
   )
 }

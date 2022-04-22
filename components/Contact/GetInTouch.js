@@ -5,23 +5,19 @@ import { faMessage, faPhone, faLocation } from "@fortawesome/free-solid-svg-icon
 import UIBigTitle from "../UI/UIBigTitle";
 import classes from "./GetInTouch.module.css";
 
-const DEFAULT_CONTACT_DETAILS = {
-  email: "kaffyintouch@example.com",
-  phones: ["09059283899", "09134830202"],
-  address: "Some Address Here",
-};
 
-const { email, phones, address } = DEFAULT_CONTACT_DETAILS;
 
-const GetInTouch = () => {
+
+const GetInTouch = ({data}) => {
+  const { email, address, phones } = data[0]
   return (
-    <div className={classes["get-in-touch"]}>
+    <div className={classes["get-in-touch"]} id="contact-2">
       <div className={classes["curve-div"]}>
        
       </div>
       <div className={classes["image-wrapper"]}>
             <div className={classes["image-wrapper-inner"]}>
-          <Image src="/images/kaffy-photo-4.jpg" alt="Get In touch with Kaffy the dancer" width={"400px"} height={"400px"} layout="responsive" />
+          <Image src="/images/get-in-touch.jpg" alt="Get In touch with Kaffy the dancer" width={"400px"} height={"400px"} layout="responsive" />
         </div>
         </div>
         

@@ -7,7 +7,7 @@ import Socials from './Socials'
 
 const FansConnect = () => {
   return (
-    <div className={classes["fans-connect"]}>
+    <div className={classes["fans-connect"]} id="contact-1" >
         <div className={classes["fans-connect-inner"]}>
             <div className={classes["content-side"]}>
                 <UIBigTitle titleText={"Fans Connect"} className={classes.title}/>

@@ -11,21 +11,44 @@ import VaultVideos from '../components/Vault/VaultVideos'
 import BrandsWorkedWith from '../components/Expressions/BrandsWorkedWith'
 import Featured from '../components/Expressions/Featured'
 
+import {db} from "../firebase"
+import { collection, getDocs } from 'firebase/firestore'
+
+const videosCollectionRef = collection(db, "videos")
+const contactDetailsCollectionRef = collection(db, "contactDetails")
 
 const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems"
 
 export async function getServerSideProps() {
-  const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLEFMDQD6AJA0YKOE1v0IBCOU4lcqehIKc&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`)
+  const videosDataFrb = await getDocs(videosCollectionRef);
+
+  const contactDetailsData = await getDocs(contactDetailsCollectionRef);
+
+  
+
+  const videosPlaylist = videosDataFrb.docs.map(doc =>  {
+    return (
+      {...doc.data(), id: doc.id}
+    )
+  })[0]
+
+  const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=${videosPlaylist.playListCode}&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`)
   const videosData = await res.json();
+
+  const contactDetails = contactDetailsData.docs.map((doc) => {
+    return { ...doc.data(), id: doc.id };
+  });
+
   return {
     props: {
-      videosData
+      videosData,
+      contactDetails,
     }
   }
 }
 
 
-export default function Home( { videosData }) {
+export default function Home( { videosData, contactDetails }) {
   return (
       <div className={styles.container}>
       <Head>
@@ -51,11 +74,12 @@ export default function Home( { videosData }) {
        <VaultVideos videosData={videosData} />
        <Services />
        <BrandsWorkedWith />
-        <GetInTouch />
+        <GetInTouch data={contactDetails} />
        
       </main>
       <Footer />
     </div>
+
     
   )
 }

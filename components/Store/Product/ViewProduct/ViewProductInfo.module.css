@@ -21,12 +21,6 @@
     margin: 0.5rem 0;
 }
 
-
-
-
-
-
-
 .size-section {
     margin: 1rem 0;
 }
@@ -35,8 +29,6 @@
 .please-select-size {
     color: red;
 }
-
-
 
 .selected-size {
     display: inline-block;
@@ -100,21 +92,9 @@
     color: var(--primary);
 }
 
-.buy-now-btn {
-    display: block;
-    width: 100%;
-    padding: 0.75rem 0;
-    background: var(--black);
-    color: var(--white);
-    border: none;
-    cursor: pointer;
-}
 
-.buy-now-btn {
-    color: var(--primary);
-}
 
-.add-to-cart-btn, .buy-now-btn {
+.add-to-cart-btn {
     margin-bottom: 0.5rem;
 }
 

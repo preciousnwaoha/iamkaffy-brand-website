@@ -12,6 +12,10 @@
     display: none;
 }
 
+.form p {
+    color: var(--primary);
+}
+
 .form input {
     padding: 0.85rem 1.5rem;
     background: var(--black);

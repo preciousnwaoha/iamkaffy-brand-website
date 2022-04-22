@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Head from "next/head"
 import Header from '../../components/Layout/Header'
 import Story from '../../components/About/Story'
@@ -9,6 +9,7 @@ import styles from "../../styles/Home.module.css"
 
 
 const About = () => {
+
   return (
     <div className={styles.container}>
       <Head>
