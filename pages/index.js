@@ -59,7 +59,7 @@ export default function Home( { videosData, contactDetails }) {
 
       <main className={styles.main}>
        <Header />
-       <Landing />
+       <Landing /> 
        
        <Featured 
         imgPath="/images/kaffy-photo-4.jpg"
