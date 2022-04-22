@@ -3,45 +3,15 @@ import Image from "next/image";
 import Button from "../../../UI/Button";
 import classes from "./ViewProductImage.module.css";
 
-const {
-  name,
-  images,
-  subCollections,
-  colors,
-  sizes,
-  date,
-  price,
-  numberLeft,
-  numSold,
-} = {
-  name: "bruh",
-  images: ["/images/fit-5.jpg", "/images/fit-3.jpg"],
-  description:
-    "Everyone need a cozy go-to hoodeie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!",
-  specs: [
-    "50% cotton, 50% polyester",
-    "Double-lined hood",
-    "Double-needle stiching throughout",
-  ],
-  subCollections: ["Unisex T-Shirts"],
-  collections: ["T-Shirts"],
-  colors: ["white", "black"],
-  sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
-  sizeGuide: {
-    small: [27, 20],
-    medium: [28, 22],
-    large: [29, 24],
-    xlarge: [30, 26],
-  },
-  date: "2022-10-11",
-  price: 500.453,
-  numberLeft: 50,
-  numSold: 10,
-};
 
-const imagesMaxIndex = images.length - 1;
 
-const ViewProductImage = () => {
+
+
+const ViewProductImage = ({ product }) => {
+  const {name, images} = product;
+  const imagesMaxIndex = images.length - 1;
+
+
   const [imageIndex, setImageIndex] = useState(0);
 
   const forwardsHandler = () => {
@@ -71,8 +41,9 @@ const ViewProductImage = () => {
       <div className={classes["product-image-wrapper"]}>
         <div className={classes["product-image-wrapper-inner"]}>
           <Image
-            src={images[imageIndex]}
-            alt={`${name} in kaffy store`}
+            src={`https://firebasestorage.googleapis.com/v0/b/iamkaffy-brand-site.appspot.com/o/products%2F${images[imageIndex]}?alt=media`}
+            alt={`${name} product in kaffy store`}
+            priority={true}
             width={"100%"}
             height={"100%"}
             layout="responsive"

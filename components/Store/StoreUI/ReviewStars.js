@@ -5,7 +5,7 @@ import classes from "./ReviewStars.module.css"
 const ReviewStars = ({starNum, className}) => {
   return (
     <div className={`${classes["review-stars"]} ${className || ""}`}>
-        {starNum} Stars
+        {starNum.toFixed(2)} Stars
     </div>
   )
 }

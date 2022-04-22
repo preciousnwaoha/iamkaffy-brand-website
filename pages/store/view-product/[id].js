@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Header from "../../../components/Layout/Header";
 import StoreHeader from "../../../components/Store/StoreHeader/StoreHeader";
-import Collection from "../../../components/Store/StoreCollections/Collection";
+import ViewProduct from "../../../components/Store/Product/ViewProduct/ViewProduct"
+import ProductReviews from "../../../components/Store/ProductReview/ProductReviews";
 import MailingList from "../../../components/Store/MailingList";
 import Footer from "../../../components/Layout/Footer";
 import styles from "../../../styles/Shop.module.css";
@@ -9,11 +10,12 @@ import styles from "../../../styles/Shop.module.css";
 import { db } from "../../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 
-const collectionsCollectionRef = collection(db, "collections");
+// const collectionsCollectionRef = collection(db, "collections");
+const collectionsCollectionRef = collection(db, "collections")
 const productsCollectionRef = collection(db, "products");
 
 export const getStaticPaths = async () => {
-  const data = await getDocs(collectionsCollectionRef);
+  const data = await getDocs(productsCollectionRef);
 
   const listOfIds = data.docs.map((doc) => {
     return {
@@ -23,22 +25,30 @@ export const getStaticPaths = async () => {
     };
   });
 
+  
+
+
   return {
     paths: listOfIds,
     fallback: false,
   };
 };
 
-
 export const getStaticProps = async ({ params }) => {
+  // const collectionsData = await getDocs(collectionsCollectionRef);
   const collectionsData = await getDocs(collectionsCollectionRef);
   const productsData = await getDocs(productsCollectionRef);
+  
 
-  const collections = collectionsData.docs.map((doc) => {
-    return { ...doc.data(), id: doc.id };
+ 
+  const collectionsPropsData = collectionsData.docs.map(doc =>  {
+    
+    return (
+      {...doc.data(), id: doc.id}
+    )
   })
 
-  const [collection] = collectionsData.docs
+  const [product] = productsData.docs
     .filter((doc) => {
       return params.id === doc.id;
     })
@@ -46,15 +56,7 @@ export const getStaticProps = async ({ params }) => {
       return { ...doc.data(), id: doc.id };
     });
 
-  const productsList = productsData.docs.map((doc) => {
-    return { ...doc.data(), id: doc.id };
-  });
-
-  const filteredProductsList = productsList.filter((product) =>
-    product.collections.includes(collection.name)
-  );
-
-  const propsData = { collections: collections, collection: collection, products: filteredProductsList };
+  const propsData = { product: product, collections: collectionsPropsData };
 
   return {
     props: {
@@ -63,11 +65,8 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-
-
-const CollectionPage = ({ propsData }) => {
-
-  console.log(propsData)
+const ViewProductPage = ({ propsData }) => {
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -78,7 +77,8 @@ const CollectionPage = ({ propsData }) => {
       <main className={styles.main}>
         <Header />
         <StoreHeader collections={propsData.collections} />
-        <Collection data={propsData} />
+            <ViewProduct data={propsData} />
+            <ProductReviews product={propsData.product} />
         <MailingList />
       </main>
       <Footer />
@@ -86,4 +86,4 @@ const CollectionPage = ({ propsData }) => {
   );
 };
 
-export default CollectionPage;
+export default ViewProductPage;

@@ -8,6 +8,7 @@
 .avg-rating {
   margin: 0 2rem;
   color: var(--black);
+  font-weight: 700;
 }
 
 .write-review-btn {

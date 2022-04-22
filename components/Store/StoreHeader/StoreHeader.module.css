@@ -1,8 +1,6 @@
 .store-header {
-    background: transparent;
-    position: absolute;
-    top: 60px;
-    left: 0;
+    background: rgb(67, 67, 67);
+    
     width: 100%;
     max-width: 1366px;
     margin: 0;
@@ -12,6 +10,13 @@
     padding: 1.5rem 1rem;
 }
 
+.in-landing {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: transparent;
+}
+
 .store-menu-icon div {
     background: var(--white);
 }
@@ -19,4 +24,10 @@
 .store-header-logo {
     color: var(--white);
     font-size: 2.5rem;
+}
+
+@media screen and (min-width: 760px) {
+    .store-header {
+        padding: 1.5rem 2rem;
+    }
 }

@@ -1,11 +1,21 @@
-import React, { useState } from 'react'
-import StoreButton from '../../StoreUI/StoreButton';
-import classes from "./ViewProductInfo.module.css"
+import React, { useState, useContext } from "react";
+import Size from "./Size";
+import Color from "./Color";
+import StoreButton from "../../StoreUI/StoreButton";
+import CartContext from "../../../../context/cart-context";
+import classes from "./ViewProductInfo.module.css";
+import AddedProductToCartPopUp from "./AddedProductToCartPopUp";
+import BuyNowLink from "../../StoreUI/BuyNowLink";
+import GooglePayButton from "../../PaymentCheckout/GooglePayButton";
 
-const {
+const ViewProductInfo = ({ product }) => {
+  const cartCtx = useContext(CartContext);
+
+  const {
     name,
     images,
     subCollections,
+    id,
     description,
     specs,
     colors,
@@ -15,135 +25,134 @@ const {
     price,
     numberLeft,
     numSold,
-  } = {
-    name: "bruh",
-    images: ["/images/fit-5.jpg", "/images/fit-3.jpg"],
-    description:
-      "Everyone need a cozy go-to hoodeie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!",
-    specs: [
-      "50% cotton, 50% polyester",
-      "Double-lined hood",
-      "Double-needle stiching throughout",
-    ],
-    subCollections: ["Unisex T-Shirts"],
-    collections: ["T-Shirts"],
-    colors: ["white", "black", "pink"],
-    sizes: [
-        {
-            size: "S",
-            numLeft: 4,
-        },
-        {
-            size: "M",
-            numLeft: 4,
-        },
-        {
-            size: "L",
-            numLeft: 4,
-        },
-        {
-            size: "XL",
-            numLeft: 4,
-        },
-        {
-            size: "2XL",
-            numLeft: 4,
-        },
-    ],
-    reviews: [
-        {
-            rating: 3,
-            name: "Precious Nwaoha",
-            itemType: {
-                color: "pink",
-                size: "L"
-            },
+  } = product;
 
-            itemName: "bruh",
-            reviewMessage: "I like this sweater a lot",
+  const [quantity, setQuantity] = useState(1);
+  const [selectedSize, setSelectedSize] = useState("");
+  const [showSelectSizeMessage, setShowSelectSizeMessage] =  useState(false)
+  const [selectedColor, setSelectedColor] = useState("");
+  const [showSelectColorMessage, setShowSelectColorMessage] =  useState(false)
+
+  const selectColorHandler = (color) => {
+    setSelectedColor(color);
+    setShowSelectColorMessage(false)
+  };
+
+  const selectSizeHandler = (size) => {
+    setSelectedSize(size);
+    setShowSelectSizeMessage(false)
+  };
+
+  const increaseQuantity = () => {
+    if (quantity < numberLeft) {
+      setQuantity((prevQuantity) => prevQuantity + 1);
+    }
+  };
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => prevQuantity - 1);
+    }
+  };
+
+  const addToCartHandler = () => {
+      if (selectedSize && selectedColor) {
+        cartCtx.onAddToCart({ ...product, quantity: quantity, selectedSizes: [selectedSize], selectedColors: [selectedColor] });
+      }
+      else {
+        if (selectedSize === "") {
+            setShowSelectSizeMessage(true)
         }
+        if (selectedColor === "" ) {
+            setShowSelectColorMessage(true)
+        }
+      }
+      
+  };
 
-    ],
-    sizeGuide: {
-      small: [27, 20],
-      medium: [28, 22],
-      large: [29, 24],
-      xlarge: [30, 26],
-    },
-    date: "2022-10-11",
-    price: 500.453,
-    numberLeft: 50,
-    numSold: 10,
+  const buyNowHandler = () => {
+    console.log("buy now handler");
   };
 
 
-
-const ViewProductInfo = () => {
-       const [quantity, setQuantity] =  useState(1)
-
-       const increaseQuantity = () => {
-           setQuantity(prevQuantity => prevQuantity + 1)
-       }
-       const decreaseQuantity = () => {
-        setQuantity(prevQuantity => prevQuantity - 1)
-        }
-
-        const addToCartHandler = () => {
-            console.log("added to cart")
-        }
-        
-        const buyNowHandler = () => {
-            console.log("buy now handler")
-        }
-
   return (
     <div className={classes["view-product-info"]}>
-        <h4 className={classes["view-product-title"]}>{name}</h4>
-        <div className={classes["color-section"]}>
-            <p className={classes["color-title"]}>COLOR</p>
-            <div className={classes["color-wrapper"]}>
-            {colors.map(color => (
-                <div key={`${name}${color}`} className={classes["color"]} style={{ background: color }}>
-                    
-                </div>
-            ))}
-            </div>
+      <h4 className={classes["view-product-title"]}>{name}</h4>
+      <div className={classes["color-section"]}>
+        <p className={classes["color-title"]}>COLOR</p>
+        {showSelectColorMessage && <p className={classes["please-select-color"]}>please select a color</p>}
+        <div className={classes["color-wrapper"]}>
+          {colors.map((color) => (
+            <Color
+              key={`${id}${color}${Math.random().toFixed(5)}`}
+              color={color}
+              onGetColor={selectColorHandler}
+            />
+          ))}
+          <div>{selectedColor}</div>
         </div>
+        
+      </div>
 
-        <div className={classes["size-section"]}>
-            <p className={classes["size-title"]}>SIZE</p>
-            <div className={classes["size-item"]}>
-            {sizes.map(size => (
-                <div key={`${size.name}${sizes.indexOf(size)}`} className={classes["size"]} >{size.size}</div>
-            ))}
-            </div>
-            
+      <div className={classes["size-section"]}>
+        <p className={classes["size-title"]}>SIZE</p>
+        {showSelectSizeMessage && <p className={classes["please-select-size"]}>please select a size</p>}
+        <div className={classes["size-item"]}>
+          {sizes.map((size) => (
+            <Size
+              key={`${id}size${sizes.indexOf(size)}`}
+              onGetSize={selectSizeHandler}
+              size={size}
+            />
+          ))}
         </div>
+        {selectedSize && <div className={classes["selected-size"]}>{selectedSize}</div>}
+      </div>
 
-        <div className={classes["quantity-section"]}>
-            <p className={classes["quantity-title"]}>QUANTITY</p>
-            <div className={classes["quantity-setter"]}>
-                <div className={classes["decrease-quantity"]} onClick={decreaseQuantity}>-</div>
-                <div>{quantity}</div>
-                <div className={classes["increase-quantity"]} onClick={increaseQuantity}>+</div>
-            </div>
+      <div className={classes["quantity-section"]}>
+        <p className={classes["quantity-title"]}>QUANTITY</p>
+        <div className={classes["quantity-setter"]}>
+          <div
+            className={classes["decrease-quantity"]}
+            onClick={decreaseQuantity}
+          >
+            -
+          </div>
+          <div>{quantity}</div>
+          <div
+            className={classes["increase-quantity"]}
+            onClick={increaseQuantity}
+          >
+            +
+          </div>
         </div>
+      </div>
 
-        <p className={classes.price}>${price.toFixed(2)}</p>
+      <p className={classes.price}>₦{price.toFixed(2)}</p>
+        <AddedProductToCartPopUp />
+      <StoreButton
+        className={classes["add-to-cart-btn"]}
+        onClick={addToCartHandler}
+      >
+        Add to Cart
+      </StoreButton>
+      <GooglePayButton className={"buy-now-btn"}/>
+      {/* <BuyNowLink productId={product.id} className={"buy-now-btn"} /> */}
 
-        <StoreButton className={classes["add-to-cart-btn"]} onClick={addToCartHandler}>Add to Cart</StoreButton>
-        <StoreButton className={classes["buy-now-btn"]} onClick={buyNowHandler}>Buy it now</StoreButton>
+      <div className={classes["description-section"]}>
+        <p className={classes["description"]}>{description}</p>
+        <ul className={classes.specs}>
+          {specs.map((spec) => (
+            <li
+              key={`${id}name${spec}${specs.indexOf(spec)}`}
+              className={classes.spec}
+            >
+              {spec}
+            </li>
+          ))}
+        </ul>
+      </div>
 
-        <div className={classes["description-section"]}>
-            <p className={classes["description"]} >{description}</p>
-            <ul className={classes.specs}>
-                {specs.map(spec => (
-                    <li key={`name${spec}${specs.indexOf(spec)}`} className={classes.spec}>{spec}</li>
-                ))}
-            </ul>
-        </div>
-
-        {/* <table className={classes["size-guide"]}>
+      {/* <table className={classes["size-guide"]}>
             <td className={classes[""]}>
                 <tr></tr>
                 <tr></tr>
@@ -152,11 +161,9 @@ const ViewProductInfo = () => {
             </td>
         </table> */}
 
-        <div className={classes["share"]}>
-            SHARE
-        </div>
+      <div className={classes["share"]}>SHARE</div>
     </div>
-  )
-}
+  );
+};
 
-export default ViewProductInfo
+export default ViewProductInfo;

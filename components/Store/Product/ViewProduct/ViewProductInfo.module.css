@@ -21,21 +21,9 @@
     margin: 0.5rem 0;
 }
 
-.color-wrapper {
-}
 
-.color-wrapper .color {
-    display: inline-block;
-    margin-right: 1rem;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    border: 3px solid var(--white);
-    cursor: pointer;
-    outline-width: 2px;
-    outline-style: solid;
-    outline-color: var(--black);
-}
+
+
 
 
 
@@ -43,16 +31,26 @@
     margin: 1rem 0;
 }
 
+.please-select-color,
+.please-select-size {
+    color: red;
+}
 
-.size {
+
+
+.selected-size {
     display: inline-block;
-    text-align: center;
+    margin: 0.5rem 0;
     line-height: 30px;
-    width: 40px;
+    font-weight: 700;
+    text-align: center;
+    min-width: 40px;
     height: 33px;
     margin-right: 0.5rem;
     color: var(--black);
-    border: 1px solid black;
+    background: var(--primary);
+    color: var(--black);
+    cursor: pointer;
 }
 
 .quantity-setter {

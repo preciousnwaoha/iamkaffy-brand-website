@@ -2,18 +2,25 @@
     width: 90%;
     max-width: 300px;
     position: absolute;
-    top: 0;
     left: -3px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: calc(100vh - 60px);
     z-index: 10;
-    background: black;
-    color: white;
+    background: var(--white);
+    color: var(--black);
     padding: 0;
     overflow-y: scroll;
     transform: translateX(-100%);
+}
+
+.no-pad-top {
+    top: 0;
+}
+
+.yes-pad-top {
+    top: 60px;
 }
 
 .store-nav::-webkit-scrollbar {
@@ -90,7 +97,7 @@
 }
 
 .store-exit-icon:hover {
-    color: white;
+    color: var(--black);
 }
 
 .store-nav-collection-list {
@@ -122,7 +129,7 @@
 }
 
 .collection-name {
-    color: white;
+    color: var(--black);
     /* border: 1px solid blue; */
     width: 100%;
 }

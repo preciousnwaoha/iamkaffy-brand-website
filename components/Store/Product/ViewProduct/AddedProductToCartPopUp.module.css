@@ -1,0 +1,46 @@
+.added-to-cart {
+    background: var(--secondary);
+    color: white;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+    
+    display: none;
+    opacity: 0;
+    /* display: none; */
+    padding: 0.4rem 1.5rem;
+    border-radius: 0.5rem;
+    -moz-box-shadow: 0 0 5px var(--shadow-3);
+    -webkit-box-shadow: 0 0 5px var(--shadow-3);
+    box-shadow: 0 0 5px var(--shadow-3);
+
+}
+
+.popup {
+    display: inline-block;
+    animation: popUp 1.5s ease-in;
+}
+@keyframes popUp {
+0% {
+    display: inline-block;
+    opacity: 0;
+}
+
+20% {
+    opacity: 0.5;
+}
+
+40% {
+    opacity: 1;
+}
+90% {
+    opacity: 1;
+}
+
+100% {
+    opacity: 0;
+}
+
+}

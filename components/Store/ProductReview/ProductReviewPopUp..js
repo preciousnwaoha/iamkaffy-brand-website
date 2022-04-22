@@ -3,7 +3,9 @@ import classes from "./ProductReviewPopUp.module.css"
 
 const ProductReviewPopUp = () => {
   return (
-    <div></div>
+    <div className={classes["review-popup"]}>
+        
+    </div>
   )
 }
 

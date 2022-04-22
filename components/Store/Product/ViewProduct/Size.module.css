@@ -1,0 +1,16 @@
+.size {
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    width: 40px;
+    height: 33px;
+    margin-right: 0.5rem;
+    color: var(--black);
+    border: 1px solid var(--black);
+    cursor: pointer;
+}
+
+.size:hover {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}

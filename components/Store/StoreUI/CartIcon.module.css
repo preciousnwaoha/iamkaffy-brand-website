@@ -1,5 +1,30 @@
 .cart {
     display: inline-block;
+    position: relative;
     color: var(--white);
     cursor: pointer;
+    margin-right: 20px;
+}
+
+.no-of-items {
+    background: var(--white);
+    color: var(--black);
+    position: absolute;
+    top: -10px;
+    right: inherit;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.cart:hover .no-of-items {
+    background: var(--primary);
+    color: var(--white);
+    font-weight: 600;
 }

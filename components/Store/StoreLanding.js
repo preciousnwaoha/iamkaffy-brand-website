@@ -12,6 +12,7 @@ const StoreLanding = () => {
         <div className={classes["store-banner-inner"]}>
           <Image
             src="/images/kaffy-photo-5.jpg"
+            priority={true}
             alt="kaffy dance online store"
             width={"100%"}
             height={"100%"}

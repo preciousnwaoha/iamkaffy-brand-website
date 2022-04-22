@@ -1,0 +1,18 @@
+.no-products {
+    color: var(--black);
+    padding: 2rem 1rem;
+}
+
+.no-products a {
+    background: var(--black);
+    padding: 0.5rem 1.5rem;
+    color: var(--primary);
+}
+
+.no-products a:hover {
+    background: var(--white);
+    border: 2px solid var(--black);
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

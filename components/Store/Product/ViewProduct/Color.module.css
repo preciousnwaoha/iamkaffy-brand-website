@@ -1,0 +1,12 @@
+.color {
+    display: inline-block;
+    margin-right: 1rem;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    cursor: pointer;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: var(--black);
+}

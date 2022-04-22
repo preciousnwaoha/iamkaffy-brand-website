@@ -2,6 +2,9 @@ import Head from "next/head";
 import CheckOutPage from "../../../components/Store/PaymentCheckout/CheckOutPage";
 import styles from "../../../styles/Home.module.css";
 
+
+
+
 const CheckOut = () => {
   return (
     <div className={styles.container}>

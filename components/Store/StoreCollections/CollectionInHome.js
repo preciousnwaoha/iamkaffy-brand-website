@@ -1,15 +1,18 @@
 import React from "react";
 import UITitle from "../../UI/UITitle";
-import classes from "./Collection.module.css";
+import classes from "./CollectionInHome.module.css";
 import Product from "../Product/Product";
 import Link from "next/link";
-import NoProducts from "../Product/NoProducts";
-// import CollectionFilterSort from "./CollectionFilterSort";
+import CollectionFilterSort from "./CollectionFilterSort";
 
 
 
-const Collection = ({ data }) => {
+const CollectionInHome = ({ data }) => {
   const { collection, products } = data
+
+  const filteredProducts = products.filter((product, index) => {
+      return ((product.collections.includes(collection.name)) && (index < 8) )
+  } )
 
   return (
     <div className={classes.collection}>
@@ -20,9 +23,8 @@ const Collection = ({ data }) => {
         <CollectionFilterSort />
       )} */}
 
-      { (products.length > 0) ?
-        <div className={classes["collection-items-wrapper"]}>
-        {products.map((product) => (
+      <div className={classes["collection-items-wrapper"]}>
+        {filteredProducts.map((product) => (
           <Product
             key={product.id}
             id={product.id}
@@ -36,12 +38,11 @@ const Collection = ({ data }) => {
           />
         ))}
       </div>
-      : <NoProducts /> } 
-      
-
-      
+      <Link href={`/store/collection/${collection.id}`}>
+        <a className={classes["view-all-link"]}>view all</a>
+      </Link>
     </div>
   );
 };
 
-export default Collection;
+export default CollectionInHome;
