@@ -9,19 +9,25 @@ import classes from "./SuccessStories.module.css";
 
 const DEFAULT_SSs = [
   {
-    img: "/images/ijoda-1.jpg",
-    title: "A Story from Kaffy's Impact 1",
-    description: "desscription of story",
+    id: "synop1",
+    img:"/images/awards/heades_show-1.jpg",
+    alt: "Kaffy Bags a Headies Award",
+    title: "Headies Award",
+    description: "Kaffy bags Headies Special Recognition Award",
   },
   {
-    img: "/images/ijoda-2.jpg",
-    title: "A Story from Kaffy's Impact 2",
-    description: "desscription of story",
+    id: "synop2",
+    img:"/images/kaffy-photo-15.JPEG",
+    alt: "Kaffy Afrima Award",
+    title: "Kaffy - AFRIMA",
+    description: "kaffy AFRIMA Award",
   },
   {
-    img: "/images/ijoda-2.jpg",
-    title: "A Story from Kaffy's Impact 3",
-    description: "desscription of story",
+    id: "synop3",
+    img:"/images/awards/mtvbase-logo.webp",
+    alt: "Kaffy on MTV Base",
+    title: "Kaffy on MTV",
+    description: "Recognized on MTV Base",
   },
 ];
 

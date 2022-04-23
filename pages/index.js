@@ -70,7 +70,7 @@ export default function Home( { videosData, contactDetails }) {
        <Landing /> 
        
        <Featured 
-        imgPath="/images/kaffy-look.jpg"
+        imgPath="/images/orange9.JPEG"
         imgW="100%"
         imgH="100%"
         name="CNN"

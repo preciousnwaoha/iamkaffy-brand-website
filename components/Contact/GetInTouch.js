@@ -12,19 +12,19 @@ const GetInTouch = ({data}) => {
   const { email, address, phones } = data[0]
   return (
     <div className={classes["get-in-touch"]} id="contact-2">
-      <div className={classes["curve-div"]}>
+      {/* <div className={classes["curve-div"]}>
        
-      </div>
+      </div> */}
       <div className={classes["image-wrapper"]}>
-            <div className={classes["image-wrapper-inner"]}>
+            {/* <div className={classes["image-wrapper-inner"]}>
           <Image src="/images/get-in-touch.jpg" alt="Get In touch with Kaffy the dancer" width={"400px"} height={"400px"} layout="responsive" />
-        </div>
+        </div> */}
         </div>
         
       <UIBigTitle titleText={"Get In Touch"} className={classes.title} />
       <div className={classes["GIT-text-wrapper"]}>
         <p className={classes["GIT-text"]}>
-          This is the get in touch cool message space
+          you connect to kaffy from here
         </p>
         <p className={classes["GIT-email"]}>
         <FontAwesomeIcon

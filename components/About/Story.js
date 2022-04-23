@@ -20,8 +20,9 @@ const Story = () => {
       <UIBigTitle titleText={"Kaffy's Story"} className={classes["story-title"]} />
       <div className={classes["story-content"]}>
         <div className={classes["story-image-case"]}>
+          <div className={classes["image-wrapper-inner"]}>
           <Image
-            src="/images/kaffyballet1-removebg.png"
+            src="/images/orange1.JPEG"
             alt="About Kaffy"
             width="100%"
             height="100%"
@@ -29,6 +30,8 @@ const Story = () => {
             priority={true}
             className={classes.image}
           />
+          </div>
+          
           <div className={classes["story-image-grid"]}>
             <div
               className={`${

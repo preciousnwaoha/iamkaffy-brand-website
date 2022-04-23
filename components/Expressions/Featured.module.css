@@ -3,16 +3,32 @@
 }
 
 .featured h4 {
-    background: var(--white);
+    background: var(--black);
     margin: 0;
     color: var(--secondary);
-    padding: 1rem 0;
+    padding: 1rem;
 }
 
 .featured-show {
     position: relative;
     overflow: hidden;
     border-radius: 1rem;
+}
+
+.image-wrapper {
+    width: 100%;
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+}
+
+.image-wrapper-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0 0 1rem 1rem;
 }
 
 .featured-image-overlay {

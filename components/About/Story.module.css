@@ -127,7 +127,7 @@ display: inline-block;
 }
 
 .story-btn:hover {
-  color: var(--black);
+  background: var(--black);
   border: 2px solid var(--black);
 }
 

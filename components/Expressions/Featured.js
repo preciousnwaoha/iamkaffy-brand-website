@@ -9,13 +9,19 @@ const Featured = ({ imgPath, imgW, imgH, name, description, featuredLink, classN
     <div className={`${classes.featured} ${className || ""}`}>
       <div className={classes["featured-show"]}>
         <h4 className={classes["featured-ref"]}>{name} FEATURE</h4>
-        <Image
+        
+        <div className={classes["image-wrapper"]}>
+          <div className={classes["image-wrapper-inner"]}>
+          <Image
           src={imgPath}
           alt={`Kaffy featured on ${name}`}
-          width={imgW}
-          height={imgH}
+          width={"100%"}
+          height={"100%"}
           layout="responsive"
         />
+          </div>
+        </div>
+        
         <div className={classes["featured-image-overlay"]}>
         <Link href={featuredLink}>
           <a target="_blank">SEE MORE</a>
