@@ -3,7 +3,7 @@
 
 .main {
     position: relative;
-    max-width: 1366px;
+    /* max-width: 1366px; */
     margin: auto;
     /* overflow-x: hidden; */
 }

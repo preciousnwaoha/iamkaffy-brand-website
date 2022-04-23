@@ -6,13 +6,15 @@ import {
   faInstagram,
   faYoutube,
   faTiktok,
+  faLinkedin,
+  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import classes from "./Socials.module.css";
 
 const Socials = ({ className }) => {
   return (
     <div className={`${classes.social} ${className || ""}`}>
-      <Link href="https://www.youtube.com">
+      <Link href="https://www.instagram.com/kaffydance/">
         <a>
           <FontAwesomeIcon
             icon={faInstagram}
@@ -22,7 +24,7 @@ const Socials = ({ className }) => {
         </a>
       </Link>
 
-      <Link href="https://www.youtube.com">
+      <Link href="https://www.youtube.com/c/kaffytube">
         <a>
           <FontAwesomeIcon
             icon={faYoutube}
@@ -32,7 +34,7 @@ const Socials = ({ className }) => {
         </a>
       </Link>
 
-      <Link href="https://www.youtube.com">
+      <Link href="https://www.facebook.com/kdancequeen">
         <a>
           <FontAwesomeIcon
             icon={faFacebook}
@@ -42,12 +44,31 @@ const Socials = ({ className }) => {
         </a>
       </Link>
 
-      <Link href="https://www.youtube.com">
+      <Link href="https://www.tiktok.com/@kaffydance">
         <a>
           <FontAwesomeIcon
             icon={faTiktok}
             style={{ fontSize: "25px" }}
-            className={classes.facebook}
+            className={classes.tiktok}
+          ></FontAwesomeIcon>
+        </a>
+      </Link>
+
+      <Link href="https://www.linkedin.com/in/kaffy-shafau-ameh-40a5a929/">
+        <a>
+          <FontAwesomeIcon
+            icon={faLinkedin}
+            style={{ fontSize: "25px" }}
+            className={classes.linkedin}
+          ></FontAwesomeIcon>
+        </a>
+      </Link>
+      <Link href="https://twitter.com/kaffydancequeen">
+        <a>
+          <FontAwesomeIcon
+            icon={faTwitter}
+            style={{ fontSize: "25px" }}
+            className={classes.twitter}
           ></FontAwesomeIcon>
         </a>
       </Link>

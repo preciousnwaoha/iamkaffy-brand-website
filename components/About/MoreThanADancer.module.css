@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  max-width: 1366px;
   /* min-height: 100vh; */
   padding-bottom: 1rem;
 }
@@ -13,6 +12,7 @@
 
 .more-content {
   margin: 0 1rem;
+ 
 }
 
 .more-content-inner {
@@ -33,7 +33,7 @@
   height: 100%;
   overflow: hidden;
   border-radius: 1rem;
-  background: var(--white);
+  background: var(--black);
 }
 
 .more-content-inner-text {

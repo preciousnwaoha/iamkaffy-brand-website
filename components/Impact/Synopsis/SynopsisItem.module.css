@@ -1,6 +1,6 @@
 .synopsis-item {
     display: inline-block;
-    width: 70%;
+    width: 75%;
     margin-right: 0.5rem;
 }
 
@@ -24,15 +24,18 @@
     font-size: 1.25rem;
     font-weight: 500;
     margin: 0.5rem 0;
+    white-space: normal;
+    color: var(--black);
 }
 .text-wrapper p {
     margin: 0;
     margin-bottom: 0.5rem;
     width: 100%;
     height: auto;
-    overflow-x: hidden;
     white-space: wrap;
     font-size: 0.85rem;
+    color: var(--black);
+    white-space: normal;
     /* border: 1px solid red; */
 }
 

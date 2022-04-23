@@ -1,7 +1,6 @@
 .footer {
     background: var(--white);
     width: 100%;
-    max-width: 1366px;
     /* margin: auto; */
     position: relative;
 }
@@ -21,6 +20,7 @@
 .footer-content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin:1rem;
 }
 
@@ -29,7 +29,7 @@
     display: inline-block;
 }
 .logo {
-    text-align: left;
+    text-align: center;
     color: var(--black);
 }
 
@@ -46,7 +46,7 @@
 
 .btn-wrapper {
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: center; */
     margin-bottom: 0;
     margin-top: 0.5rem;
 }

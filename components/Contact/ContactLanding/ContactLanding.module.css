@@ -2,7 +2,6 @@
     position: relative;
     background: var(--white);
     width: 100%;
-    max-width: 1366px;
     overflow: hidden;
 }
 

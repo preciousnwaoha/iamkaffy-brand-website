@@ -62,7 +62,7 @@ const SuccessStories = () => {
 
   return (
     <div className={classes["success-stories"]}>
-      <UIBigTitle titleText={"Success Stories"} />
+      <UIBigTitle titleText={"Success Stories"} className={classes.title} />
       <div className={classes["SSs-content"]}>
         <div className={classes["SSs-image-wrapper"]}>
           <div className={classes["SSs-image-wrapper-inner"]}>

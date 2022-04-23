@@ -5,7 +5,6 @@
     justify-content: space-between;
     background: var(--white);
     width: 100%;
-    max-width: 1366px;
     margin: auto;
     padding: 0;
     padding-bottom: 0;
@@ -123,7 +122,7 @@ text-orientation: sideways;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 55%;
+    width: 60%;
     padding: 0 1rem;
     align-self: flex-end;
     text-align: center;
@@ -144,13 +143,14 @@ text-orientation: sideways;
     border-radius: 1rem;
 }
 .record h4 {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1.25em;
+    font-weight: 700;
     font-style: italic;
     margin: 0;
 }
 .record p {
-    font-size: 0.85rem;
+    font-size: 1rem;
+
     font-style: italic;
 }
 

@@ -21,7 +21,7 @@ const themeLight = {
 
 const themeDark = {
   "--primary": "#a67453",
-  "--secondary": "#e6a071",
+  "--secondary": "#a67453",
   "--primary-trans": "rgba(166, 116, 83, 0.471)",
   "--secondary-trans": "rgba(230, 160, 113, 0.424)", 
   "--black": "#fffcfb",

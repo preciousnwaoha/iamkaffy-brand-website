@@ -36,7 +36,7 @@ const Landing = () => {
       <div className={classes["landing-text-side"]}>
         <div className={classes["hero-text"]}>
           <h1 className={classes.tagline}>
-            I EXPOLORE MY <br />
+            I EXPLORE MY <br />
             <span>FULL HUMANITY</span>
             <br /> - Through Dance
           </h1>

@@ -1,7 +1,6 @@
 .foundation {
     width: 100%;
-    max-width: 1366px;
-    height: 100vh;
+    min-height: 100vh;
     max-height: 1000px;
     background: var(--white);
     background: url("/images/foundation-1.jpg");
@@ -22,6 +21,7 @@
 
 .foundation-title {
     color: var(--secondary);
+    /* border: 1px solid red; */
 }
 
 .foundation-text {
@@ -31,6 +31,7 @@
     font-size: 1.5rem;
     text-align: center;
     font-weight: 400;
+   
 
 }
 
@@ -46,7 +47,7 @@
     line-height: 1rem;
     padding: 1rem 1.5rem;
     border-radius: 1.5rem;
-    background: var(--secondary);
+    background: var(--black);
     margin: 1rem;
 }
 

@@ -6,6 +6,10 @@
   margin: 0 1rem;
 }
 
+.title {
+  font-size: 2.5rem;
+}
+
 .SSs-image-wrapper {
   /* display: inline-block; */
   position: relative;

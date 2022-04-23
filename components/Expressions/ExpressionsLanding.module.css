@@ -1,9 +1,8 @@
 .expressions-landing {
     position: relative;
     width: 100%;
-    max-width: 1366px;
     height: calc(100vh - 60px);
-    max-height: 1366px;
+    max-height: 900px;
     background: var(--black);
     margin: 0 auto;
     background: url("/images/kaffy-clean.jpeg");
