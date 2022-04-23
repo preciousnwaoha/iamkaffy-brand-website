@@ -26,6 +26,7 @@ const Story = () => {
             width="100%"
             height="100%"
             layout="responsive"
+            priority={true}
             className={classes.image}
           />
           <div className={classes["story-image-grid"]}>

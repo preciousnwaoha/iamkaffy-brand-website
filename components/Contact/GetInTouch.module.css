@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 1366px;
     height: calc(100vh - 60px);
-    max-height: 800px;
+    max-height: 600px;
     position: relative;
 }
 
@@ -79,6 +79,9 @@ bottom: 0;
 } */
 
 @media screen and (min-width: 760px) {
+    .get-in-touch {
+        max-height: 800px;
+    }
     .GIT-text-wrapper {
         width: 55%;
         margin: 1rem 2rem;
