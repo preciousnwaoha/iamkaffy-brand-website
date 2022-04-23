@@ -17,7 +17,7 @@
 }
 
 .curve-div {
-    background: rgb(216, 125, 50);
+    background: var(--secondary);
     position: absolute;
     bottom: 0;
     right: 1rem;

@@ -56,9 +56,10 @@
   line-height: 40px;
   text-align: center;
   padding: 0;
-  background: var(--primary);
+  background: transparent;
+  border: 2px solid var(--black);
   border-radius: 50%;
-  color: var(--white);
+  color: var(--black);
   font-weight: 700;
   margin: 1rem;
 }

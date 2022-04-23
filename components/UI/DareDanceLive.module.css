@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .dare-dance-live div:nth-child(1) {
@@ -34,6 +34,6 @@
     }
 
     .dare-dance-live div {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }

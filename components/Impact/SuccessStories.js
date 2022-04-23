@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Button from "../UI/Button";
 import UIBigTitle from "../UI/UIBigTitle";
 import Image from "next/image";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+
 import classes from "./SuccessStories.module.css";
 
 const DEFAULT_SSs = [
@@ -73,8 +76,12 @@ const SuccessStories = () => {
             <p>{description}</p>
           </div>
           <div className={classes["SSs-actions"]}>
-            <Button className={classes["right-btn"]} clickAction={backwardsHandler}>{"<"}</Button>
-            <Button className={classes["left-btn"]} clickAction={forwardsHandler}>{">"}</Button>
+            <Button className={classes["right-btn"]} clickAction={backwardsHandler}>
+            <FontAwesomeIcon icon={faAngleLeft} style={{fontSize: "1.125rem"}} />
+              </Button>
+            <Button className={classes["left-btn"]} clickAction={forwardsHandler}>
+            <FontAwesomeIcon icon={faAngleRight} style={{fontSize: "1.125rem"}} />
+              </Button>
           </div>
         </div>
       </div>

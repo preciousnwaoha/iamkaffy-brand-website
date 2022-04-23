@@ -6,20 +6,12 @@
     margin-bottom: 0.5rem;
     background: var(--white);
     color: var(--black);
-  box-shadow: 0px 0px 8px 0px var(--shadow-3);
-  border: 1px solid transparent;
+  border: 1px solid var(--primary);
   cursor: pointer;
+  user-select: none;
 }
 
-.service:nth-child(even) {
-    background: var(--black);
-    color: var(--white);
-}
 
-.service:hover, .service:focus {
-    color: var(--primary);
-    border: 1px solid var(--primary);
-}
 
 
 @media screen and (min-width: 760px) {
