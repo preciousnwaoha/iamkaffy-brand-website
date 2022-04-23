@@ -62,11 +62,13 @@
   color: var(--black);
   font-weight: 700;
   margin: 1rem;
+  user-select: none;
 }
 
 .left-btn:hover,
 .right-btn:hover {
-  background: var(--black);
+  border: 2px solid var(--primary);
+  color: 2px solid var(--primary);
 }
 
 @media screen and (min-width: 760px) {
@@ -82,9 +84,7 @@
     height: 0;
   }
 
-  .SSs-image-wrapper-inner {
-     
-  }
+ 
 
   .SSs-text-actions-wrapper {
     width: calc(35% - 0.25rem);

@@ -15,8 +15,8 @@
 }
 
 .dare-dance-live div:nth-child(1) {
-    background: var(--black);
-    color: var(--white);
+    background: var(--black-stay);
+    color: var(--white-stay);
 }
 
 .dare-dance-live div:nth-child(2) {
@@ -24,8 +24,8 @@
     color: var(--black);
 }
 .dare-dance-live div:nth-child(3) {
-    background: var(--black);
-    color: var(--white);
+    background: var(--black-stay);
+    color: var(--white-stay);
 }
 
 @media screen and (min-width: 760px) {

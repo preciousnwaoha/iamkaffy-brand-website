@@ -4,13 +4,15 @@
     height: calc(100vh - 60px);
     max-height: 600px;
     position: relative;
+    /* background: url("/images/kaffy-photo-6.webp");
+    background-size: cover;
+    filter: brightness(50%); */
 }
 
 .GIT-text-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-   
     margin: 1rem;
     margin-top: 0;
     padding: 0;

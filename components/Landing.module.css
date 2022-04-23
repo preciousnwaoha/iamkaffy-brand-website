@@ -16,7 +16,7 @@
     position: absolute;
     bottom: -70%;
     right: calc(-70% + 80px);
-    background: var(--primary);
+    background: #e6a071;
     width: 120%;
     height: 120%;
     border-radius: 50%;
@@ -26,10 +26,13 @@
     
     display: inline-block;
     position: absolute;
-    top: 60%;
-    left: 75%;
+    top: 70%; /*  */
+    left: 75%; /**/
     transform: translate(-50%, -50%);
     width: 100%;
+    height: 100%;
+    border: 1px solid red;
+
     /* border: 1px solid red; */
     z-index: 1;
     /* border: 1px solid red; */
@@ -93,7 +96,7 @@ text-orientation: sideways;
 }
 
 .p-yellow {
-    color: var(--secondary)
+    color: var(--primary)
 }
 
 .record-image-side {
@@ -118,6 +121,7 @@ text-orientation: sideways;
     color: var(--white);
     z-index: 1;
     backdrop-filter: blur(3px);
+    border-radius: 1rem;
 }
 .record h4 {
     font-size: 1rem;

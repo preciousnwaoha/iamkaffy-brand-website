@@ -6,7 +6,7 @@ import classes from "./Landing.module.css";
 const LANDDING_IMAGES = [
   {
     id: "landimg1",
-    path: "/images/orange2-removebg.png",
+    path: "/images/kaffyballet1.jpg",
     width: "406",
     height: "612",
   },

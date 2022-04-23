@@ -5,8 +5,8 @@
   font-size: 1.5rem;
     margin-bottom: 0.5rem;
     background: var(--white);
-    color: var(--black);
-  border: 1px solid var(--primary);
+    color: var(--primary);
+  border: 1px solid var(--black);
   cursor: pointer;
   user-select: none;
 }
