@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link"
 import Social from "../Contact/Socials"
 import Button from "../UI/Button";
 import DareDanceLive from "../UI/DareDanceLive";
@@ -17,9 +18,12 @@ const Footer = () => {
         </div>
         <Social className={classes["footer-socials"]} />
         <div className={classes["btn-wrapper"]}>
-          <Button className={classes["footer-btn"]}>
+          <Link href={"/contact"}>
+          <a className={classes["footer-btn"]}>
               Contact
-          </Button>
+          </a>
+          </Link>
+          
         </div>
       </div>
       <div className={classes["footer-footer"]}>
