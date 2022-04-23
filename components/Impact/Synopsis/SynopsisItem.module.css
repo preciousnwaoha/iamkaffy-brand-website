@@ -28,6 +28,11 @@
 .text-wrapper p {
     margin: 0;
     margin-bottom: 0.5rem;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    white-space: nowrap;
+    /* border: 1px solid red; */
 }
 
 @media screen and (min-width: 760px) {

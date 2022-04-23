@@ -11,7 +11,7 @@ const DEFAULT_SYNOPSIS = [
     img:"/images/ijoda-1.jpg",
     alt: "Kaffy on Synopsis",
     title: "Synopsis 1",
-    description: "Synopsis 1 Description",
+    description: "Synopsis 1 Description is linger than other",
   },
   {
     id: "synop2",
