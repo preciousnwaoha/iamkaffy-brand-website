@@ -20,6 +20,7 @@
     width: 120%;
     height: 120%;
     border-radius: 50%;
+    display: none;
 }
 
 .image-case {
@@ -37,6 +38,25 @@
     z-index: 1;
     /* border: 1px solid red; */
 }
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    z-index: 0;
+    background: url("/images/kaffy-culture-2.JPEG");
+    background-size: cover;
+    filter: brightness(25%);
+}
+
+/* .hero-holder {
+    width: 100%;
+    height: calc(100vh - 60px);
+    border: 1px solid red;
+    
+} */
 
 
 
@@ -118,7 +138,7 @@ text-orientation: sideways;
     height: auto;
     text-align: right;
     width: 100%;
-    color: var(--white);
+    color: var(--white-stay);
     z-index: 1;
     backdrop-filter: blur(3px);
     border-radius: 1rem;

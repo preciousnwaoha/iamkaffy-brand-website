@@ -15,7 +15,7 @@ const LANDDING_IMAGES = [
 const Landing = () => {
   return (
     <div className={classes.landing}>
-      <div className={classes["image-case"]}>
+      {/* <div className={classes["image-case"]}>
         {LANDDING_IMAGES.map((image) => (
           <Image
             key={image.id}
@@ -28,6 +28,9 @@ const Landing = () => {
             className={classes.image}
           />
         ))}
+      </div> */}
+      <div className={classes["hero-bg"]}>
+        
       </div>
       <div className={classes.circle}></div>
       <div className={classes["landing-text-side"]}>
