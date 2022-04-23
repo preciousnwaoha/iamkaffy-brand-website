@@ -21,10 +21,10 @@ const Story = () => {
       <div className={classes["story-content"]}>
         <div className={classes["story-image-case"]}>
           <Image
-            src="/images/orange1.JPEG"
+            src="/images/kaffyballet1-removebg.png"
             alt="About Kaffy"
-            width="2299"
-            height="3218"
+            width="100%"
+            height="100%"
             layout="responsive"
             className={classes.image}
           />

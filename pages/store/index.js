@@ -8,7 +8,7 @@ import CollectionInHome from "../../components/Store/StoreCollections/Collection
 import MailingList from "../../components/Store/MailingList";
 import StoreHeader from "../../components/Store/StoreHeader/StoreHeader";
 import { db } from "../../firebase";
-import { collection, getDoc, getDocs } from "firebase/firestore"
+import { collection, getDocs } from "firebase/firestore"
 
 
 

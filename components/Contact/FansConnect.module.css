@@ -10,8 +10,7 @@
 }
 
 .fans-connect-inner {
-    background: var(--primary-trans);
-    background: #020202;
+    background: #060606;
     width: 100%;
     margin: 1rem;
     border-radius: 1rem;
@@ -33,6 +32,7 @@
     color: var(--secondary);
     text-align: center;
     font-weight: 400;
+    margin: 0 1rem;
 }
 
 .image-side {

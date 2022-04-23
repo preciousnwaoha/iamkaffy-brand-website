@@ -54,7 +54,7 @@ const Vault = ({ videosData, photosData }) => {
       <main className={styles.main}>
        <Header />
        <VaultLanding />
-       {/* <VaultVideos videosData={videosData} /> */}
+       <VaultVideos videosData={videosData} />
        <VaultPhotos photosData={photosData} />
       </main>
       <Footer />

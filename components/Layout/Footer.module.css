@@ -48,17 +48,20 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 0;
+    margin-top: 0.5rem;
 }
 
 .footer-btn {
-    background: var(--secondary);
-    color: var(--white);
+    background: transparent;
+    border: 2px solid var(--black);
+    color: var(--black);
     font-weight: 500;
-    border-radius: 0.5rem;
+    border-radius: 0;
 }
 
 .footer-btn:hover {
-    color: var(--black);
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
 }
 
 .footer-footer {

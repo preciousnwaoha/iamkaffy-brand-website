@@ -1,5 +1,5 @@
 .inspire {
-  background: var(--black);
+  background: #080808;
   width: 100%;
   max-width: 1366px;
   margin: auto;
@@ -8,7 +8,7 @@
 }
 
 .inspire-title {
-  background: var(--black);
+  background: #080808;
   box-shadow: 0px 0px 8px 0px var(--shadow-2);
 }
 
@@ -22,7 +22,7 @@
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-size: 0.85rem;
-  color: var(--white);
+  color: white;
   text-align: justify;
   text-indent: 2rem;
 }

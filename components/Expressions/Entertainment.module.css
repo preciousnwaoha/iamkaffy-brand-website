@@ -1,12 +1,10 @@
 .entertainment {
-    border: 1px solid red;
     width: 100%;
     max-width: 1366px;
     padding-bottom: 1rem;
 }
 
 .entertainment h4 {
-    border: 1px solid red;
     margin: 1rem;
     font-size: 1.125rem;
     font-weight: 500;

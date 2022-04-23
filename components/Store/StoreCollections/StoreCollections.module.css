@@ -2,13 +2,13 @@
     width: 100%;
     max-width: 1366px;
     min-height: 100vh;
-    background: black;
+    background: #080808;
     text-align: center;
     padding: 2rem 0;
 }
 
 .collections-title {
-    color: var(--white);
+    color:white;
     margin-top: 0rem;
     /* border: 1px solid black; */
 }

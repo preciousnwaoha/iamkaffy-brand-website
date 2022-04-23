@@ -1,5 +1,5 @@
 .store-header {
-    background: rgb(67, 67, 67);
+    background: var(--black);
     
     width: 100%;
     max-width: 1366px;

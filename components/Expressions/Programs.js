@@ -54,7 +54,7 @@ const DEFAULT_PROGRAMS = [
 const Programs = () => {
   return (
     <div className={classes.programs}>
-      <UITitle titleText={"Some of Ijoda by Kaffy Customised Programs are"} />
+      <UITitle titleText={"Some of Ijoda by Kaffy Customised Programs are"} className={classes["programs-title"]} />
       <div className={classes["programs-items-wrapper"]}>
         {DEFAULT_PROGRAMS.map((program) => (
           <Program

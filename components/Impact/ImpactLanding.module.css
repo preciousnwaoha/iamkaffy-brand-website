@@ -33,7 +33,7 @@
   /* width: auto; */
   display: inline-block;
   position: absolute;
-  color: var(--white);
+  color: white;
   top: 45%;
   left: 6rem;
   font-weight: 700;

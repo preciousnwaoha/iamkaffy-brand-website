@@ -6,6 +6,10 @@
     margin: 1rem 1rem;
 }
 
+.programs-title {
+    color: var(--black);
+}
+
 .programs-items-wrapper {
     width: 100%;
 }
