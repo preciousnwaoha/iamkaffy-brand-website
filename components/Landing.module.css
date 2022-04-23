@@ -47,7 +47,9 @@
     position: relative;
     display: inline-block;
     margin-bottom: 3rem;
-    width: 55%;
+    width: 85%;
+    
+    border: 1px solid red;
 }
 
 .tagline {
@@ -58,6 +60,7 @@
     margin: 0;
     padding-left: 1.5rem;
     color: var(--secondary);
+    color: var(--black);
 }
 .dare-dance-live {
     position: absolute;
