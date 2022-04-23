@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    user-select: none;
 }
 
 
@@ -59,6 +60,7 @@
 }
 
 .awards {
+    user-select: none;
     position: absolute;
     display: grid;
     padding-left: 0.5rem;
