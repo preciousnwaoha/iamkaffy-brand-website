@@ -10,14 +10,14 @@ import {db} from "../../firebase"
 import { collection, getDocs } from 'firebase/firestore'
 
 // const videosCollectionRef = collection(db, "videos")
-const videosEmbedIdCollectionRef = collection(db, "videosEmbedId")
+// const videosEmbedIdCollectionRef = collection(db, "videosEmbedId")
 const photosCollectionRef = collection(db, "photos")
 
 // const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems"
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   // const videosDataFrb = await getDocs(videosCollectionRef);
-  const videosEmbedIdData = await getDocs(videosEmbedIdCollectionRef)
+  // const videosEmbedIdData = await getDocs(videosEmbedIdCollectionRef)
   const photosDataFrb = await getDocs(photosCollectionRef);
 
 
@@ -27,11 +27,11 @@ export async function getServerSideProps() {
   //   )
   // })[0]
 
-  const videosData = videosEmbedIdData.docs.map(doc =>  {
-    return (
-      {...doc.data(), id: doc.id}
-    )
-  })
+  // const videosData = videosEmbedIdData.docs.map(doc =>  {
+  //   return (
+  //     {...doc.data(), id: doc.id}
+  //   )
+  // })
 
 
   const photosData = photosDataFrb.docs.map(doc =>  {
@@ -44,13 +44,13 @@ export async function getServerSideProps() {
   // const videosData = await res.json();
   return {
     props: {
-      videosData,
+      // videosData,
       photosData: photosData,
     }
   }
 }
 
-const Vault = ({ videosData, photosData }) => {
+const Vault = ({ photosData }) => {
  
   return (
     <div className={styles.container}>
@@ -62,7 +62,7 @@ const Vault = ({ videosData, photosData }) => {
       <main className={styles.main}>
        <Header />
        <VaultLanding />
-       <VaultVideos videosData={videosData} />
+       {/* <VaultVideos videosData={videosData} /> */}
        <VaultPhotos photosData={photosData} />
       </main>
       <Footer />

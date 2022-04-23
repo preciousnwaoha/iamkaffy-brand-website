@@ -15,14 +15,14 @@ import {db} from "../firebase"
 import { collection, getDocs } from 'firebase/firestore'
 
 // const videosCollectionRef = collection(db, "videos")
-const videosEmbedIdCollectionRef = collection(db, "videosEmbedId")
+// const videosEmbedIdCollectionRef = collection(db, "videosEmbedId")
 const contactDetailsCollectionRef = collection(db, "contactDetails")
 
 // const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems"
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   // const videosDataFrb = await getDocs(videosCollectionRef);
-  const videosEmbedIdData = await getDocs(videosEmbedIdCollectionRef)
+  // const videosEmbedIdData = await getDocs(videosEmbedIdCollectionRef)
 
   const contactDetailsData = await getDocs(contactDetailsCollectionRef);
 
@@ -34,11 +34,11 @@ export async function getServerSideProps() {
   //   )
   // })[0]
 
-  const videosData = videosEmbedIdData.docs.map(doc =>  {
-    return (
-      {...doc.data(), id: doc.id}
-    )
-  })
+  // const videosData = videosEmbedIdData.docs.map(doc =>  {
+  //   return (
+  //     {...doc.data(), id: doc.id}
+  //   )
+  // })
 
   // const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=${videosPlaylist.playListCode}&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`)
   // const videosData = await res.json();
@@ -49,7 +49,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      videosData,
+      // videosData,
       contactDetails,
     }
   }
@@ -79,7 +79,7 @@ export default function Home( { videosData, contactDetails }) {
        />
        <SuccessStories />
        <Story />
-       <VaultVideos videosData={videosData} />
+       {/* <VaultVideos videosData={videosData} /> */}
        <Services />
        <BrandsWorkedWith />
         <GetInTouch data={contactDetails} />

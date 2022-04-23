@@ -18,7 +18,7 @@
 
 .form input {
     padding: 0.85rem 1.5rem;
-    background: #020202;
+    background: transparent;
     border-radius: 1rem;
     margin: 0.5rem 0;
     outline: none;
@@ -38,7 +38,7 @@
 }
 
 .form textarea {
-    background: #020202;
+    background: transparent;
     color: var(--primary);
     -moz-box-shadow: 0 0 5px var(--shadow-2);
   -webkit-box-shadow: 0 0 5px var(--shadow-2);
@@ -67,5 +67,5 @@
   box-shadow: 0 0 5px var(--shadow-2); */
     text-align: center;
     margin: 0.5rem auto;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
