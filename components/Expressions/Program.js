@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import classes from "./Program.module.css";
 
-const Program = ({ name, imgPath, imgw, imgh, description, topRef }) => {
+const Program = ({ name, imgPath, imgw, imgh, description }) => {
   return (
     <div className={classes.program}>
       <div className={classes["program-image-wrapper"]}>
@@ -14,7 +14,7 @@ const Program = ({ name, imgPath, imgw, imgh, description, topRef }) => {
           height={imgh}
           layout="responsive"
         />
-        <p className={classes["program-image-ref"]}>{topRef}</p>
+        {/* <p className={classes["program-image-ref"]}>{topRef}</p> */}
         
       </div>
       </div>

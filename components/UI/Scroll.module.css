@@ -10,8 +10,8 @@
     padding: 0 0;
     margin: 0;
     border-radius: 50%;
-    background: var(--black);
-    color: var(--white);
+    background: var(--black-stay);
+    color: var(--white-stay);
     cursor: pointer;
     
 }

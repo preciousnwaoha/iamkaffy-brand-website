@@ -6,17 +6,16 @@ import classes from "./Programs.module.css";
 const DEFAULT_PROGRAMS = [
   {
     id: "program1",
-    imgPath: "/images/fit_bomb-1.webp",
-    topRef: "REF",
+    imgPath: "/images/imagneto-2.jpg",
     name: "B.O.M.B",
     imgw: "640",
     imgh: "640",
-    description: "Program Decription in many many words",
+    description: "BEST OF MY BODY",
   },
   {
     id: "program2",
     imgPath: "/images/fit_breaking-bad-1.jpg",
-    topRef: "REF",
+
     name: "Breaking Bad",
     imgw: "2048",
     imgh: "2048",
@@ -24,12 +23,11 @@ const DEFAULT_PROGRAMS = [
   },
   {
     id: "program3",
-    imgPath: "/images/fit_burnout-1.jpg",
-    topRef: "REF",
+    imgPath: "/images/dance-burn-1.jpg",
     name: "Dance Burnout",
     imgw: "320",
     imgh: "320",
-    description: "Program Decription in many many words",
+    description: "",
   },
   {
     id: "program4",
@@ -38,12 +36,11 @@ const DEFAULT_PROGRAMS = [
     name: "Sensual Me",
     imgw: "454",
     imgh: "400",
-    description: "Program Decription in many many words",
+    description: "",
   },
   {
     id: "program5",
     imgPath: "/images/kaffy-fit-2.jpg",
-    topRef: "REF",
     name: "Tommy Blast",
     imgw: "403",
     imgh: "539",
@@ -64,7 +61,6 @@ const Programs = () => {
             imgw={program.imgw}
             imgh={program.imgh}
             description={program.description}
-            topRef={program.topRef}
           />
         ))}
       </div>

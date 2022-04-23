@@ -19,7 +19,7 @@
     margin: 1rem;
     font-size: 0.85rem;
     font-weight: 400;
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 @media screen and (min-width: 760px) {

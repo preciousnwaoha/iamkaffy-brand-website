@@ -68,7 +68,7 @@
 .left-btn:hover,
 .right-btn:hover {
   border: 2px solid var(--primary);
-  color: 2px solid var(--primary);
+  color: var(--primary);
 }
 
 @media screen and (min-width: 760px) {

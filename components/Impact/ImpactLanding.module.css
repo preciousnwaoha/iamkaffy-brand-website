@@ -15,7 +15,7 @@
 }
 
 .impact-angle-div {
-  background: var(--primary-trans);
+  background: var(--white);
   position: absolute;
   top: 0;
   left: -60vw;
@@ -33,7 +33,7 @@
   /* width: auto; */
   display: inline-block;
   position: absolute;
-  color: white;
+  color: var(--black);
   top: 45%;
   left: 6rem;
   font-weight: 700;

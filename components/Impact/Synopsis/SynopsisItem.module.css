@@ -1,6 +1,6 @@
 .synopsis-item {
     display: inline-block;
-    width: 40%;
+    width: 70%;
     margin-right: 0.5rem;
 }
 
@@ -31,12 +31,13 @@
     width: 100%;
     height: auto;
     overflow-x: hidden;
-    white-space: nowrap;
+    white-space: wrap;
+    font-size: 0.85rem;
     /* border: 1px solid red; */
 }
 
 @media screen and (min-width: 760px) {
     .synopsis-item {
-        width: 35%;
+        width: 45%;
     }
 }

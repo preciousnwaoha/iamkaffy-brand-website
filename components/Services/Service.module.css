@@ -2,10 +2,10 @@
   display: inline-block;
   width: 100%;
   padding: 2rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
     margin-bottom: 0.5rem;
     background: var(--white);
-    color: var(--primary);
+    color: var(--secondary);
   border: 1px solid var(--black);
   cursor: pointer;
   user-select: none;
