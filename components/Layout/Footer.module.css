@@ -8,7 +8,7 @@
 
 .scroll-up {
     top: -10px;
-    left: calc(50% - 1rem);
+    left: calc(50% - 1.25rem);
     transform: translate(-50%, -50%);
     margin: 0;
 
