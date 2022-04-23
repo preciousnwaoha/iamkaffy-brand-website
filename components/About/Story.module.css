@@ -119,14 +119,16 @@ display: inline-block;
 
 .story-btn {
   align-self: center;
-  background: var(--primary);
-  color: var(--white);
+  background: transparent;
+  color: var(--secondary);
   margin: 1rem;
-  border-radius: 0.5rem;
+  border: 2px solid var(--secondary);
+  border-radius: 0;
 }
 
 .story-btn:hover {
-  background: var(--secondary);
+  color: var(--black);
+  border: 2px solid var(--black);
 }
 
 @media screen and (min-width: 760px) {
