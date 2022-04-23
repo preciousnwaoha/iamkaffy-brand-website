@@ -1,10 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Moon+Dance&family=Poppins&family=Roboto&display=swap');
+
+
+
+@font-face {
+  font-family: 'Courgette', cursive;
+  font-family: 'Moon Dance', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), url(/fonts/roboto.woff2) format('woff2');
+}
+
 :root {
   --primary: #e6a071;
   --secondary: #a67453;
   --primary-trans: rgba(230, 160, 113, 0.424);
   --secondary-trans: rgba(166, 116, 83, 0.471); 
-  --black: #020202;
+  --black: #080808;
   --white: #fffcfb;
+  --black-stay: #080808;
   --text-black-1: #000000;
   --text-white-1: #fffaf7;
   --shadow-1: rgba(255, 102, 0, 0.12);
@@ -26,8 +43,9 @@ body {
   background: var(--white);
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Poppins;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
 a {

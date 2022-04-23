@@ -58,6 +58,7 @@
     height: 100%;
     margin: 0;
     transform: rotate(-35deg);
+    user-select: none;
 }
 
 .awards {

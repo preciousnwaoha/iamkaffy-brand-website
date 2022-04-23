@@ -16,19 +16,21 @@
     position: absolute;
     bottom: -70%;
     right: calc(-70% + 80px);
-    background: var(--primary);
+    background: var(--secondary);
     width: 120%;
     height: 120%;
     border-radius: 50%;
 }
 
 .image-case {
+    
     display: inline-block;
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: -15%;
     width: 100%;
     z-index: 1;
+    /* border: 1px solid red; */
 }
 
 
