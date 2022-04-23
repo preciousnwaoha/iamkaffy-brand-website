@@ -2,6 +2,7 @@
     background: var(--white);
     position: relative;
     height: 100vh;
+    max-height: 800px;
     width: 100%;
     max-width: 1366px;
     margin: 0;
