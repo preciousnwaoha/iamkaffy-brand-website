@@ -1,11 +1,11 @@
 .store-nav {
     width: 90%;
     max-width: 300px;
-    position: absolute;
+    position: fixed;
     left: -3px;
     display: flex;
     flex-direction: column;
-    height: calc(100% - 60px);
+    height: calc(100vh - 60px);
     z-index: 2;
     background: var(--white);
     color: var(--black);
@@ -16,6 +16,7 @@
 
 .no-pad-top {
     top: 0;
+    top: 60px;
 }
 
 .yes-pad-top {

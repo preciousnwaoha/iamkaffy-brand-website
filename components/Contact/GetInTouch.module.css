@@ -2,6 +2,7 @@
     width: 100%;
     max-width: 1366px;
     height: calc(100vh - 60px);
+    max-height: 800px;
     position: relative;
 }
 
