@@ -5,7 +5,7 @@ import classes from "./Video.module.css";
 
 import PropTypes from "prop-types";
 
-const Video = ({ medium, title, embedId }) => (
+const Video = ({ embedId }) => (
   <div className={classes.video}>
     <div className={classes["video-responsive"]}>
       <iframe

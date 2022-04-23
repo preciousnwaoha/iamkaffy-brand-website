@@ -9,21 +9,29 @@ import VaultPhotos from '../../components/Vault/VaultPhotos'
 import {db} from "../../firebase"
 import { collection, getDocs } from 'firebase/firestore'
 
-const videosCollectionRef = collection(db, "videos")
+// const videosCollectionRef = collection(db, "videos")
+const videosEmbedIdCollectionRef = collection(db, "videosEmbedId")
 const photosCollectionRef = collection(db, "photos")
 
-const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems"
+// const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems"
 
 export async function getServerSideProps() {
-  const videosDataFrb = await getDocs(videosCollectionRef);
+  // const videosDataFrb = await getDocs(videosCollectionRef);
+  const videosEmbedIdData = await getDocs(videosEmbedIdCollectionRef)
   const photosDataFrb = await getDocs(photosCollectionRef);
 
 
-  const videosPlaylist = videosDataFrb.docs.map(doc =>  {
+  // const videosPlaylist = videosDataFrb.docs.map(doc =>  {
+  //   return (
+  //     {...doc.data(), id: doc.id}
+  //   )
+  // })[0]
+
+  const videosData = videosEmbedIdData.docs.map(doc =>  {
     return (
       {...doc.data(), id: doc.id}
     )
-  })[0]
+  })
 
 
   const photosData = photosDataFrb.docs.map(doc =>  {
@@ -32,8 +40,8 @@ export async function getServerSideProps() {
     )
   })
 
-  const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=${videosPlaylist.playListCode}&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`)
-  const videosData = await res.json();
+  // const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=${videosPlaylist.playListCode}&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`)
+  // const videosData = await res.json();
   return {
     props: {
       videosData,

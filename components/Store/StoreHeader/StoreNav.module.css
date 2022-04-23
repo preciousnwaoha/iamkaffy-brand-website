@@ -5,9 +5,8 @@
     left: -3px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: calc(100vh - 60px);
-    z-index: 10;
+    height: calc(100% - 60px);
+    z-index: 2;
     background: var(--white);
     color: var(--black);
     padding: 0;
@@ -65,8 +64,8 @@
 }
 
 .store-nav::-webkit-scrollbar {
-    width: 10px;
-    background-color: var(--primary)
+    width: 0;
+    background-color: var(--white)
 }
 
 .store-nav-logo {
@@ -84,7 +83,7 @@
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin: 0.5rem 0;
+    margin: 0.5rem;
     width: 30px;
     height: 30px;
     font-size: 2rem;
@@ -104,6 +103,7 @@
     list-style: none;
     padding-left: 0;
     margin: 0;
+    margin-bottom: 2rem;
     /* width: 100%; */
 }
 
