@@ -62,9 +62,9 @@ export default function Home( { videosData, contactDetails }) {
        <Landing /> 
        
        <Featured 
-        imgPath="/images/kaffy-photo-4.jpg"
-        imgW="640"
-        imgH="517"
+        imgPath="/images/kaffy-look.jpg"
+        imgW="100%"
+        imgH="100%"
         name="CNN"
         description="Featured on News Channel CNN"
         featuredLink={"https://www.instagram.com/reel/CI_HfTXBwEv/?utm_source=ig_web_copy_link"}

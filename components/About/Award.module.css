@@ -29,9 +29,6 @@
 
 .award:hover,
 .award:focus {
-  -moz-box-shadow: 0 0 10px var(--shadow-1);
-  -webkit-box-shadow: 0 0 10px var(--shadow-1);
-  box-shadow: 0 0 10px var(--shadow-1);
 }
 
 .award:hover .award-text,

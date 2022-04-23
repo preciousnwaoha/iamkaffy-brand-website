@@ -54,6 +54,7 @@
     background: var(--secondary);
     color: var(--white);
     font-weight: 500;
+    border-radius: 0.5rem;
 }
 
 .footer-btn:hover {

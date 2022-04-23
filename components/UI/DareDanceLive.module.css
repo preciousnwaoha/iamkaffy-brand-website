@@ -1,6 +1,7 @@
 .dare-dance-live {
     display: flex;
     height: 25vh;
+    max-height: 150px;
     width: 100%;
 }
 

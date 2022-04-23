@@ -99,6 +99,7 @@ display: inline-block;
 
 .sub-title {
   font-size: 1.3rem;
+  color: var(--black);
 }
 
 .story-text p {
@@ -122,6 +123,7 @@ display: inline-block;
   background: var(--primary);
   color: var(--white);
   margin: 1rem;
+  border-radius: 0.5rem;
 }
 
 .story-btn:hover {

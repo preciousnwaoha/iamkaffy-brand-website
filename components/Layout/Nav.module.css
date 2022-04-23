@@ -20,11 +20,8 @@
   width: 250px;
   height: 100vh;
   opacity: 0;
-  background: var(--primary-trans);
+  background: var(--white);
   padding: 2rem 0;
-  -moz-box-shadow: 0 0 5px var(--shadow-2);
-  -webkit-box-shadow: 0 0 5px var(--shadow-2);
-  box-shadow: 0 0 5px var(--shadow-2);
   /* background-color: var(--glass); */
   backdrop-filter: blur(8px);
   transition: right .3s;
@@ -65,7 +62,7 @@
   color: var(--black);
 }
 .nav .side-nav-ul li:hover {
-  color: var(--white);
+  color: var(--secondary);
 }
 
 .exit-side-nav-btn {
@@ -87,7 +84,7 @@
 }
 
 .exit-side-nav-btn:hover, .exit-side-nav-btn:focus {
-    color: var(--white);
+    color: var(--secondary);
 }
 
 .theme-btn-wrapper {
