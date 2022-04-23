@@ -44,7 +44,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: 100%;
+    min-height: calc(100vh - 60px);
     z-index: 0;
     background: url("/images/kaffy-culture-2.JPEG");
     background-size: cover;
@@ -82,8 +83,7 @@
     text-align: left;
     margin: 0;
     padding-left: 1.5rem;
-    color: var(--secondary);
-    color: var(--black);
+    color: var(--white-stay);
 }
 
 .dare-dance-live {
@@ -108,7 +108,7 @@ text-orientation: sideways;
 .p-tags {
     margin-top: 1rem;
     width: 60%;
-    color: var(--black);
+    color: var(--white-stay);
 }
 
 .p-tags p {
