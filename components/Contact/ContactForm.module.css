@@ -22,9 +22,9 @@
     border-radius: 1rem;
     margin: 0.5rem 0;
     outline: none;
-    -moz-box-shadow: 0 0 5px var(--shadow-2);
-  -webkit-box-shadow: 0 0 5px var(--shadow-2);
-  box-shadow: 0 0 5px var(--shadow-2);
+    -moz-box-shadow: 0 0 5px rgba(79, 79, 79, 0.15);
+  -webkit-box-shadow: 0 0 5px rgba(79, 79, 79, 0.15);
+  box-shadow: 0 0 5px rgba(79, 79, 79, 0.15);
   border: none;
     color: var(--secondary);
 }
@@ -40,16 +40,16 @@
 .form textarea {
     background: transparent;
     color: var(--primary);
-    -moz-box-shadow: 0 0 5px var(--shadow-2);
-  -webkit-box-shadow: 0 0 5px var(--shadow-2);
-  box-shadow: 0 0 5px var(--shadow-2);
+    -moz-box-shadow: 0 0 5px rgba(79, 79, 79, 0.15);
+  -webkit-box-shadow: 0 0 5px rgba(79, 79, 79, 0.15);
+  box-shadow: 0 0 5px rgba(79, 79, 79, 0.15);
   outline: none;
     resize: vertical;
     min-height: 150px;
     margin: 0.5rem 0;
     border-radius: 1rem;
     border: none;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -67,5 +67,5 @@
   box-shadow: 0 0 5px var(--shadow-2); */
     text-align: center;
     margin: 0.5rem auto;
-    border-radius: 0.5rem;
+    border-radius: 0rem;
 }

@@ -4,6 +4,10 @@
 .main {
     position: relative;
     /* max-width: 1366px; */
+    
+    background-color: var(--white);
+    background: var(--bg-art);
+    background-size: contain;
     margin: auto;
     /* overflow-x: hidden; */
 }

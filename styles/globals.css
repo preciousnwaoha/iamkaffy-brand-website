@@ -1,11 +1,15 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Arizonia&family=Courgette&family=Moon+Dance&family=Poppins&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Anton&family=Arizonia&family=Bebas+Neue&family=Courgette&family=Moon+Dance&family=Noto+Sans+JP&family=Patrick+Hand&family=Poppins&family=Roboto&display=swap');
 
 @font-face {
   font-family: 'Alex Brush', cursive;
+font-family: 'Anton', sans-serif;
 font-family: 'Arizonia', cursive;
+font-family: 'Bebas Neue', cursive;
 font-family: 'Courgette', cursive;
 font-family: 'Moon Dance', cursive;
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Patrick Hand', cursive;
 font-family: 'Poppins', sans-serif;
 font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -27,7 +31,8 @@ font-family: 'Roboto', sans-serif;
   --text-white-1: #fffaf7;
   --shadow-1: rgba(255, 102, 0, 0.12);
   --shadow-2: rgba(79, 79, 79, 0.15);
-  --shadow-3: rgba(0, 0, 0, 0.15);
+  --shadow-3: rgba(0, 0, 0, 0.056);
+  --bg-art: url("/images/bg-art1.png");
 }
 
 html {

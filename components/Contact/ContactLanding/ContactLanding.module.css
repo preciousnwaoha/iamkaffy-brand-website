@@ -1,8 +1,12 @@
 .contact-landing {
     position: relative;
-    background: var(--white);
     width: 100%;
+    min-height: calc(100vh - 60px);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 2rem;
 }
 
 .cut-div {

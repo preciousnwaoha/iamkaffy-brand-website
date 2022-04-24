@@ -1,7 +1,8 @@
 .get-in-touch {
     width: 100%;
     height: calc(100vh - 60px);
-    max-height: 800px;
+    min-height: 630px;
+    max-height: 1366px;
     position: relative;
     /* background: url("/images/kaffy-photo-6.webp");
     background-size: cover;
@@ -97,18 +98,10 @@ bottom: 0;
 } */
 
 @media screen and (min-width: 760px) {
-    .get-in-touch {
-        max-height: 900px;
-    }
     .GIT-text-wrapper {
         width: 55%;
         margin: 1rem 2rem;
         margin-top: 0;
         margin-left: 10%;
-    }
-}
-@media screen and (min-height: 1000px) {
-    .get-in-touch {
-        max-height: 1000px;
     }
 }

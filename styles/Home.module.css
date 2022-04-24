@@ -1,5 +1,8 @@
 .main {
   position: relative;
+  background-color: var(--white);
+  background: var(--bg-art);
+  background-size: contain;
   /* max-width: 1366px; */
   margin: auto;
   /* overflow-x: hidden; */

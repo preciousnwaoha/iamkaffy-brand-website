@@ -1,6 +1,6 @@
 .collections {
     width: 100%;
-    background: #080808;
+    background: var(--black-stay);
     text-align: center;
     padding: 2rem 0;
 }

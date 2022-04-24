@@ -7,6 +7,7 @@ import classes from "./Featured.module.css";
 const Featured = ({ imgPath, imgW, imgH, name, description, featuredLink, className }) => {
   return (
     <div className={`${classes.featured} ${className || ""}`}>
+      <div className={classes["featured-content"]}>
       <div className={classes["featured-show"]}>
         <h4 className={classes["featured-ref"]}>{name} FEATURE</h4>
         
@@ -34,6 +35,9 @@ const Featured = ({ imgPath, imgW, imgH, name, description, featuredLink, classN
           <a target="_blank" className={classes["hiden-see-more"]}>SEE MORE</a>
         </Link>
       </div>
+      </div>
+
+      
     </div>
   );
 };

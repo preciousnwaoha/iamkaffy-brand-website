@@ -1,5 +1,12 @@
 .featured {
+    max-height: 600px;
+    /* overflow: hidden; */
     margin: 1rem;
+    padding: 0;
+}
+
+.featured-content {
+    width: 100%;
 }
 
 .featured h4 {
@@ -82,6 +89,9 @@
 @media screen and (min-width: 760px) {
     .featured {
         margin: 2rem;
+    }
+
+    .featured-content {
         display: flex;
         justify-content: space-between;
     }

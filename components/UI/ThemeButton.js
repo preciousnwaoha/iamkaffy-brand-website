@@ -17,6 +17,7 @@ const themeLight = {
   "--shadow-1": "rgba(255, 102, 0, 0.12)",
   "--shadow-2": "rgba(79, 79, 79, 0.15)",
   "--shadow-3": "rgba(0, 0, 0, 0.15)",
+  "--bg-art": "url('/images/bg-art1.png')",
 }
 
 const themeDark = {
@@ -31,6 +32,7 @@ const themeDark = {
   "--shadow-1": "rgba(255, 102, 0, 0.12)",
   "--shadow-2": "rgba(0, 0, 0, 0.15)",
   "--shadow-3": "rgba(79, 79, 79, 0.15)",
+  "--bg-art": "url('/images/bg-art2.png')",
 }
 if (typeof window !== "undefined") {
   const root = document.querySelector(":root")

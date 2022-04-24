@@ -29,7 +29,7 @@
 }
 
 .collection-name {
-    color: var(--white);
+    color: var(--white-stay);
     font-size: 1.5rem;
     display: inline-block;
     text-align: center;
