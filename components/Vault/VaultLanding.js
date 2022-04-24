@@ -1,5 +1,9 @@
 import React from "react";
 import Image from "next/image";
+
+import Effect2 from "../UI/Effects/Effect2"
+import Effect3 from "../UI/Effects/Effect3"
+import Effect5 from "../UI/Effects/Effect5"
 import classes from "./VaultLanding.module.css";
 
 const DEFAULT_VL_IMAGES = [
@@ -24,6 +28,9 @@ const DEFAULT_VL_IMAGES = [
 const VaultLanding = () => {
   return (
     <div className={classes["vault-landing"]}>
+      <Effect2 className={classes["effect-item-2"]} />
+      <Effect3 className={classes["effect-item-3"]} />
+      <Effect5 className={classes["effect-item-5"]} />
       <div className={classes["colored-side"]}></div>
       
       <div className={classes["image-wrapper"]}>

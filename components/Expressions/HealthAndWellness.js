@@ -4,13 +4,15 @@ import React from "react";
 import Programs from "./Programs";
 import ImportantMessage from "../UI/ImportantMessage";
 import Title from "./Title";
+import Effect5 from "../UI/Effects/Effect5"
 import classes from "./HealthAndWellness.module.css";
 import BrandsWorkedWith from "./BrandsWorkedWith";
 
-const HealthAndWellness = () => {
+const HealthAndWellness = ({programs}) => {
   return (
     <div className={classes.HAW}>
       {/* HAW - Health and Wellness */}
+      <Effect5 className={classes["effect-item"]} />
       <Title className={classes["HAW-title"]}>
         <h2>Health & Wellness</h2>
         <h3>
@@ -78,7 +80,7 @@ const HealthAndWellness = () => {
           determine where to start your fitness journey.
         </p>
       </ImportantMessage>
-      <Programs />
+      <Programs programs={programs} />
       <BrandsWorkedWith />
     </div>
   );

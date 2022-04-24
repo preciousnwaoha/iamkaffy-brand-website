@@ -1,5 +1,16 @@
 .business {
   padding-bottom: 1rem;
+  position: relative;
+}
+
+.effect-item {
+  position: absolute;
+  bottom: -10px;
+  left: 5%;
+  width: 70px;
+  height: 70px;
+  border-width: 10px;
+  z-index: -1;
 }
 
 .business-content {

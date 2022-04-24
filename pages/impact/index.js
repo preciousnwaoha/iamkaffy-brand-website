@@ -7,7 +7,40 @@ import ImpactLanding from '../../components/Impact/ImpactLanding'
 import SuccessStories from '../../components/Impact/SuccessStories'
 import Synopsis from '../../components/Impact/Synopsis/Synopsis'
 
-const Impact = () => {
+import {db} from "../../firebase"
+import { collection, getDocs } from 'firebase/firestore'
+
+const synopsisCollectionRef = collection(db, "synopsis")
+const successStoriesCollectionRef = collection(db, "successStories")
+
+// const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems"
+
+export async function getStaticProps() {
+  // const videosDataFrb = await getDocs(videosCollectionRef);
+  // const videosEmbedIdData = await getDocs(videosEmbedIdCollectionRef)
+
+  const synopsisData = await getDocs(synopsisCollectionRef);
+
+  const successStoriesData = await getDocs(successStoriesCollectionRef);
+
+  const synopsis = synopsisData.docs.map((doc) => {
+    return { ...doc.data(), id: doc.id };
+  });
+
+  const successStories = successStoriesData.docs.map((doc) => {
+    return { ...doc.data(), id: doc.id };
+  });
+
+  return {
+    props: {
+      synopsis,
+      successStories,
+    }
+  }
+}
+
+
+const Impact = ( {successStories, synopsis}) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -18,8 +51,8 @@ const Impact = () => {
       <main className={styles.main}>
        <Header />
        <ImpactLanding />
-       <SuccessStories />
-       <Synopsis />
+       <SuccessStories successStories={successStories} />
+       <Synopsis synopsis={synopsis} />
        <Foundation />
        
       </main>

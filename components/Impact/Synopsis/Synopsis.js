@@ -1,53 +1,25 @@
 import React from "react";
-import HorizontalScroll from "react-scroll-horizontal";
 import UIBigTitle from "../../UI/UIBigTitle";
 import SynopsisItem from "./SynopsisItem";
 import classes from "./Synopsis.module.css";
 import SideScrollDots from "../../UI/SideScrollDots";
+import Effect3 from "../../UI/Effects/Effect3";
 
-const DEFAULT_SYNOPSIS = [
-  {
-    id: "synop1",
-    img:"/images/imagneto-2.jpg",
-    alt: "Kaffy Bags a Headies Award",
-    title: "Eko Dance",
-    description: "Eko Dance",
-  },
-  {
-    id: "synop2",
-    img:"/images/kaffy-photo-15.JPEG",
-    alt: "Kaffy Afrima Award",
-    title: "The Dance Workshop and Conference",
-    description: "The Dance Workshop and Conference",
-  },
-  {
-    id: "synop3",
-    img:"/images/kaffy-fit-1.png",
-    alt: "Kaffy on MTV Base",
-    title: "Dance Health Inituative",
-    description: "Dance Health Inituative",
-  },
-  {
-    id: "synop4",
-    img:"/images/kaffy-photo-4.jpg",
-    alt: "Kaffy on Synopsis",
-    title: "DanceBoss Challenge",
-    description: "DanceBoss Challenge",
-  },
-];
 
-const Synopsis = () => {
+
+const Synopsis = ({synopsis}) => {
   return (
     <div className={classes.synopsis}>
+      <Effect3 className={classes["effect-item"]} />
       <UIBigTitle titleText={"Synopsis"} />
       <div className={classes["synopsis-content"]}>
-        {DEFAULT_SYNOPSIS.map((synopsis) => (
+        {synopsis.map((synop) => (
           <SynopsisItem
-            key={synopsis.id}
-            img={synopsis.img}
-            title={synopsis.title}
-            alt={synopsis.alt}
-            description={synopsis.description}
+            key={synop.id}
+            img={synop.img}
+            title={synop.title}
+            alt={`${synop.description || synop.title} with Kaffy the dancer`}
+            description={synop.description}
           />
         ))}
       </div>

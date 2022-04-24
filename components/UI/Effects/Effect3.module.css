@@ -1,0 +1,17 @@
+.effect-3 {
+    height: 180px;
+    width: 180px;
+    border: 25px solid var(--black);
+    border-radius: 50%;
+    animation: leftBounce 3s ease-in-out infinite;
+  }
+
+  @keyframes leftBounce {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(25px);
+    }
+  }

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMessage, faPhone, faLocation } from "@fortawesome/free-solid-svg-icons";
 import UIBigTitle from "../UI/UIBigTitle";
 import classes from "./GetInTouch.module.css";
+import Effect1 from "../UI/Effects/Effect1";
 
 
 
@@ -12,6 +13,7 @@ const GetInTouch = ({data}) => {
   const { email, address, phones } = data[0]
   return (
     <div className={classes["get-in-touch"]} id="contact-2">
+      <Effect1 className={classes["effect-item"]} />
       {/* <div className={classes["curve-div"]}>
        
       </div> */}

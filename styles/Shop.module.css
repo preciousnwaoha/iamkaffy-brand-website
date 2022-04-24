@@ -4,7 +4,7 @@
 .main {
     position: relative;
     /* max-width: 1366px; */
-    
+    padding-top: 60px;
     background-color: var(--white);
     background: var(--bg-art);
     background-size: contain;

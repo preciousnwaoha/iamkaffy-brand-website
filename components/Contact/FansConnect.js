@@ -4,10 +4,12 @@ import UIBigTitle from '../UI/UIBigTitle'
 import ContactForm from './ContactForm'
 import classes from "./FansConnect.module.css"
 import Socials from './Socials'
+import Effect3 from '../UI/Effects/Effect3'
 
 const FansConnect = () => {
   return (
     <div className={classes["fans-connect"]} id="contact-1" >
+        <Effect3 className={classes["effect-item"]} />
         <div className={classes["fans-connect-inner"]}>
             <div className={classes["content-side"]}>
                 <UIBigTitle titleText={"Fans Connect"} className={classes.title}/>

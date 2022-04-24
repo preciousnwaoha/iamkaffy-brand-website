@@ -4,6 +4,26 @@
   width: 100%;
   /* min-height: 100vh; */
   padding-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.effect-item-1 {
+  position: absolute;
+  right: -30px;
+  border-width: 15px;
+  width: 100px;
+  height: 100px;
+}
+
+.effect-item-2 {
+  position: absolute;
+  top: 10%;
+  left: -30px;
+  border-width: 15px;
+  border-radius: 0.5rem;
+  width: 100px;
+  height: 100px;
 }
 
 .more-title {

@@ -2,6 +2,15 @@
     width: 100%;
     /* min-height: 100vh; */
     padding-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.effect-item {
+    position: absolute;
+    bottom: 50px;
+    right: -100px;
+    z-index: -1;
 }
 
 .title {

@@ -3,7 +3,16 @@
   background-color: var(--white);
   background: var(--bg-art);
   background-size: contain;
+  padding-top: 60px;
   /* max-width: 1366px; */
   margin: auto;
-  /* overflow-x: hidden; */
+  overflow: hidden;
+}
+
+.effect5-in-about-page {
+  position: absolute;
+  top: 20px;
+  right: 10%;
+  width: 100px;
+  height: 100px;
 }

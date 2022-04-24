@@ -1,5 +1,12 @@
 .success-stories {
   padding-bottom: 1rem;
+  position: relative;
+}
+
+.effect-item {
+  position: absolute;
+  top: 2rem;
+  right: 10%;
 }
 
 .SSs-content {

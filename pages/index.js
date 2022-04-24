@@ -17,6 +17,7 @@ import { collection, getDocs } from 'firebase/firestore'
 // const videosCollectionRef = collection(db, "videos")
 // const videosEmbedIdCollectionRef = collection(db, "videosEmbedId")
 const contactDetailsCollectionRef = collection(db, "contactDetails")
+const successStoriesCollectionRef = collection(db, "successStories")
 
 // const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems"
 
@@ -26,7 +27,7 @@ export async function getStaticProps() {
 
   const contactDetailsData = await getDocs(contactDetailsCollectionRef);
 
-  
+  const successStoriesData = await getDocs(successStoriesCollectionRef);
 
   // const videosPlaylist = videosDataFrb.docs.map(doc =>  {
   //   return (
@@ -47,16 +48,21 @@ export async function getStaticProps() {
     return { ...doc.data(), id: doc.id };
   });
 
+  const successStories = successStoriesData.docs.map((doc) => {
+    return { ...doc.data(), id: doc.id };
+  });
+
   return {
     props: {
       // videosData,
       contactDetails,
+      successStories,
     }
   }
 }
 
 
-export default function Home( { videosData, contactDetails }) {
+export default function Home( { successStories, contactDetails }) {
   return (
       <div className={styles.container}>
       <Head>
@@ -70,14 +76,13 @@ export default function Home( { videosData, contactDetails }) {
        <Landing /> 
        
        <Featured 
-        imgPath="/images/orange9.JPEG"
-        imgW="100%"
-        imgH="100%"
+        img="/images/orange9.JPEG"
         name="CNN"
-        description="Featured on News Channel CNN"
-        featuredLink={"https://www.instagram.com/reel/CI_HfTXBwEv/?utm_source=ig_web_copy_link"}
+        title={"Nigerian choreographer is all about health"}
+        description="Kaffy has brought up some of the best dancers in Nigeria and now she's giving back to her community through a healthcare partnership."
+        featuredLink={"https://edition.cnn.com/videos/tv/2020/12/18/african-voices-choreographers-kaffy-tileh-pacbro-spc-intl.cnn"}
        />
-       <SuccessStories />
+       <SuccessStories successStories={successStories} />
        <Story />
        {/* <VaultVideos videosData={videosData} /> */}
        <Services />

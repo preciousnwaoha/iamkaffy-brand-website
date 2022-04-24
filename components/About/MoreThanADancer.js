@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import classes from "./MoreThanADancer.module.css";
 import UIBigTitle from "../UI/UIBigTitle";
+import Effect1 from "../UI/Effects/Effect1";
 
 const DEFAULT_MTAD_DATA = [
   {
@@ -54,6 +55,8 @@ const DEFAULT_MTAD_DATA = [
 const MoreThanADancer = () => {
   return (
     <div className={classes.more}>
+    <Effect1 className={classes["effect-item-1"]}/>
+    <Effect1 className={classes["effect-item-2"]}/>
       <UIBigTitle
         titleText={"More Than A Dancer"}
         className={classes["more-title"]}

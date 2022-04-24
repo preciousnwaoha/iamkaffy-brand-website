@@ -1,4 +1,6 @@
 import React from "react";
+import Effect3 from "../../UI/Effects/Effect3";
+import Effect5 from "../../UI/Effects/Effect5";
 import classes from "./ContactLanding.module.css";
 import ContactOption from "./ContactOption";
 
@@ -34,6 +36,8 @@ const DEFAULT_OPTIONS = [
 const ContactLanding = () => {
   return (
     <div className={classes["contact-landing"]}>
+      <Effect3 className={classes["effect-item-3"]} />
+      <Effect5 className={classes["effect-item-5"]}/>
       <div className={classes["cut-div"]}></div>
       <div className={classes["title-wrapper"]}>
         <h1>Would Love to Hear From You</h1>

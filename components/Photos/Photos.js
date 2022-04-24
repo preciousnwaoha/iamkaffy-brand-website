@@ -4,7 +4,6 @@ import classes from "./Photos.module.css"
 
 const Photos = ({photosData}) => {
 
-  console.log(photosData)
   return (
     <div className={classes.photos}>
         {photosData.map(photo => (

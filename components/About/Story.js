@@ -5,6 +5,8 @@ import Scroll from "../UI/Scroll";
 import classes from "./Story.module.css";
 import UIBigTitle from "../UI/UIBigTitle";
 import UITitle from "../UI/UITitle";
+// import Effect from "../UI/Effects/Effect2";
+import Effect2 from "../UI/Effects/Effect2";
 
 const Story = () => {
   const [showingMore, setShowingMore] = useState(false);
@@ -17,6 +19,7 @@ const Story = () => {
 
   return (
     <div className={classes.story}>
+    <Effect2 className={classes["effect-item"]} />
       <UIBigTitle titleText={"Kaffy's Story"} className={classes["story-title"]} />
       <div className={classes["story-content"]}>
         <div className={classes["story-image-case"]}>

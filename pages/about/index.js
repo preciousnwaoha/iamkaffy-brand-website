@@ -5,6 +5,7 @@ import Story from '../../components/About/Story'
 import MoreThanADancer from '../../components/About/MoreThanADancer'
 import Accolades from '../../components/About/Accolades'
 import Footer from '../../components/Layout/Footer'
+import Effect5 from "../../components/UI/Effects/Effect5"
 import styles from "../../styles/Home.module.css"
 
 
@@ -19,6 +20,7 @@ const About = () => {
       </Head>
 
       <main className={styles.main}>
+        <Effect5 className={styles["effect5-in-about-page"]} />
        <Header />
        <Story />
        <MoreThanADancer />

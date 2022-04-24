@@ -2,12 +2,19 @@
     width: 100%;
     height: calc(100vh - 60px);
     min-height: 630px;
-    max-height: 1366px;
+    max-height: 900px;
     position: relative;
     /* background: url("/images/kaffy-photo-6.webp");
     background-size: cover;
     filter: brightness(50%); */
     padding: 2rem 0;
+}
+
+.effect-item {
+    border-color: var(--black-stay);
+    width: 80px;
+    height: 40px;
+    border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .title {

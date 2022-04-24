@@ -15,10 +15,12 @@ const Foundation = () => {
         />
         <h4 className={classes["foundation-text"]}>Kaffy&apos;s Foundation has helped lots of Africans to a much better life than they were living</h4>
         <div className={classes.actions}>
-          <Link href="/">
-            <a className={classes["learn-more-link"]}>Learn More</a>
+          <Link href="http://kaffyfoundation.org" passHref >
+            <a target="_blank" className={classes["learn-more-link"]}>Learn More</a>
           </Link>
-          <Button className={classes["foundation-contact-btn"]}>Contact Us</Button>
+          <Link href="/contact/#contact-2">
+          <a className={classes["foundation-contact-btn"]}>Contact Us</a>
+          </Link>
         </div>
       </div>
     </div>

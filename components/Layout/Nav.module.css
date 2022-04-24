@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  
 }
 
 .top-nav-ul {
@@ -20,12 +21,28 @@
   width: 250px;
   height: 100vh;
   opacity: 0;
-  background: var(--white);
+  background: var(--bg-art);
+  background-color: var(--white);
+  background-size: contain;
   padding: 2rem 0;
-  /* background-color: var(--glass); */
-  backdrop-filter: blur(8px);
   transition: right .3s;
+  z-index: 10;
 }
+
+.effect-item-1 {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  z-index: -1;
+}
+
+.effect-item-2 {
+  position: absolute;
+  top: 10%;
+  right: 90%;
+  z-index: -1;
+}
+
 
 .show-side-nav {
     right: 0;

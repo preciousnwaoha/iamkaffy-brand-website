@@ -2,10 +2,12 @@ import React from "react";
 import Title from "./Title";
 import Image from "next/image";
 import classes from "./Business.module.css";
+import Effect1 from "../UI/Effects/Effect1";
 
 const Business = () => {
   return (
     <div className={classes.business}>
+      <Effect1 className={classes["effect-item"]} />
       <Title>
         <h2>Business</h2>
       </Title>

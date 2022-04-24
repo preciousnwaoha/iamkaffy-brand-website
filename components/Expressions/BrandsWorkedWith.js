@@ -8,44 +8,44 @@ const DEFAULT_BRANDS = [
     {
         id: "brand1",
         name: "Access Bank Company",
-        logoImgPath: "/images/bww_logos/access-bank.png",
-        logoImgW: "700",
-        logoImgH: "175"
+        logoImgPath: "/images/bww_logos/bww5.png",
+        logoImgW: "1280",
+        logoImgH: "1280",
     },
     {
         id: "brand2",
         name: "GoldMyneTV Company",
-        logoImgPath: "/images/bww_logos/goldmynetv.jpg",
-        logoImgW: "960",
-        logoImgH: "538"
+        logoImgPath: "/images/bww_logos/bww6.png",
+        logoImgW: "1280",
+        logoImgH: "1280",
     },
     {
         id: "brand3",
         name: "Interswitch Company",
-        logoImgPath: "/images/bww_logos/interswitch.webp",
-        logoImgW: "400",
-        logoImgH: "400"
+        logoImgPath: "/images/bww_logos/bww1.png",
+        logoImgW: "1280",
+        logoImgH: "1280",
     },
     {
         id: "brand4",
         name: "Arise Women Organization",
-        logoImgPath: "/images/bww_logos/arise-women.jpeg",
-        logoImgW: "228",
-        logoImgH: "115"
+        logoImgPath: "/images/bww_logos/bww4.png",
+        logoImgW: "1280",
+        logoImgH: "1280",
     },
     {
         id: "brand5",
         name: "Pepsodent Company",
-        logoImgPath: "/images/bww_logos/pepsodent.png",
-        logoImgW: "700",
-        logoImgH: "394"
+        logoImgPath: "/images/bww_logos/bww2.png",
+        logoImgW: "1280",
+        logoImgH: "1280",
     },
     {
         id: "brand6",
         name: "Three Crowns Company",
-        logoImgPath: "/images/bww_logos/three-crowns.jpg",
-        logoImgW: "400",
-        logoImgH: "400"
+        logoImgPath: "/images/bww_logos/bww3.png",
+        logoImgW: "1280",
+        logoImgH: "1280",
     },
 ]
 

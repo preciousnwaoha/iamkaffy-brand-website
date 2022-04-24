@@ -1,14 +1,15 @@
 .store-landing {
     position: relative;
-    background: #080808;
+    background: var(--black-stay);
 }
 
 .store-banner {
     position: relative;
     width: 100%;
-    height: calc(60vh - 60px);
+    /* max-height: calc(60vh - 60px); */
+    padding-top: 56.25%;
     overflow: hidden;
-    background: #080808;
+    background: var(--black-stay);
 }
 
 .store-banner-inner {
@@ -22,5 +23,11 @@
 
 .banner-image {
     filter: brightness(25%);
-    object-fit: contain;
+    /* object-fit: contain; */
+}
+
+@media screen and (min-width: 760px) {
+    .store-banner {
+        padding-top: 40.625%;
+    }
 }

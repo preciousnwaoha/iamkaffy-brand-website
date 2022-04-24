@@ -2,38 +2,17 @@ import React, { useState } from "react";
 import Button from "../UI/Button";
 import UIBigTitle from "../UI/UIBigTitle";
 import Image from "next/image";
+import Effect5 from "../UI/Effects/Effect5"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
 import classes from "./SuccessStories.module.css";
 
-const DEFAULT_SSs = [
-  {
-    id: "synop1",
-    img:"/images/awards/heades_show-1.jpg",
-    alt: "Kaffy Bags a Headies Award",
-    title: "Headies Award",
-    description: "Kaffy bags Headies Special Recognition Award",
-  },
-  {
-    id: "synop2",
-    img:"/images/kaffy-photo-15.JPEG",
-    alt: "Kaffy Afrima Award",
-    title: "Kaffy - AFRIMA",
-    description: "kaffy AFRIMA Award",
-  },
-  {
-    id: "synop3",
-    img:"/images/awards/mtvbase-logo.webp",
-    alt: "Kaffy on MTV Base",
-    title: "Kaffy on MTV",
-    description: "Recognized on MTV Base",
-  },
-];
 
-const storyMaxIndex = DEFAULT_SSs.length - 1
 
-const SuccessStories = () => {
+const SuccessStories = ({successStories}) => {
+  const storyMaxIndex = successStories.length - 1
+
   const [storyIndex, setStoryIndex] = useState(0);
 
   const forwardsHandler = () => {
@@ -58,20 +37,21 @@ const SuccessStories = () => {
       }
   };
 
-  const { img, title, description} = DEFAULT_SSs[storyIndex]
+  const { img, title, description} = successStories[storyIndex]
 
   return (
     <div className={classes["success-stories"]}>
+      <Effect5 className={classes["effect-item"]} />
       <UIBigTitle titleText={"Success Stories"} className={classes.title} />
       <div className={classes["SSs-content"]}>
         <div className={classes["SSs-image-wrapper"]}>
           <div className={classes["SSs-image-wrapper-inner"]}>
             <Image
               src={img}
-              alt={title}
+              alt={`Kaffy on ${description || title}`}
               priority={true}
               width={"100%"}
-              height="100%"
+              height={"100%"}
               layout="responsive"
             />
           </div>
@@ -79,7 +59,7 @@ const SuccessStories = () => {
         <div className={classes["SSs-text-actions-wrapper"]}>
           <div className={classes["SSs-text"]}>
             <h4>{title}</h4>
-            <p>{description}</p>
+            <p>{description || ""}</p>
           </div>
           <div className={classes["SSs-actions"]}>
             <Button className={classes["right-btn"]} clickAction={backwardsHandler}>

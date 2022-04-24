@@ -36,15 +36,13 @@ const Inspiration = () => {
           voice to contribute to societal development.
         </p>
       </div>
-      <Featured
-        imgPath="/images/kaffy-photo-4.jpg"
-        imgW="640"
-        imgH="517"
+      <Featured 
+        img="/images/orange9.JPEG"
         name="CNN"
-        description="Featured on News Channel CNN"
-        featuredLink={"https://www.instagram.com/reel/CI_HfTXBwEv/?utm_source=ig_web_copy_link"}
-        className={classes["cnn-feature"]}
-      />
+        title={"Nigerian choreographer is all about health"}
+        description="Kaffy has brought up some of the best dancers in Nigeria and now she's giving back to her community through a healthcare partnership."
+        featuredLink={"https://edition.cnn.com/videos/tv/2020/12/18/african-voices-choreographers-kaffy-tileh-pacbro-spc-intl.cnn"}
+       />
     </div>
   );
 };

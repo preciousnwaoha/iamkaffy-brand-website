@@ -1,4 +1,5 @@
 import React from "react";
+import Effect3 from "../UI/Effects/Effect3";
 import UITitle from "../UI/UITitle";
 import Service from "./Service";
 import classes from "./Services.module.css";
@@ -39,6 +40,7 @@ const DEFAULT_SERVICES = [
 const Services = () => {
   return (
     <div className={classes.services}>
+      <Effect3 className={classes["effect-item"]} />
       <UITitle titleText={"Her Range of Tunkey Services Include"} className={classes.title} />
       <ul className={classes["services-items-wrapper"]}>
         {DEFAULT_SERVICES.map((service) => (

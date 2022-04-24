@@ -5,6 +5,13 @@
   align-items: center;
   justify-content: flex-start;
   padding-bottom: 1rem;
+  position: relative;
+}
+
+.effect-item {
+  position: absolute;
+  bottom: 2rem;
+  left: 5%;
 }
 
 .story .story-title {

@@ -2,7 +2,18 @@
   width: 100%;
   /* max-width: 1366px; */
   margin: auto;
+  position: relative;
+  overflow: hidden;
   /* min-height: 100vh; */
+}
+
+.effect-item {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  z-index: -1;
 }
 
 .sub-title {

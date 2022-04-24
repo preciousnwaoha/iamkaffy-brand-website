@@ -2,16 +2,17 @@ import Image from "next/image";
 import React from "react";
 import classes from "./Program.module.css";
 
-const Program = ({ name, imgPath, imgw, imgh, description }) => {
+const Program = ({ name, img, description }) => {
   return (
     <div className={classes.program}>
       <div className={classes["program-image-wrapper"]}>
       <div className={classes["program-image-wrapper-inner"]}>
         <Image
-          src={imgPath}
-          alt={`Kaffy the dancer's ${name} program`}
-          width={imgw}
-          height={imgh}
+          src={img}
+          alt={`Kaffy the dancer's ${name} program ${description || ""}`}
+          priority={true}
+          width={"100%"}
+          height={"100%"}
           layout="responsive"
         />
         {/* <p className={classes["program-image-ref"]}>{topRef}</p> */}

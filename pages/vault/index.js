@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from '../../components/Layout/Header'
 import Footer from '../../components/Layout/Footer'
 import styles from "../../styles/Home.module.css"
+import Featured from "../../components/Expressions/Featured"
 import VaultLanding from '../../components/Vault/VaultLanding'
 import VaultVideos from '../../components/Vault/VaultVideos'
 import VaultPhotos from '../../components/Vault/VaultPhotos'
@@ -64,7 +65,15 @@ const Vault = ({ photosData }) => {
        <VaultLanding />
        {/* <VaultVideos videosData={videosData} /> */}
        <VaultPhotos photosData={photosData} />
+       <Featured 
+        img="/images/orange9.JPEG"
+        name="CNN"
+        title={"Nigerian choreographer is all about health"}
+        description="Kaffy has brought up some of the best dancers in Nigeria and now she's giving back to her community through a healthcare partnership."
+        featuredLink={"https://edition.cnn.com/videos/tv/2020/12/18/african-voices-choreographers-kaffy-tileh-pacbro-spc-intl.cnn"}
+       />
       </main>
+      
       <Footer />
     </div>
   )

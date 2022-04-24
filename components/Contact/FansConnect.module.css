@@ -6,7 +6,14 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    position: relative;
 
+}
+
+.effect-item {
+    position: absolute;
+    bottom: -120px;
+    left: -50px;
 }
 
 .fans-connect-inner {
