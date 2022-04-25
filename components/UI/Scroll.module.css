@@ -13,7 +13,7 @@
     background: var(--black-stay);
     color: var(--white-stay);
     cursor: pointer;
-    
+    user-select: none;
 }
 
 

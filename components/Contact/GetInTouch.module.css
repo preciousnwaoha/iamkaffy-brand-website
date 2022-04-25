@@ -10,11 +10,14 @@
     padding: 2rem 0;
 }
 
-.effect-item {
-    border-color: var(--black-stay);
-    width: 80px;
-    height: 40px;
+.get-in-touch .effect-item {
+    /* border-color: var(--black-stay); */
+    width: 50px;
+    height: 50px;
     border-radius: 0.5rem 0.5rem 0 0;
+    border-width: 8px;
+    right: 7%;
+    bottom: 10%;
 }
 
 .title {

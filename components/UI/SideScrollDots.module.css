@@ -9,7 +9,7 @@
     display: inline-block;
     width: 12px;
     height: 12px;
-    background: var(--primary);
+    background: var(--black);
     border-radius: 50%;
     margin: 0 0.5rem;
 }

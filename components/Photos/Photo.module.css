@@ -27,8 +27,9 @@
     position: absolute;
     margin: 0;
     padding: 1rem;
-    background: var(--primary);
-    color: var(--white);
+    background: var(--black-stay);
+    font-size: 0.85rem;
+    color: var(--white-stay);
     bottom: 0;
     left: 0;
     border-radius: 0 0 1rem 1rem;

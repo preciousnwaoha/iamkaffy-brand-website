@@ -1,8 +1,6 @@
 .effect-4 {
     border-top: 30px solid transparent;
     border-left: 30px solid #06d79c;
-    left: 30%;
-    top: 20%;
     animation: spin 15s linear infinite;
   }
   

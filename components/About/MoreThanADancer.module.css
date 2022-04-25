@@ -8,20 +8,23 @@
   overflow: hidden;
 }
 
-.effect-item-1 {
+.more .effect-item-1 {
   position: absolute;
   right: -30px;
+  bottom: 10%;
   border-width: 15px;
   width: 100px;
   height: 100px;
+  border-color: var(--black);
 }
 
-.effect-item-2 {
+.more .effect-item-2 {
   position: absolute;
-  top: 10%;
-  left: -30px;
+  top: 30%;
+  left: 0;
   border-width: 15px;
   border-radius: 0.5rem;
+  border-color: #4dd0e1;
   width: 100px;
   height: 100px;
 }
@@ -53,7 +56,7 @@
   height: 100%;
   overflow: hidden;
   border-radius: 1rem;
-  background: var(--black);
+  background: var(--black-stay);
 }
 
 .more-content-inner-text {
@@ -66,7 +69,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 0;
-  z-index: 10;
+  /* z-index: 1; */
 }
 
 .more-content-inner-text:hover {
@@ -75,16 +78,23 @@
 
 
 .more-content-inner-text h3 {
-  backdrop-filter: brightness(33.33%);
+  /* display: none; */
   font-size: 2.5rem;
   font-weight: 400;
   margin: 0;
   color: white;
   padding: 1rem;
-  -moz-box-shadow: 0 0 10px var(--shadow-3);
-    -webkit-box-shadow: 0 0 10px var(--shadow-3);
-    box-shadow: 0 0 10px var(--shadow-3);
+  transform: translateY(100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
+
+.more-content-inner-text:hover h3 {
+  animation: showUp .3s ease forwards;
+}
+
 .more-content-inner-text p {
   font-size: 1.5rem;
   padding: 1rem;

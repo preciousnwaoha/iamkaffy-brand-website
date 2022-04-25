@@ -38,6 +38,7 @@
 
 .contact-option-link {
   display: inline-block;
+  align-self: flex-end;
   background: var(--primary);
   color: var(--white);
   padding: 0.5rem 1rem;

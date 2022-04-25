@@ -18,9 +18,13 @@
 
 .effect-item-5 {
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     border-width: 25px;
     right: 5%;
+}
+
+.effect-item-5 div {
+    background: var(--secondary);
 }
 
 .cut-div {

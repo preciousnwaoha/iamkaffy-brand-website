@@ -10,7 +10,7 @@
 
 .effect-item {
   position: absolute;
-  bottom: 2rem;
+  bottom: 0rem;
   left: 5%;
 }
 
@@ -130,11 +130,6 @@ display: inline-block;
   margin: 1rem;
   border: 2px solid var(--secondary);
   border-radius: 0;
-}
-
-.story-btn:hover {
-  background: var(--black);
-  border: 2px solid var(--black);
 }
 
 @media screen and (min-width: 760px) {

@@ -43,17 +43,16 @@
 
 .learn-more-link, .foundation-contact-btn {
     display: inline-block;
-    color: var(--white);
+    color: var(--white-stay);
     font-size: 1rem;
     line-height: 1rem;
     padding: 1rem 1.5rem;
     border-radius: 1.5rem;
-    background: var(--black);
+    background: var(--black-stay);
     margin: 1rem;
 }
 
 
 .learn-more-link:hover, .foundation-contact-btn:hover {
     color: var(--primary);
-    background: var(--black);
 }

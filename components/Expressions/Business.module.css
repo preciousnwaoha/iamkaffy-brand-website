@@ -5,8 +5,8 @@
 
 .effect-item {
   position: absolute;
-  bottom: -10px;
-  left: 5%;
+  bottom: 10%;
+  left: 16%;
   width: 70px;
   height: 70px;
   border-width: 10px;

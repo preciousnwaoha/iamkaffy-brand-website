@@ -8,13 +8,20 @@
 
 .effect-item-1 {
     position: relative;
-    bottom: 0;
-    right: 0;
+    bottom: -20%;
+    right: -10%;
+    
+    border-left: 30px solid #4dd0e1;
+    /*  */
+}
+
+.effect-item-1::before {
+    border-left: 30px solid #4dd0e1;
 }
 
 .effect-item-2 {
     position: absolute;
-    bottom: -70px;
+    bottom: -100px;
     left: -1rem;
     z-index: -1;
 }

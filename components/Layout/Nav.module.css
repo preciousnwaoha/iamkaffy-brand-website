@@ -38,10 +38,23 @@
 
 .effect-item-2 {
   position: absolute;
-  top: 10%;
-  right: 90%;
+  top: 50%;
+  left: 15%;
+  border-left: 30px solid var(--black);
   z-index: -1;
 }
+
+.effect-item-2::before {
+  border-left: 30px solid var(--black);
+}
+
+.effect-item-5 {
+position: absolute;
+right: 5%;
+top: 5%;
+}
+
+
 
 
 .show-side-nav {

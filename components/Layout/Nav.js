@@ -6,7 +6,7 @@ import Button from "../UI/Button";
 import classes from "./Nav.module.css";
 import Effect3 from "../UI/Effects/Effect3";
 import Effect4 from "../UI/Effects/Effect4";
-
+import Effect5 from "../UI/Effects/Effect5";
 
 const Nav = () => {
   const [showingSideNav, setShowingSideNav] = useState(false);
@@ -68,6 +68,7 @@ const Nav = () => {
         {/* <Effect className={classes["effect"]}/> */}
         <Effect3 className={classes["effect-item-1"]} />
         <Effect4 className={classes["effect-item-2"]} />
+        <Effect5 className={classes["effect-item-5"]} />
         <li>
           <Link href="/">
             <a>Home</a>

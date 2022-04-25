@@ -78,7 +78,7 @@ const MoreThanADancer = () => {
 
             <div className={classes["more-content-inner-text"]}>
               <h3>{item.title}</h3>
-              <p>{item.description}</p>
+              {/* <p>{item.description}</p> */}
             </div>
           </div>
         ))}
