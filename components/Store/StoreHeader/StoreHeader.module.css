@@ -1,6 +1,5 @@
 .store-header {
-    background: var(--black);
-    
+    background: var(--black-stay);
     width: 100%;
     margin: 0;
     display: flex;
@@ -17,11 +16,11 @@
 }
 
 .store-menu-icon div {
-    background: var(--white);
+    background: var(--white-stay);
 }
 
 .store-header-logo {
-    color: var(--white);
+    color: var(--white-stay);
     font-size: 2.5rem;
 }
 

@@ -1,7 +1,13 @@
 .mailing-list{
-    padding: 1rem;
+    
     text-align: center;
-    background: var(--black);
+    background-color: var(--black);
+}
+
+.mailing-list div {
+    padding: 1rem;
+    background: url("/images/bg-art1.png");
+    background-size: contain;
 }
 
 .mailing-list h3 {

@@ -1,14 +1,14 @@
 .cart {
     display: inline-block;
     position: relative;
-    color: var(--white);
+    color: var(--white-stay);
     cursor: pointer;
     margin-right: 20px;
 }
 
 .no-of-items {
-    background: var(--white);
-    color: var(--black);
+    background: var(--black-stay);
+    color: var(--white-stay);
     position: absolute;
     top: -10px;
     right: inherit;

@@ -21,7 +21,7 @@
 }
 
 .dare-dance-live div:nth-child(2) {
-    background: var(--white);
+    background: transparent;
     color: var(--black);
 }
 .dare-dance-live div:nth-child(3) {

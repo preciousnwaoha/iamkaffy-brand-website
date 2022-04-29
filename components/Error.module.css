@@ -1,0 +1,48 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 60px);
+}
+
+.error h1 {
+    position: absolute;
+    top: 30%;
+    left: calc(50% - 4.25rem);
+    font-size: 3rem;
+    color: var(--secondary);
+    transform: translateY(-100px);
+}
+
+.error .effect-item-3 {
+    transform: translateX(-100px);
+}
+
+.effect-item-2 {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+}
+
+.effect-item-1 {
+    position: absolute;
+    top: 50%;
+right: 10%;
+}
+
+.error h3 {
+    color: var(--black);
+    text-align: center;
+    margin: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.error a {
+    color: var(--black);
+    cursor: pointer;
+}
+
+.error a:hover {
+    color: var(--secondary);
+}

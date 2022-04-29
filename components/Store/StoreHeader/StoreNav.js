@@ -1,12 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import StoreLogo from "../StoreUI/StoreLogo";
 import Link from "next/link"
 import classes from "./StoreNav.module.css";
+import AuthContext from "../../../context/auth-context";
 
 const StoreNav = ({ className, onExitNav, collections, padTopOrNot }) => {
+  const authCtx = useContext(AuthContext)
+  const isLoggedIn = authCtx.isLoggedIn
+
   const hideNavHandler = () => {
     onExitNav();
   };
+
+  const logoutHandler = () => {
+    console.log("logged out")
+    authCtx.logout()
+  }
 
   const storeNavClasses = `${classes["store-nav"]} ${classes[className]} ${classes[padTopOrNot]}`;
 
@@ -34,12 +43,28 @@ const StoreNav = ({ className, onExitNav, collections, padTopOrNot }) => {
         ))}
       </ul>
       <div className={classes["store-nav-acc"]}>
+        
         <div className={classes["store-nav-acc-head"]}>ACCOUNT</div>
-        <div className={classes["store-nav-acc_item"]}>Login</div>
-        <div className={classes["store-nav-acc_item"]}>Logout</div>
+
+       { !isLoggedIn && (
+         <>
+          <Link href={"/store/login"} >
+          <a className={classes["store-nav-acc_item"]}>Login</a>
+          </Link>
+          <Link href={"/store/createaccount"} >
+          <a  className={classes["store-nav-acc_item"]}>Create Account</a>
+          </Link>
+         </>
+        
+        )
+        }
+
+         {isLoggedIn && <button onClick={logoutHandler} className={classes["logout"]}>Logout</button>}
+
       </div>
     </div>
   );
 };
 
 export default StoreNav;
+

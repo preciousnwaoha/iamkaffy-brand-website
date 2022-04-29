@@ -1,0 +1,86 @@
+.create-acc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.create-acc h1 {
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--black);
+}
+
+.create-acc form {
+    margin: 1rem;
+    max-width: 400px;
+}
+
+.create-acc input:-webkit-autofill,
+.create-acc input:-webkit-autofill:hover, 
+.create-acc input:-webkit-autofill:focus, 
+.create-acc input:-webkit-autofill:active{
+    -webkit-text-fill-color: var(--secondary) !important;
+    -webkit-box-shadow: 0 0 0 30px var(--white) inset !important;
+}
+
+.error {
+    margin-top: 0;
+    color: red;
+    font-size: 0.65rem;
+}
+
+.create-acc label {
+    display: none;
+}
+
+.create-acc input {
+    background: transparent;
+    width: 100%;
+    padding: 0.85rem 0;
+    margin-bottom: 0.5rem;
+    color: var(--secondary);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--secondary);
+}
+
+.create-acc button {
+    padding: 0.75rem 0;
+    width: 100%;
+    margin: 0;
+    margin-top: 0.25rem;
+    border: none;
+    background: var(--black);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.create-acc button:hover,
+.create-acc button:hover {
+    color: var(--secondary);
+}
+
+.create-acc button:disabled,
+.create-acc button:disabled:hover,
+.create-acc button:disabled:active {
+    opacity: 0.5;
+}
+
+
+.loading {
+    text-align: center;
+    color: var(--secondary);
+}
+.return-to-store {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.return-to-store:hover {
+    color: var(--secondary);
+}

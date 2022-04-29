@@ -1,0 +1,86 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.login h1 {
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--black);
+}
+
+.login form {
+    margin: 1rem;
+    max-width: 400px;
+}
+
+.login input:-webkit-autofill,
+.login input:-webkit-autofill:hover, 
+.login input:-webkit-autofill:focus, 
+.login input:-webkit-autofill:active{
+    -webkit-text-fill-color: var(--secondary) !important;
+    -webkit-box-shadow: 0 0 0 30px var(--white) inset !important;
+}
+
+.error {
+    margin-top: 0;
+    color: red;
+    font-size: 0.65rem;
+}
+
+.login label {
+    display: none;
+}
+
+.login input {
+    background: transparent;
+    width: 100%;
+    padding: 0.85rem 0;
+    margin-bottom: 0.5rem;
+    color: var(--secondary);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--secondary);
+}
+
+.login button {
+    padding: 0.75rem 0;
+    width: 100%;
+    margin: 0;
+    margin-top: 0.25rem;
+    border: none;
+    background: var(--black);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.login button:hover,
+.login button:hover {
+    color: var(--secondary);
+}
+
+.login button:disabled,
+.login button:disabled:hover,
+.login button:disabled:active {
+    opacity: 0.5;
+}
+
+
+.loading {
+    text-align: center;
+    color: var(--secondary);
+}
+.return-to-store {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.return-to-store:hover {
+    color: var(--secondary);
+}

@@ -9,6 +9,7 @@ const MailingList = () => {
 
   return (
     <div className={classes["mailing-list"]}>
+      <div>
       <h3>Join kaffy&apos;s mailing list</h3>
       <form className={classes["mailing-list-form"]} onSubmit={submitHanlder}>
         <label htmlFor="email-list-email">Email</label>
@@ -17,6 +18,8 @@ const MailingList = () => {
             &gt;
         </button>
       </form>
+      </div>
+      
     </div>
   );
 };

@@ -38,11 +38,13 @@ const CartPage = () => {
         </div>
       )}
 
-      {items.length < 1 && (
+      {(items.length < 1) ? 
         <Link href={"/store"}>
           <a className={classes["see-collections-link"]}>See Collections</a>
         </Link>
-      )}
+      : <Link href={"/store"}>
+      <a className={classes["collections-link"]}>Collections</a>
+    </Link>}
     </div>
   );
 };

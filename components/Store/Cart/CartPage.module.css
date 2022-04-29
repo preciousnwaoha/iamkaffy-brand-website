@@ -69,6 +69,16 @@
     color: var(--secondary);
 }
 
+.collections-link {
+    display: inline-block;
+    color: var(--black);
+    margin: 2rem 0;
+}
+
+.collections-link:hover {
+    color: var(--secondary);
+}
+
 @media screen and (min-width: 760px) {
     .cart-page {
         padding: 2rem;

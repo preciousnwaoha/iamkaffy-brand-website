@@ -36,7 +36,7 @@
   z-index: -1;
 }
 
-.effect-item-2 {
+.side-nav-ul .effect-item-2 {
   position: absolute;
   top: 50%;
   left: 15%;
@@ -44,7 +44,7 @@
   z-index: -1;
 }
 
-.effect-item-2::before {
+.side-nav-ul .effect-item-2::before {
   border-left: 30px solid var(--black);
 }
 

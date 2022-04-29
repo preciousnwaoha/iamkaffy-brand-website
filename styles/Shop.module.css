@@ -3,11 +3,12 @@
 
 .main {
     position: relative;
+    background-color: var(--white);
+  background: var(--bg-art);
+  background-size: contain;
     /* max-width: 1366px; */
     padding-top: 60px;
-    background-color: var(--white);
-    background: var(--bg-art);
-    background-size: contain;
+    
     margin: auto;
     /* overflow-x: hidden; */
 }

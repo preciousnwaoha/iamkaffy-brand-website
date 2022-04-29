@@ -158,7 +158,9 @@
 
 .store-nav-acc_item {
     /* border: 1px solid yellow; */
+    display: block;
     padding: 1rem;
+    color: var(--black)
 }
 
 .store-nav-acc_item:hover {
@@ -167,4 +169,19 @@
 
 .store-nav-acc_item:not(:last-of-type) {
     border-bottom: 1px solid var(--primary);
+}
+
+.logout {
+    display: block;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--black);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.logout:hover, .logout:active {
+    color: var(--primary)
 }

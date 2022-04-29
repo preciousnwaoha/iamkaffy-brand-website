@@ -1,6 +1,7 @@
 .footer {
-    background: var(--white);
     width: 100%;
+    background: var(--bg-art);
+  background-size: contain;
     /* margin: auto; */
     position: relative;
 }
