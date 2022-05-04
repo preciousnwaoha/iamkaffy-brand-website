@@ -5,16 +5,22 @@
   overflow: hidden;
 }
 
-.effect-item-2 {
+.vault-landing .effect-item-2 {
     position: absolute;
     left: 90%;
     top: 0;
+}
+.vault-landing .effect-item-2 div {
+    background: var(--black);
 }
 
 .effect-item-5 {
     position: absolute;
     left: 5%;
     top: 20%;
+}
+.vault-landing .effect-item-5 div {
+    background: var(--black);
 }
 
 .effect-item-3 {

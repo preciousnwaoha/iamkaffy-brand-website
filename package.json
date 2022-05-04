@@ -11,6 +11,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@google-pay/button-react": "^3.0.0",
@@ -21,6 +22,7 @@
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-instagram-embed": "^3.0.0",
+    "react-paystack": "^3.0.5",
     "react-player": "^2.10.0",
     "react-scroll-horizontal": "^1.6.6"
   },

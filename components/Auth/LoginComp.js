@@ -1,15 +1,15 @@
 import React, { useState, useContext } from "react";
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import Link from "next/link";
-import classes from "./Login.module.css";
+import classes from "./LoginComp.module.css";
 import AuthContext from "../../context/auth-context";
 
 const passChecker = /[\+\*/\\!?]/;
 const emailRegex =
   /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-const Login = () => {
-    const router = useRouter();
+const LoginComp = () => {
+    // const router = useRouter();
     const authCtx = useContext(AuthContext)
 
   const [authError, setAuthError] = useState("");
@@ -102,7 +102,7 @@ const Login = () => {
         console.log("login", data)
         const expirationTime = new Date(new Date().getTime() + (+data.expiresIn * 1000))
         authCtx.login(data.idToken, expirationTime.toISOString(), data.localId)
-        router.push('/store')
+
     }).catch(err => {
         setAuthError(err.message);
     });
@@ -147,15 +147,10 @@ const Login = () => {
         {isLoading && <p className={classes.loading}>In a sec...</p>}
       </form>
       {authError && <p className={classes.error}>{authError}</p>}
-      <Link href={"/store/createaccount"}>
-        <a className={classes["return-to-store"]}>Don&apos;t have an account? Create</a>
-      </Link>
 
-      <Link href={"/store"}>
-        <a className={classes["return-to-store"]}>Return to store</a>
-      </Link>
+      
     </div>
   );
 };
 
-export default Login;
+export default LoginComp;

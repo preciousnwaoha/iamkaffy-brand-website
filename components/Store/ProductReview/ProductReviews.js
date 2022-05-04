@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import AuthContext from "../../../context/auth-context";
 import UIBigTitle from "../../UI/UIBigTitle";
 import ReviewStars from "../StoreUI/ReviewStars";
 import ProductReview from "./ProductReview";
 import classes from "./ProductReviews.module.css";
+import WriteReview from "./WriteReview";
 
 
 const ProductReviews = ({ product }) => {
+  const authCtx = useContext(AuthContext)
+  const [showWriteReview, setShowWriteReview] = useState(false)
 
   const {reviews} = product
 
   const writeReviewHandler = () => {
-    console.log("write a review handled");
+    
+      setShowWriteReview(true)
+    
   };
 
   const reviewExist = reviews.length > 0;
@@ -37,13 +43,15 @@ const ProductReviews = ({ product }) => {
       <div className={classes["avg-rating"]}>
         <ReviewStars starNum={avgRating} />
       </div>
-      <button
+      {!showWriteReview && <button
         type="button"
         className={classes["write-review-btn"]}
         onClick={writeReviewHandler}
       >
         write a review
-      </button>
+      </button>}
+
+     { showWriteReview && <WriteReview product={product} />}
       <div className={classes["product-reviews-content"]}>
         {(reviews && reviewExist) ? (
           reviews.map((review) => (

@@ -1,4 +1,8 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useContext, useEffect } from "react";
+import { db } from "../firebase";
+import { collection, doc, updateDoc, getDoc } from "firebase/firestore";
+import AuthContext from "./auth-context";
+
 
 
 const CartContext = React.createContext({
@@ -90,12 +94,70 @@ const cartReducer = (state, action) => {
         }
 
     }
+
+    if (action.type === "MERGE_WITH__DB") {
+      const newSubtotal = state.subtotal + action.cart.subtotal
+
+      const newCartItems = [...state.items, ...action.cart.items]
+
+      return {
+        items: newCartItems,
+        subtotal: newSubtotal,
+      }
+    }
+
     return DEFAULT_CART_STATE
 }
 
 
 export const CartContextProvider = ({ children }) => {
     const [cartState, dispatchCartAction] = useReducer(cartReducer, DEFAULT_CART_STATE)
+    const authCtx = useContext(AuthContext)
+
+    const {isLoggedIn, userId } = authCtx
+
+    // useEffect(() => {
+    //   const getCart = async () => {
+    //     const userRef = collection(db, 'users', userId);
+    //     const userSnap = await getDoc(userRef);
+    //     if (userSnap.exists()) {
+
+    //       const userData = userSnap.data()
+
+
+    //       // dispatchCartAction({type: "MERGE_WITH_DB", cart: userData.cart })
+
+    //       console.log("Document data:", userData);
+
+
+    //     } else {
+    //       // doc.data() will be undefined in this case
+    //       console.log("No such document!");
+    //     }
+    //   }
+
+    //   if (isLoggedIn) {
+    //    getCart()
+    //   } else {
+    //     console.log("from: local storage")
+    //   }
+      
+    // }, [isLoggedIn, userId])
+
+    // useEffect(() => {
+    //   const updateDBCart = async () => {
+    //     const userRef = doc(db, "users", userId);
+    //     await updateDoc(userRef, {
+    //       'cart': cartState,
+    //   });
+    //   }
+
+    //   if (isLoggedIn) {
+    //     updateDBCart()
+    //     console.log("updated doc")
+    //   }
+      
+    // }, [cartState, userId, isLoggedIn])
 
   const addToCartHandler = (item) => {
     dispatchCartAction({type: "ADD_CART_ITEM", item: item })

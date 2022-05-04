@@ -1,6 +1,8 @@
 .review-stars {
+    text-align: center;
+    color: var(--black);
 }
 
 .star {
-    color: var(--);
+    color: var(--black);
 }

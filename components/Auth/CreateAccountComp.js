@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useRouter } from 'next/router';
 import Link from "next/link";
-import classes from "./CreateAccount.module.css";
+import classes from "./CreateAccountComp.module.css";
 import AuthContext from "../../context/auth-context";
 import { db } from "../../firebase"
 import { collection, doc, setDoc } from "firebase/firestore";
@@ -12,7 +12,7 @@ const passChecker = /[\+\*/\\!?]/;
 const emailRegex =
   /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-const CreateAccount = () => {
+const CreateAccountComp = () => {
     const router = useRouter();
     const authCtx = useContext(AuthContext)
 
@@ -166,23 +166,23 @@ const CreateAccount = () => {
         console.log("create", data)
         
         const userData = {
-          firstName: enteredFirstName,
-          lastName: enteredLastName,
-          email: data.email,
-          contactDetails: {
-            country: '',
-            state: '',
-            address: '',
-            postalCode: '',
-            phone: '',
+            firstName: enteredFirstName,
+            lastName: enteredLastName,
             email: data.email,
-          },
-          viewedItems: [],
-          boughtItems: [],
-          cart: {
-            items: [],
-            subtotal: 0,
-          }
+            contactDetails: {
+              country: '',
+              state: '',
+              address: '',
+              postalCode: '',
+              phone: '',
+              email: data.email,
+            },
+            viewedItems: [],
+            boughtItems: [],
+            cart: {
+              items: [],
+              subtotal: 0,
+            }
         }
         const userRef = doc(db, 'users', data.localId)
         setDoc(userRef, userData)
@@ -285,15 +285,10 @@ const CreateAccount = () => {
         {isLoading && <p className={classes.loading}>In a sec...</p>}
       </form>
      {authError && <p className={classes.error}>{authError}</p>}
-     <Link href={"/store/login"}>
-        <a className={classes["return-to-store"]}>Already have an account? Login</a>
-      </Link>
-
-      <Link href={"/store"}>
-        <a className={classes["return-to-store"]}>Return to store</a>
-      </Link>
+     
+    
     </div>
   );
 };
 
-export default CreateAccount;
+export default CreateAccountComp;

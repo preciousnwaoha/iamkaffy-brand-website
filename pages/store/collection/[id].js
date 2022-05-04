@@ -8,6 +8,7 @@ import styles from "../../../styles/Shop.module.css";
 
 import { db } from "../../../firebase";
 import { collection, getDocs } from "firebase/firestore";
+import ViewedProducts from "../../../components/Store/Product/ViewedProducts/ViewedProducts";
 
 const collectionsCollectionRef = collection(db, "collections");
 const productsCollectionRef = collection(db, "products");
@@ -79,6 +80,7 @@ const CollectionPage = ({ propsData }) => {
         <Header />
         <StoreHeader collections={propsData.collections} />
         <Collection data={propsData} />
+        <ViewedProducts />
         <MailingList />
       </main>
       <Footer />

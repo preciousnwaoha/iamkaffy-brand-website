@@ -2,11 +2,13 @@
     
     text-align: center;
     background-color: var(--black);
+    padding-bottom: 1rem;
 }
 
 .mailing-list div {
+    width: 100%;
     padding: 1rem;
-    background: url("/images/bg-art1.png");
+    background: var(--bg-art-par);
     background-size: contain;
 }
 
@@ -19,6 +21,8 @@
 
 .mailing-list-form {
     display: flex;
+    margin: auto;
+    max-width: 500px;
 }
 
 .mailing-list-form label {
@@ -27,6 +31,7 @@
 
 .mailing-list-form input {
     padding: 0.65rem 1.5rem;
+    padding-left: 0;
     width: 100%;
     border: none;
     border-bottom: 1px solid var(--white);
@@ -40,9 +45,29 @@
     padding: 0.65rem 1.5rem;
     color: var(--white);
     border: none;
+    border-bottom: 1px solid var(--white);
     outline: none;
     background: transparent;
     cursor: pointer;
+}
+.mailing-list-form button:hover .submit-arrow, .mailing-list-form button:active .submit-arrow {
+    color: var(--white);
+}
+
+.submit-arrow {
+    color: var(--secondary);
+}
+
+.error {
+    color: red;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.success {
+    color: var(--white);
+    font-size: 0.85rem;
+    text-align: center;
 }
 
 @media screen and (min-width: 760px) {

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 
 import classes from "./Product.module.css"
 import Link from "next/link";
+import ItemsContext from "../../../context/items-context";
 
 const Product = ({
   id,
@@ -14,12 +15,24 @@ const Product = ({
   numberLeft,
   numSold,
 }) => {
+  const itemsCtx = useContext(ItemsContext)
 
+  const addToViewedProductsHandler = () => {
+    console.log("addToViewedProductsHandler")
+    itemsCtx.addItem({id,
+      name,
+      images,
+      subCollections,
+      collections,
+      price,
+      numberLeft,
+      numSold, })
+  }
 
 
   return (
     <Link href={`/store/view-product/${id}`}>
-    <a className={classes["product"]}>
+    <a className={classes["product"]} onClick={addToViewedProductsHandler} >
       <div className={classes["image-wrapper"]}>
         <div className={classes["image-wrapper-inner"]}>
           <Image

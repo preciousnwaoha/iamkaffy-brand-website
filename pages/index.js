@@ -50,6 +50,8 @@ export async function getStaticProps() {
   // const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=${videosPlaylist.playListCode}&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`)
   // const videosData = await res.json();
 
+  const videosData = [{ id: "Yq99FyfnGxA", type:"landscape", from: "youtube" }, { id: "41FLPJ5_Qwk", type: "portrait", from: "youtube" }];
+
   const contactDetails = contactDetailsData.docs.map((doc) => {
     return { ...doc.data(), id: doc.id };
   });
@@ -60,20 +62,20 @@ export async function getStaticProps() {
 
   return {
     props: {
-      // videosData,
+      videosData,
       contactDetails,
       successStories,
     },
   };
 }
 
-const videosData = [{ id: "Yq99FyfnGxA", type:"landscape", from: "youtube" }, { id: "41FLPJ5_Qwk", type: "portrait", from: "youtube" }];
 
-export default function Home({ successStories, contactDetails }) {
+
+export default function Home({videosData, successStories, contactDetails }) {
   // fetch("/api/hello")
-  // if (typeof window !== "undefined") {
-  //   document.cookie = 'cookie4=value4; SameSite=None; Secure';
-  // }
+  if (typeof window !== "undefined") {
+    document.cookie = 'cookie4=value4; SameSite=None; Secure';
+  }
   
   return (
     <div className={styles.container}>

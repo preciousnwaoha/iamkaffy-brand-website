@@ -1,0 +1,68 @@
+.auth-pop-up {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: rgba(8, 8, 8, 0.933);
+    backdrop-filter: blur(8px);
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.auth-pop-up::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+}
+
+.auth-pop-up::-webkit-scrollbar-thumb {
+    background: var(--primary-trans);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.auth-pop-up::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-trans);
+}
+
+.return-to-store {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    cursor: pointer;
+    color: var(--white-stay);
+}
+
+.return-to-store:hover {
+    color: var(--secondary);
+}
+
+
+.exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    background: var(--black-stay);
+    color: var(--white-stay);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.exit:hover {
+    color: var(--secondary);
+}
+
+@media screen and (min-width: 760px) {
+    .exit {
+        margin-right: 2rem;
+    }
+}

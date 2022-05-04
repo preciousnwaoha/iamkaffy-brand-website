@@ -1,3 +1,4 @@
+
 import Head from "next/head";
 import Header from "../../../components/Layout/Header";
 import StoreHeader from "../../../components/Store/StoreHeader/StoreHeader";
@@ -9,10 +10,12 @@ import styles from "../../../styles/Shop.module.css";
 
 import { db } from "../../../firebase";
 import { collection, getDocs } from "firebase/firestore";
+import ViewedProducts from "../../../components/Store/Product/ViewedProducts/ViewedProducts";
 
 // const collectionsCollectionRef = collection(db, "collections");
 const collectionsCollectionRef = collection(db, "collections")
 const productsCollectionRef = collection(db, "products");
+const usersCollectionRef = collection(db, "users");
 
 export const getStaticPaths = async () => {
   const data = await getDocs(productsCollectionRef);
@@ -65,6 +68,9 @@ export const getStaticProps = async ({ params }) => {
 
 const ViewProductPage = ({ propsData }) => {
   
+
+  
+ 
   return (
     <div className={styles.container}>
       <Head>
@@ -77,7 +83,10 @@ const ViewProductPage = ({ propsData }) => {
         <StoreHeader collections={propsData.collections} />
             <ViewProduct data={propsData} />
             <ProductReviews product={propsData.product} />
+        
+        <ViewedProducts />
         <MailingList />
+    
       </main>
       <Footer />
     </div>

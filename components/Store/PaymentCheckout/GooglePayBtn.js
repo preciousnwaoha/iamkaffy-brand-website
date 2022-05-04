@@ -14,7 +14,36 @@ const GooglePayBtn = ({ item, fromCart=false, className }) => {
     amountToPay = item.price
   }
 
-  
+  const baseRequest = {
+    apiVersion: 2,
+    apiVersionMinor: 0
+  };
+
+  const allowedCardAuthMethods = ["PAN_ONLY", "CRYPTOGRAM_3DS"];
+  const allowedCardNetworks = ["MASTERCARD", "VISA"];
+
+  const tokenizationSpecification = {
+    type: "PAYMENT_GATEWAY", // Payment Gateway Details
+    parameters: {
+      gateway: "example", //
+      gatewayMerchantId: "exampleGatewayMerchantId",
+    },
+  }
+  const baseCardPaymentMethod = {
+    type: 'CARD',
+    parameters: {
+      allowedAuthMethods: allowedCardAuthMethods,
+      allowedCardNetworks: allowedCardNetworks
+    }
+  };
+
+  // const cardPaymentMethod = Object.assign(
+  //   {tokenizationSpecification: tokenizationSpecification},
+  //   baseCardPaymentMethod
+  // );
+
+  // const isReadyToPayRequest = Object.assign({}, baseRequest);
+  // isReadyToPayRequest.allowedPaymentMethods = [baseCardPaymentMethod];
 
 
   return (
@@ -23,27 +52,16 @@ const GooglePayBtn = ({ item, fromCart=false, className }) => {
         environment="TEST"
         buttonSizeMode="fill"
         paymentRequest={{
-          apiVersion: 2,
-          apiVersionMinor: 0,
+          ...baseRequest,
           allowedPaymentMethods: [
             {
-              type: "CARD",
-              parameters: {
-                allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
-                allowedCardNetworks: ["MASTERCARD", "VISA"],
-              },
-              tokenizationSpecification: {
-                type: "PAYMENT_GATEWAY", // Payment Gateway Details
-                parameters: {
-                  gateway: "example", //
-                  gatewayMerchantId: "exampleGatewayMerchantId",
-                },
-              },
+              ...baseCardPaymentMethod,
+              tokenizationSpecification: tokenizationSpecification,
             },
           ],
           merchantInfo: {
-            merchantId: "17613812255336763067",
-            merchantName: "Demo Only (you will not be charged",
+            merchantId: "BCR2DN4TWCAOF72I",
+            merchantName: "Kaffy Store",
           },
           transactionInfo: {
             totalPriceStatus: "FINAL",
@@ -58,7 +76,7 @@ const GooglePayBtn = ({ item, fromCart=false, className }) => {
             "TODO: send order to server",
             paymentData.paymentMethodData
           );
-          history.pushState("/confirm");
+          // history.pushState("/confirm");
         }}
       />
     </div>

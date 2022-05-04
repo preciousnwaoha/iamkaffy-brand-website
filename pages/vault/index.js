@@ -34,6 +34,8 @@ export async function getStaticProps() {
   //   )
   // })
 
+  const videosData = [{ id: "Yq99FyfnGxA", type:"landscape", from: "youtube" }, { id: "41FLPJ5_Qwk", type: "portrait", from: "youtube" }];
+
 
   const photosData = photosDataFrb.docs.map(doc =>  {
     return (
@@ -45,13 +47,18 @@ export async function getStaticProps() {
   // const videosData = await res.json();
   return {
     props: {
-      // videosData,
+      videosData,
       photosData: photosData,
     }
   }
 }
 
-const Vault = ({ photosData }) => {
+
+
+const Vault = ({ videosData, photosData }) => {
+if (typeof window !== "undefined") {
+    document.cookie = 'cookie4=value4; SameSite=None; Secure';
+  }
  
   return (
     <div className={styles.container}>
@@ -63,7 +70,7 @@ const Vault = ({ photosData }) => {
       <main className={styles.main}>
        <Header />
        <VaultLanding />
-       {/* <VaultVideos videosData={videosData} /> */}
+       <VaultVideos videosData={videosData} />
        <VaultPhotos photosData={photosData} />
        <Featured 
         img="/images/orange9.JPEG"

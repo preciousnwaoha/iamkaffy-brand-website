@@ -16,7 +16,7 @@ const CollectionInHome = ({ data }) => {
 
   return (
     <div className={classes.collection}>
-      <UITitle titleText={collection.name} className={classes["title"]} />
+      <UITitle titleText={collection.name || "Collection" } className={classes["title"]} />
       <h4 className={classes["subtitle"]}>{collection.statement ? collection.statement : ""}</h4>
 
       {/* {!isInStoreHome && (

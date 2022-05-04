@@ -33,6 +33,7 @@ font-family: 'Roboto', sans-serif;
   --shadow-2: rgba(79, 79, 79, 0.045);
   --shadow-3: rgba(0, 0, 0, 0.056);
   --bg-art: url("/images/bg-art1.png");
+  --bg-art-par: url("/images/bg-art2.png");
 }
 
 html {

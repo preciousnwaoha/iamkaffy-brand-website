@@ -9,6 +9,7 @@ import MailingList from "../../components/Store/MailingList";
 import StoreHeader from "../../components/Store/StoreHeader/StoreHeader";
 import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore"
+import ViewedProducts from "../../components/Store/Product/ViewedProducts/ViewedProducts";
 
 
 
@@ -50,7 +51,6 @@ export const getStaticProps = async () => {
 
 const Store = ({ propsData }) => {
 
-  console.log(propsData)
 
   return (
     <div className={styles.container}>
@@ -67,7 +67,7 @@ const Store = ({ propsData }) => {
         <CollectionInHome data={ {collection: propsData.collections[0], products: propsData.products} } />
         <CollectionInHome data={ {collection: propsData.collections[1], products: propsData.products} } />
         <CollectionInHome data={ {collection: propsData.collections[2], products: propsData.products} }  />
-       
+       <ViewedProducts />
         {/* <ProductReviews /> */}
         <MailingList />
       </main>

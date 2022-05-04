@@ -10,8 +10,6 @@ import StoreHeader from "../../StoreHeader/StoreHeader";
 const ViewProduct = ({data}) => {
   const {product } = data
 
-  console.log(product)
-
   return (
     <div className={classes["view-product"]}>
       <ViewProductImage product={product}  />
