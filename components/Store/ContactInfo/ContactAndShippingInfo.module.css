@@ -1,0 +1,38 @@
+.contact-info {
+    
+}
+
+.not-logged-in {
+    height: calc(100vh - 10.5rem - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    color: var(--black);
+}
+
+.not-logged-in h3 {
+    margin-top: 1rem;
+    max-width: 80%;
+}
+
+.auth-btn {
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary);
+    cursor: pointer;
+    padding-bottom: 0.5rem;
+}
+
+.auth-btn:hover, .auth-btn-active {
+    border-bottom: 2px solid var(--secondary);
+}
+
+@media screen and (min-width: 760px) {
+    .not-logged-in {
+        padding: 2rem;
+    }
+}

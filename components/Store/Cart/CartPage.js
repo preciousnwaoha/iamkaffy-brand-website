@@ -5,6 +5,7 @@ import CartItem from "./CartItem";
 import CheckOutBtn from "../PaymentCheckout/CheckOutBtn";
 import GooglePayBtn from "../PaymentCheckout/GooglePayBtn";
 import classes from "./CartPage.module.css";
+import PayStackBtn from "../PaymentCheckout/PayStackBtn";
 
 const CartPage = () => {
   const cartCtx = useContext(CartContext);
@@ -34,7 +35,8 @@ const CartPage = () => {
       {items.length > 0 && (
         <div className={classes["actions"]}>
           <CheckOutBtn className={classes["check-out-btn"]} />
-          <GooglePayBtn item={cartCtx} fromCart={true} className={classes["g-pay-btn"]} />
+          {/* <GooglePayBtn item={cartCtx} fromCart={true} className={classes["g-pay-btn"]} /> */}
+          <PayStackBtn item={cartCtx} fromCart={true} />
         </div>
       )}
 

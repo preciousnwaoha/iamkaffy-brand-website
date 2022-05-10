@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import Link from "next/link";
 import classes from "./CreateAccountComp.module.css";
 import AuthContext from "../../context/auth-context";
@@ -13,7 +13,7 @@ const emailRegex =
   /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 const CreateAccountComp = () => {
-    const router = useRouter();
+    // const router = useRouter();
     const authCtx = useContext(AuthContext)
 
     // server states
@@ -166,30 +166,34 @@ const CreateAccountComp = () => {
         console.log("create", data)
         
         const userData = {
-            firstName: enteredFirstName,
-            lastName: enteredLastName,
-            email: data.email,
-            contactDetails: {
-              country: '',
-              state: '',
-              address: '',
-              postalCode: '',
-              phone: '',
-              email: data.email,
-            },
-            viewedItems: [],
-            boughtItems: [],
-            cart: {
-              items: [],
-              subtotal: 0,
-            }
+          firstName: enteredFirstName,
+          lastName: enteredLastName,
+          email: data.email,
+          contactShippingInfo: {
+            firstName: '',
+            lastName: '',
+            country: '',
+            state: '',
+            city: '',
+            address: '',
+            zipCode: '',
+            phone: '',
+            contactEmail: data.email,
+            validity: false,
+          },
+          viewedItems: [],
+          boughtItems: [],
+          cart: {
+            items: [],
+            subtotal: 0,
+          }
         }
         const userRef = doc(db, 'users', data.localId)
         setDoc(userRef, userData)
 
         const expirationTime = new Date(new Date().getTime() + (+data.expiresIn * 1000))
         authCtx.login(data.idToken, expirationTime.toISOString(), data.localId)
-        router.push('/store')
+        // router.push('/store')
       }).catch(err => {
           setAuthError(err.message);
       });

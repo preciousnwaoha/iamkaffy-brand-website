@@ -21,6 +21,7 @@ const calculateRemainingTime = (expirationTime) => {
 
 const retrieveStoredToken = () => {
     const storedToken = localStorage.getItem("token");
+    const storedUserId = localStorage.getItem("userId");
     const storedExpirationDate = localStorage.getItem("expirationTime");
 
     const remainingTime = calculateRemainingTime(storedExpirationDate);
@@ -33,6 +34,7 @@ const retrieveStoredToken = () => {
 
     return {
         token: storedToken,
+        userId: storedUserId,
         remainingTime: remainingTime,
     }
 }
@@ -44,12 +46,15 @@ export const AuthContextProvider = ({ children }) => {
     const [token, setToken] = useState(initialToken);
 
     const logoutHandler = useCallback(() => {
-      setUserIdState('')
-      
+
+        setUserIdState('')
+
         setToken(null);
         if (typeof window !== "undefined") {
             localStorage.removeItem('token');
-            localStorage.removeItem('expirationTime')
+            localStorage.removeItem('userId');
+            localStorage.removeItem('expirationTime');
+
         }
 
         if(logoutTimer) {
@@ -64,6 +69,7 @@ export const AuthContextProvider = ({ children }) => {
         setToken(token)
         if (typeof window !== "undefined") {
             localStorage.setItem('token', token);
+             localStorage.setItem('userId', userId);
             localStorage.setItem('expirationTime', expirationTime)
         }
 
@@ -74,6 +80,7 @@ export const AuthContextProvider = ({ children }) => {
     useEffect(() => {
       const tokenData = retrieveStoredToken();
       if (tokenData) {
+        setUserIdState(tokenData.userId)
         setToken(tokenData.token);
         // console.log("remainingTime", tokenData.remainingTime)
         logoutTimer = setTimeout(logoutHandler, tokenData.remainingTime)
@@ -83,6 +90,7 @@ export const AuthContextProvider = ({ children }) => {
     useEffect(() => {
       if (token !== initialToken) {
         localStorage.setItem("token", token);
+        localStorage.setItem('userId', userIdState)
       }
     }, [token, initialToken]);
 
@@ -90,8 +98,7 @@ export const AuthContextProvider = ({ children }) => {
     const userIsLoggedIn = !!token;
 
     
-
-
+    console.log("userId", userIdState)
 
   return (
     <AuthContext.Provider

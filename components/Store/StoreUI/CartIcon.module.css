@@ -24,7 +24,7 @@
 }
 
 .cart:hover .no-of-items {
-    background: var(--primary);
-    color: var(--white);
+    background: var(--white-stay);
+    color: var(--black-stay);
     font-weight: 600;
 }

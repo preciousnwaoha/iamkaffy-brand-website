@@ -137,7 +137,7 @@ const ViewProductInfo = ({ product }) => {
       >
         Add to Cart
       </StoreButton>
-      <PayStackBtn />
+      <PayStackBtn item={product} />
       {/* <GooglePayBtn item={product} className={classes["buy-now-btn"]} /> */}
       {/* <BuyNowLink productId={product.id} className={"buy-now-btn"} /> */}
 

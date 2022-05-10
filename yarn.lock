@@ -2013,6 +2013,11 @@
   dependencies:
     "performance-now" "^2.1.0"
 
+"react-country-region-selector@^3.4.0":
+  "integrity" "sha512-3zUC0Uhsr6gV8Wxj/BBVJxdTl7pETHPnpDU72OT1n6WrhKVlSYcITEjV0iSyqyk+EmTPM1Fca9JmHRJ+efA2UA=="
+  "resolved" "https://registry.npmjs.org/react-country-region-selector/-/react-country-region-selector-3.4.0.tgz"
+  "version" "3.4.0"
+
 "react-dom@^15.0.0 || ^16.0.0", "react-dom@^15.0.0 || ^16.0.0 || ^17.0.0", "react-dom@^17.0.0 || ^16.0.0 || ^15.0.0 || ~0.14.0", "react-dom@^17.0.2 || ^18.0.0-0", "react-dom@>=16.3.0", "react-dom@18.0.0":
   "integrity" "sha512-XqX7uzmFo0pUceWFCt7Gff6IyIMzFUn7QMZrbrQfGxtaxXZIcGQzoNpRLE3fQLnS4XzLLPMZX2T9TRcSrasicw=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.0.0.tgz"

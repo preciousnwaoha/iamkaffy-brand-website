@@ -6,12 +6,22 @@ import classes from './PayStackBtn.module.css'
 
   
 
-const PayStackBtn = () => {
+const PayStackBtn = ( { item, fromCart=false }) => {
+  let amountToPay;
+
+  if (fromCart) {
+    amountToPay = item.subtotal
+  }
+  else {
+    amountToPay = item.price
+  }
+
     const publicKey = "pk_test_03a5461f993e37655bf14816546e8cc873cb8103"
-    const amount = 1000000 // Remember, set in kobo!
+    const amount = amountToPay * 100  // Remember, set in kobo!
     const name = 'precious'
     const email = 'precious@gmail.com'
     const phone = '09030238390'
+    const address = 'My special test street'
 
     const config = {
         reference: (new Date()).getTime(),
@@ -19,6 +29,7 @@ const PayStackBtn = () => {
         amount,
         publicKey,
       };
+
 
     const handlePaystackSuccessAction = (reference) => {
         // Implementation for whatever you want to do with reference and after success call.
@@ -38,8 +49,9 @@ const PayStackBtn = () => {
     metadata: {
       name,
       phone,
+      address,
     },
-    text: "Pay Now",
+    text: "Buy Now",
     onSuccess: (reference) => handlePaystackSuccessAction(reference),
     onClose: handlePaystackCloseAction,
   }

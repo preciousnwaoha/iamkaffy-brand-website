@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import classes from "./CheckOutPage.module.css";
 import ExpressCheckout from "./ExpressCheckout";
+import ManualCheckout from "./ManualCheckout";
 import Link from "next/link"
 import OrderSummary from "./OrderSummary/OrderSummary";
 import CartContext from "../../../context/cart-context";
@@ -30,8 +31,8 @@ const CheckOutPage = () => {
         
         <ExpressCheckout />
  
-      {/* <div className={classes["OR-line"]}><p>OR</p></div>
-      <ManualCheckout /> */}
+      {/* <div className={classes["OR-line"]}><p>OR</p></div> */}
+      <ManualCheckout />
 
 <Link href="/store/cart">
             <a className={classes["return-to-cart-link"]}>Return to cart</a>

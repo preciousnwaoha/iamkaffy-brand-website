@@ -5,6 +5,7 @@ import { CartContextProvider } from "../context/cart-context";
 import { ThemeContextProvider } from "../context/theme-context";
 import { AuthContextProvider } from "../context/auth-context";
 import { ItemsContextProvider } from "../context/items-context";
+import { ContactShippingInfoContextProvider } from "../context/contact-shipping-info-context";
 
 config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
@@ -12,11 +13,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeContextProvider>
       <AuthContextProvider>
+        <ContactShippingInfoContextProvider>
         <CartContextProvider>
           <ItemsContextProvider>
             <Component {...pageProps} />
           </ItemsContextProvider>
         </CartContextProvider>
+        </ContactShippingInfoContextProvider>
       </AuthContextProvider>
     </ThemeContextProvider>
   );

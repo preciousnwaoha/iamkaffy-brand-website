@@ -1,0 +1,21 @@
+
+.CSII {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.edit {
+    display: inline-block;
+    border: 2px solid var(--black);
+    padding: 0.6rem 1.5rem;
+    color: var(--black);
+    background: transparent;
+    margin: auto;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.edit:hover, .edit:active {
+    border-color: var(--secondary);
+    color: var(--secondary);
+}

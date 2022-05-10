@@ -58,7 +58,9 @@ const StoreNav = ({ className, onExitNav, collections, padTopOrNot }) => {
         
         )
         }
-
+        {isLoggedIn && <Link href={"/store/contact-and-shipping-info"} >
+          <a  className={classes["store-nav-acc_item"]}>Contact and Shipping Details</a>
+          </Link>}
          {isLoggedIn && <button onClick={logoutHandler} className={classes["logout"]}>Logout</button>}
 
       </div>

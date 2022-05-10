@@ -1,6 +1,6 @@
 .added-to-cart {
-    background: var(--secondary);
-    color: white;
+    background: var(--black);
+    color: var(--white);
     position: fixed;
     top: 70%;
     left: 50%;
@@ -29,7 +29,7 @@
 }
 
 20% {
-    opacity: 0.5;
+    opacity: 0.2;
 }
 
 40% {
