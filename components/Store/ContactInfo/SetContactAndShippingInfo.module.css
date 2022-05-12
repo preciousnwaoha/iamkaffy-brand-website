@@ -1,9 +1,41 @@
 .set-contact-info {
     padding-bottom: 2rem;
     text-align: left;
+    position: relative;
+    border: 1px solid transparent;
+}
+
+
+.cancel {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.cancel-icon {
+    font-size: 1.5rem;
+    color: var(--secondary);
+   
+    
+}
+
+.cancel-icon:hover {
+    color: var(--black);
+
 }
 
 .set-contact-info h4{
+    margin-top: 1.5rem;
     color: var(--secondary);
     text-align: center;
     text-transform: uppercase;
@@ -191,4 +223,8 @@
         margin: 0 2rem;
     }
     
+
+    .cancel {
+        margin-right: 2rem;
+    }
 }

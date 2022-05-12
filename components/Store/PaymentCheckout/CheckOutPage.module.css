@@ -5,11 +5,12 @@
 
 .title {
     margin: 1rem;
+    font-size: 2.5rem;
 }
 
 .order-summary {
     margin: 0 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     
 }
 .short-order-summary {
@@ -40,6 +41,17 @@
     margin: 0;
     font-weight: 700;
     color: var(--black);
+}
+
+.express-checkout {
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.express-checkout-title {
+    color: var(--secondary);
+    font-weight: 600;
 }
 
 .return-to-cart-link {

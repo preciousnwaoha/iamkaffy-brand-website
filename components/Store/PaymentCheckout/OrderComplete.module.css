@@ -1,0 +1,63 @@
+.order-complete {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-complete-inner {
+    background: var(--white);
+    width: 70%;
+    min-width: 300px;
+    padding: 1rem;
+    text-align: center;
+    -moz-box-shadow: 0 0 5px var(--shadow-3);
+    -webkit-box-shadow: 0 0 5px var(--shadow-3);
+    box-shadow: 0 0 5px var(--shadow-3);
+    color: var(--black);
+}
+
+
+.order-complete-inner h1 {
+    color: var(--secondary);
+    font-size: 2.5rem;
+}
+
+
+
+.mails {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 1rem auto;
+}
+
+.contact {
+    font-size: 0.75rem;
+    color: rgb(127, 127, 127);
+    margin: 1rem auto;
+}
+
+.explore {
+    border: 2px solid var(--secondary);
+    border-radius: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    color: var(--secondary);
+    font-size: 1rem;
+    display: inline-block;
+    line-height: 1rem;
+    margin: 1rem auto;
+}
+
+.explore:hover {
+    color: var(--secondary);
+    background: var(--black);
+    border-color: transparent;
+}
+
+.explore-icon {
+    margin-right: 0.5rem;
+}

@@ -41,7 +41,7 @@ const Cart = ({ className, onHideCart }) => {
         <div className={classes["actions"]}>
           <CheckOutBtn className={classes["check-out-btn"]} />
           {/* <GooglePayBtn item={cartCtx} fromCart={true} className={classes["g-pay-btn"]} /> */}
-          <PayStackBtn item={cartCtx} fromCart={true} />
+          {/* <PayStackBtn item={cartCtx} fromCart={true} /> */}
         </div>
       )}
     </div>
@@ -49,3 +49,5 @@ const Cart = ({ className, onHideCart }) => {
 };
 
 export default Cart;
+
+//fcd4ff2119a914e5621732d661967be20008657

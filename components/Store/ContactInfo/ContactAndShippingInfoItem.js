@@ -18,7 +18,6 @@ const ContactAndShippingInfoItem = () => {
   return (
     <div className={classes.CSII}>
         {!showUpdateCSI && <ContactInfoSummary contactInfo={contactInfo} onToggleEdit={toggleEditHandler} />}
-      {(!showUpdateCSI && contactInfo.validity) && <button onClick={toggleEditHandler} className={classes.edit} >Edit</button>}
       {showUpdateCSI && <SetContactAndShippingInfo onToggleEdit={toggleEditHandler} />}
     </div>
   )

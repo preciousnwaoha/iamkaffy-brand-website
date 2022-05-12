@@ -1,11 +1,16 @@
 import React, { useState, useRef, useContext, useEffect } from "react";
 import useInput from "../../../hooks/use-input";
 import ContactShippingInfoContext from "../../../context/contact-shipping-info-context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faXmark
+} from "@fortawesome/free-solid-svg-icons";
 import {
   CountryDropdown,
   RegionDropdown,
   CountryRegionData,
 } from "react-country-region-selector";
+
 import classes from "./SetContactAndShippingInfo.module.css";
 
 const emailRegex =
@@ -181,6 +186,9 @@ const SetContactAndShippingInfo = ({ onToggleEdit }) => {
 
   return (
     <div className={classes["set-contact-info"]}>
+      <div className={classes.cancel} onClick={() => onToggleEdit()}>
+        <FontAwesomeIcon icon={faXmark} className={classes["cancel-icon"]} />
+      </div>
       <h4>{`${contactInfo.validity ? "Update Info" : "Add Info"}`}</h4>
       <form onSubmit={submitHandler}>
         <div className={classes["contact-info"]}>

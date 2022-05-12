@@ -1,14 +1,14 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faMessage,
   faPhone,
   faHome,
   faLocation,
-  faTag,
-  faAddressCard,
+  faUser,
   faPlus,
+  faEnvelope
 } from "@fortawesome/free-solid-svg-icons";
+import {faEdit, } from "@fortawesome/free-regular-svg-icons";
 import classes from "./ContactInfoSummary.module.css";
 
 const ContactInfoSummary = ({ contactInfo, onToggleEdit }) => {
@@ -31,7 +31,14 @@ const ContactInfoSummary = ({ contactInfo, onToggleEdit }) => {
 
   return (
     <div className={classes["contact-info"]}>
+      {validity && (
+        <div className={classes.edit} onClick={addCSIHandler}>
+        <FontAwesomeIcon icon={faEdit} className={classes["edit-icon"]} />
+        </div>
+      )}
       <h3>Contact and Shipping Details</h3>
+
+
       {!validity && (
         <div className={classes.add}>
           <button className={classes["add-btn"]} onClick={addCSIHandler}>
@@ -44,11 +51,11 @@ const ContactInfoSummary = ({ contactInfo, onToggleEdit }) => {
       {validity && (
         <>
           <div>
-            <FontAwesomeIcon icon={faTag} className={classes.icon} />
+            <FontAwesomeIcon icon={faUser} className={classes.icon} />
             <p className={classes.name}> {`${firstName} ${lastName}`} </p>
           </div>
           <div>
-            <FontAwesomeIcon icon={faMessage} className={classes.icon} />
+            <FontAwesomeIcon icon={faEnvelope} className={classes.icon} />
             <p className={classes.email}>{contactEmail}</p>
           </div>
           <div>

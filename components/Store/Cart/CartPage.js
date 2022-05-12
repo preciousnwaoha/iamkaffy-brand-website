@@ -36,7 +36,7 @@ const CartPage = () => {
         <div className={classes["actions"]}>
           <CheckOutBtn className={classes["check-out-btn"]} />
           {/* <GooglePayBtn item={cartCtx} fromCart={true} className={classes["g-pay-btn"]} /> */}
-          <PayStackBtn item={cartCtx} fromCart={true} />
+          {/* <PayStackBtn item={cartCtx} fromCart={true} /> */}
         </div>
       )}
 
