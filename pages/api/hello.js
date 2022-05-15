@@ -2,9 +2,10 @@
 
 import cookie from "cookie"
 
-export default function handler(req, res) {;
+export default function handler(req, res) {
+  res.status(200).json({ status: 'Ok' })
   res.setHeader('set-cookie', [
-    'cookie1=value1; SameSite=Lax',
+    // 'cookie1=value1; SameSite=Lax',
     'cookie2=value2; SameSite=None; Secure',
   ]);
 

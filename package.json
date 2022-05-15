@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
@@ -16,17 +17,21 @@
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@google-pay/button-react": "^3.0.0",
     "cookie": "^0.5.0",
+    "dotenv": "^16.0.1",
     "emailjs-com": "^3.2.0",
     "firebase": "^9.6.11",
     "js-cookie": "^3.0.1",
     "next": "12.1.4",
+    "node-mailjet": "^3.4.1",
     "react": "18.0.0",
     "react-country-region-selector": "^3.4.0",
     "react-dom": "18.0.0",
     "react-instagram-embed": "^3.0.0",
     "react-paystack": "^3.0.5",
     "react-player": "^2.10.0",
-    "react-scroll-horizontal": "^1.6.6"
+    "react-scroll-horizontal": "^1.6.6",
+    "sib-api-v3-sdk": "^8.3.0",
+    "sparkpost": "^2.1.4"
   },
   "devDependencies": {
     "eslint": "8.12.0",

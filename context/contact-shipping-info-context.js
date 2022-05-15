@@ -61,8 +61,10 @@ export const ContactShippingInfoContextProvider = ({ children }) => {
 
   const updateContactInfo = (newContactInfo) => {
       
+    if (authCtx.isLoggedIn) {
       updateContactInfoDB(newContactInfo);
-
+    }
+     
       setContactInfo(newContactInfo);
       console.log("updateContactInfoState")
   };

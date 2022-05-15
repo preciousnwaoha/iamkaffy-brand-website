@@ -22,7 +22,9 @@
 .create-acc input:-webkit-autofill:focus, 
 .create-acc input:-webkit-autofill:active{
     -webkit-text-fill-color: var(--secondary) !important;
-    -webkit-box-shadow: 0 0 0 30px var(--white) inset !important;
+    /* border: 1px solid var(--black) !important; */
+    /* -webkit-box-shadow: 0 0 0 30px var(--white) inset !important; */
+    -webkit-background-clip: text;
 }
 
 .error {
