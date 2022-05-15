@@ -36,7 +36,7 @@ const Product = ({
       <div className={classes["image-wrapper"]}>
         <div className={classes["image-wrapper-inner"]}>
           <Image
-            src={`https://firebasestorage.googleapis.com/v0/b/iamkaffy-brand-site.appspot.com/o/products%2F${images[0]}?alt=media`}
+            src={images[0]}
             alt={`buy ${name}`}
             priority={true}
             width={"100%"}

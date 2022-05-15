@@ -6,7 +6,7 @@ const defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // Configure API key authorization: api-key
 const apiKey = defaultClient.authentications["api-key"];
-apiKey.apiKey = "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";
+apiKey.apiKey = process.env.SB_API_KEY;
 
 export default function handler(req, res) {
   let apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();

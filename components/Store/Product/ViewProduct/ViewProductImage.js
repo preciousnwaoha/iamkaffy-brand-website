@@ -41,7 +41,7 @@ const ViewProductImage = ({ product }) => {
       <div className={classes["product-image-wrapper"]}>
         <div className={classes["product-image-wrapper-inner"]}>
           <Image
-            src={`https://firebasestorage.googleapis.com/v0/b/iamkaffy-brand-site.appspot.com/o/products%2F${images[imageIndex]}?alt=media`}
+            src={images[imageIndex]}
             alt={`${name} product in kaffy store`}
             priority={true}
             width={"100%"}

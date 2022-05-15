@@ -1,6 +1,6 @@
 const mailjet = require("node-mailjet").connect(
-  "30004a7b28230fe0d76576d59776269e",
-  "c53597ddd6433bc3673f57cc9be7bbd3"
+    process.env.MJ_SECRET_KEY,
+  process.env.MJ_API_KEY,
 );
 
 export default function handler(req, res) {
@@ -30,6 +30,7 @@ export default function handler(req, res) {
     Messages: [
       {
         From: {
+            // support@kaff
           Email: "nwaohaprecious04@gmail.com",
           Name: "Kaffy Store",
         },
