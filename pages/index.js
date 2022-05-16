@@ -100,7 +100,7 @@ export default function Home({videosData, successStories, contactDetails }) {
         <SuccessStories successStories={successStories} />
         <Story />
         {/* {Cookies.set("video", "vdld", {sameSite: 'None', secure: true} )} */}
-        <VaultVideos videosData={videosData} />
+        {/* <VaultVideos videosData={videosData} /> */}
         <Services />
         <BrandsWorkedWith />
         <GetInTouch data={contactDetails} />
