@@ -15,14 +15,13 @@ const StoreCollectionsItem = ({ image, name, id }) => {
 
   // const colName = name.replace(/\s+/g, "+")
 
-  const imageSource = `https://firebasestorage.googleapis.com/v0/b/kaffy-website-e7e63.appspot.com/o/collections%2F${image}?alt=media`
 
 
   return (
     <div className={classes["collections-item"]}>
         <div className={classes["image-wrapper"]}>
             <div className={classes["image-wrapper-inner"]}>
-                <Image priority={true} src={imageSource} alt={`kaffy store ${name} in the collection`} width={"100%"} height={"100%"} layout='responsive' className={"image"} />
+                <Image priority={true} src={image} alt={`kaffy store ${name} in the collection`} width={"100%"} height={"100%"} layout='responsive' className={"image"} />
             </div>
         </div>
         <div className={classes["collection-name-btn-wrapper"]}>

@@ -9,6 +9,7 @@ import VaultPhotos from '../../components/Vault/VaultPhotos'
 
 import {db} from "../../firebase"
 import { collection, getDocs } from 'firebase/firestore'
+import UIBigTitle from '../../components/UI/UIBigTitle'
 
 // const videosCollectionRef = collection(db, "videos")
 // const videosEmbedIdCollectionRef = collection(db, "videosEmbedId")
@@ -70,8 +71,9 @@ if (typeof window !== "undefined") {
       <main className={styles.main}>
        <Header />
        <VaultLanding />
-       <VaultVideos videosData={videosData} />
+       {/* <VaultVideos videosData={videosData} /> */}
        <VaultPhotos photosData={photosData} />
+       <UIBigTitle titleText={"Featured"} />
        <Featured 
         img="/images/orange9.JPEG"
         name="CNN"

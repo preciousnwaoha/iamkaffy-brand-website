@@ -4,10 +4,13 @@ import UITitle from '../UI/UITitle'
 import classes from "./VaultPhotos.module.css"
 
 const VaultPhotos = ({photosData}) => {
+  console.log(photosData)
+  
   return (
     <div className={classes["vault-photos"]}>
         <UITitle titleText={"Photos"} className={classes.title} />
         <Photos photosData={photosData}/>
+        
     </div>
   )
 }

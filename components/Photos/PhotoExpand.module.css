@@ -1,0 +1,122 @@
+.photo-expand {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: rgba(8, 8, 8, 0.933);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.top-nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    min-height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+    background: rgba(8, 8, 8, 0.233);
+    backdrop-filter: blur(8px);
+}
+
+.share, .back {
+    display: inline-block;
+    color: var(--white-stay);
+    font-size: 1.5rem;
+    font-weight: 700;
+cursor: pointer;
+}
+
+.share:hover, .back:hover {
+    color: var(--secondary);
+}
+
+.photo-wrapper {
+    width: 100%;
+    
+    /* overflow: hidden; */
+    border: 2px solid blue;
+    height: calc(100vh - 60px);
+}
+
+.photo {
+    /* border: 1px solid red; */
+    /* height: 100%; */
+    /* width: 100% !important; */
+    /* position: relative !important; */
+    /* object-fit: contain; */
+    /* height: unset !important; */
+    /* overflow: hidden; */
+    /* display: inline-block; */
+    /* height: 100% !important; */
+}
+
+.photo-wrapper > div {
+    /* position: unset !important; */
+    border : 2px solid yellow;
+}
+
+
+.desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(8, 8, 8, 0.233);
+    backdrop-filter: blur(8px);
+}
+
+.desc p {
+    color: var(--white-stay);
+    font-size: 1.125rem;
+    margin: 1rem;
+}
+
+.fade-out {
+    opacity: 1;
+    animation: fadeOut 0.5s ease forwards;
+    
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (min-width: 760px) {
+    .top-nav {
+        padding: 0 2rem;
+    }
+
+    .desc p {
+        margin: 1rem 2rem;
+    }
+}

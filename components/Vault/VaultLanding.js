@@ -6,25 +6,6 @@ import Effect3 from "../UI/Effects/Effect3"
 import Effect5 from "../UI/Effects/Effect5"
 import classes from "./VaultLanding.module.css";
 
-const DEFAULT_VL_IMAGES = [
-  {
-    id: "vault1",
-    img: "/images/ijoda-1.jpg",
-  },
-  {
-    id: "vault2",
-    img: "/images/ijoda-1.jpg",
-  },
-  {
-    id: "vault3",
-    img: "/images/ijoda-1.jpg",
-  },
-  {
-    id: "vault4",
-    img: "/images/ijoda-1.jpg",
-  },
-];
-
 const VaultLanding = () => {
   return (
     <div className={classes["vault-landing"]}>
