@@ -37,11 +37,11 @@ const DEFAULT_SERVICES = [
   },
 ];
 
-const Services = () => {
+const Services = ({inHome=false}) => {
   return (
     <div className={classes.services}>
       <Effect3 className={classes["effect-item"]} />
-      <UITitle titleText={"Her Range of Tunkey Services Include"} className={classes.title} />
+      <UITitle titleText={"Her Range of Tunkey Services Include"} className={`${classes.title} ${inHome ? "" : classes["title-sm"]}`} />
       <ul className={classes["services-items-wrapper"]}>
         {DEFAULT_SERVICES.map((service) => (
           <Service key={service.id} name={service.name} />

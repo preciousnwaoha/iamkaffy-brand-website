@@ -18,6 +18,8 @@ import { collection, getDocs } from "firebase/firestore";
 
 const programsCollectionRef = collection(db, "programs");
 
+const featuredCollectionRef = collection(db, "featured");
+
 // const videosCollectionRef = collection(db, "videos")
 // const videosEmbedIdCollectionRef = collection(db, "videosEmbedId")
 export async function getStaticProps() {
@@ -26,6 +28,15 @@ export async function getStaticProps() {
   //   const videosEmbedIdData = await getDocs(videosEmbedIdCollectionRef)
 
   const programsData = await getDocs(programsCollectionRef);
+
+  const featuredDataFrb = await getDocs(featuredCollectionRef);
+
+  const featuredData = featuredDataFrb.docs.map(doc =>  {
+    return (
+      {...doc.data(), id: doc.id}
+    )
+  })
+
 
   const programs = programsData.docs.map((doc) => {
     return { ...doc.data(), id: doc.id };
@@ -48,12 +59,13 @@ export async function getStaticProps() {
   return {
     props: {
       // videosData,
+      featuredData,
       programs,
     },
   };
 }
 
-const Expressions = ({programs}) => {
+const Expressions = ({featuredData, programs}) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -65,7 +77,7 @@ const Expressions = ({programs}) => {
         <Header />
         <ExpressionsLanding />
         <HealthAndWellness programs={programs} />
-        <Inspiration />
+        <Inspiration featuredData={featuredData} />
         <Arts />
         {/* <Entertainment videosData={videosData} /> */}
         <Business />

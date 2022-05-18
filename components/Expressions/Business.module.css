@@ -1,6 +1,7 @@
 .business {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   position: relative;
+  margin-bottom: 2rem;
 }
 
 .effect-item {
@@ -28,9 +29,16 @@
   border-radius: 1rem;
 }
 
+.quotes {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 @media screen and (min-width: 760px) {
     .business-content {
         margin: 0 2rem;
+        margin-bottom: 2rem;
       }
       
   .business-image-div-split {

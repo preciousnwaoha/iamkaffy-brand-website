@@ -30,13 +30,13 @@ const Business = () => {
           </div>
           <div className={classes["split-text-wrapper"]}>
           <p className={classes["split-text"]}>
-            I understand what the people want and leverage my superpower as a
+          <span className={classes.quotes}>&ldquo;</span>I understand what the people want and leverage my superpower as a
             creative to curate compelling content, represent the brand in a
             manner that appeals to their market, and convert interaction to the
             bottom line. I pride myself on the badge ‘ First Female Nigerian
             Dancer to serve as Brand Ambassador/Influencer’ and continue to
             deliver sustainable value to my clients -both corporate and
-            individuals.
+            individuals.<span className={classes.quotes}>&rdquo;</span>
           </p>
           </div>
           

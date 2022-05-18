@@ -2,18 +2,18 @@ import Head from 'next/head'
 import Header from '../../components/Layout/Header'
 import Footer from '../../components/Layout/Footer'
 import styles from "../../styles/Home.module.css"
-import Featured from "../../components/Expressions/Featured"
+import FeaturedSection from "../../components/Featured/FeaturedSection"
 import VaultLanding from '../../components/Vault/VaultLanding'
 import VaultVideos from '../../components/Vault/VaultVideos'
 import VaultPhotos from '../../components/Vault/VaultPhotos'
 
 import {db} from "../../firebase"
 import { collection, getDocs } from 'firebase/firestore'
-import UIBigTitle from '../../components/UI/UIBigTitle'
 
 // const videosCollectionRef = collection(db, "videos")
 // const videosEmbedIdCollectionRef = collection(db, "videosEmbedId")
 const photosCollectionRef = collection(db, "photos")
+const featuredCollectionRef = collection(db, "featured")
 
 // const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems"
 
@@ -21,19 +21,13 @@ export async function getStaticProps() {
   // const videosDataFrb = await getDocs(videosCollectionRef);
   // const videosEmbedIdData = await getDocs(videosEmbedIdCollectionRef)
   const photosDataFrb = await getDocs(photosCollectionRef);
+  const featuredDataFrb = await getDocs(featuredCollectionRef);
 
-
-  // const videosPlaylist = videosDataFrb.docs.map(doc =>  {
-  //   return (
-  //     {...doc.data(), id: doc.id}
-  //   )
-  // })[0]
-
-  // const videosData = videosEmbedIdData.docs.map(doc =>  {
-  //   return (
-  //     {...doc.data(), id: doc.id}
-  //   )
-  // })
+  const featuredData = featuredDataFrb.docs.map(doc =>  {
+    return (
+      {...doc.data(), id: doc.id}
+    )
+  })
 
   const videosData = [{ id: "Yq99FyfnGxA", type:"landscape", from: "youtube" }, { id: "41FLPJ5_Qwk", type: "portrait", from: "youtube" }];
 
@@ -46,8 +40,10 @@ export async function getStaticProps() {
 
   // const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=${videosPlaylist.playListCode}&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`)
   // const videosData = await res.json();
+
   return {
     props: {
+      featuredData,
       videosData,
       photosData: photosData,
     }
@@ -56,7 +52,7 @@ export async function getStaticProps() {
 
 
 
-const Vault = ({ videosData, photosData }) => {
+const Vault = ({ featuredData, videosData, photosData }) => {
 if (typeof window !== "undefined") {
     document.cookie = 'cookie4=value4; SameSite=None; Secure';
   }
@@ -73,14 +69,7 @@ if (typeof window !== "undefined") {
        <VaultLanding />
        {/* <VaultVideos videosData={videosData} /> */}
        <VaultPhotos photosData={photosData} />
-       <UIBigTitle titleText={"Featured"} />
-       <Featured 
-        img="/images/orange9.JPEG"
-        name="CNN"
-        title={"Nigerian choreographer is all about health"}
-        description="Kaffy has brought up some of the best dancers in Nigeria and now she's giving back to her community through a healthcare partnership."
-        featuredLink={"https://edition.cnn.com/videos/tv/2020/12/18/african-voices-choreographers-kaffy-tileh-pacbro-spc-intl.cnn"}
-       />
+       <FeaturedSection featuredData={featuredData} />
       </main>
       
       <Footer />

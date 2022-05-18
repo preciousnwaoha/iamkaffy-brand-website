@@ -20,8 +20,8 @@ export default function handler(req, res) {
 sendSmtpEmail.textContent = "This is my first transactional email {{params.parameter}}"
   sendSmtpEmail.sender = { name: "Kaffy Store", email: "nwaohaprecious25@gmail.com" };
   sendSmtpEmail.to = [{ email: "nwaohaprecious04@gmail.com", name: "Precious" }];
-  sendSmtpEmail.cc = [{ email: "example2@example2.com", name: "Janice Doe" }];
-  sendSmtpEmail.bcc = [{ email: "John Doe", name: "example@example.com" }];
+  // sendSmtpEmail.cc = [{ email: "example2@example2.com", name: "Janice Doe" }];
+  // sendSmtpEmail.bcc = [{ email: "John Doe", name: "example@example.com" }];
   sendSmtpEmail.replyTo = { email: "nwaohaprecious25@gmail.com", name: "Kaffy Store" };
   sendSmtpEmail.headers = { "Some-Custom-Name": "unique-id-1234" };
   sendSmtpEmail.params = {

@@ -1,13 +1,14 @@
 .inspire {
-  background: #080808;
+  background: var(--black-stay);
   width: 100%;
   margin: auto;
   padding: 1rem 0;
+  margin-bottom: 2rem;
   /* min-height: 100vh; */
 }
 
 .inspire-title {
-  background: #080808;
+  background: var(--black-stay);
   box-shadow: 0px 0px 8px 0px var(--shadow-2);
 }
 

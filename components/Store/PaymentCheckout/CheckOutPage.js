@@ -83,15 +83,16 @@ const CheckOutPage = () => {
       currency: "Naira"
     }
 
-    await setDoc(doc(ordersCollectionRef, orderId), orderData)
+    // await setDoc(doc(ordersCollectionRef, orderId), orderData)
 
-    // fetch("/api/sendinblue", {
-    //   method: "post",
-    //   body: JSON.stringify(CSIData),
-    // });
+    const data = fetch("/api/sendinblue", {
+      method: "post",
+      body: JSON.stringify(CSIData),
+    });
 
+    // console.log(JSON.parse(data))
     // setOrderComplete(true);
-    console.log(reference);
+    // console.log(reference);
   };
 
   if (orderComplete) {

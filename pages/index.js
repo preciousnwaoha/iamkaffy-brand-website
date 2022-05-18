@@ -1,5 +1,6 @@
 import Head from "next/head";
-import Cookies from 'js-cookie'
+// import Cookies from "js-cookie";
+import CookieConsent, { Cookies, getCookieConsentValue } from "react-cookie-consent";
 import Services from "../components/Services/Services";
 import SuccessStories from "../components/Impact/SuccessStories";
 import GetInTouch from "../components/Contact/GetInTouch";
@@ -9,13 +10,12 @@ import Header from "../components/Layout/Header";
 import Landing from "../components/Landing";
 import VaultVideos from "../components/Vault/VaultVideos";
 import BrandsWorkedWith from "../components/Expressions/BrandsWorkedWith";
-import Featured from "../components/Expressions/Featured";
+import Feature from "../components/Featured/Feature";
+import Effect3 from "../components/UI/Effects/Effect3";
 import styles from "../styles/Home.module.css";
 
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
-
-
 
 // const api = Cookies.withAttributes({ expires: 7, path: '', domain: '.youtube.com', sameSite: 'None', secure: true })
 
@@ -23,6 +23,7 @@ import { collection, getDocs } from "firebase/firestore";
 // const videosEmbedIdCollectionRef = collection(db, "videosEmbedId")
 const contactDetailsCollectionRef = collection(db, "contactDetails");
 const successStoriesCollectionRef = collection(db, "successStories");
+const featuredCollectionRef = collection(db, "featured");
 // cookie('cookie2', 'value2', { sameSite: 'None', secure: true });
 
 // const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems"
@@ -32,8 +33,8 @@ export async function getStaticProps() {
   // const videosEmbedIdData = await getDocs(videosEmbedIdCollectionRef)
 
   const contactDetailsData = await getDocs(contactDetailsCollectionRef);
-
   const successStoriesData = await getDocs(successStoriesCollectionRef);
+  const featuredDataFrb = await getDocs(featuredCollectionRef);
 
   // const videosPlaylist = videosDataFrb.docs.map(doc =>  {
   //   return (
@@ -47,10 +48,17 @@ export async function getStaticProps() {
   //   )
   // })
 
+  const featuredData = featuredDataFrb.docs.map((doc) => {
+    return { ...doc.data(), id: doc.id };
+  });
+
   // const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=${videosPlaylist.playListCode}&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`)
   // const videosData = await res.json();
 
-  const videosData = [{ id: "Yq99FyfnGxA", type:"landscape", from: "youtube" }, { id: "41FLPJ5_Qwk", type: "portrait", from: "youtube" }];
+  const videosData = [
+    { id: "Yq99FyfnGxA", type: "landscape", from: "youtube" },
+    { id: "41FLPJ5_Qwk", type: "portrait", from: "youtube" },
+  ];
 
   const contactDetails = contactDetailsData.docs.map((doc) => {
     return { ...doc.data(), id: doc.id };
@@ -65,18 +73,21 @@ export async function getStaticProps() {
       videosData,
       contactDetails,
       successStories,
+      featuredData,
     },
   };
 }
 
+export default function Home({
+  featuredData,
+  videosData,
+  successStories,
+  contactDetails,
+}) {
+  // if (typeof window !== "undefined") {
+  //   document.cookie = "cookie4=value4; SameSite=None; Secure";
+  // }
 
-
-export default function Home({videosData, successStories, contactDetails }) {
-  // fetch("/api/hello")
-  if (typeof window !== "undefined") {
-    document.cookie = 'cookie4=value4; SameSite=None; Secure';
-  }
-  
   return (
     <div className={styles.container}>
       <Head>
@@ -87,23 +98,32 @@ export default function Home({videosData, successStories, contactDetails }) {
       <main className={styles.main}>
         <Header />
         <Landing />
+        <div style={{ position: "relative" }}>
+          <Effect3 className={styles["effect-item"]} />
+          <Feature feature={featuredData[0]} />
+        </div>
 
-        <Featured
-          img="/images/orange9.JPEG"
-          name="CNN"
-          title={"Nigerian choreographer is all about health"}
-          description="Kaffy has brought up some of the best dancers in Nigeria and now she's giving back to her community through a healthcare partnership."
-          featuredLink={
-            "https://edition.cnn.com/videos/tv/2020/12/18/african-voices-choreographers-kaffy-tileh-pacbro-spc-intl.cnn"
-          }
-        />
         <SuccessStories successStories={successStories} />
         <Story />
         {/* {Cookies.set("video", "vdld", {sameSite: 'None', secure: true} )} */}
-        {/* <VaultVideos videosData={videosData} /> */}
+        <VaultVideos videosData={videosData} />
         <Services />
         <BrandsWorkedWith />
         <GetInTouch data={contactDetails} />
+        <CookieConsent
+        // debug={true}
+        location="bottom"
+        containerClasses={styles["cookie-consent-container"]}
+        contentClasses={styles["cookie-consent-content"]}
+        buttonClasses={styles["cookie-consent-btn"]}
+        expires={365}
+          >
+          We use cookies to enhance your experience as you use this website.{" "}
+          {/* <span style={{ fontSize: "0.85rem" }}>
+            This bit of text is smaller :O
+          </span> */}
+        </CookieConsent>
+        {console.log(getCookieConsentValue())}
       </main>
       <Footer />
     </div>

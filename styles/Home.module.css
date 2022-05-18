@@ -9,10 +9,47 @@
   overflow: hidden;
 }
 
+.effect-item {
+  position: absolute;
+  top: -100px;
+  border-color: var(--secondary);
+  z-index: -1;
+  border-width: 20px;
+  left: -130px;
+}
+
+
 .effect5-in-about-page {
   position: absolute;
   top: 0px;
   right: 5%;
   width: 100px;
   height: 100px;
+}
+
+.cookie-consent-container {
+  padding: 0.5rem 1rem;
+  /* background-image: var(--bg-art);
+  background-size: contain; */
+  /* background-color: var(--white) !important; */
+}
+
+.cookie-consent-content {
+  color: var(--white-stay);
+  margin-left: 0 !important;
+}
+
+.cookie-consent-btn {
+  color: var(--white-stay) !important;
+  border: 2px solid var(--white-stay) !important;
+  padding: 0.65rem 1.5rem !important;
+  font-family: inherit !important;
+  background-color: transparent !important;
+  margin-right: 0 !important;
+}
+
+@media screen and (min-width: 760px) {
+  .cookie-consent-container {
+    padding: 0.5rem 2rem;
+  }
 }

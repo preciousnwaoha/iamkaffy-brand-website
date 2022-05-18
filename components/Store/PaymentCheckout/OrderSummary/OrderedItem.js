@@ -10,7 +10,7 @@ const OrderedItem = ({ image, itemName, price, quantity }) => {
         <div className={classes["item-image-wrapper"]}>
             <div className={classes["item-image-wrapper-inner"]}>
                 <div className={classes["item-image-wrapper-inner-inner"]}>
-                <Image src={`https://firebasestorage.googleapis.com/v0/b/iamkaffy-brand-site.appspot.com/o/products%2F${image}?alt=media`} alt={`${itemName} in checkout of kaffy store`} width={"100%"} height={"100%"} layout="responsive" />
+                <Image src={image} alt={`${itemName} in checkout of kaffy store`} width={"100%"} height={"100%"} layout="responsive" />
                 </div>
                 
             </div>

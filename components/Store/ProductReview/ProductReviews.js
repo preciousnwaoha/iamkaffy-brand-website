@@ -41,7 +41,8 @@ const ProductReviews = ({ product }) => {
     <div className={classes["product-reviews"]}>
       <UIBigTitle titleText={"Product reviews"} className={classes.title} />
       <div className={classes["avg-rating"]}>
-        <ReviewStars starNum={avgRating} />
+        {reviewExist && <ReviewStars starNum={avgRating} />}
+        {!reviewExist && <p>No review yet</p>}
       </div>
       {!showWriteReview && <button
         type="button"

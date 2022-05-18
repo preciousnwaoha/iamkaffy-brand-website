@@ -7,6 +7,7 @@
     margin: 0 auto;
     background: url("/images/kaffy-clean.jpeg");
     background-size: cover;
+    margin-bottom: 2rem;
 }
 
 .expressions-landing h1 {
@@ -24,7 +25,7 @@
     height: 100%;
     padding: 0 0.5rem;
     color: var(--white-stay);
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .scroll-down {

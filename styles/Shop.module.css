@@ -12,3 +12,30 @@
     margin: auto;
     /* overflow-x: hidden; */
 }
+
+.cookie-consent-container {
+  padding: 0.5rem 1rem;
+  /* background-image: var(--bg-art);
+  background-size: contain; */
+  /* background-color: var(--white) !important; */
+}
+
+.cookie-consent-content {
+  color: var(--white-stay);
+  margin-left: 0 !important;
+}
+
+.cookie-consent-btn {
+  color: var(--white-stay) !important;
+  border: 2px solid var(--white-stay) !important;
+  padding: 0.65rem 1.5rem !important;
+  font-family: inherit !important;
+  background-color: transparent !important;
+  margin-right: 0 !important;
+}
+
+@media screen and (min-width: 760px) {
+  .cookie-consent-container {
+    padding: 0.5rem 2rem;
+  }
+}

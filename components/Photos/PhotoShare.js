@@ -27,7 +27,7 @@ const PhotoShare = ({photoURL, onHideShare}) => {
 
         const timer = setTimeout(() => {
                   setCopied(false)
-                }, 2000);
+        }, 2000);
   }
 
 //   useEffect(() => {

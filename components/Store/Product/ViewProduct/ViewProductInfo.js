@@ -75,6 +75,14 @@ const ViewProductInfo = ({ product }) => {
     console.log("buy now handler");
   };
 
+  // if (colors.length = 1) {
+  //   setSelectedColor(colors[0])
+  // }
+
+  // if (sizes.length = 1) {
+  //   setSelectedSize(sizes[0])
+  // }
+
 
   return (
     <div className={classes["view-product-info"]}>
@@ -90,7 +98,7 @@ const ViewProductInfo = ({ product }) => {
               onGetColor={selectColorHandler}
             />
           ))}
-          <div>{selectedColor}</div>
+          <div style={{color: "var(--black)"}}>{selectedColor}</div>
         </div>
         
       </div>

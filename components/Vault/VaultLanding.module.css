@@ -29,6 +29,17 @@
     bottom: -130px;
 }
 
+.scroll-down {
+    bottom: 40px;
+    left: calc(50% - 1.25rem);
+    transform: translate(-50%, -50%);
+  }
+  
+  .scroll-down:hover {
+    color: var(--primary)
+  }
+  
+
 .colored-side {
     position: absolute;
     top: 60px;

@@ -35,6 +35,7 @@ const HealthAndWellness = ({programs}) => {
                 height="3712"
                 layout="responsive"
                 className={classes["message-item_image"]}
+                priority={true}
               />
               <p className={classes["message-item_image-ref"]}>IJODA</p>
             </div>
@@ -68,6 +69,7 @@ const HealthAndWellness = ({programs}) => {
                 height="3561"
                 layout="responsive"
                 className={classes["message-item_image"]}
+                priority={true}
               />
               <p className={classes["message-item_image-ref"]}>BODY BACK</p>
             </div>
@@ -81,7 +83,7 @@ const HealthAndWellness = ({programs}) => {
         </p>
       </ImportantMessage>
       <Programs programs={programs} />
-      <BrandsWorkedWith />
+      <BrandsWorkedWith inHome={false} />
     </div>
   );
 };

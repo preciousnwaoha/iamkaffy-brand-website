@@ -14,9 +14,16 @@ function Scroll({className, scrollType}) {
     })
   }
 
+  const scrollToDown = () => {
+    window.scrollTo({
+      top: window.innerHeight - 60,
+      behavior: 'smooth' // for smooth scrolling
+    })
+  }
+
   if (scrollType === "scroll-down" ) {
     return (
-      <div className={`${scrollClasses} ${classes.bounceDown}`}>
+      <div onClick={scrollToDown} className={`${scrollClasses} ${classes.bounceDown}`}>
         <FontAwesomeIcon icon={faArrowDown} style={{fontSize: "25px"}}>
       
         </FontAwesomeIcon>

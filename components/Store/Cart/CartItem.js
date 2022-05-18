@@ -29,7 +29,7 @@ const CartItem = ({ item }) => {
       <div className={classes["image-wrapper"]}>
         <div className={classes["image-wrapper-inner"]}>
           <Image
-            src={`https://firebasestorage.googleapis.com/v0/b/iamkaffy-brand-site.appspot.com/o/products%2F${image}?alt=media`}
+            src={image}
             alt={`${name} item in cart`}
             width={"100%"}
             height={"100%"}

@@ -27,7 +27,7 @@ const Arts = () => {
           right emotions and create the desired experience.
         </p>
       </div>
-      <Services />
+      <Services inHome={false} />
       
       <ImportantMessage className={classes["arts-quote"]}>
         <h4>Art is a piece of communication tool used to express the unspoken and open the eyes to the unseen.</h4>

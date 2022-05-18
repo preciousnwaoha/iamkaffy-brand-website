@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import UITitle from '../UI/UITitle'
+import UIBigTitle from '../UI/UIBigTitle'
 import classes from "./BrandsWorkedWith.module.css"
 
 /*BWW - Brands Worked With*/
@@ -49,10 +49,10 @@ const DEFAULT_BRANDS = [
     },
 ]
 
-const BrandsWorkedWith = ({inExpressionsPage}) => {
+const BrandsWorkedWith = ({inExpressionsPage, inHome=true}) => {
   return (
     <div className={classes.brands}>
-        <UITitle titleText={"Brands I've worked with"} className={classes["brands-title"]} />
+        <UIBigTitle titleText={"Brands I've worked with"} className={`${classes["title"]} ${inHome ? "" : classes["title-sm"]}`} />
         {inExpressionsPage && <p>Kaffy hass also worked with several brands, promoting wellness and health. Some of these brands include:</p>}
         <div className={classes["list-wrapper"]}>
         <ul className={classes["list-of-brands"]}>

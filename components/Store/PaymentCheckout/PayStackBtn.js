@@ -40,7 +40,7 @@ const PayStackBtn = ( { item, fromCart=false, onPaymentSuccess, CSIData }) => {
 
       const handlePaystackCloseAction = () => {
         // implementation for  whatever you want to do when the Paystack dialog closed.
-        alert("Wait! You need this oil, don't go!!!!")
+        alert("Wait! You need this, don't go!!!!")
         console.log('closed')
       }
   

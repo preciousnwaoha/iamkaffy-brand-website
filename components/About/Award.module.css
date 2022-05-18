@@ -26,49 +26,55 @@
   justify-content: space-around;
   padding: 1rem 2rem;
   transition: background 0.3s;
+  opacity: 0;
 }
 
 .award:hover,
 .award:focus {
+  
 }
 
 .award:hover .award-text,
 .award:focus .award-text {
-    background: rgba(230, 160, 113, 0.759);
-    
+  background: rgba(0, 0, 0, 0.62);
+    opacity: 1;
 }
+
 
 .award-from {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  color: var(--white-stay);
+  text-transform: uppercase;
 }
 
 .award-name {
-  color: var(--black);
+  color: var(--white-stay);
   margin: 0;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .award-date {
   align-self: flex-end;
   font-size: 1rem;
-  font-weight: 500;
-  color: var(--white);
+  font-weight: 400;
+  color: var(--white-stay);
   margin: 0;
 }
+
+
+
 @media screen and (min-width: 760px) {
     .award-from {
-        font-size: 1.85rem;
+        font-size: 2rem;
       }
       
       .award-name {
         font-size: 1.75rem;
-        font-weight: 600;
       }
       
       .award-date {
-        font-size: 1.5rem;
-        font-weight: 500;
+        font-size: 1.25rem;
       }
 }

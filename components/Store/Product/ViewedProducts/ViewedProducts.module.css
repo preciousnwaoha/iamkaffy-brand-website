@@ -7,7 +7,7 @@
 }
 
 .title {
-    margin: 1rem;
+    margin: 1rem auto;
     margin-top: 2rem;
     color: var(--black);
 }

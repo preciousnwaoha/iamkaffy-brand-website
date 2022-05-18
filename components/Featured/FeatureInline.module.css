@@ -1,0 +1,35 @@
+.feature-inline {
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+
+.feature-inline h5 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.feature-inline p {
+    margin: 0;
+    color: var(--black);
+    font-size: 0.85rem;
+}
+
+.feature-link {
+    color: var(--secondary);
+    margin: 1rem;
+}
+
+.feature-link:hover {
+    font-weight: 700;
+    text-transform: uppercase;
+} 
+
+@media screen and (min-width: 760px) {
+    .feature-inline {
+        margin: 1rem 2rem;
+        margin-bottom: 2rem;
+    }
+}

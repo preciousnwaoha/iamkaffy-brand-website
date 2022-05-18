@@ -1,10 +1,12 @@
 import React from "react";
-import Image from "next/image";
 import classes from "./Inspiration.module.css";
-import Featured from "./Featured";
+import Feature from "../Featured/Feature";
 import Title from "./Title";
 
-const Inspiration = () => {
+const Inspiration = ({featuredData}) => {
+
+  const feature = featuredData[1]
+
   return (
     <div className={classes.inspire}>
       <Title className={classes["inspire-title"]}>
@@ -36,13 +38,9 @@ const Inspiration = () => {
           voice to contribute to societal development.
         </p>
       </div>
-      <Featured 
-        img="/images/orange9.JPEG"
-        name="CNN"
-        title={"Nigerian choreographer is all about health"}
-        description="Kaffy has brought up some of the best dancers in Nigeria and now she's giving back to her community through a healthcare partnership."
-        featuredLink={"https://edition.cnn.com/videos/tv/2020/12/18/african-voices-choreographers-kaffy-tileh-pacbro-spc-intl.cnn"}
-       />
+      <Feature
+        feature={feature}
+      />
     </div>
   );
 };

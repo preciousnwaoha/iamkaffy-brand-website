@@ -15,23 +15,7 @@ const LANDDING_IMAGES = [
 const Landing = () => {
   return (
     <div className={classes.landing}>
-      {/* <div className={classes["image-case"]}>
-        {LANDDING_IMAGES.map((image) => (
-          <Image
-            key={image.id}
-            src={image.path}
-            alt="Kaffy Dance"
-            width={image.width}
-            height={image.height}
-            layout="responsive"
-            priority={true}
-            className={classes.image}
-          />
-        ))}
-      </div> */}
-      <div className={classes["hero-bg"]}>
-        
-      </div>
+      <div className={classes["hero-bg"]}></div>
       <div className={classes.circle}></div>
       <div className={classes["landing-text-side"]}>
         <div className={classes["hero-text"]}>
@@ -57,7 +41,7 @@ const Landing = () => {
             activate the human minds for personal discovery, societal
             transformation and exploring humanity.
           </p>
-          <p>
+          <p className={classes["p-last"]}>
             You can BE and DO MORE – Just Dance. DANCE WITH ME – I am passionate
             about who you can truly become.
           </p>

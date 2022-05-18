@@ -28,6 +28,7 @@
 
 .programs-title {
     color: var(--black);
+    font-size: 1.85rem;
 }
 
 .programs-items-wrapper {

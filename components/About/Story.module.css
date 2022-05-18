@@ -103,8 +103,9 @@ display: inline-block;
 }
 
 .sub-title {
-  font-size: 1.3rem;
+  font-size: 1.75rem;
   color: var(--black);
+  max-width: 100%;
 }
 
 .story-text p {

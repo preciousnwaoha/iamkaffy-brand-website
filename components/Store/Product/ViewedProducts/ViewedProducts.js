@@ -9,7 +9,7 @@ import classes from "./ViewedProducts.module.css";
 
 
 
-const ViewedProducts = () => {
+const ViewedProducts = ({inStoreHome=false}) => {
   const itemsCtx = useContext(ItemsContext);
 
  const { viewedItems } = itemsCtx
@@ -36,7 +36,7 @@ const ViewedProducts = () => {
           />
         ))}
       </div>
-      : <NoProducts /> }
+      : <NoProducts inViewed={true} inStoreHome={inStoreHome} /> }
 
     </div>
   );

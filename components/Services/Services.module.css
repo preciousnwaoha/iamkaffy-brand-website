@@ -18,6 +18,10 @@
     font-size: 2.5rem;
 }
 
+.title-sm {
+    font-size: 1.75rem;
+}
+
 .services-items-wrapper {
     list-style: none;
     margin: 0 1rem;
