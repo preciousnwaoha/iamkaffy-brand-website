@@ -22,6 +22,7 @@
     background-size: cover;
     color: var(--white-stay);
     border: 1px dotted var(--white-stay);
+    border-top: none;
     border-left: none;
     border-right: none;
 }
@@ -40,6 +41,7 @@
     background-size: cover;
     color: var(--white-stay);
     border: 1px dotted var(--white-stay);
+    border-top: none;
     border-left: none;
     border-right: none;
 }

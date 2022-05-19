@@ -29,8 +29,114 @@
     font-size: 2.5rem;
 }
 
+
+.menu-hover, .cart-hover {
+    position: fixed;
+    top: calc(60px + 4rem);
+    padding: 0;
+    margin: 0;
+    min-width: 50px;
+    min-height: 50px;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    
+}
+
+
+
+.menu-hover {
+    left: 1rem;
+    transform: translate(calc(-1rem - 60px));
+    
+}
+
+.cart-hover {
+    right: 1rem;
+    transform: translate(calc(1rem + 60px));
+    
+}
+
+.showup-left {
+    animation: showFromLeft .5s ease-in forwards;
+}
+
+.showup-right {
+    animation: showFromRight .5s ease-in forwards;
+}
+
+
+
+@keyframes showFromLeft {
+    0% {
+        transform: translate(calc(-1rem - 60px));
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes showFromRight {
+    0% {
+        transform: translate(calc(1rem + 60px));
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+.menu-hover-icon {
+    width: 28px;
+    height: 20px;
+}
+
+.cart-hover-icon {
+    line-height: 0.65rem;
+    margin-right: 1rem !important;
+    margin-bottom: 0 !important;
+    color: var(--black) !important;
+    
+}
+
+
+.cart-hover .cart-hover-icon div {
+    background: transparent;
+    color: var(--black);
+}
+
+.cart-hover .cart-hover-icon div:hover {
+    background: transparent;
+    color: var(--black);
+}
+
+.cart-hover .cart-hover-icon:hover div {
+    background: transparent;
+    color: var(--black);
+}
+
+.menu-hover:hover div div  {
+    background: var(--secondary) !important;
+}
+
+.cart-hover:hover div {
+    color: var(--secondary) !important;
+}
+
 @media screen and (min-width: 760px) {
     .store-header {
         padding: 1.5rem 2rem;
+    }
+    
+    .menu-hover {
+        left: 2rem;
+        transform: translate(calc(-2rem - 60px));
+    }
+    
+    .cart-hover {
+        right: 2rem;
+        transform: translate(calc(2rem + 60px));
+        
     }
 }

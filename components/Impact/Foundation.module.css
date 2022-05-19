@@ -36,7 +36,7 @@
 }
 
 .foundation-text {
-    color: white;
+    color: var(--white-stay);
     width: 90%;
     margin: 1rem;
     font-size: 1.5rem;
@@ -53,16 +53,17 @@
 
 .learn-more-link, .foundation-contact-btn {
     display: inline-block;
-    color: var(--primary);
+    color: var(--white-stay);
     font-size: 1rem;
     line-height: 1rem;
     padding: 1rem 1.5rem;
-    background: rgba(0,0,0,0.125);
+    background: var(--black-stay);
     margin: 1rem;
-    border: 2px solid var(--white);
+    /* border: 2px solid var(--white); */
 }
 
 
 .learn-more-link:hover, .foundation-contact-btn:hover {
-    border-color: var(--primary);
+    color: var(--secondary);
+    /* border-color: var(--primary); */
 }

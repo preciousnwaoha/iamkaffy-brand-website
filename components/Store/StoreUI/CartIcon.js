@@ -5,7 +5,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 import classes from "./CartIcon.module.css"
 
-const CartIcon = ( {className, onClick}) => {
+const CartIcon = ( {className, iconSize="25px", onClick}) => {
   const cartCtx = useContext(CartContext)
 
   const numberOfItems = cartCtx.items.reduce((curNumber, item) => {
@@ -15,7 +15,7 @@ const CartIcon = ( {className, onClick}) => {
 
   return (
     <div className={`${classes.cart} ${className || ""}`} onClick={onClick}>
-        <FontAwesomeIcon icon={faCartShopping} style={{fontSize: "25px"}} />
+        <FontAwesomeIcon icon={faCartShopping} style={{fontSize: iconSize}} />
         <div className={classes["no-of-items"]}>{numberOfItems}</div>
     </div>
   )

@@ -6,7 +6,7 @@
     background: var(--white);
     width: 80%;
     overflow-y: scroll;
-    z-index: 2;
+    z-index: 10;
     padding: 1rem;
     text-align: center;
 }
