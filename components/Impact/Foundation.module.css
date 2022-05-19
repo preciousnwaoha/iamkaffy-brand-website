@@ -8,6 +8,16 @@
     position: relative;
 }
 
+.bg-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/bg-art1.png");
+    background-size: contain;
+}
+
 .foundation-content {
     width: 100%;
     min-height: 100vh;
@@ -43,16 +53,16 @@
 
 .learn-more-link, .foundation-contact-btn {
     display: inline-block;
-    color: var(--white-stay);
+    color: var(--primary);
     font-size: 1rem;
     line-height: 1rem;
     padding: 1rem 1.5rem;
-    border-radius: 1.5rem;
-    background: var(--black-stay);
+    background: rgba(0,0,0,0.125);
     margin: 1rem;
+    border: 2px solid var(--white);
 }
 
 
 .learn-more-link:hover, .foundation-contact-btn:hover {
-    color: var(--primary);
+    border-color: var(--primary);
 }

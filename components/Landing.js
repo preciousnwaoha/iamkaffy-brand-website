@@ -14,7 +14,7 @@ const LANDDING_IMAGES = [
 
 const Landing = () => {
   return (
-    <div className={classes.landing}>
+    <section className={classes.landing}>
       <div className={classes["hero-bg"]}></div>
       <div className={classes.circle}></div>
       <div className={classes["landing-text-side"]}>
@@ -56,7 +56,7 @@ const Landing = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,8 +1,9 @@
 .brands {
     width: 100%;
     overflow-x: hidden;
-    background: transparent;
+    background: rgba(137, 137, 137, 0.01);
     padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 .brands .title {
     margin-bottom: 0;

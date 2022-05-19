@@ -61,12 +61,12 @@
     border-radius: 0 0 1rem 1rem;
 }
 .feature-image-overlay:hover, .feature-image-overlay:focus {
-    /* backdrop-filter: brightness(35%); */
     background: rgba(0, 0, 0, 0.435);
 }
 
 .show-see-more {
     position: absolute;
+    width: 100%;
     top: calc(100% + 3rem);
     left: 50%;
     transform: translate(-50%, -50%);
@@ -75,6 +75,7 @@
     font-weight: 700;
     font-size: 1.25rem;
     color: var(--white-stay);
+    text-align: center;
 }
 
 
@@ -112,8 +113,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* width: calc(50% - 0.25rem); */
-        /* background:  */
         background: var(--bg-art) var(--black-stay);;
         
         background-size: contain;

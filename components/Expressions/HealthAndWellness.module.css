@@ -3,7 +3,6 @@
   /* max-width: 1366px; */
   margin: auto;
   position: relative;
-  overflow: hidden;
   margin-bottom: 2rem;
   /* min-height: 100vh; */
 }
@@ -24,7 +23,7 @@
 .sub-title {
   font-size: 1.1rem;
   padding: 0 2rem;
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
   color: var(--black);
 }
@@ -67,6 +66,10 @@
   padding: 2rem 0;
   color: var(--black);
   
+}
+
+.message-text span {
+  color: var(--primary)
 }
 
 .ijoda-link {

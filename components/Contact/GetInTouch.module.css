@@ -4,14 +4,21 @@
     min-height: 630px;
     max-height: 900px;
     position: relative;
-    /* background: url("/images/kaffy-photo-6.webp");
-    background-size: cover;
-    filter: brightness(50%); */
     padding: 2rem 0;
+    z-index: 2;
+}
+
+.bg-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/bg-art1.png");
+    background-size: contain;
 }
 
 .get-in-touch .effect-item {
-    /* border-color: var(--black-stay); */
     width: 50px;
     height: 50px;
     border-radius: 0.5rem 0.5rem 0 0;
@@ -45,18 +52,7 @@
     z-index: -1;
 }
 
-/* .image-wrapper {
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
-    right: 8%;
-    width: 50%;
-    max-height: 50vh;
-    min-width: 250px;
-    overflow: hidden;
-    z-index: -1;
-    
-} */
+
 
 .image-wrapper {
     position: absolute;
@@ -69,24 +65,11 @@
     filter: brightness(20%) grayscale(15%);
     z-index: -1;
 }
-/* 
-.image-wrapper-inner {
-    width: 100%;
-    height: 100%;
-position: absolute;
-bottom: 0;
-    left: 0;
-    overflow: hidden;
-} */
 
 .GIT-text {
     font-size: 1.5rem;
     color: var(--secondary);
     margin-bottom: 1rem;
-}
-
-.get-in-touch input {
-
 }
 
 .GIT-email, .GIT-phone, .GIT-address {
@@ -98,14 +81,6 @@ bottom: 0;
     margin-left: 1rem;
     margin-right: 1rem;
 }
-/* 
-.GIT-phone {
-    color: var(--secondary);
-}
-
-.GIT-address {
-    color: var(--secondary);
-} */
 
 @media screen and (min-width: 760px) {
     .GIT-text-wrapper {

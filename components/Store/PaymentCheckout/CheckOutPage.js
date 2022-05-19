@@ -65,29 +65,38 @@ const CheckOutPage = () => {
   const paymentSuccessHandler = async (reference) => {
 
     const {status, trxref} = reference
-    // fetch("/api/mailjet", {
-    //   method: "post",
-    //   body: JSON.stringify(CSIData),
-    // });
 
-    const orderId = `${trxref}userId${isLoggedIn ? userId : "Anonymous"}`
+    const order_ref = trxref || (new Date()).getTime()
+
+    const order_id = `${isLoggedIn ? (Math.random() * 10000).toFixed(4).shift + "u" : (Math.random() * 10000).toFixed(4) + "a"}${order_ref}`
+
+    
+    
+
 
     const orderData = {
-      trxref,
-      user: `${isLoggedIn ? userId : "Anonymous"}`,
+      order_ref: trxref,
+      order_id: order_ref,
+      user_id: `${isLoggedIn ? userId : "Anonymous"}`,
+      order_date: new Date(trxref),
       CSIData,
-      purchasedItems: [
+      orders: [
         ...cartCtx.items
       ],
-      paid: cartCtx.subtotal,
-      currency: "Naira"
+      subtotal: cartCtx.subtotal,
+      currency: "NGN ₦",
+      paymentStatus: status,
     }
 
     // await setDoc(doc(ordersCollectionRef, orderId), orderData)
 
-    const data = fetch("/api/sendinblue", {
+    await fetch("/api/orderConfirmEmail", {
       method: "post",
-      body: JSON.stringify(CSIData),
+      body: JSON.stringify(orderData),
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
     });
 
     // console.log(JSON.parse(data))

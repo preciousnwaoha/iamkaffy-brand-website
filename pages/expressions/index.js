@@ -12,20 +12,14 @@ import styles from "../../styles/Home.module.css";
 import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 
-// const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems"
-
-// const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems"
-
 const programsCollectionRef = collection(db, "programs");
 
 const featuredCollectionRef = collection(db, "featured");
 
 // const videosCollectionRef = collection(db, "videos")
-// const videosEmbedIdCollectionRef = collection(db, "videosEmbedId")
 export async function getStaticProps() {
   //   // const videosDataFrb = await getDocs(videosCollectionRef);
   // const videosDataFrb = await getDocs(videosCollectionRef);
-  //   const videosEmbedIdData = await getDocs(videosEmbedIdCollectionRef)
 
   const programsData = await getDocs(programsCollectionRef);
 
@@ -42,30 +36,22 @@ export async function getStaticProps() {
     return { ...doc.data(), id: doc.id };
   });
 
-  //   // const videosPlaylist = videosDataFrb.docs.map(doc =>  {
-  //   //   return (
-  //   //     {...doc.data(), id: doc.id}
-  //   //   )
-  //   // })[0]
+  const videosData = [
+    { id: "Yq99FyfnGxA", type: "landscape", from: "youtube" },
+    { id: "41FLPJ5_Qwk", type: "portrait", from: "youtube" },
+  ];
 
-  //   const videosData = videosEmbedIdData.docs.map(doc =>  {
-  //     return (
-  //       {...doc.data(), id: doc.id}
-  //     )
-  //   })
 
-  //   // const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=${videosPlaylist.playListCode}&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`)
-  //   // const videosData = await res.json();
   return {
     props: {
-      // videosData,
+      videosData,
       featuredData,
       programs,
     },
   };
 }
 
-const Expressions = ({featuredData, programs}) => {
+const Expressions = ({videosData, featuredData, programs}) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -79,7 +65,7 @@ const Expressions = ({featuredData, programs}) => {
         <HealthAndWellness programs={programs} />
         <Inspiration featuredData={featuredData} />
         <Arts />
-        {/* <Entertainment videosData={videosData} /> */}
+        <Entertainment videosData={videosData} />
         <Business />
       </main>
       <Footer />

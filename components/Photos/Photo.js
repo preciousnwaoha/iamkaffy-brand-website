@@ -5,9 +5,9 @@ import { faExpand } from "@fortawesome/free-solid-svg-icons";
 
 import classes from "./Photo.module.css";
 
-const Photo = ({ url, desc, onExpandPhoto }) => {
+const Photo = ({ url, id, desc, onExpandPhoto }) => {
   const expandPhotoHandler = () => {
-    onExpandPhoto({ url, desc });
+    onExpandPhoto({ url, id, desc });
   };
 
   return (

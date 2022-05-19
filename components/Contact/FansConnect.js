@@ -8,11 +8,11 @@ import Effect3 from '../UI/Effects/Effect3'
 
 const FansConnect = () => {
   return (
-    <div className={classes["fans-connect"]} id="contact-1" >
+    <div className={`${classes["fans-connect"]} contact-2`} >
         <Effect3 className={classes["effect-item"]} />
         <div className={classes["fans-connect-inner"]}>
             <div className={classes["content-side"]}>
-                <UIBigTitle titleText={"Fans Connect"} className={classes.title}/>
+                <UIBigTitle titleText={"Kaffy Connect"} className={classes.title}/>
                 <h4 className={classes["sub-title"]}>Wanna Be Associated Kaffy&apos;s Brand, Join Our Fam</h4>
                 <ContactForm />
             </div>

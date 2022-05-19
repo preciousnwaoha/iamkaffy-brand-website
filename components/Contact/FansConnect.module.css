@@ -2,11 +2,13 @@
     /* border: 1px solid red; */
     /* background: url("/images/kaffy-photo-11.jpg"); */
     /* background-size: cover; */
-    padding: 1rem 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     text-align: center;
     position: relative;
+    padding-top: calc(60px + 1rem);
+    padding-bottom: 2rem;
 
 }
 
@@ -14,6 +16,7 @@
     position: absolute;
     bottom: -120px;
     left: -50px;
+    z-index: -1;
 }
 
 .fans-connect-inner {

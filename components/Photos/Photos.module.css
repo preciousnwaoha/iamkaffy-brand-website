@@ -23,14 +23,11 @@
 }
 
 .photos::-webkit-scrollbar-thumb {
-    background: var(--secondary);
+    background: rgba(129, 78, 40, 0.679);
     border-radius: 1rem;
     cursor: pointer;
 }
 
-.photos::-webkit-scrollbar-thumb:hover {
-    background: rgba(129, 78, 40, 0.679);
-}
 
 
 @media screen and (min-width: 760px) {

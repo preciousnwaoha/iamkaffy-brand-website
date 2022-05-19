@@ -8,6 +8,7 @@ import classes from "./Foundation.module.css";
 const Foundation = () => {
   return (
     <div className={classes.foundation}>
+      <div className={classes["bg-div"]}></div>
       <div className={classes["foundation-content"]}>
         <UIBigTitle
           titleText={"Kaffy Foundation"}

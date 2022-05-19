@@ -12,10 +12,10 @@ const Business = () => {
         <h2>Business</h2>
       </Title>
       <div className={classes["business-content"]}>
-        <p>
+        <p className={classes["subtitle"]}>
           I offer above-the-line marketing and influencer marketing services to
-          brands and individuals. Worked with top brands including Hennesy,
-          Globacom, Tecno Mobile, Verve, etc.
+          brands and individuals. <span>Worked with top brands including Hennesy,
+          Globacom, Tecno Mobile, Verve,</span> etc.
         </p>
         <div className={classes["business-image-div-split"]}>
           <div className={classes["split-image-wrapper"]}>

@@ -9,31 +9,34 @@ const DEFAULT_OPTIONS = [
     id: "copt1",
     optionText: "Business",
     linkText: "Connect",
-    linkURL: "/contact/#contact-2",
+    optionId: "contact-1",
   },
   {
     id: "copt2",
     optionText: "Management",
-    linkURL: "/contact/#contact-2",
+    optionId: "contact-1",
   },
   {
     id: "copt3",
     optionText: "Partneship",
-    linkURL: "/contact/#contact-2",
+    optionId: "contact-1",
   },
   {
     id: "copt4",
     optionText: "Speaking Engagements",
-    linkURL: "/contact/#contact-2",
+    optionId: "contact-1",
   },
   {
     id: "copt5",
-    optionText: "For Fans",
-    linkURL: "/contact/#contact-1",
+    optionText: "Meesage Kaffy",
+    optionId: "contact-2",
   },
 ];
 
+
+
 const ContactLanding = () => {
+
   return (
     <div className={classes["contact-landing"]}>
       <Effect3 className={classes["effect-item-3"]} />
@@ -48,7 +51,7 @@ const ContactLanding = () => {
           <ContactOption
             key={option.id}
             optionText={option.optionText}
-            linkURL={option.linkURL}
+            optionId={option.optionId}
           />
         ))}
       </div>

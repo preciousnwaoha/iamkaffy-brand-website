@@ -3,6 +3,8 @@ import AuthContext from "../../../context/auth-context";
 import UIBigTitle from "../../UI/UIBigTitle";
 import ReviewStars from "../StoreUI/ReviewStars";
 import ProductReview from "./ProductReview";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen } from "@fortawesome/free-solid-svg-icons";
 import classes from "./ProductReviews.module.css";
 import WriteReview from "./WriteReview";
 
@@ -49,7 +51,7 @@ const ProductReviews = ({ product }) => {
         className={classes["write-review-btn"]}
         onClick={writeReviewHandler}
       >
-        write a review
+        write a review <FontAwesomeIcon icon={faPen} className={classes["wrb-icon"]} />
       </button>}
 
      { showWriteReview && <WriteReview product={product} />}

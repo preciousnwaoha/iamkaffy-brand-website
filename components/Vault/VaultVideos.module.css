@@ -1,48 +1,10 @@
+.vault-videos {
+    padding-bottom: 2rem;
+    /* min-height: 100vh;
+    max-height: 1366px; */
+}
 .title {
     color: var(--black);
     font-size: 2.5rem;
 }
 
-.insta-yt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 1rem;
-}
-
-.insta-yt a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1.5rem;
-    padding: 0.5rem 1.5rem;
-    border: 2px solid var(--black);
-    color: var(--black);
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-.icon {
-    margin-left: 0.5rem;
-    font-size: 1.5rem;
-}
-
-.insta-yt a:nth-child(1):hover {
-    color: red;
-}
-
-.insta-yt a:nth-child(2):hover {
-    color: rgb(255, 0, 81);
-}
-
-
-@media screen and (min-width: 760px) {
-    .insta-yt {
-        margin: 0 2rem;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    .insta-yt a {
-        margin-bottom: 0;
-    }
-}

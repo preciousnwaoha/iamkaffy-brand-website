@@ -1,5 +1,5 @@
 .accolades {
-    background: var(--white);
+    
     position: relative;
     height: 100vh;
     max-height: 800px;
@@ -12,29 +12,25 @@
 
 
 .title {
+    background-color: var(--white);
+    background-image: var(--bg-art);
+    background-size: contain;
     position: relative;
     top: 4.5rem;
     left: calc(50% - 2rem);
-    transform: translate(-50%, -50%);
+    transform: translate(calc(-50% + 2rem), -50%);
+    width: calc(100% - 2rem);
     padding: 1rem;
-    border-radius: 1rem;
-    width: calc(100%);
+    /* border-radius: 1rem; */
     max-width: calc(600px);
     margin-top: 60px;
-    background: var(--white);
     text-align: center;
-    /* -moz-box-shadow: 0 0 10px var(--shadow-3);
-    -webkit-box-shadow: 0 0 10px var(--shadow-3);
-    box-shadow: 0 0 10px var(--shadow-3); */
-    /* backdrop-filter: blur(8px); */
 }
 
 .acco-title {
     margin: auto;
     color: var(--secondary);
-
 }
-
 .title h3 {
     color: var(--black);
     font-size: 1.225rem;

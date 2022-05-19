@@ -38,28 +38,14 @@ cursor: pointer;
     color: var(--secondary);
 }
 
-.photo-wrapper {
-    width: 100%;
-    
-    /* overflow: hidden; */
-    border: 2px solid blue;
-    height: calc(100vh - 60px);
-}
-
 .photo {
-    /* border: 1px solid red; */
-    /* height: 100%; */
-    /* width: 100% !important; */
-    /* position: relative !important; */
-    /* object-fit: contain; */
-    /* height: unset !important; */
-    /* overflow: hidden; */
-    /* display: inline-block; */
-    /* height: 100% !important; */
+    border: 1px solid red;
+    object-fit: contain;
+    height: 100% !important;
 }
 
 .photo-wrapper > div {
-    /* position: unset !important; */
+    position: unset !important;
     border : 2px solid yellow;
 }
 

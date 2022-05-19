@@ -17,30 +17,18 @@ import styles from "../styles/Home.module.css";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 
-// const api = Cookies.withAttributes({ expires: 7, path: '', domain: '.youtube.com', sameSite: 'None', secure: true })
-
 // const videosCollectionRef = collection(db, "videos")
-// const videosEmbedIdCollectionRef = collection(db, "videosEmbedId")
 const contactDetailsCollectionRef = collection(db, "contactDetails");
 const successStoriesCollectionRef = collection(db, "successStories");
 const featuredCollectionRef = collection(db, "featured");
-// cookie('cookie2', 'value2', { sameSite: 'None', secure: true });
-
-// const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems"
 
 export async function getStaticProps() {
   // const videosDataFrb = await getDocs(videosCollectionRef);
-  // const videosEmbedIdData = await getDocs(videosEmbedIdCollectionRef)
 
   const contactDetailsData = await getDocs(contactDetailsCollectionRef);
   const successStoriesData = await getDocs(successStoriesCollectionRef);
   const featuredDataFrb = await getDocs(featuredCollectionRef);
 
-  // const videosPlaylist = videosDataFrb.docs.map(doc =>  {
-  //   return (
-  //     {...doc.data(), id: doc.id}
-  //   )
-  // })[0]
 
   // const videosData = videosEmbedIdData.docs.map(doc =>  {
   //   return (
@@ -52,8 +40,6 @@ export async function getStaticProps() {
     return { ...doc.data(), id: doc.id };
   });
 
-  // const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=${videosPlaylist.playListCode}&maxResults=50&key=${process.env.YOUTUBE_API_KEY}`)
-  // const videosData = await res.json();
 
   const videosData = [
     { id: "Yq99FyfnGxA", type: "landscape", from: "youtube" },
@@ -84,9 +70,6 @@ export default function Home({
   successStories,
   contactDetails,
 }) {
-  // if (typeof window !== "undefined") {
-  //   document.cookie = "cookie4=value4; SameSite=None; Secure";
-  // }
 
   return (
     <div className={styles.container}>
@@ -105,9 +88,8 @@ export default function Home({
 
         <SuccessStories successStories={successStories} />
         <Story />
-        {/* {Cookies.set("video", "vdld", {sameSite: 'None', secure: true} )} */}
         <VaultVideos videosData={videosData} />
-        <Services />
+        <Services inHome={true} />
         <BrandsWorkedWith />
         <GetInTouch data={contactDetails} />
         <CookieConsent

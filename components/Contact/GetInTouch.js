@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMessage, faPhone, faLocation } from "@fortawesome/free-solid-svg-icons";
@@ -10,13 +10,15 @@ import Effect1 from "../UI/Effects/Effect1";
 
 
 const GetInTouch = ({data}) => {
+  const GITRef = useRef()
+
   const { email, address, phones } = data[0]
   return (
-    <div className={classes["get-in-touch"]} id="contact-2">
+    <div className={`${classes["get-in-touch"]} contact-1`} ref={GITRef}>
       <Effect1 className={classes["effect-item"]} />
-      {/* <div className={classes["curve-div"]}>
+      <div className={classes["bg-div"]}>
        
-      </div> */}
+      </div>
       <div className={classes["image-wrapper"]}>
             {/* <div className={classes["image-wrapper-inner"]}>
           <Image src="/images/get-in-touch.jpg" alt="Get In touch with Kaffy the dancer" width={"400px"} height={"400px"} layout="responsive" />

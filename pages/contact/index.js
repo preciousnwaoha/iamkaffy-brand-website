@@ -10,13 +10,9 @@ import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 
 
-
 const contactDetailsCollectionRef = collection(db, "contactDetails")
 
-
 export const getStaticProps = async () => {
-  
-  
   
   const contactDetailsData = await getDocs(contactDetailsCollectionRef);
 

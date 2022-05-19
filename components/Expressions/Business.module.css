@@ -19,6 +19,14 @@
   color: var(--black);
 }
 
+.subtitle {
+  font-weight: 700;
+}
+
+.business-content span {
+  color: var(--secondary)
+}
+
 .business-image-div-split {
     margin-top: 1rem;
 }

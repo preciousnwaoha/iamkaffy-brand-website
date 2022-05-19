@@ -1,15 +1,11 @@
 import React, {useState, useRef} from 'react'
-import emailjs from "@emailjs/browser";
 import Button from '../UI/Button'
 import classes from "./ContactForm.module.css"
-// import { db } from '../../firebase'
-// import { collection, addDoc } from 'firebase/firestore'
-
 
 const ContactForm = () => {
-  // const usersCollectionRef = collection(db, "contactMessages");
   const [submitted, setSubmitted] = useState(false)
   const [sending, setSending] = useState(false)
+  const [retry, setRetry] = useState(false)
 
   const nameRef = useRef()
   const emailRef = useRef()
@@ -30,16 +26,26 @@ const ContactForm = () => {
           message,
         }
 
-        emailjs.send('service_lg6hz83', 'template_6x7qmjt', templateParams, "4XWVk6nlrikOaocCl")
-        .then(function(response) {
-           console.log('SUCCESS!', response.status, response.text);
-        }, function(error) {
-           console.log('FAILED...', error);
-        });
-        
-        // const res = await addDoc(usersCollectionRef, {name: name, email: email, message: message})
-        setSending(false)
-        setSubmitted(true)
+    
+
+       const response =  await fetch("/api/mailMessage", {
+          method: "post",
+          body: JSON.stringify(templateParams),
+          headers: {
+            'Content-Type': 'application/json'
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+        })
+
+        // console.log(response)
+        if (response.status === 200) {
+          setRetry(false)
+          setSending(false)
+          setSubmitted(true)
+        } else {
+          setRetry(true)
+           setSending(false)
+        }
     }
 
     
@@ -53,7 +59,9 @@ const ContactForm = () => {
         <textarea ref={messageRef} placeholder='Got a message for Kaffy'> 
         </textarea>
         {submitted ? <p>Kaffy&apos;s got your message</p> : <Button className={classes["form-submit-btn"]}>
-           { !sending ? "Send Message" : "Sending..."}
+        {(!sending && !retry ) && "Send Message" }
+           {sending && "Sending..." }
+           {(retry && !sending) && "Could not Send, Retry?"}
         </Button>}
     </form>
   )

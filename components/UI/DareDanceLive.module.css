@@ -13,6 +13,7 @@
     justify-content: center;
     font-size: 1.5rem;
     font-family: 'Patrick Hand';
+    
 }
 
 .dare-dance-live div:nth-child(1) {
@@ -20,17 +21,27 @@
     background-image: url('/images/bg-art2.png');
     background-size: cover;
     color: var(--white-stay);
+    border: 1px dotted var(--white-stay);
+    border-left: none;
+    border-right: none;
 }
+
 
 .dare-dance-live div:nth-child(2) {
     background: transparent;
     color: var(--black);
+    border: 1px dotted var(--white-stay);
+    border-bottom: none;
+    
 }
 .dare-dance-live div:nth-child(3) {
     background: var(--black-stay);
     background-image:  url('/images/bg-art2.png');
     background-size: cover;
     color: var(--white-stay);
+    border: 1px dotted var(--white-stay);
+    border-left: none;
+    border-right: none;
 }
 
 @media screen and (min-width: 760px) {

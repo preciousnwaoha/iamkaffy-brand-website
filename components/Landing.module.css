@@ -49,14 +49,6 @@
     filter: brightness(25%);
 }
 
-/* .hero-holder {
-    width: 100%;
-    height: calc(100vh - 60px);
-    border: 1px solid red;
-    
-} */
-
-
 
 .landing-text-side {
     margin: 0 1rem;
@@ -95,16 +87,17 @@ text-orientation: sideways;
 }
 
 .sub-tagline {
-    font-size: 1rem;
     color: var(--primary);
     padding-left: 1.5rem;
-    line-height: 1rem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        rem;
+    font-size: 1.1rem;
+    line-height: 1.1rem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      rem;
 }
 
 .p-tags {
     margin-top: 1rem;
     width: 60%;
     color: var(--white-stay);
+    margin-bottom: 2rem;
 }
 
 .p-tags p {
@@ -182,12 +175,13 @@ text-orientation: sideways;
     }
     
     .sub-tagline {
-        font-size: 1.4rem;
-        line-height: 1.4rem;
+        font-size: 1.1rem;
+        line-height: 1.1rem;
     }
 
     .p-tags {
         width: 90%;
+        margin-bottom: 0;
     }
     
     .record-image-side {
@@ -211,5 +205,6 @@ text-orientation: sideways;
     }
     .record p {
         font-size: 1.125rem;
+        margin-bottom: 0;
     }
 }

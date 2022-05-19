@@ -20,6 +20,7 @@ const Photos = ({photosData}) => {
         {photosData.map(photo => (
             <Photo 
                 key={photo.id}
+                id={photo.id}
                 url={photo.url}
                 desc={photo.desc}
                 onExpandPhoto={toggleExpandPhotoHandler}

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Programs from "./Programs";
 import ImportantMessage from "../UI/ImportantMessage";
 import Title from "./Title";
@@ -9,6 +9,12 @@ import classes from "./HealthAndWellness.module.css";
 import BrandsWorkedWith from "./BrandsWorkedWith";
 
 const HealthAndWellness = ({programs}) => {
+  const [showTest, setShowTest] = useState(false)
+
+  const testHandler = () => {
+    setShowTest(true)
+  } 
+
   return (
     <div className={classes.HAW}>
       {/* HAW - Health and Wellness */}
@@ -58,7 +64,7 @@ const HealthAndWellness = ({programs}) => {
             From A-List celebrities to women who desire to reconnect with their
             bodies, from High Networth Individuals NIs to middle-class working
             professionals, Kaffy works with individuals to improve their health
-            - using dance as a tool for fitness and wellness
+            - <span>using dance as a tool for fitness and wellness</span>
           </p>
           <div className={classes["message-item_image-wrapper"]}>
             <div className={classes["message-item_image-wrapper-inner"]}>
@@ -77,10 +83,14 @@ const HealthAndWellness = ({programs}) => {
         </div>
       </div>
       <ImportantMessage className={classes["take-test-wrapper"]}>
-        <p>
-          <span className={classes["take-test-span"]}>Take this test </span>to
+        {!showTest && <p>
+          <span className={classes["take-test-span"]} onClick={testHandler}>Take this test </span>to
           determine where to start your fitness journey.
-        </p>
+        </p>}
+
+        {showTest && <p>
+          <span className={classes["take-test-span"]}>Sorry, Test not availble now!</span>
+        </p>}
       </ImportantMessage>
       <Programs programs={programs} />
       <BrandsWorkedWith inHome={false} />

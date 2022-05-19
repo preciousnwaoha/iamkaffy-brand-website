@@ -3,12 +3,14 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-bottom: 4rem;
 }
 
 .effect-item {
     position: absolute;
     top: -50px;
     left: -100px;
+    z-index: -1;
 }
 
 .synopsis-content {

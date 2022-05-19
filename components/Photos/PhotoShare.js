@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { faCopy } from "@fortawesome/free-regular-svg-icons";
+import {  faCopy } from "@fortawesome/free-regular-svg-icons";
+import { faXmark, faCheck, } from "@fortawesome/free-solid-svg-icons";
 import classes from "./PhotoShare.module.css";
 
 const PhotoShare = ({photoURL, onHideShare}) => {
@@ -14,7 +14,7 @@ const PhotoShare = ({photoURL, onHideShare}) => {
 
   if (typeof window !== "undefined") {
     origin = window.location.origin;
-    path = `${origin}${path}${photoURL}`;
+    path = `${origin}${path}/photos/${photoURL}`;
   }
 
   const exitShareHandler = () => {
@@ -29,21 +29,6 @@ const PhotoShare = ({photoURL, onHideShare}) => {
                   setCopied(false)
         }, 2000);
   }
-
-//   useEffect(() => {
-//     if (items.length === 0) {
-//       return;
-//     }
-//     setButtonIsHighlighted(true);
-//     const timer = setTimeout(() => {
-//       setButtonIsHighlighted(false);
-//     }, 300);
-
-//     return () => {
-//       clearTimeout(timer);
-//     };
-//   }, [items]);
-
   
 
   return (
@@ -55,11 +40,11 @@ const PhotoShare = ({photoURL, onHideShare}) => {
         <p className={classes["link-txt"]}>{path}</p>
         <div className={classes["copy-link"]}>
           {!copied && <FontAwesomeIcon
-            Icon={faCopy}
+            icon={faCopy}
             className={classes["copy-link-icon"]}
             onClick={copyHandler}
           />}
-          {copied && <FontAwesomeIcon icon={faCheck} className={classes["copy-link-icon"]} />}
+          {copied && <span><b>Copied</b> <FontAwesomeIcon icon={faCheck} className={classes["copy-link-icon"]} /></span>}
         </div>
       </div>
     </>

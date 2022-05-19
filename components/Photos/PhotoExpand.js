@@ -8,9 +8,7 @@ import classes from "./PhotoExpand.module.css"
 const PhotoExpand = ({ photoData, onMinimizePhoto }) => {
     const [showOptions, setShowOptions] = useState(true)
     const [showShare, setShowShare] = useState(false)
-    const { url, desc } = photoData
-
-    console.log(url, desc)
+    const { url, id, desc } = photoData
 
     const minimizePhotoHandler = (e) => {
         e.stopPropagation()
@@ -32,11 +30,8 @@ const PhotoExpand = ({ photoData, onMinimizePhoto }) => {
         <div className={classes["photo-expand"]}  >
         
             
-
-            {/* <div className={classes["photo-wrapper"]} onClick={(e) => e.stopPropagation()}  > */}
-            <Image alt={`Kaffy in ${desc}`} src={url} className={classes.photo} width={"100vh"} height={'100vh'} onClick={showOptionsHandler}  />
+            <Image alt={`Kaffy in ${desc}`} src={url} className={classes.photo} width={"100%"} height={'100%'} layout="fill" onClick={showOptionsHandler}  />
             
-            {/* </div> */}
             <div className={`${classes["top-nav"]}  ${showOptions ? classes['fade-in'] : classes["fade-out"]}`}>
         <div className={classes.back}>
                 <FontAwesomeIcon icon={faArrowLeft} className={classes["back-icon"]} onClick={minimizePhotoHandler} />
@@ -47,7 +42,7 @@ const PhotoExpand = ({ photoData, onMinimizePhoto }) => {
             </div>
         </div>
 
-            {showShare && <PhotoShare onHideShare={toggleShowShareHandler} photoURL={url} />}
+            {showShare && <PhotoShare onHideShare={toggleShowShareHandler} photoURL={id} />}
             
        
             <div className={`${classes.desc} ${showOptions ? classes['fade-in'] : classes["fade-out"]}`}>

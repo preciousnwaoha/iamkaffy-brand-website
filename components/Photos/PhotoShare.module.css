@@ -64,6 +64,16 @@
     font-size: 2rem;
     color: var(--black);
 }
+.copy-link span, .copy-link .copy-link-icon {
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.copy-link b {
+    /* display: inline; */
+    /* border: 1px solid red; */
+    margin-right: 0.5rem;
+}
 
 .copy-link-icon:hover {
     color: var(--secondary);
