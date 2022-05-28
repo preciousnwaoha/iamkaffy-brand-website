@@ -20,17 +20,23 @@ const PayStackBtn = ( { item, fromCart=false, onPaymentSuccess, CSIData }) => {
     amountToPay = item.price
   }
 
-    const publicKey = "pk_test_03a5461f993e37655bf14816546e8cc873cb8103"
     const amount = amountToPay * 100  // Remember, set in kobo!
     const {name, email, phone, address, location} = CSIData
 
-    const config = {
+    const preConfig = {
       reference: (new Date()).getTime(),
       email,
       amount,
-      publicKey,
     };
 
+    const config = fetch("/api/getPayStackConfig", {
+      method: "post",
+      body: JSON.stringify(preConfig),
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    });
 
     const handlePaystackSuccessAction = (reference) => {
         // Implementation for whatever you want to do with reference and after success call.

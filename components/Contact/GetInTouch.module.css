@@ -1,6 +1,6 @@
 .get-in-touch {
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - var(--headerHeigth));
     min-height: 630px;
     max-height: 900px;
     position: relative;

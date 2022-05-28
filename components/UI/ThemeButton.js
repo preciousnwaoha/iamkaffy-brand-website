@@ -1,4 +1,4 @@
-import { useState, useContext, useLayoutEffect } from "react";
+import { useState, useContext, useEffect, useLayoutEffect } from "react";
 import ThemeContext from "../../context/theme-context";
 import classes from "./ThemeButton.module.css"
 
@@ -50,6 +50,7 @@ const useTheme = (theme) => {
     },
     [theme] // Only call again if theme object reference changes
   );
+  
 }
 
 
@@ -60,6 +61,16 @@ const ThemeButton = () => {
     const themeChangeHandler = () => {
       themeCtx.onToggleTheme()
     }
+
+    useEffect(() => {
+      if (typeof window !== "undefined") {
+        let themeFromLS = localStorage.getItem("theme");
+        if (themeFromLS) {
+          // setThemeState(themeFromLS)
+          // console.log("themeE", themeFromLS)
+        }
+      }
+    }, [])
 
     let themeValue;
     if (themeCtx.theme === "light") {

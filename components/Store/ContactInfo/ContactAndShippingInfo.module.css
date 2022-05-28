@@ -3,7 +3,7 @@
 }
 
 .not-logged-in {
-    height: calc(100vh - 10.5rem - 60px);
+    height: calc(100vh - 10.5rem - var(--headerHeigth));
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

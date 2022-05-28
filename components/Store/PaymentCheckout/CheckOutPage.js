@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import emailjs from "@emailjs/browser";
 import classes from "./CheckOutPage.module.css";
 import AuthPopUp from "../../Auth/AuthPopUp";
 import PayStackBtn from "./PayStackBtn";
@@ -13,6 +12,7 @@ import OrderComplete from "./OrderComplete";
 
 import { db } from "../../../firebase";
 import { collection, setDoc, doc } from "firebase/firestore";
+import Loading from "../StoreUI/Loading";
 
 
 const ordersCollectionRef = collection(db, "orders");
@@ -22,6 +22,7 @@ const ordersCollectionRef = collection(db, "orders");
 
 const CheckOutPage = () => {
   const [orderComplete, setOrderComplete] = useState(false);
+  const [loadingOrderComplete, setLoadingOrderComplete] = useState(false);
   const [showSummary, setShowSummary] = useState(false);
   const [showAuthPopUp, setShowAuthPopUp] = useState(false);
   const authCtx = useContext(AuthContext);
@@ -63,21 +64,16 @@ const CheckOutPage = () => {
   };
 
   const paymentSuccessHandler = async (reference) => {
-
+    loadingOrderComplete(true)
     const {status, trxref} = reference
-
     const order_ref = trxref || (new Date()).getTime()
-
     const order_id = `${isLoggedIn ? (Math.random() * 10000).toFixed(4).shift + "u" : (Math.random() * 10000).toFixed(4) + "a"}${order_ref}`
-
-    
-    
 
 
     const orderData = {
       order_ref: trxref,
-      order_id: order_ref,
-      user_id: `${isLoggedIn ? userId : "Anonymous"}`,
+      order_id: order_id,
+      user_id: `${isLoggedIn ? userId : email || "Anonymous"}`,
       order_date: new Date(trxref),
       CSIData,
       orders: [
@@ -88,9 +84,11 @@ const CheckOutPage = () => {
       paymentStatus: status,
     }
 
-    // await setDoc(doc(ordersCollectionRef, orderId), orderData)
+    // Send order to database
+    await setDoc(doc(ordersCollectionRef, order_id), orderData)
 
-    await fetch("/api/orderConfirmEmail", {
+    // Send emails of order
+    const sendOrderEmailResponse = await fetch("/api/orderConfirmEmail", {
       method: "post",
       body: JSON.stringify(orderData),
       headers: {
@@ -99,10 +97,12 @@ const CheckOutPage = () => {
       },
     });
 
-    // console.log(JSON.parse(data))
-    // setOrderComplete(true);
-    // console.log(reference);
+    setOrderComplete(true);
+    loadingOrderComplete(false)
+
   };
+
+
 
   if (orderComplete) {
     return <OrderComplete />;
@@ -141,8 +141,6 @@ const CheckOutPage = () => {
         )}
 
         <div className={classes["express-checkout"]}>
-          {/* <p className={classes["express-checkout-title"]}>Express checkout</p> */}
-          {/* <GooglePayButton  /> */}
           {validity && (
             <PayStackBtn
               item={cartCtx}
@@ -153,16 +151,7 @@ const CheckOutPage = () => {
           )}
         </div>
 
-        
-
-<div className={classes.login}>
-            <button
-              className={classes["login-btn"]}
-              onClick={paymentSuccessHandler}
-            >
-              Send Email
-            </button>
-          </div>
+        {loadingOrderComplete && <Loading />}
 
         {(showAuthPopUp && !isLoggedIn) && (
           <AuthPopUp onExitAuthPopUp={toggleShowAuthPopUpHandler} />

@@ -13,7 +13,7 @@
 
 .in-landing {
     position: absolute;
-    top: 60px;
+    top: var(--headerHeigth);
     left: 0;
     background: transparent;
 }
@@ -32,7 +32,7 @@
 
 .menu-hover, .cart-hover {
     position: fixed;
-    top: calc(60px + 4rem);
+    top: calc(var(--headerHeigth) + 4rem);
     padding: 0;
     margin: 0;
     min-width: 50px;
@@ -49,13 +49,13 @@
 
 .menu-hover {
     left: 1rem;
-    transform: translate(calc(-1rem - 60px));
+    transform: translate(calc(-1rem - var(--headerHeigth)));
     
 }
 
 .cart-hover {
     right: 1rem;
-    transform: translate(calc(1rem + 60px));
+    transform: translate(calc(1rem + var(--headerHeigth)));
     
 }
 
@@ -71,7 +71,7 @@
 
 @keyframes showFromLeft {
     0% {
-        transform: translate(calc(-1rem - 60px));
+        transform: translate(calc(-1rem - var(--headerHeigth)));
     }
     100% {
         transform: translate(0);
@@ -80,7 +80,7 @@
 
 @keyframes showFromRight {
     0% {
-        transform: translate(calc(1rem + 60px));
+        transform: translate(calc(1rem + var(--headerHeigth)));
     }
     100% {
         transform: translate(0);
@@ -131,12 +131,12 @@
     
     .menu-hover {
         left: 2rem;
-        transform: translate(calc(-2rem - 60px));
+        transform: translate(calc(-2rem - var(--headerHeigth)));
     }
     
     .cart-hover {
         right: 2rem;
-        transform: translate(calc(2rem + 60px));
+        transform: translate(calc(2rem + var(--headerHeigth)));
         
     }
 }

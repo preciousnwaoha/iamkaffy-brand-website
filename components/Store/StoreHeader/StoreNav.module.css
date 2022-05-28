@@ -5,7 +5,7 @@
     left: -3px;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 60px);
+    height: calc(100vh - var(--headerHeigth));
     z-index: 10;
     background: var(--white);
     color: var(--black);
@@ -16,11 +16,11 @@
 
 .no-pad-top {
     top: 0;
-    top: 60px;
+    top: var(--headerHeigth);
 }
 
 .yes-pad-top {
-    top: 60px;
+    top: var(--headerHeigth);
 }
 
 .store-nav::-webkit-scrollbar {

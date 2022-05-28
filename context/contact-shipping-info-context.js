@@ -36,14 +36,14 @@ export const ContactShippingInfoContextProvider = ({ children }) => {
         setContactInfo(userData.contactShippingInfo);
       } else {
         // doc.data() will be undefined in this case
-        console.log("No such document!");
+        // console.log("No such document!");
       }
     };
 
     if (authCtx.isLoggedIn) {
       getCart(authCtx.userId);
     } else {
-      console.log("not logged in: get local storage");
+      // console.log("not logged in: get local storage");
     }
   }, [authCtx]);
 
@@ -54,7 +54,7 @@ export const ContactShippingInfoContextProvider = ({ children }) => {
     await updateDoc(userRef, {
       contactShippingInfo: newContactInfo,
     });
-    console.log("updateContactInfoDB")
+    // console.log("updateContactInfoDB")
     
   };
 
@@ -69,7 +69,6 @@ export const ContactShippingInfoContextProvider = ({ children }) => {
       console.log("updateContactInfoState")
   };
 
-  console.log("contactInfo: ", contactInfo)
 
 
   return (

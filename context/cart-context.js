@@ -44,7 +44,6 @@ const cartReducer = (state, action) => {
         ],
       };
 
-
       updatedItems = [...state.items];
       updatedItems[existingCartItemIndex] = updatedItem;
     } else {
@@ -99,52 +98,31 @@ const cartReducer = (state, action) => {
   }
 
   if (action.type === "ADD_CART") {
-
     let updatedItems = [...state.items];
-    let updatedSubtotal = state.subtotal
+    let updatedSubtotal = state.subtotal;
 
+    action.cart.items.forEach((item) => {
+      const existingCartItemIndex = state.items.findIndex(
+        (itema) => itema.id === item.id
+      );
+      const existingCartItem = state.items[existingCartItemIndex];
 
-    action.cart.items.forEach(item => {
-      
+      if (existingCartItem) {
+        console.log("exists");
+      } else {
+        updatedSubtotal += item.price * item.quantity;
+        updatedItems = updatedItems.concat(item);
+      }
+    });
 
-    const existingCartItemIndex = state.items.findIndex(
-      (itema) => itema.id === item.id
-    );
-
-    const existingCartItem = state.items[existingCartItemIndex];
-
-    
-
-    if (existingCartItem) {
-      // const updatedItem = {
-      //   ...existingCartItem,
-      //   quantity: existingCartItem.quantity,
-      //   selectedSizes: [
-      //     ...existingCartItem.selectedSizes,
-      //   ],
-      //   selectedColors: [
-      //     ...existingCartItem.selectedColors,
-      //   ],
-      // };
-      console.log("exists")
-
-      
-    } else {
-      updatedSubtotal +=
-      (item.price * item.quantity);
-      updatedItems = updatedItems.concat(item);
-    }
-  
-    })
-    
     console.log({
       items: updatedItems,
-      subtotal: updatedSubtotal
-    })
+      subtotal: updatedSubtotal,
+    });
 
     return {
       items: updatedItems,
-      subtotal: updatedSubtotal
+      subtotal: updatedSubtotal,
     };
   }
 
@@ -158,31 +136,30 @@ export const CartContextProvider = ({ children }) => {
   );
   const authCtx = useContext(AuthContext);
 
-
   useEffect(() => {
     const getCart = async (id) => {
       const userRef = doc(usersCollectionRef, id);
       const userSnap = await getDoc(userRef);
       if (userSnap.exists()) {
         const userData = userSnap.data();
-          dispatchCartAction({ type: "ADD_CART", cart: userData.cart });
-
-        
+        dispatchCartAction({ type: "ADD_CART", cart: userData.cart });
       } else {
         // doc.data() will be undefined in this case
-        console.log("No such document!");
       }
     };
 
     if (authCtx.isLoggedIn) {
       getCart(authCtx.userId);
     } else {
-      console.log("not logged in: get local storage");
+      // "not logged in: get local storage"
+      if (typeof window !== "undefined") {
+        let cartInLS = JSON.parse(localStorage.getItem("cart"));
+        if (cartInLS.items.length > 0) {
+          dispatchCartAction({ type: "ADD_CART", cart: cartInLS });
+        }
+      }
     }
   }, [authCtx]);
-
-
-  console.log("cartState: ", cartState)
 
   useEffect(() => {
     const updateDBCart = async (id) => {
@@ -190,16 +167,16 @@ export const CartContextProvider = ({ children }) => {
       await updateDoc(userRef, {
         cart: cartState,
       });
-      
     };
 
     if (authCtx.isLoggedIn) {
       updateDBCart(authCtx.userId);
-    } else {
-      console.log("Send to LS cos not logged in");
+    }
+
+    if (typeof window !== "undefined") {
+      localStorage.setItem("cart", JSON.stringify(cartState));
     }
   }, [cartState]);
-
 
   const addToCartHandler = (item) => {
     dispatchCartAction({ type: "ADD_CART_ITEM", item: item });

@@ -12,7 +12,7 @@
     margin: 1rem;
     width: calc(100% - 2rem);
     max-width: 150vh;
-    max-height: calc(80vh - 60px - 4rem);
+    max-height: calc(80vh - var(--headerHeigth) - 4rem);
     border-radius: 1rem;
     overflow: hidden;
 }

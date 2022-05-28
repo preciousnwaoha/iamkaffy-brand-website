@@ -1,9 +1,9 @@
 .auth-pop-up {
     position: fixed;
-    top: 60px;
+    top: var(--headerHeigth);
     left: 0;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - var(--headerHeigth));
     background: rgba(8, 8, 8, 0.933);
     backdrop-filter: blur(8px);
     overflow-y: auto;

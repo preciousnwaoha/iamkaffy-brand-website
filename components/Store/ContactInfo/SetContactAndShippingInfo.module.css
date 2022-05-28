@@ -18,8 +18,8 @@
     margin: 1rem;
     margin-top: 1.5rem;
     cursor: pointer;
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .cancel-icon {
@@ -191,32 +191,6 @@
     font-size: 0.65rem;
 }
 
-/* .continue-to-shipping-btn {
-    background: var(--black);
-    color: var(--primary);
-    padding: 1rem 1.5rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    margin-right: 0.5rem;
-    margin-top: 1rem;
-}
-
-.continue-to-shipping-btn:hover {
-    color: var(--secondary);
-}
-
-.return-to-cart-link {
-    display: inline-block;
-    font-size: 0.85rem;
-    color: var(--secondary);
-    padding: 0.75rem 1.5rem;
-    margin: 0;
-}
-
-.return-to-cart-link:hover {
-    color: var(--primary);
-} */
 
 @media screen and (min-width: 760px) {
     .set-contact-info form {

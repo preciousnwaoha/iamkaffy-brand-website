@@ -7,37 +7,59 @@ import ItemsContext from "../../../../context/items-context";
 import classes from "./ViewedProducts.module.css";
 // import CollectionFilterSort from "./CollectionFilterSort";
 
-
-
-const ViewedProducts = ({inStoreHome=false}) => {
+const ViewedProducts = ({ inStoreHome = false, newProduct = {} }) => {
   const itemsCtx = useContext(ItemsContext);
 
- const { viewedItems } = itemsCtx
+  const { viewedItems } = itemsCtx;
 
+  if (newProduct.id) {
+    console.log("addToViewedProductsHandler");
+    const {
+      id,
+      name,
+      images,
+      subCollections,
+      collections,
+      price,
+      numberLeft,
+      numSold,
+    } = newProduct;
+
+    itemsCtx.addItem({
+      id,
+      name,
+      images,
+      subCollections,
+      collections,
+      price,
+      numberLeft,
+      numSold,
+    });
+  }
 
   return (
     <div className={classes.viewed}>
       <UITitle titleText={"Viewed Products"} className={classes["title"]} />
-     
 
-      { (viewedItems.length > 0) ?
+      {viewedItems.length > 0 ? (
         <div className={classes["viewed-items-wrapper"]}>
-        {viewedItems.map((product) => (
-          <Product
-            key={product.id}
-            id={product.id}
-            name={product.name}
-            images={product.images}
-            subCollections={product.subCollections}
-            collections={product.collections}
-            price={product.price}
-            numberLeft={product.numberLeft}
-            numSold={product.numSold}
-          />
-        ))}
-      </div>
-      : <NoProducts inViewed={true} inStoreHome={inStoreHome} /> }
-
+          {viewedItems.map((product) => (
+            <Product
+              key={product.id}
+              id={product.id}
+              name={product.name}
+              images={product.images}
+              subCollections={product.subCollections}
+              collections={product.collections}
+              price={product.price}
+              numberLeft={product.numberLeft}
+              numSold={product.numSold}
+            />
+          ))}
+        </div>
+      ) : (
+        <NoProducts inViewed={true} inStoreHome={inStoreHome} />
+      )}
     </div>
   );
 };

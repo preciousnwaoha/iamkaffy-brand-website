@@ -3,11 +3,9 @@ import Photo from './Photo'
 import PhotoExpand from "../Photos/PhotoExpand"
 import classes from "./Photos.module.css"
 
-const Photos = ({photosData}) => {
-  const [expandPhoto, setExpandPhoto] = useState(false)
-  const [expandPhotoData, setExpandPhotoData] = useState({})
-
-
+const Photos = ({photosData, inPhotosRoute, photoData }) => {
+  const [expandPhoto, setExpandPhoto] = useState(inPhotosRoute)
+  const [expandPhotoData, setExpandPhotoData] = useState(photoData)
 
   const toggleExpandPhotoHandler = (data) => {
     setExpandPhotoData(data)
@@ -28,7 +26,7 @@ const Photos = ({photosData}) => {
         ))}
     </div>
 
-    {expandPhoto && <PhotoExpand photoData={expandPhotoData} onMinimizePhoto={toggleExpandPhotoHandler} /> }
+    {expandPhoto && <PhotoExpand photoData={expandPhotoData} photosData={photosData} onMinimizePhoto={toggleExpandPhotoHandler} /> }
     </>
     
   )

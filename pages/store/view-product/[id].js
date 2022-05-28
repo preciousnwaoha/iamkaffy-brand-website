@@ -84,7 +84,7 @@ const ViewProductPage = ({ propsData }) => {
             <ViewProduct data={propsData} />
             <ProductReviews product={propsData.product} />
         
-        <ViewedProducts />
+        <ViewedProducts newProduct={propsData.product} />
         <MailingList />
     
       </main>

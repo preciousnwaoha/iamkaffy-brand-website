@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import Menu from "../UI/Menu";
 import ThemeButton from "../UI/ThemeButton";
 import Button from "../UI/Button";
@@ -109,7 +111,7 @@ const Nav = () => {
           className={classes["exit-side-nav-btn"]}
           onClick={toggleSideNavHandler}
         >
-          &times;
+          <FontAwesomeIcon icon={faXmark} className={classes["exit-side-nav-icon"]} />
         </div>
       </ul>
       <div className={classes["theme-btn-wrapper"]}>

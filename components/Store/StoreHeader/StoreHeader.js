@@ -41,8 +41,7 @@ const StoreHeader = ({isLandingPage=false, collections}) => {
     <div className={`${classes["cart-hover"]} ${showUpIcons ? classes["showup-right"] : ""}`}>
     <CartIcon className={classes["cart-hover-icon"]} iconSize={"1.25rem"} onClick={toggleShowingCart} />
     </div>
-    
-    
+  
   </>
     
   )

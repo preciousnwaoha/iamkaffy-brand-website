@@ -68,3 +68,11 @@
     margin: 0.5rem auto;
     border-radius: 0rem;
 }
+
+
+.error {
+    color: red;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.65rem;
+}

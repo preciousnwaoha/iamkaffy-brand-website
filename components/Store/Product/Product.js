@@ -17,22 +17,12 @@ const Product = ({
 }) => {
   const itemsCtx = useContext(ItemsContext)
 
-  const addToViewedProductsHandler = () => {
-    console.log("addToViewedProductsHandler")
-    itemsCtx.addItem({id,
-      name,
-      images,
-      subCollections,
-      collections,
-      price,
-      numberLeft,
-      numSold, })
-  }
+  
 
 
   return (
     <Link href={`/store/view-product/${id}`}>
-    <a className={classes["product"]} onClick={addToViewedProductsHandler} >
+    <a className={classes["product"]} >
       <div className={classes["image-wrapper"]}>
         <div className={classes["image-wrapper-inner"]}>
           <Image

@@ -134,7 +134,7 @@ li.hidden-nav-item {
 
     display: flex;
     flex-direction: row;
-    align-items: c;
+    align-items: center;
     width: auto;
     height: 100%;
     background: transparent;

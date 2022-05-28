@@ -1,80 +1,92 @@
 .photo-share {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: var(--white);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .exit-share {
-    text-align: right;
-    position: absolute;
-    top: 0;
-    right: 0;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
 
-    margin: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1.25rem;
-    height: 1.25rem;
-    line-height: 100%;
-    padding: 0;
-    cursor: pointer;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 100%;
+  padding: 0;
+  cursor: pointer;
 }
 
 .exit-share-icon {
-    font-size: 1.25rem;
-    color: var(--black);
+  font-size: 1.25rem;
+  color: var(--black);
 }
 
 .exit-share-icon:hover {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 .link-txt {
-    color: var(--black);
-    margin: 0;
-    margin-top: 1.25rem;
-    margin-bottom: 1rem;
+  color: var(--black);
+  margin: 0;
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .copy-link {
-
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    height: 2rem;
-    line-height: 100%;
-    padding: 0;
-    cursor: pointer;
-    align-self: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  line-height: 100%;
+  padding: 0;
+  cursor: pointer;
+  align-self: center;
 }
 
 .copy-link-icon {
-    font-size: 2rem;
-    color: var(--black);
+  font-size: 2rem;
+  color: var(--black);
 }
-.copy-link span, .copy-link .copy-link-icon {
-    font-weight: 700;
-    color: var(--secondary);
+.copy-link span,
+.copy-link .copy-link-icon {
+  font-weight: 700;
+  color: var(--secondary);
 }
 
 .copy-link b {
-    /* display: inline; */
-    /* border: 1px solid red; */
-    margin-right: 0.5rem;
+  /* display: inline; */
+  /* border: 1px solid red; */
+  margin-right: 0.5rem;
 }
 
 .copy-link-icon:hover {
-    color: var(--secondary);
+  color: var(--secondary);
 }
