@@ -1,23 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons'
 import { faStar } from '@fortawesome/free-regular-svg-icons'
-
 import classes from "./RateItem.module.css"
-const RateItem = ({onGetRating}) => {
+
+const RateItem = ({onGetRating, userReview}) => {
+
+    // const [rated, setRated] = useState(!!userReview)
+    // const [rating, setRating] = useState(Number(`${!!userReview ? userReview.rating : 0}`))
+
     const [rated, setRated] = useState(false)
     const [rating, setRating] = useState(0)
 
 
-    
     const rateHandler = (rating) => {
-        setRated(true)
-        setRating(rating)
-        onGetRating(rating)
+            setRated(true)
+            setRating(rating)
+            onGetRating(rating)
     }
-
     
+    
+    // useEffect(() => {
+    //     if (!!userReview) {
+    //         onGetRating(rating)
 
+    //     }
+    // }, [userReview])
 
 
     const emptyStars = 5 - rating

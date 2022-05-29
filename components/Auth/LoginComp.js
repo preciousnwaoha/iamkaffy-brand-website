@@ -141,7 +141,7 @@ const LoginComp = () => {
 
         {!isLoading && (
           <button disabled={!formIsValid} type="submit">
-            Create
+            Login
           </button>
         )}
         {isLoading && <p className={classes.loading}>In a sec...</p>}

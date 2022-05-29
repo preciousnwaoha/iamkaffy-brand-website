@@ -1,8 +1,7 @@
-
 import Head from "next/head";
 import Header from "../../../components/Layout/Header";
 import StoreHeader from "../../../components/Store/StoreHeader/StoreHeader";
-import ViewProduct from "../../../components/Store/Product/ViewProduct/ViewProduct"
+import ViewProduct from "../../../components/Store/Product/ViewProduct/ViewProduct";
 import ProductReviews from "../../../components/Store/ProductReview/ProductReviews";
 import MailingList from "../../../components/Store/MailingList";
 import Footer from "../../../components/Layout/Footer";
@@ -12,8 +11,7 @@ import { db } from "../../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import ViewedProducts from "../../../components/Store/Product/ViewedProducts/ViewedProducts";
 
-// const collectionsCollectionRef = collection(db, "collections");
-const collectionsCollectionRef = collection(db, "collections")
+const collectionsCollectionRef = collection(db, "collections");
 const productsCollectionRef = collection(db, "products");
 const usersCollectionRef = collection(db, "users");
 
@@ -28,7 +26,6 @@ export const getStaticPaths = async () => {
     };
   });
 
-
   return {
     paths: listOfIds,
     fallback: false,
@@ -36,18 +33,15 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  // const collectionsData = await getDocs(collectionsCollectionRef);
+  const reviewsRef = collection(db, "products", params.id, "reviews");
+
   const collectionsData = await getDocs(collectionsCollectionRef);
   const productsData = await getDocs(productsCollectionRef);
-  
+  const reviewsData = await getDocs(reviewsRef);
 
- 
-  const collectionsPropsData = collectionsData.docs.map(doc =>  {
-    
-    return (
-      {...doc.data(), id: doc.id}
-    )
-  })
+  const collectionsPropsData = collectionsData.docs.map((doc) => {
+    return { ...doc.data(), id: doc.id };
+  });
 
   const [product] = productsData.docs
     .filter((doc) => {
@@ -57,7 +51,15 @@ export const getStaticProps = async ({ params }) => {
       return { ...doc.data(), id: doc.id };
     });
 
-  const propsData = { product: product, collections: collectionsPropsData };
+  const reviews = reviewsData.docs.map((doc) => {
+    return { ...doc.data(), id: doc.id };
+  });
+
+  const propsData = {
+    product: product,
+    reviews,
+    collections: collectionsPropsData,
+  };
 
   return {
     props: {
@@ -67,10 +69,6 @@ export const getStaticProps = async ({ params }) => {
 };
 
 const ViewProductPage = ({ propsData }) => {
-  
-
-  
- 
   return (
     <div className={styles.container}>
       <Head>
@@ -81,12 +79,12 @@ const ViewProductPage = ({ propsData }) => {
       <main className={styles.main}>
         <Header />
         <StoreHeader collections={propsData.collections} />
-            <ViewProduct data={propsData} />
-            <ProductReviews product={propsData.product} />
-        
+        <ViewProduct data={propsData} />
+        {/* <ProductReviews product={propsData.product} /> */}
+        <ProductReviews reviews={propsData.reviews} product={propsData.product} />
+
         <ViewedProducts newProduct={propsData.product} />
         <MailingList />
-    
       </main>
       <Footer />
     </div>

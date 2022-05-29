@@ -18,12 +18,12 @@ export const ThemeContextProvider = ({ children }) => {
         let themeFromLS = localStorage.getItem("theme");
         if (themeFromLS !== "") {
           setThemeState(themeFromLS);
-          console.log("set from LS as", themeFromLS);
+          // console.log("set from LS as", themeFromLS);
         }
 
         if (!themeFromLS) {
           setThemeState("light")
-          console.log("had to set as light")
+          // console.log("had to set as light")
         }
       }
     }
@@ -50,7 +50,6 @@ export const ThemeContextProvider = ({ children }) => {
       value={{
         theme: themeState,
         onToggleTheme: toggleThemeHandler,
-        // onSetTheme: useTheme(themeState),
       }}
     >
       {children}

@@ -115,10 +115,6 @@ const cartReducer = (state, action) => {
       }
     });
 
-    console.log({
-      items: updatedItems,
-      subtotal: updatedSubtotal,
-    });
 
     return {
       items: updatedItems,
@@ -154,7 +150,7 @@ export const CartContextProvider = ({ children }) => {
       // "not logged in: get local storage"
       if (typeof window !== "undefined") {
         let cartInLS = JSON.parse(localStorage.getItem("cart"));
-        if (cartInLS.items.length > 0) {
+        if (cartInLS) {
           dispatchCartAction({ type: "ADD_CART", cart: cartInLS });
         }
       }

@@ -31,11 +31,11 @@ const StoreNav = ({ className, onExitNav, collections, padTopOrNot }) => {
             key={`${collection.id}`}
             className={classes["store-nav-collection-item"]}
           >
-            <p className={classes["collection-name"]}>
-              <Link href={`/store/collection/${collection.id}`}>
-                <a>{collection.name}</a>
-              </Link>
-            </p>
+            <Link href={`/store/collection/${collection.id}`}>
+            <a className={classes["collection-name"]}>
+                {collection.name}
+            </a>
+            </Link>
             {collection.subCollections.length > 0 && (
               <p className={classes["sub-collection-arrow"]}>&gt;</p>
             )}

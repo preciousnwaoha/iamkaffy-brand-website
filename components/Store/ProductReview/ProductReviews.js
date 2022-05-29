@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import AuthContext from "../../../context/auth-context";
 import UIBigTitle from "../../UI/UIBigTitle";
 import ReviewStars from "../StoreUI/ReviewStars";
@@ -9,21 +9,37 @@ import classes from "./ProductReviews.module.css";
 import WriteReview from "./WriteReview";
 
 
-const ProductReviews = ({ product }) => {
+const ProductReviews = ({ product, reviews }) => {
   const authCtx = useContext(AuthContext)
   const [showWriteReview, setShowWriteReview] = useState(false)
+  const [reviewsToMap, setReviewsToMap] = useState(reviews)
 
-  const {reviews} = product
+  let userReview = null;
+  if (authCtx.isLoggedIn) {
+    const curUserReview = reviewsToMap.filter(review => review.reviewerId === authCtx.userId)
 
-  const writeReviewHandler = () => {
-    
+    console.log("review", curUserReview)
+    if (curUserReview.length === 1) {
+      userReview = {...curUserReview[0]}
+    }
+  }
+
+
+  const showWriteReviewHandler = () => {
+      // show write a review form
       setShowWriteReview(true)
-    
   };
+  const postedNewReviewHandler = (newReviews) => {
+    // reload reviews
+    setReviewsToMap(newReviews)
+    // hide write a review form
+    setShowWriteReview(false)
+};
 
-  const reviewExist = reviews.length > 0;
 
-  const allRating = reviews.map(review => review.rating)
+  const reviewExist = reviewsToMap.length > 0;
+
+  const allRating = reviewsToMap.map(review => review.rating)
 
   const calculateAverage = (array) => {
     let total = 0;
@@ -49,15 +65,15 @@ const ProductReviews = ({ product }) => {
       {!showWriteReview && <button
         type="button"
         className={classes["write-review-btn"]}
-        onClick={writeReviewHandler}
+        onClick={showWriteReviewHandler}
       >
-        write a review <FontAwesomeIcon icon={faPen} className={classes["wrb-icon"]} />
+        {`${userReview ? "edit your" : "write a"}`} review <FontAwesomeIcon icon={faPen} className={classes["wrb-icon"]} />
       </button>}
 
-     { showWriteReview && <WriteReview product={product} />}
+     { showWriteReview && <WriteReview product={product} reviews={reviews} onPostedNewReview={postedNewReviewHandler} />}
       <div className={classes["product-reviews-content"]}>
-        {(reviews && reviewExist) ? (
-          reviews.map((review) => (
+        {(reviewsToMap && reviewExist) ? (
+          reviewsToMap.map((review) => (
             <ProductReview
               key={`review${review.reviewerName}${reviews.indexOf(review)}`}
               reviewerName={review.reviewerName}

@@ -10,6 +10,7 @@ const emailRegex =
 
 const Login = () => {
     const router = useRouter();
+    
     const authCtx = useContext(AuthContext)
 
   const [authError, setAuthError] = useState("");
@@ -19,7 +20,12 @@ const Login = () => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
 
-  // values validity state defs
+  // get route path
+  // let path = router.asPath
+  // if (typeof window !== "undefined") {
+  //   let origin = window.location.origin
+  //   path = `${origin}${path}`
+  // }
 
   // touched state defs
   const [emailIsTouched, setEmailIsTouched] = useState(false);
@@ -141,7 +147,7 @@ const Login = () => {
 
         {!isLoading && (
           <button disabled={!formIsValid} type="submit">
-            Create
+            Login
           </button>
         )}
         {isLoading && <p className={classes.loading}>In a sec...</p>}

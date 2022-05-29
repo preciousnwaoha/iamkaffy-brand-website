@@ -1,42 +1,23 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import UITitle from "../../../UI/UITitle";
 
 import Product from "../Product";
 import NoProducts from "../NoProducts";
 import ItemsContext from "../../../../context/items-context";
 import classes from "./ViewedProducts.module.css";
-// import CollectionFilterSort from "./CollectionFilterSort";
 
-const ViewedProducts = ({ inStoreHome = false, newProduct = {} }) => {
+const ViewedProducts = ({ inStoreHome = false, newProduct = null }) => {
   const itemsCtx = useContext(ItemsContext);
 
   const { viewedItems } = itemsCtx;
 
-  if (newProduct.id) {
-    console.log("addToViewedProductsHandler");
-    const {
-      id,
-      name,
-      images,
-      subCollections,
-      collections,
-      price,
-      numberLeft,
-      numSold,
-    } = newProduct;
-
-    itemsCtx.addItem({
-      id,
-      name,
-      images,
-      subCollections,
-      collections,
-      price,
-      numberLeft,
-      numSold,
-    });
-  }
-
+  useEffect(() => {
+    if (newProduct) {
+      itemsCtx.addItem(newProduct);
+    }
+  
+  })
+  
   return (
     <div className={classes.viewed}>
       <UITitle titleText={"Viewed Products"} className={classes["title"]} />

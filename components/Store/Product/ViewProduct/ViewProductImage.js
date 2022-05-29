@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Button from "../../../UI/Button";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import classes from "./ViewProductImage.module.css";
 
 
@@ -52,10 +54,10 @@ const ViewProductImage = ({ product }) => {
       </div>
       <div className={classes["actions"]}>
         <Button className={classes["next-btn"]} clickAction={forwardsHandler}>
-          &lt;
+        <FontAwesomeIcon icon={faAngleLeft} style={{fontSize: "1.125rem"}} />
         </Button>
         <Button className={classes["prev-btn"]} clickAction={backwardsHandler}>
-          &gt;
+        <FontAwesomeIcon icon={faAngleRight} style={{fontSize: "1.125rem"}} />
         </Button>
       </div>
     </div>

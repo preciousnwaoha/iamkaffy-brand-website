@@ -62,13 +62,14 @@ const ThemeButton = () => {
       themeCtx.onToggleTheme()
     }
 
+
     useEffect(() => {
       if (typeof window !== "undefined") {
         let themeFromLS = localStorage.getItem("theme");
-        if (themeFromLS) {
-          // setThemeState(themeFromLS)
-          // console.log("themeE", themeFromLS)
-        }
+        // if (themeFromLS) {
+        //   setThemeState(themeFromLS)
+        //   console.log("themeE", themeFromLS)
+        // }
       }
     }, [])
 

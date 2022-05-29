@@ -1,5 +1,4 @@
 import Head from "next/head";
-import CookieConsent, { Cookies, getCookieConsentValue } from "react-cookie-consent";
 import Header from "../../components/Layout/Header";
 import Footer from "../../components/Layout/Footer";
 import styles from "../../styles/Shop.module.css";
@@ -71,19 +70,6 @@ const Store = ({ propsData }) => {
        <ViewedProducts inStoreHome={true} />
         {/* <ProductReviews /> */}
         <MailingList />
-        <CookieConsent
-        // debug={true}
-        location="bottom"
-        containerClasses={styles["cookie-consent-container"]}
-        contentClasses={styles["cookie-consent-content"]}
-        buttonClasses={styles["cookie-consent-btn"]}
-        expires={365}
-          >
-          We use cookies to enhance your experience as you use this website.{" "}
-          {/* <span style={{ fontSize: "0.85rem" }}>
-            This bit of text is smaller :O
-          </span> */}
-        </CookieConsent>
       </main>
       <Footer />
     </div>
