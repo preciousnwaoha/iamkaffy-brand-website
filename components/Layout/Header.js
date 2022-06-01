@@ -1,8 +1,9 @@
 import React from 'react'
 import Nav from './Nav'
 import Logo from '../UI/Logo'
-import ScrollLine from '../UI/ScrollLine'
+import ScrollLine from '../UI/scrollLine'
 import classes from "./Header.module.css"
+
 
 
 const Header = () => {
