@@ -1,15 +1,21 @@
 .scroll-line {
     position: absolute;
-    bottom: -0.22rem;
-    /* position: fixed; */
-    /* top: var(--headerHeigth); */
+    bottom: -0.15rem;
+        height: 0.15rem;
     left: 0;
-    height: 0.22rem;
+    
     width: 100%;
 }
 
 .scroll-line-inner {
      background: var(--black);
      height: 100%;
+}
+
+@media screen and (min-width: 760px) {
+    .scroll-line {
+        bottom: -0.22rem;
+        height: 0.22rem;
+    }
 }
 
