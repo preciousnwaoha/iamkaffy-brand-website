@@ -18,13 +18,13 @@
 }
 
 .photos::-webkit-scrollbar {
-    width: 10px;
-    background: var(--white);
+    /* width: 10px; */
+    /* background: var(--white); */
 }
 
 .photos::-webkit-scrollbar-thumb {
-    background: rgba(129, 78, 40, 0.679);
-    border-radius: 1rem;
+    /* background: rgba(129, 78, 40, 0.679); */
+    /* border-radius: 1rem; */
     cursor: pointer;
 }
 

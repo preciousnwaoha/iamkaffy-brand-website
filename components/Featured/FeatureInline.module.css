@@ -1,6 +1,8 @@
 .feature-inline {
     margin: 1rem;
     margin-bottom: 2rem;
+    border-left: 0.25rem solid var(--secondary);
+    padding-left: 1rem;
 }
 
 .feature-inline h5 {
@@ -10,6 +12,10 @@
     margin: 0;
     margin-bottom: 0.5rem;
 }
+.feature-inline h5:hover {
+    color: var(--black);
+}
+
 
 .feature-inline p {
     margin: 0;

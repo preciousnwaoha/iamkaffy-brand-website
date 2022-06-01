@@ -60,11 +60,11 @@
 }
 
 .showup-left {
-    animation: showFromLeft .5s ease-in forwards;
+    animation: showFromLeft .3s ease-in-out forwards;
 }
 
 .showup-right {
-    animation: showFromRight .5s ease-in forwards;
+    animation: showFromRight .3s ease-in-out forwards;
 }
 
 

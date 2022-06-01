@@ -6,12 +6,14 @@ import { ThemeContextProvider } from "../context/theme-context";
 import { AuthContextProvider } from "../context/auth-context";
 import { ItemsContextProvider } from "../context/items-context";
 import { ContactShippingInfoContextProvider } from "../context/contact-shipping-info-context";
+import { ScrollContextProvider } from "../context/scroll-context";
 
 config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeContextProvider>
+    <ScrollContextProvider>
+      <ThemeContextProvider>
       <AuthContextProvider>
         <ContactShippingInfoContextProvider>
         <CartContextProvider>
@@ -22,6 +24,8 @@ function MyApp({ Component, pageProps }) {
         </ContactShippingInfoContextProvider>
       </AuthContextProvider>
     </ThemeContextProvider>
+    </ScrollContextProvider>
+    
   );
 }
 

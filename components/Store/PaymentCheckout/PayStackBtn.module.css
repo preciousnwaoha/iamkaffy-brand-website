@@ -5,8 +5,10 @@
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     background-color: rgb(0, 135, 208);
+    
     font-weight: bold;
     color: #e0eafc;
+    max-width: 453px;
     border: none;
     border-radius: 5px;
     width: 100%;

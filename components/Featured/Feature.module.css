@@ -116,6 +116,9 @@
         background: var(--bg-art) var(--black-stay);;
         
         background-size: contain;
+        /* -moz-box-shadow: 0 0 5px var(--shadow-3); */
+    /* -webkit-box-shadow: 0 0 5px var(--shadow-3);
+    box-shadow: 0 0 5px var(--shadow-3); */
         border-radius: 1rem;
         
   box-shadow: 0px 0px 8px 0px var(--shadow-2);

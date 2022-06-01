@@ -45,14 +45,17 @@ const CheckOutPage = () => {
     validity,
   } = contactShippingInfoCtx.contactInfo;
 
+  const zipCodeRedo = `${zipCode ? "Zip/Postal Code: " + zipCode + ", " : ""}`
+  const cityRedo = `${city ? city + ", " : ""}`
+  const stateRedo = `${state ? state + ", " : ""}`
+  const countryRedo = `${country ? country + "." : ""}`
+
   const CSIData = {
     name: `${firstName} ${lastName}`,
     email: contactEmail,
     phone,
     address,
-    location: `${zipCode ? "Zip/Postal Code: " + zipCode + ", " : ""}${
-      city ? city + ", " : ""
-    }${state ? state + ", " : ""}${country ? country + "." : ""}`,
+    location: `${zipCodeRedo}${cityRedo}${stateRedo}${countryRedo}`,
   };
 
   const toggleShowSummaryHandler = () => {
@@ -64,17 +67,17 @@ const CheckOutPage = () => {
   };
 
   const paymentSuccessHandler = async (reference) => {
-    loadingOrderComplete(true)
+    setLoadingOrderComplete(true)
     const {status, trxref} = reference
     const order_ref = trxref || (new Date()).getTime()
-    const order_id = `${isLoggedIn ? (Math.random() * 10000).toFixed(4).shift + "u" : (Math.random() * 10000).toFixed(4) + "a"}${order_ref}`
-
+    const order_id = `${isLoggedIn ? (Math.floor(Math.random() * 10000)).toFixed() + "u" : (Math.floor(Math.random() * 10000)).toFixed() + "a"}${order_ref}`
+    const order_date = new Date().toLocaleDateString().replace(/\//g, "-")
 
     const orderData = {
       order_ref: trxref,
       order_id: order_id,
-      user_id: `${isLoggedIn ? userId : email || "Anonymous"}`,
-      order_date: new Date(trxref),
+      user_id: `${isLoggedIn ? userId : "Anonymous"}`,
+      order_date,
       CSIData,
       orders: [
         ...cartCtx.items
@@ -84,8 +87,19 @@ const CheckOutPage = () => {
       paymentStatus: status,
     }
 
+
+    // clear cart
+    
+    cartCtx.onClearCart()
+    
+
     // Send order to database
-    await setDoc(doc(ordersCollectionRef, order_id), orderData)
+    await setDoc(doc(ordersCollectionRef, order_id), orderData).then(data => {
+      console.log(data)
+    }).catch(err => {
+      console.log(err)
+    })
+
 
     // Send emails of order
     const sendOrderEmailResponse = await fetch("/api/orderConfirmEmail", {
@@ -95,10 +109,14 @@ const CheckOutPage = () => {
         'Content-Type': 'application/json'
         // 'Content-Type': 'application/x-www-form-urlencoded',
       },
+    }).then(data => {
+      console.log(data)
+    }).catch(err => {
+      console.log(err)
     });
 
     setOrderComplete(true);
-    loadingOrderComplete(false)
+    setLoadingOrderComplete(false)
 
   };
 

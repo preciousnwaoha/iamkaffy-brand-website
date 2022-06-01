@@ -3,7 +3,9 @@
     top: 60px;
     right: -100%;
     height: calc(100vh - var(--headerHeigth));
-    background: var(--white);
+    background-color: var(--white);
+    background-image: var(--bg-art);
+    background-size: contain;
     width: 80%;
     overflow-y: scroll;
     z-index: 10;
@@ -44,8 +46,6 @@
 
 .cart::-webkit-scrollbar-thumb {
     background: var(--primary-trans);
-    border-radius: 1rem;
-    cursor: pointer;
 }
 
 .cart::-webkit-scrollbar-thumb:hover {

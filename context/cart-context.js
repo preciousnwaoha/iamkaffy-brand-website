@@ -10,6 +10,7 @@ const CartContext = React.createContext({
   subtotal: 0,
   onAddToCart: (item) => {},
   onRemoveFromCart: (id) => {},
+  onClearCart: () => {},
 });
 
 const DEFAULT_CART_STATE = {
@@ -107,9 +108,7 @@ const cartReducer = (state, action) => {
       );
       const existingCartItem = state.items[existingCartItemIndex];
 
-      if (existingCartItem) {
-        console.log("exists");
-      } else {
+      if (!!existingCartItem === false) {
         updatedSubtotal += item.price * item.quantity;
         updatedItems = updatedItems.concat(item);
       }
@@ -120,6 +119,12 @@ const cartReducer = (state, action) => {
       items: updatedItems,
       subtotal: updatedSubtotal,
     };
+  }
+
+  if (action.type === "CLEAR_CART") {
+    
+
+    return DEFAULT_CART_STATE;
   }
 
   return DEFAULT_CART_STATE;
@@ -186,6 +191,10 @@ export const CartContextProvider = ({ children }) => {
     }
   };
 
+  const clearCartHandler = () => {
+    dispatchCartAction({ type: "CLEAR_CART" });
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -193,6 +202,7 @@ export const CartContextProvider = ({ children }) => {
         subtotal: cartState.subtotal,
         onAddToCart: addToCartHandler,
         onRemoveFromCart: removeFromCartHandler,
+        onClearCart: clearCartHandler,
       }}
     >
       {children}

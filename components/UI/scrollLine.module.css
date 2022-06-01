@@ -1,0 +1,15 @@
+.scroll-line {
+    position: absolute;
+    bottom: -0.22rem;
+    /* position: fixed; */
+    /* top: var(--headerHeigth); */
+    left: 0;
+    height: 0.22rem;
+    width: 100%;
+}
+
+.scroll-line-inner {
+     background: var(--black);
+     height: 100%;
+}
+

@@ -10,7 +10,6 @@ const FeaturedSection = ({ featuredData }) => {
     (a, b) => a.order - b.order
   );
 
-  console.log(featuredDataOrganized);
 
   if (noOfFeatured < 1) {
     return;

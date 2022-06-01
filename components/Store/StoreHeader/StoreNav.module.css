@@ -1,4 +1,5 @@
 .store-nav {
+    direction: rtl;
     width: 90%;
     max-width: 300px;
     position: fixed;
@@ -64,9 +65,17 @@
     }
 }
 
-.store-nav::-webkit-scrollbar {
+/* .store-nav::-webkit-scrollbar {
     width: 0;
     background-color: var(--white)
+} */
+
+.store-nav::-webkit-scrollbar-thumb {
+    background: var(--primary-trans);
+}
+
+.store-nav::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-trans);
 }
 
 .store-nav-logo {
@@ -74,6 +83,7 @@
     margin: 0.5rem;
     margin-bottom: 1rem;
     color: var(--primary);
+    direction: ltr;
 }
 
 .store-exit-icon {
@@ -94,6 +104,7 @@
     font-weight: 500;
     cursor: pointer;
     user-select: none;
+    direction: ltr;
 }
 
 .store-exit-icon:hover {
@@ -105,6 +116,7 @@
     padding-left: 0;
     margin: 0;
     margin-bottom: 2rem;
+    direction: ltr;
     /* width: 100%; */
 }
 
@@ -115,6 +127,7 @@
     margin: 0;
     padding: 0;
     cursor: pointer;
+    direction: ltr;
 }
 
 .store-nav-collection-item:not(:last-of-type) {
@@ -124,7 +137,7 @@
 .collection-name, .sub-collection-arrow {
     margin: 0;
     padding: 0.75rem 1rem;
-    
+    direction: ltr;
     cursor: pointer;
 
 }
@@ -132,6 +145,7 @@
 .collection-name {
     color: var(--black);
     /* border: 1px solid blue; */
+    direction: ltr;
     width: 100%;
 }
 
@@ -141,12 +155,14 @@
 
 .sub-collection-arrow {
     color: var(--primary);
+    direction: ltr;
     /* border: 1px solid green; */
 }
 
 .store-nav-acc {
     /* border: 1px solid green; */
     margin-top: 0.5rem;
+    direction: ltr;
 }
 
 .store-nav-acc-head {
@@ -154,13 +170,15 @@
     font-size: 0.85rem;
     /* border: 1px solid red; */
     padding: 0.5rem 1rem;
+    direction: ltr;
 }
 
 .store-nav-acc_item {
     /* border: 1px solid yellow; */
     display: block;
     padding: 1rem;
-    color: var(--black)
+    color: var(--black);
+    direction: ltr;
 }
 
 .store-nav-acc_item:hover {
@@ -180,8 +198,10 @@
     border: none;
     cursor: pointer;
     outline: none;
+    direction: ltr;
 }
 
 .logout:hover, .logout:active {
-    color: var(--primary)
+    color: var(--primary);
+    direction: ltr;
 }

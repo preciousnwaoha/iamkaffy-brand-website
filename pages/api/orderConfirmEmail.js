@@ -29,7 +29,7 @@ export default async function handler(req, res) {
   let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
 
 
-  sendSmtpEmail.to = [{ email: "{{params.to_email}}", name: "{{params.to_name}}" }, { email: "guidetophone@gmail.com", name: "Precious" }];
+  sendSmtpEmail.to = [{ email: "nwaohaprecious25@gmail.com", name: "Kaffy" }, { email: `${email.trim()}`, name: `${name}` }];
   sendSmtpEmail.templateId = 3
   sendSmtpEmail.headers = { "Some-Custom-Name": "unique-id-1234" };
   sendSmtpEmail.params = {
@@ -44,6 +44,8 @@ export default async function handler(req, res) {
     subtotal,
     currency,
   };
+
+
 
   await apiInstance.sendTransacEmail(sendSmtpEmail).then(
     function (data) {

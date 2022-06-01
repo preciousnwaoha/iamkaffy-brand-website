@@ -1,6 +1,6 @@
 .scroll {
     position: absolute;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 40px;
@@ -19,11 +19,21 @@
 
 
 .bounceDown {
+    display: flex;
     animation: bouncyDown 3s infinite;
 }
 
 .bounceUp {
+    display: flex;
     animation: bouncyUp 3s infinite;
+}
+
+.hide {
+    display: flex;
+}
+
+.show {
+    display: flex;
 }
 
 

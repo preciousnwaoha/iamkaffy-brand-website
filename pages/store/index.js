@@ -61,8 +61,8 @@ const Store = ({ propsData }) => {
 
       <main className={styles.main}>
         <Header />
-        <StoreLanding  />
-        <StoreHeader isLandingPage={true} collections={propsData.collections} />
+        {/* <StoreLanding  /> */}
+        <StoreHeader isLandingPage={false} collections={propsData.collections} />
         <StoreCollections collectionsData={propsData.collections} />
         <CollectionInHome data={ {collection: propsData.collections[0], products: propsData.products} } />
         <CollectionInHome data={ {collection: propsData.collections[1], products: propsData.products} } />

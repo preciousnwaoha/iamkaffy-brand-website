@@ -41,7 +41,6 @@ export const ThemeContextProvider = ({ children }) => {
 
     if (typeof window !== "undefined") {
       localStorage.setItem("theme", themeState);
-      console.log("theme", themeState);
     }
   }, [themeState]);
 

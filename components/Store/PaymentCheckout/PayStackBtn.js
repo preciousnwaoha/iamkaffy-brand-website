@@ -4,12 +4,10 @@ import { PaystackButton } from 'react-paystack'
 import classes from './PayStackBtn.module.css'
 
 
-
+const publicKey = process.env.NEXT_PUBLIC_PSK_PUB_KEY
   
 
 const PayStackBtn = ( { item, fromCart=false, onPaymentSuccess, CSIData }) => {
-
-  
 
   let amountToPay;
 
@@ -20,23 +18,18 @@ const PayStackBtn = ( { item, fromCart=false, onPaymentSuccess, CSIData }) => {
     amountToPay = item.price
   }
 
+
     const amount = amountToPay * 100  // Remember, set in kobo!
     const {name, email, phone, address, location} = CSIData
 
-    const preConfig = {
+    const config = {
+      publicKey,
       reference: (new Date()).getTime(),
       email,
       amount,
     };
 
-    const config = fetch("/api/getPayStackConfig", {
-      method: "post",
-      body: JSON.stringify(preConfig),
-      headers: {
-        'Content-Type': 'application/json'
-        // 'Content-Type': 'application/x-www-form-urlencoded',
-      },
-    });
+
 
     const handlePaystackSuccessAction = (reference) => {
         // Implementation for whatever you want to do with reference and after success call.
@@ -46,7 +39,7 @@ const PayStackBtn = ( { item, fromCart=false, onPaymentSuccess, CSIData }) => {
 
       const handlePaystackCloseAction = () => {
         // implementation for  whatever you want to do when the Paystack dialog closed.
-        alert("Wait! You need this, don't go!!!!")
+        alert("Wait! Sure you want to go!!!")
         console.log('closed')
       }
   
