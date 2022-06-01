@@ -3,7 +3,6 @@ import CartItem from "./CartItem";
 import classes from "./Cart.module.css";
 import CheckOutBtn from "../PaymentCheckout/CheckOutBtn";
 import CartContext from "../../../context/cart-context";
-import GooglePayBtn from "../PaymentCheckout/GooglePayBtn";
 import PayStackBtn from "../PaymentCheckout/PayStackBtn";
 
  
