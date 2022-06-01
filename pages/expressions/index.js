@@ -16,10 +16,10 @@ const programsCollectionRef = collection(db, "programs");
 
 const featuredCollectionRef = collection(db, "featured");
 
-// const videosCollectionRef = collection(db, "videos")
+const videosCollectionRef = collection(db, "videos")
 export async function getStaticProps() {
   //   // const videosDataFrb = await getDocs(videosCollectionRef);
-  // const videosDataFrb = await getDocs(videosCollectionRef);
+  const videosDataFrb = await getDocs(videosCollectionRef);
 
   const programsData = await getDocs(programsCollectionRef);
 
@@ -36,10 +36,9 @@ export async function getStaticProps() {
     return { ...doc.data(), id: doc.id };
   });
 
-  const videosData = [
-    { id: "Yq99FyfnGxA", type: "landscape", from: "youtube" },
-    { id: "41FLPJ5_Qwk", type: "portrait", from: "youtube" },
-  ];
+  const videosData = videosDataFrb.docs.map(doc =>  {
+    return {...doc.data(), id: doc.id}
+  })
 
 
   return {

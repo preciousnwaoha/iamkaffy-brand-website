@@ -17,34 +17,26 @@ import styles from "../styles/Home.module.css";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 
-// const videosCollectionRef = collection(db, "videos")
+const videosCollectionRef = collection(db, "videos")
 const contactDetailsCollectionRef = collection(db, "contactDetails");
 const successStoriesCollectionRef = collection(db, "successStories");
 const featuredCollectionRef = collection(db, "featured");
 
 export async function getStaticProps() {
-  // const videosDataFrb = await getDocs(videosCollectionRef);
-
+  const videosDataFrb = await getDocs(videosCollectionRef);
   const contactDetailsData = await getDocs(contactDetailsCollectionRef);
   const successStoriesData = await getDocs(successStoriesCollectionRef);
   const featuredDataFrb = await getDocs(featuredCollectionRef);
 
 
-  // const videosData = videosEmbedIdData.docs.map(doc =>  {
-  //   return (
-  //     {...doc.data(), id: doc.id}
-  //   )
-  // })
+  const videosData = videosDataFrb.docs.map(doc =>  {
+    return {...doc.data(), id: doc.id}
+  })
 
   const featuredData = featuredDataFrb.docs.map((doc) => {
     return { ...doc.data(), id: doc.id };
   });
 
-
-  const videosData = [
-    { id: "Yq99FyfnGxA", type: "landscape", from: "youtube" },
-    { id: "41FLPJ5_Qwk", type: "portrait", from: "youtube" },
-  ];
 
   const contactDetails = contactDetailsData.docs.map((doc) => {
     return { ...doc.data(), id: doc.id };
@@ -92,20 +84,7 @@ export default function Home({
         <Services inHome={true} />
         <BrandsWorkedWith />
         <GetInTouch data={contactDetails} />
-        <CookieConsent
-        // debug={true}
-        location="bottom"
-        containerClasses={styles["cookie-consent-container"]}
-        contentClasses={styles["cookie-consent-content"]}
-        buttonClasses={styles["cookie-consent-btn"]}
-        expires={365}
-          >
-          We use cookies to enhance your experience as you use this website.{" "}
-          {/* <span style={{ fontSize: "0.85rem" }}>
-            This bit of text is smaller :O
-          </span> */}
-        </CookieConsent>
-        {console.log(getCookieConsentValue())}
+        
       </main>
       <Footer />
     </div>

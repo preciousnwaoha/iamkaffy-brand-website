@@ -1,10 +1,6 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 import classes from "./Video.module.css";
 
-// import PropTypes from "prop-types";
-// embedId
 const Video = ({ id, type, from }) => {
   let vw = "640px";
   let vh = "360px";

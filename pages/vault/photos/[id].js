@@ -25,19 +25,6 @@ export const getStaticPaths = async () => {
     };
   });
 
-  // const listOfIds = [
-  //   {
-  //     params: {
-  //       id: "jnvajvdfijgg",
-  //     },
-  //   },
-  //   {
-  //     params: {
-  //       id: "jnvajvdjknfi",
-  //     },
-  //   },
-  // ];
-
   return {
     paths: listOfIds,
     fallback: false,
@@ -58,24 +45,11 @@ export async function getStaticProps({ params }) {
     { id: "41FLPJ5_Qwk", type: "portrait", from: "youtube" },
   ];
 
-  const photosData = [
-    {
-      id: "jnvajvdfijgg",
-      url: "/images/dance-burn-1.JPG",
-      desc: "Dance Burnout",
-    },
-    {
-      id: "jnvajvdjknfi",
-      url: "/images/fit-3.JPG",
-      desc: "Fit 3",
-    },
-  ];
-
-  // const photosData = photosDataFrb.docs.map(doc =>  {
-  //   return (
-  //     {...doc.data(), id: doc.id}
-  //   )
-  // })
+  const photosData = photosDataFrb.docs.map(doc =>  {
+    return (
+      {...doc.data(), id: doc.id}
+    )
+  })
 
   // const videosData = videosDataFrb.docs.map(doc =>  {
   //   return (
@@ -106,10 +80,7 @@ export async function getStaticProps({ params }) {
 }
 
 const Vault = ({ photoData, featuredData, videosData, photosData }) => {
-  if (typeof window !== "undefined") {
-    document.cookie = "cookie4=value4; SameSite=None; Secure";
-  }
-
+  
   return (
     <div className={styles.container}>
       <Head>
