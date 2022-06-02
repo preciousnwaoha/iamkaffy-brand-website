@@ -12,7 +12,7 @@ const PayStackBtn = ( { item, fromCart=false, onPaymentSuccess, CSIData }) => {
 
   useEffect(() => {
     const getPaystackData = async () => {
-      const payDataRef = doc(db, "payments", "paystack")
+      const payDataRef = doc(db, "admin", "paystack")
       const payData = await getDoc(payDataRef).then(data => {
         setPayStackData(data.data())
       }).catch(err => {

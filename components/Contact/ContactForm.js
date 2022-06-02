@@ -74,6 +74,7 @@ const ContactForm = (toEmail=null) => {
           },
         })
 
+
         if (mailMessageResponse.status === 200) {
           setRetry(false)
           setSending(false)
@@ -99,9 +100,9 @@ const ContactForm = (toEmail=null) => {
         <label htmlFor='email'>Email</label>
         <input onChange={emailChangeHandler} onBlur={emailBlurHandler} type="email" id="email" placeholder='Email' />
        { emailHasError && <p className={classes.error}>Please enter your valid email address</p>}
-        <textarea ref={messageRef} placeholder='Got a message for Kaffy'> 
+        <textarea ref={messageRef} placeholder={`${toEmail ? 'Write message' : 'Got a message for Kaffy?'}`}> 
         </textarea>
-        {submitted ? <p>Kaffy&apos;s got your message</p> : <button type="submit" className={classes["form-submit-btn"]}>
+        {submitted ? <p>{`${toEmail ? 'Your Message has been sent!' : 'Kaffy\'s got your message'}`}</p> : <button type="submit" className={classes["form-submit-btn"]}>
         {(!sending && !retry ) && "Send Message" }
            {sending && "Sending..." }
            {(retry && !sending) && "Could not Send, Retry?"}

@@ -201,7 +201,7 @@ const Story = () => {
               Breaker and choreographing hip-hop on MTV Stage; authoring a
               best-selling memoir,books, training over a thousand 1,000 dancers
               & celebrities, featuring on CNN, and to founding a fitness
-              companyies.
+              company.
             </p>
             <p>
               Kaffy Shafau is the perfect example of never stop, never settle,

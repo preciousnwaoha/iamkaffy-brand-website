@@ -37,7 +37,7 @@ const Landing = () => {
             society.
           </p>
           <p className={classes["p-yellow"]}>
-            I believe dance is more than movements – iIt is a tool to reform and
+            I believe dance is more than movements – it is a tool to reform and
             activate the human minds for personal discovery, societal
             transformation and exploring humanity.
           </p>

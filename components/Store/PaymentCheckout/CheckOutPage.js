@@ -146,9 +146,9 @@ const CheckOutPage = () => {
           </div>
           {showSummary && <OrderSummary />}
         </div>
-        <ContactAndShippingInfoItem />
+        {!loadingOrderComplete && <ContactAndShippingInfoItem />}
 
-        {isLoggedIn && (
+        {!isLoggedIn && (
           <div className={classes.login}>
             <button
               className={classes["login-btn"]}
@@ -159,7 +159,7 @@ const CheckOutPage = () => {
           </div>
         )}
 
-        <div className={classes["express-checkout"]}>
+        {!loadingOrderComplete && <div className={classes["express-checkout"]}>
           {validity && (
             <PayStackBtn
               item={cartCtx}
@@ -168,7 +168,7 @@ const CheckOutPage = () => {
               CSIData={CSIData}
             />
           )}
-        </div>
+        </div>}
 
         {loadingOrderComplete && <Loading />}
 

@@ -193,9 +193,9 @@ const SetContactAndShippingInfo = ({ onToggleEdit }) => {
       <form onSubmit={submitHandler}>
         <div className={classes["contact-info"]}>
           <h3 className={classes["contact-info-title"]}>Contact Information</h3>
-          <label htmlFor="email"></label>
+          <label htmlFor="contact-email"></label>
           <input
-            id="email"
+            id="contact-email"
             type="email"
             placeholder="Contact Email"
             defaultValue={curValuesIsValid ? contactInfo.contactEmail : ""}
