@@ -12,18 +12,17 @@
 
 .auth-pop-up::-webkit-scrollbar {
     width: 10px;
-    background: transparent;
+    background: var(--white);
 }
 
 .auth-pop-up::-webkit-scrollbar-thumb {
     background: var(--primary-trans);
-    border-radius: 1rem;
-    cursor: pointer;
 }
 
 .auth-pop-up::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-trans);
 }
+
 
 .return-to-store {
     display: block;

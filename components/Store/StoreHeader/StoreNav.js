@@ -7,13 +7,13 @@ import AuthContext from "../../../context/auth-context";
 const StoreNav = ({ className, onExitNav, collections, padTopOrNot }) => {
   const authCtx = useContext(AuthContext)
   const isLoggedIn = authCtx.isLoggedIn
+  
 
   const hideNavHandler = () => {
     onExitNav();
   };
 
   const logoutHandler = () => {
-    console.log("logged out")
     authCtx.logout()
   }
 
@@ -63,6 +63,11 @@ const StoreNav = ({ className, onExitNav, collections, padTopOrNot }) => {
           </Link>}
          {isLoggedIn && <button onClick={logoutHandler} className={classes["logout"]}>Logout</button>}
 
+         <Link href={"/store/support"} >
+          <a  className={classes["store-nav-acc_item"]}>Support</a>
+          </Link>
+          
+          
       </div>
     </div>
   );

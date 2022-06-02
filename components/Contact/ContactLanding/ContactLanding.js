@@ -23,8 +23,8 @@ const DEFAULT_OPTIONS = [
   },
   {
     id: "copt4",
-    optionText: "Speaking Engagements",
-    optionId: "contact-1",
+    optionText: "Store Support",
+    optionId: "store-support",
   },
   {
     id: "copt5",

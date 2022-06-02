@@ -189,7 +189,7 @@
     border-bottom: 1px solid var(--primary);
 }
 
-.logout {
+.logout, .support-btn {
     display: block;
     padding: 1rem;
     font-size: 1rem;
@@ -201,7 +201,8 @@
     direction: ltr;
 }
 
-.logout:hover, .logout:active {
+.logout:hover, .support-btn:hover .logout:active {
     color: var(--primary);
     direction: ltr;
 }
+

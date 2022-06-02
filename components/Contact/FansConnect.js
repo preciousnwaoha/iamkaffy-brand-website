@@ -13,7 +13,7 @@ const FansConnect = () => {
         <div className={classes["fans-connect-inner"]}>
             <div className={classes["content-side"]}>
                 <UIBigTitle titleText={"Kaffy Connect"} className={classes.title}/>
-                <h4 className={classes["sub-title"]}>Wanna Be Associated Kaffy&apos;s Brand, Join Our Fam</h4>
+                <h4 className={classes["sub-title"]}>Wanna Reach Kaffy, or Join Our Fam</h4>
                 <ContactForm />
             </div>
             <div className={classes["image-side"]}>

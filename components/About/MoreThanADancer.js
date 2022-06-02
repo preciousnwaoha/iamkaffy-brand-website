@@ -51,11 +51,10 @@ const DEFAULT_MTAD_DATA = [
   //     "Lays out the characters of horizontal scripts naturally (upright), as well as the glyphs for vertical scripts",
   // },
 ];
-
+// <Effect1 className={classes["effect-item-1"]}/>
 const MoreThanADancer = () => {
   return (
     <div className={classes.more}>
-    <Effect1 className={classes["effect-item-1"]}/>
     <Effect1 className={classes["effect-item-2"]}/>
       <UIBigTitle
         titleText={"More Than A Dancer"}

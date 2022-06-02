@@ -21,7 +21,7 @@
     background-image: url('/images/bg-art2.png');
     background-size: cover;
     color: var(--white-stay);
-    border: 1px dotted var(--white-stay);
+    border: 1px solid var(--white-stay);
     border-top: none;
     border-left: none;
     border-right: none;
@@ -31,7 +31,7 @@
 .dare-dance-live div:nth-child(2) {
     background: transparent;
     color: var(--black);
-    border: 1px dotted var(--white-stay);
+    border: 1px solid var(--white-stay);
     border-bottom: none;
     
 }
@@ -40,7 +40,7 @@
     background-image:  url('/images/bg-art2.png');
     background-size: cover;
     color: var(--white-stay);
-    border: 1px dotted var(--white-stay);
+    border: 1px solid var(--white-stay);
     border-top: none;
     border-left: none;
     border-right: none;

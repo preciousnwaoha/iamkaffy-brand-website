@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMessage, faPhone, faLocation } from "@fortawesome/free-solid-svg-icons";
 import UIBigTitle from "../UI/UIBigTitle";
@@ -19,11 +18,9 @@ const GetInTouch = ({data}) => {
       <div className={classes["bg-div"]}>
        
       </div>
-      <div className={classes["image-wrapper"]}>
-            {/* <div className={classes["image-wrapper-inner"]}>
-          <Image src="/images/get-in-touch.jpg" alt="Get In touch with Kaffy the dancer" width={"400px"} height={"400px"} layout="responsive" />
+      {/* <div className={classes["image-wrapper"]}>
+            
         </div> */}
-        </div>
         
       <UIBigTitle titleText={"Get In Touch"} className={classes.title} />
       <div className={classes["GIT-text-wrapper"]}>

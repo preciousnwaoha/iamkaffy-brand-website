@@ -61,6 +61,13 @@
 
 
 .form-submit-btn {
+    display: inline-block;
+    padding: 1em 1.5rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    text-align: center;
+    border: none;
+    outline: none;
     color: var(--secondary);
     border: 2px solid var(--secondary);
     background-color: transparent;

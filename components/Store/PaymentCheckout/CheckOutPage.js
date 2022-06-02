@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import classes from "./CheckOutPage.module.css";
 import AuthPopUp from "../../Auth/AuthPopUp";
 import PayStackBtn from "./PayStackBtn";
 import Link from "next/link";
@@ -9,6 +8,8 @@ import CartContext from "../../../context/cart-context";
 import ContactShippingInfoContext from "../../../context/contact-shipping-info-context";
 import AuthContext from "../../../context/auth-context";
 import OrderComplete from "./OrderComplete";
+
+import classes from "./CheckOutPage.module.css";
 
 import { db } from "../../../firebase";
 import { collection, setDoc, doc } from "firebase/firestore";

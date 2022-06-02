@@ -6,7 +6,7 @@ import classes from "./ContactForm.module.css"
 const emailRegex =
   /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-const ContactForm = () => {
+const ContactForm = (toEmail=null) => {
   const [submitted, setSubmitted] = useState(false)
   const [sending, setSending] = useState(false)
   const [retry, setRetry] = useState(false)
@@ -18,7 +18,7 @@ const ContactForm = () => {
     valueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
     reset: emailResetHandler,
-  } = useInput((value) => emailRegex.test(value));
+  } = useInput((value) => emailRegex.test(value.trim()));
 
 
   const nameRef = useRef()
@@ -39,11 +39,12 @@ const ContactForm = () => {
 
         const templateParams = {
           name,
-          email: enteredEmail,
+          email: enteredEmail.trim(),
           message,
         }
 
-       const mailMessageResponse =  await fetch("/api/mailMessage", {
+      if (email) {
+        const mailSupportResponse =  await fetch("/api/mail-support", {
           method: "post",
           body: JSON.stringify(templateParams),
           headers: {
@@ -53,6 +54,26 @@ const ContactForm = () => {
         })
 
         // console.log(response)
+        if (mailSupportResponse.status === 200) {
+          setRetry(false)
+          setSending(false)
+          emailResetHandler();
+          setSubmitted(true)
+        } else {
+          setRetry(true)
+           setSending(false)
+        }
+
+      } else {
+        const mailMessageResponse =  await fetch("/api/mail-message", {
+          method: "post",
+          body: JSON.stringify(templateParams),
+          headers: {
+            'Content-Type': 'application/json'
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+        })
+
         if (mailMessageResponse.status === 200) {
           setRetry(false)
           setSending(false)
@@ -62,6 +83,11 @@ const ContactForm = () => {
           setRetry(true)
            setSending(false)
         }
+      }
+
+       
+
+        
     }
 
     
@@ -72,14 +98,14 @@ const ContactForm = () => {
         <input ref={nameRef} type="text" id="name" placeholder='Your Name' />
         <label htmlFor='email'>Email</label>
         <input onChange={emailChangeHandler} onBlur={emailBlurHandler} type="email" id="email" placeholder='Email' />
-        <p className={classes.error}>Please enter your valid email address</p>
+       { emailHasError && <p className={classes.error}>Please enter your valid email address</p>}
         <textarea ref={messageRef} placeholder='Got a message for Kaffy'> 
         </textarea>
-        {submitted ? <p>Kaffy&apos;s got your message</p> : <Button className={classes["form-submit-btn"]}>
+        {submitted ? <p>Kaffy&apos;s got your message</p> : <button type="submit" className={classes["form-submit-btn"]}>
         {(!sending && !retry ) && "Send Message" }
            {sending && "Sending..." }
            {(retry && !sending) && "Could not Send, Retry?"}
-        </Button>}
+        </button>}
     </form>
   )
 }

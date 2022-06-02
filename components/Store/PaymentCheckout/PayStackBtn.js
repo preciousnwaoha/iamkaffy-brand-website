@@ -1,13 +1,29 @@
-import React, { useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import { PaystackButton } from 'react-paystack'
 // import ContactShippingInfoContext from "../../../context/contact-shipping-info-context"
 import classes from './PayStackBtn.module.css'
 
-
-const publicKey = process.env.NEXT_PUBLIC_PSK_PUB_KEY
+import { db } from "../../../firebase"
+import { doc, getDoc } from 'firebase/firestore'
   
 
 const PayStackBtn = ( { item, fromCart=false, onPaymentSuccess, CSIData }) => {
+  const [paystackData, setPayStackData] = useState("")
+
+  useEffect(() => {
+    const getPaystackData = async () => {
+      const payDataRef = doc(db, "payments", "paystack")
+      const payData = await getDoc(payDataRef).then(data => {
+        setPayStackData(data.data())
+      }).catch(err => {
+        console.log(err)
+      })
+    }
+
+    getPaystackData()
+
+  })
+  
 
   let amountToPay;
 
@@ -23,7 +39,7 @@ const PayStackBtn = ( { item, fromCart=false, onPaymentSuccess, CSIData }) => {
     const {name, email, phone, address, location} = CSIData
 
     const config = {
-      publicKey,
+      publicKey: paystackData.PSK_PUB_KEY,
       reference: (new Date()).getTime(),
       email,
       amount,
@@ -42,6 +58,7 @@ const PayStackBtn = ( { item, fromCart=false, onPaymentSuccess, CSIData }) => {
         alert("Wait! Sure you want to go!!!")
         console.log('closed')
       }
+
   
     
 

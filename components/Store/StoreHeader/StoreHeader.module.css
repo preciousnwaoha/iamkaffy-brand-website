@@ -49,43 +49,71 @@
 
 .menu-hover {
     left: 1rem;
-    transform: translate(calc(-1rem - var(--headerHeigth)));
+    /* transform: translate(calc(-1rem - var(--headerHeigth))); */
     
 }
 
 .cart-hover {
     right: 1rem;
-    transform: translate(calc(1rem + var(--headerHeigth)));
+    /* transform: translate(calc(1rem + var(--headerHeigth))); */
     
 }
 
+.hide-left {
+    animation: hideLeft .3s ease-in-out forwards;
+}
+
+.hide-right {
+    animation: hideRight .3s ease-in-out forwards;
+}
+
+@keyframes hideLeft {
+    0% {
+        transform: translateX(0);
+        
+    }
+    100% {
+        transform: translateX(calc(-2rem - var(--headerHeigth)));
+    }
+}
+
+@keyframes hideRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        
+        transform: translateX(calc(2rem + var(--headerHeigth)));
+    }
+}
+
+
 .showup-left {
-    animation: showFromLeft .3s ease-in-out forwards;
+    animation: showLeft .3s ease-in-out forwards;
 }
 
 .showup-right {
-    animation: showFromRight .3s ease-in-out forwards;
+    animation: showRight .3s ease-in-out forwards;
 }
 
-
-
-@keyframes showFromLeft {
+@keyframes showLeft {
     0% {
-        transform: translate(calc(-1rem - var(--headerHeigth)));
+        transform: translateX(calc(-1rem - var(--headerHeigth)));
     }
     100% {
-        transform: translate(0);
+        transform: translateX(0);
     }
 }
 
-@keyframes showFromRight {
+@keyframes showRight {
     0% {
-        transform: translate(calc(1rem + var(--headerHeigth)));
+        transform: translateX(calc(2rem + var(--headerHeigth)));;
     }
     100% {
-        transform: translate(0);
+        transform: translateX(0);
     }
 }
+
 
 .menu-hover-icon {
     width: 28px;

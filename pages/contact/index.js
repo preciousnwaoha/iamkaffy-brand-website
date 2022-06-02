@@ -2,12 +2,14 @@ import Head from "next/head";
 import Header from "../../components/Layout/Header";
 import ContactLanding from "../../components/Contact/ContactLanding/ContactLanding";
 import Footer from "../../components/Layout/Footer";
-import styles from "../../styles/Home.module.css";
 import GetInTouch from "../../components/Contact/GetInTouch";
+import StoreSupport from "../../components/Store/Support/StoreSupport";
 import FansConnect from "../../components/Contact/FansConnect";
+import styles from "../../styles/Home.module.css";
 
 import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
+
 
 
 const contactDetailsCollectionRef = collection(db, "contactDetails")
@@ -44,6 +46,7 @@ const Contact = ({ propsData }) => {
         <ContactLanding />
         <GetInTouch data={propsData} />
         <FansConnect />
+        <StoreSupport />
       </main>
       <Footer />
     </div>

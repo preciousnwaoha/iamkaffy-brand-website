@@ -66,7 +66,6 @@ export const ContactShippingInfoContextProvider = ({ children }) => {
     }
      
       setContactInfo(newContactInfo);
-      console.log("updateContactInfoState")
   };
 
 

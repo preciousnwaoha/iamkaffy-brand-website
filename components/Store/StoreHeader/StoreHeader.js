@@ -13,6 +13,8 @@ const StoreHeader = ({isLandingPage=false, collections}) => {
   const [showCart, setShowCart] = useState(false)
   const [showUpIcons, setShowUpIcons] = useState(false)
 
+  
+
   const headerRef = useRef()
 
   const {scrollState} = scrollCtx
@@ -53,14 +55,14 @@ const StoreHeader = ({isLandingPage=false, collections}) => {
         <Cart className={`${showCart ? "show-cart" : "hide-cart"}`} onHideCart={toggleShowingCart}  />
     </div>
 
-    <div className={`${classes["menu-hover"]} ${showUpIcons ? classes["showup-left"] : ""}`} >
+    <div className={`${classes["menu-hover"]} ${showUpIcons ? classes["showup-left"] : classes["hide-left"]}`} >
     <Menu className={classes["menu-hover-icon"]} onClick={toggleShowingNav} />
     </div>
 
-    <div className={`${classes["cart-hover"]} ${showUpIcons ? classes["showup-right"] : ""}`}>
+    <div className={`${classes["cart-hover"]} ${showUpIcons ? classes["showup-right"] : classes["hide-right"]}`}>
     <CartIcon className={classes["cart-hover-icon"]} iconSize={"1.25rem"} onClick={toggleShowingCart} />
     </div>
-  
+
   </>
     
   )
