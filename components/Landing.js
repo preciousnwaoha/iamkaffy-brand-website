@@ -1,21 +1,16 @@
 import React from "react";
 import Image from "next/image";
-import Scroll from "./UI/Scroll";
 import classes from "./Landing.module.css";
 
-const LANDDING_IMAGES = [
-  {
-    id: "landimg1",
-    path: "/images/kaffyballet1.jpg",
-    width: "406",
-    height: "612",
-  },
-];
 
 const Landing = () => {
+
   return (
     <section className={classes.landing}>
-      <div className={classes["hero-bg"]}></div>
+      
+      <div className={classes["hero-bg"]}>
+        <Image src={"/images/kaffy-culture-2.JPEG"} objectFit={"cover"} alt={"Kaffy official website with Kaffy the dancer"} priority width={"853"} height={"1280"} layout="responsive" />
+      </div>
       <div className={classes.circle}></div>
       <div className={classes["landing-text-side"]}>
         <div className={classes["hero-text"]}>

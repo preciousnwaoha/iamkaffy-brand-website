@@ -12,9 +12,14 @@
     margin: 0;
     margin-bottom: 0.5rem;
 }
-.feature-inline h5:hover {
+.feature-inline:hover h5:hover {
     color: var(--black);
 }
+
+.feature-inline:hover {
+    border-left: 0.25rem solid var(--black);
+}
+
 
 
 .feature-inline p {
@@ -28,7 +33,7 @@
     margin: 1rem;
 }
 
-.feature-link:hover {
+.feature-inline:hover .feature-inline{
     font-weight: 700;
     text-transform: uppercase;
 } 

@@ -39,11 +39,12 @@ export default async function handler(req, res) {
   let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
 
   sendSmtpEmail.to = [
-    { email: "nwaohaprecious25@gmail.com", name: "Kaffy" },
+    { email: envs.ORDER_CONFIRM_TO_EMAIL, name: envs.ORDER_CONFIRM_TO_NAME },
     { email: `${email.trim()}`, name: `${name}` },
   ];
   sendSmtpEmail.templateId = 3;
-  sendSmtpEmail.headers = { "Some-Custom-Name": "unique-id-1234" };
+  // sendSmtpEmail.headers = { "Some-Custom-Name": "unique-id-1234" };
+  sendSmtpEmail.headers = { "Some-Custom-Name": order_id };
   sendSmtpEmail.params = {
     order_date,
     order_id,
