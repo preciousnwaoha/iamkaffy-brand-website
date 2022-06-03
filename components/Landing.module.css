@@ -9,7 +9,7 @@
     padding: 0;
     padding-bottom: 0;
     overflow: hidden;
-    /* min-height: calc(100vh - var(--headerHeigth)); */
+    min-height: calc(100vh - var(--headerHeigth));
     margin-bottom: 2rem;
 }
 

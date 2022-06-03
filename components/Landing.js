@@ -9,7 +9,7 @@ const Landing = () => {
     <section className={classes.landing}>
       
       <div className={classes["hero-bg"]}>
-        <Image src={"/images/kaffy-culture-2.JPEG"} objectFit={"cover"} alt={"Kaffy official website with Kaffy the dancer"} priority width={"853"} height={"1280"} layout="responsive" />
+        <Image src={"/images/kaffy-culture-2.jpeg"} objectFit={"cover"} alt={"Kaffy official website with Kaffy the dancer"} priority width={"853"} height={"1280"} layout="responsive" />
       </div>
       <div className={classes.circle}></div>
       <div className={classes["landing-text-side"]}>
