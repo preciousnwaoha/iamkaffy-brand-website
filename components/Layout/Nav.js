@@ -13,14 +13,19 @@ import Effect5 from "../UI/Effects/Effect5";
 const Nav = () => {
   const [showingSideNav, setShowingSideNav] = useState(false);
 
+  const [menuClicked, setMenuClicked] = useState(false)
+
   const toggleSideNavHandler = () => {
     setShowingSideNav((prevState) => {
       return !prevState;
     });
+
+    setMenuClicked(true)
   };
 
+  const hideNavClass = `${menuClicked ? classes["hide-side-nav"] : ""}`
   const sideNavClasses = `${classes["side-nav-ul"]} ${
-    showingSideNav ? classes["show-side-nav"] : classes["hide-side-nav"]
+    showingSideNav ? classes["show-side-nav"] : hideNavClass
   }`;
 
   return (

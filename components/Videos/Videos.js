@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Video from "./Video";
 import classes from "./Videos.module.css";
 
 const Videos = ({ videosData }) => {
+  let noVideos = false
+
+  if (videosData.length < 1) {
+    noVideos = true;
+  }
+  
+
   return (
     <div className={classes.videos}>
-      <div className={classes["videos-inner"]}>
+      {!noVideos && <div className={classes["videos-inner"]}>
         {videosData.map((video) => {
           
           return (
@@ -13,7 +20,9 @@ const Videos = ({ videosData }) => {
           )
 
         })}
-      </div>
+      </div>}
+
+      {noVideos && <div className={classes["videos-inner"]}>No Videos</div>}
     </div>
   );
 };

@@ -88,9 +88,12 @@
     font-size: 4rem;
   }
   .impact-angle-div {
-    top: -5vw;
-    left: -20vh;
-    width: 50vw;
-    height: 50vw;
+    /* top: -5vw;
+    left: -20vh; */
+    top: -50vw;
+    transform: translateY(50vw) rotate(45deg);
+    left: -50vw;
+    width: 100vw;
+    height: 100vw;
   }
 }

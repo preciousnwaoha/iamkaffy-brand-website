@@ -67,7 +67,7 @@ export default function Home({
     <div className={styles.container}>
       <Head>
         <title>Home | IAMKAFFY Brand</title>
-        <meta name="description" content="Kaffy the Dance Queen Personal Brand Official Website Homepage - IAMKAFFY" />
+        <meta name="description" content="Kaffy the Dance Queen's Personal Brand Official Website Homepage - IAMKAFFY" />
       </Head>
 
       <main className={styles.main}>

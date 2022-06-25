@@ -30,7 +30,7 @@
         align-items: center;
     }
     .synopsis-content {
-        width: 100%;
+        width: calc(100% - 4rem);
         margin: 0 2rem;
         max-width: 900px;
     }

@@ -20,12 +20,12 @@
   flex-direction: column;
   width: 250px;
   height: 100vh;
-  opacity: 0;
+  opacity: 1;
   background: var(--bg-art);
   background-color: var(--white);
   background-size: contain;
   padding: 2rem 0;
-  transition: right .3s;
+  /* transition: right .3s; */
   z-index: 10;
 }
 
@@ -54,19 +54,13 @@ right: 5%;
 top: 5%;
 }
 
-
-
-
 .show-side-nav {
-    right: 0;
     opacity: 1;
     animation: show-side-nav 0.3s forwards;
 }
 .hide-side-nav {
     opacity: 1;
-    
     animation: hide-side-nav 0.3s forwards;
-    /* animation-delay: 0.3s; */
     
 }
 
@@ -91,7 +85,7 @@ top: 5%;
   }
   100% {
     right: -252px;
-    opacity: 0;
+    opacity: 1;
   }
 }
 .side-nav-ul li {

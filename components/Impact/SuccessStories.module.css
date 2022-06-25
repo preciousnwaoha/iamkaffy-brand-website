@@ -91,7 +91,7 @@
 
   .SSs-content {
     max-width: 1000px;
-    width: 100%;
+    width: calc(100% - 4rem);
     margin: 0 2rem;
     display: flex;
     justify-content: space-between;
