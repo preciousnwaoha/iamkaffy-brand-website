@@ -12,7 +12,7 @@ const StoreSupport = () => {
   useEffect(() => {
     const getSupportDetails = async () => {
       setSupportDetails({
-        email: "kaffystoresupport@gmail.com",
+        email: "ask@iamkaffy.com",
       });
     };
 

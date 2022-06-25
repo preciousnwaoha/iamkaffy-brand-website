@@ -13,6 +13,8 @@ const SynopsisItem = ({ title, alt, img, description }) => {
             width={"100%"}
             height={"100%"}
             layout="responsive"
+            placeholder="blur"
+  blurDataURL={img}
           />
         </div>
       </div>

@@ -24,7 +24,14 @@
 
 
 @media screen and (min-width: 760px) {
+    .synopsis {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .synopsis-content {
+        width: 100%;
         margin: 0 2rem;
+        max-width: 900px;
     }
 }

@@ -60,23 +60,33 @@ top: 5%;
 .show-side-nav {
     right: 0;
     opacity: 1;
+    animation: show-side-nav 0.3s forwards;
 }
 .hide-side-nav {
     opacity: 1;
     
     animation: hide-side-nav 0.3s forwards;
-    animation-delay: 0.3s;
-    display: none;
+    /* animation-delay: 0.3s; */
     
 }
 
 .menu-icon {
   margin-left: 1rem;
 }
+@keyframes show-side-nav {
+  0% {
+    right: -252px;
+    opacity: 1;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
 
 @keyframes hide-side-nav {
   0% {
-    right: -252px;
+    right: 0;
     opacity: 1;
   }
   100% {
@@ -174,8 +184,17 @@ li.hidden-nav-item {
 }
 
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1100px) {
   li.hidden-nav-item {
     display: flex !important;
   }
+  
+  .menu-icon {
+    display: none;
+  }
+
+  .side-nav-ul {
+    display: none;
+  }
+  
 }

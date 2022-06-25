@@ -9,8 +9,8 @@ const Error404Page = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Kaffy 404 Error</title>
-        <meta name="description" content="Page not found error 404" />
+        <title>Page Not Found - 404 | IAMKAFFY Brand</title>
+        <meta name="description" content="Page not found error 404 from IAMKAFFY Brand Website" />
       </Head>
 
       <main className={styles.main}>

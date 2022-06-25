@@ -42,7 +42,7 @@
 }
 
 .support-details {
-    align-self: flex-start;
+    align-self: center;
     margin-bottom: 1rem;
 }
 
@@ -61,7 +61,7 @@
 .GIT-email {
     color: var(--black);
     margin: 0.5rem 0;
-    text-align: left;
+    text-align: center;
 }
 
 .GIT-icon {
@@ -118,5 +118,16 @@
  .side {
      width: 40%;
  }
+
+ .support-details {
+    align-self: flex-start;
+    margin-bottom: 1rem;
+}
+
+.GIT-email {
+    color: var(--black);
+    margin: 0.5rem 0;
+    text-align: left;
+}
 
 }

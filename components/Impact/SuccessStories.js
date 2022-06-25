@@ -2,23 +2,21 @@ import React, { useState } from "react";
 import Button from "../UI/Button";
 import UIBigTitle from "../UI/UIBigTitle";
 import Image from "next/image";
-import Effect5 from "../UI/Effects/Effect5"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+import Effect5 from "../UI/Effects/Effect5";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
 import classes from "./SuccessStories.module.css";
 
-
-
-const SuccessStories = ({successStories}) => {
-  const storyMaxIndex = successStories.length - 1
+const SuccessStories = ({ successStories }) => {
+  const storyMaxIndex = successStories.length - 1;
 
   const [storyIndex, setStoryIndex] = useState(0);
 
   const forwardsHandler = () => {
     if (storyIndex === storyMaxIndex) {
       setStoryIndex(0);
-      return
+      return;
     } else {
       setStoryIndex((prevIndex) => {
         return prevIndex + 1;
@@ -28,16 +26,16 @@ const SuccessStories = ({successStories}) => {
 
   const backwardsHandler = () => {
     if (storyIndex === 0) {
-        setStoryIndex(storyMaxIndex);
-        return
-      } else {
-        setStoryIndex((prevIndex) => {
-          return prevIndex - 1;
-        });
-      }
+      setStoryIndex(storyMaxIndex);
+      return;
+    } else {
+      setStoryIndex((prevIndex) => {
+        return prevIndex - 1;
+      });
+    }
   };
 
-  const { img, title, description} = successStories[storyIndex]
+  const { img, title, description } = successStories[storyIndex];
 
   return (
     <div className={classes["success-stories"]}>
@@ -53,6 +51,8 @@ const SuccessStories = ({successStories}) => {
               width={"100%"}
               height={"100%"}
               layout="responsive"
+              placeholder="blur"
+              blurDataURL={img}
             />
           </div>
         </div>
@@ -62,12 +62,24 @@ const SuccessStories = ({successStories}) => {
             <p>{description || ""}</p>
           </div>
           <div className={classes["SSs-actions"]}>
-            <Button className={classes["right-btn"]} clickAction={backwardsHandler}>
-            <FontAwesomeIcon icon={faAngleLeft} style={{fontSize: "1.125rem"}} />
-              </Button>
-            <Button className={classes["left-btn"]} clickAction={forwardsHandler}>
-            <FontAwesomeIcon icon={faAngleRight} style={{fontSize: "1.125rem"}} />
-              </Button>
+            <Button
+              className={classes["right-btn"]}
+              clickAction={backwardsHandler}
+            >
+              <FontAwesomeIcon
+                icon={faAngleLeft}
+                style={{ fontSize: "1.125rem" }}
+              />
+            </Button>
+            <Button
+              className={classes["left-btn"]}
+              clickAction={forwardsHandler}
+            >
+              <FontAwesomeIcon
+                icon={faAngleRight}
+                style={{ fontSize: "1.125rem" }}
+              />
+            </Button>
           </div>
         </div>
       </div>

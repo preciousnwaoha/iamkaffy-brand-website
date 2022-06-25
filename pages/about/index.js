@@ -15,7 +15,7 @@ const About = () => {
     <div className={styles.container}>
       <Head>
         <title>About Dancer Kaffy Shatau</title>
-        <meta name="description" content="About popular Dancer Kaffy Shatau aka KAFFY DANCE" />
+        <meta name="description" content="About Dancer Kaffy Shatau aka Kaffy the Dancer Qween" />
         
       </Head>
 
