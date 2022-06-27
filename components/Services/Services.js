@@ -32,7 +32,7 @@ const DEFAULT_SERVICES = [
   },
   {
     id: "service6",
-    name: "Custom Design",
+    name: "Custome Design",
     description: "Service Description in many many words",
   },
 ];

@@ -39,17 +39,20 @@ if (typeof window !== "undefined") {
 
 // Hook
 const useTheme = (theme) => {
-  useLayoutEffect(
-    () => {
-      // Iterate through each value in theme object
-      
-      for (const key in theme) {
-        // Update css variables in document's root element
-        root.style.setProperty(`${key}`, theme[key]);
+
+  
+    useLayoutEffect(
+      () => {
+        // Iterate through each value in theme object
+        if (typeof window !== "undefined") {
+        for (const key in theme) {
+          // Update css variables in document's root element
+          root.style.setProperty(`${key}`, theme[key]);
+        }   
       }
-    },
-    [theme] // Only call again if theme object reference changes
-  );
+      },
+      [theme] // Only call again if theme object reference changes
+    );
   
 }
 
